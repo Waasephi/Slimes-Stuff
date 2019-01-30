@@ -8,7 +8,8 @@ namespace OurStuffAddon.Items.Accessories
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("For the true Warrior. (+3 Defence, Obsidian Shield and Magma Stone Buffs)");
+            DisplayName.SetDefault("Molten Shield");
+            Tooltip.SetDefault("For the true Warrior. (+3 Defence, +20 Max Life, Obsidian Shield And Magma Stone Buffs)");
         }
         public override void UpdateAccessory(Player player, bool hideVisual) //Where it says "p" is the variable used to represent "player". In this case, every p stands for player. This is called when the accessory is on.
         {

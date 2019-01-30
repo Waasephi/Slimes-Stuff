@@ -29,8 +29,8 @@ namespace OurStuffAddon.Items.Melee
 			item.rare = 12;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
-			item.shoot = mod.ProjectileType("AwokenProjectile");
-			item.shootSpeed = 8f;
+            item.shoot = mod.ProjectileType("AwokenProjectile");
+            item.shootSpeed = 8f;
 		}
 
 		public override void AddRecipes()
