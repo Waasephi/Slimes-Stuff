@@ -1,0 +1,3 @@
+author = Waasephi
+version = 0.12.1
+displayName = Slime's Stuff
