@@ -9,7 +9,7 @@ namespace OurStuffAddon.Items.Accessories
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("Your sky high journey seems like it will never end");
+            Tooltip.SetDefault("Your sky high journey seems like it will never end (? wing time, 3 accel");
         }
 
         public override void SetDefaults()

@@ -31,6 +31,7 @@ namespace OurStuffAddon.Projectiles
             projectile.rotation = (float)Math.Atan2((double)projectile.velocity.Y, (double)projectile.velocity.X) + 1.57f;
             projectile.localAI[0] += 1f;
             projectile.alpha = (int)projectile.localAI[0] * 2;
+            Lighting.AddLight(projectile.position, 0f, 0f, 1f);
 
             if (projectile.localAI[0] > 330f) //projectile time left before disappears
             {

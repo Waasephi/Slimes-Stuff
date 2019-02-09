@@ -25,6 +25,13 @@ namespace OurStuffAddon
                     Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("FrostStone"));
                 }
             }
+            if (npc.type == NPCID.DarkCaster)
+            {
+                if (Main.rand.Next(100) == 0) //1% chance
+                {
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("AncientBlaster"));
+                }
+            }
         }
     }
 }

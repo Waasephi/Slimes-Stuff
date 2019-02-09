@@ -9,7 +9,7 @@ namespace OurStuffAddon.Items.Accessories
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("The wings of the darkness");
+            Tooltip.SetDefault("The wings of the darkness (150 wing time, 2 accel");
         }
 
         public override void SetDefaults()

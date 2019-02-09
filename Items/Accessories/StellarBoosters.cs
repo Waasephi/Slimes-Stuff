@@ -9,7 +9,7 @@ namespace OurStuffAddon.Items.Accessories
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("Reach the heavens!");
+            Tooltip.SetDefault("Reach the heavens! (10 wing time, 1.5 accel)");
         }
 
         public override void SetDefaults()

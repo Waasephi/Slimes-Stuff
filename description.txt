@@ -6,13 +6,23 @@ Use this link to get to our discord page https://discord.gg/tRFPRdu
 
 
 Currently this mod adds:
-9 Weapons - 6 Melee 9 Ranged 2 Magic 1 Throwing
+31 Weapons - 6 Melee 21 Ranged 3 Magic 1 Throwing
 4 Ammo Types (With Endless Variants)
 3 Wings
-1 Enemey
+2 Enemies
 1 Item Tier 
 1 Block
+9 Materials
+14 Accessories
+1 Armor
+1 Boss
+2 Consumables
 
 What changed in most recent update:
-More Sprite Changes
-Added the spiricite brick
+
+Added The FIRST BOSS!! The Giant Sand Sifter
+Added Sand Scale Armor
+Added The Giant Sand Scale's Expert Item
+Added Sand Sifter Mandible
+Added A Silent Version Of Duality
+Added Giant Sand Sifter Treasure Bag
