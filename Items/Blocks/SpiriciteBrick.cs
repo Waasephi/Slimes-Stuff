@@ -26,7 +26,7 @@ namespace OurStuffAddon.Items.Blocks
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddTile(TileID.Anvils);
+            recipe.AddTile(mod, "SpiritInfuser");
             recipe.AddIngredient(null, "SpiritShard", 1);
             recipe.AddIngredient(3, 50);
             recipe.SetResult(this, 50);

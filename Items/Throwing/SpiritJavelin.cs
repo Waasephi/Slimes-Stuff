@@ -19,7 +19,7 @@ namespace OurStuffAddon.Items.Throwing
         }
         public override void SetDefaults()
         {
-            item.damage = 25;           //this is the item damage
+            item.damage = 15;           //this is the item damage
             item.thrown = true;             //this make the item do throwing damage
             item.noMelee = true;
             item.width = 22;
@@ -46,7 +46,7 @@ namespace OurStuffAddon.Items.Throwing
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(mod, "SpiriciteCrystal", 10);
-            recipe.AddTile(TileID.Anvils);
+            recipe.AddTile(mod, "SpiritInfuser");
             recipe.SetResult(this, 1);
             recipe.AddRecipe();
         }

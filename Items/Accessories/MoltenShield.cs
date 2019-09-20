@@ -9,15 +9,16 @@ namespace OurStuffAddon.Items.Accessories
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Molten Shield");
-            Tooltip.SetDefault("For the true Warrior. (+3 Defence, +20 Max Life, Obsidian Shield And Magma Stone Buffs)");
+            Tooltip.SetDefault("For the true Warrior. (+3 Defence, +20 Max Life, Gives Immunity To Chilled Debuff, Obsidian Shield And Magma Stone Buffs)");
         }
         public override void UpdateAccessory(Player player, bool hideVisual) //Where it says "p" is the variable used to represent "player". In this case, every p stands for player. This is called when the accessory is on.
         {
-            player.statLife += 20;//This is where an effect from the list goes.
+            player.statLifeMax2 += 20;//This is where an effect from the list goes.
             player.fireWalk = true;
             player.noKnockback = true;
             player.magmaStone = true;
             player.statDefense += 3;
+            player.buffImmune[BuffID.Chilled] = true;
         }
         public override void SetDefaults()
         {

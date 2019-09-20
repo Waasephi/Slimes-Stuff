@@ -29,5 +29,14 @@ namespace OurStuffAddon.Items.Materials
 			item.expert = false;
 			item.autoReuse = true;
         }
+        public override void AddRecipes()
+        {
+            ModRecipe recipe = new ModRecipe(mod);
+            recipe.AddIngredient(ItemID.IceBlock, 100);
+            recipe.AddIngredient(ItemID.HermesBoots);
+            recipe.AddTile(TileID.IceMachine);
+            recipe.SetResult(ItemID.IceSkates);
+            recipe.AddRecipe();
+        }
     }
 }

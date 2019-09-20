@@ -6,6 +6,7 @@ using System.IO;
 
 namespace OurStuffAddon.NPCs.Bosses
 {
+    [AutoloadBossHead]
     class GiantSandSifterHead : GiantSandSifter
     {
         public override string Texture { get { return "OurStuffAddon/NPCs/Bosses/GiantSandSifterHead"; } }
@@ -13,11 +14,11 @@ namespace OurStuffAddon.NPCs.Bosses
         public override void SetDefaults()
         {
             npc.CloneDefaults(NPCID.DiggerHead);
-            npc.width = 120;
-            npc.height = 144;
-            npc.damage = 40;
+            npc.width = 112;
+            npc.height = 104;
+            npc.damage = 20;
             npc.defense = 0;
-            npc.lifeMax = 4000;
+            npc.lifeMax = 6000;
             npc.HitSound = SoundID.NPCHit1;
             npc.DeathSound = SoundID.NPCDeath1;
             npc.aiStyle = -1;
@@ -62,11 +63,11 @@ namespace OurStuffAddon.NPCs.Bosses
         public override void SetDefaults()
         {
             npc.CloneDefaults(NPCID.DiggerBody);
-            npc.width = 114;
-            npc.height = 132;
-            npc.damage = 20;
+            npc.width = 96;
+            npc.height = 96;
+            npc.damage = 15;
             npc.defense = 1;
-            npc.lifeMax = 4000;
+            npc.lifeMax = 6000;
             npc.HitSound = SoundID.NPCHit1;
             npc.DeathSound = SoundID.NPCDeath1;
             npc.aiStyle = -1;
@@ -85,11 +86,11 @@ namespace OurStuffAddon.NPCs.Bosses
         public override void SetDefaults()
         {
             npc.CloneDefaults(NPCID.DiggerTail);
-            npc.width = 114;
-            npc.height = 174;
-            npc.damage = 15;
+            npc.width = 120;
+            npc.height = 76;
+            npc.damage = 20;
             npc.defense = 0;
-            npc.lifeMax = 4000;
+            npc.lifeMax = 6000;
             npc.HitSound = SoundID.NPCHit1;
             npc.DeathSound = SoundID.NPCDeath1;
             npc.aiStyle = -1;
@@ -112,7 +113,7 @@ namespace OurStuffAddon.NPCs.Bosses
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault(" Giant Sand Sifter");
+            DisplayName.SetDefault("Giant Sand Sifter");
         }
 
         public override void Init()
@@ -131,18 +132,41 @@ namespace OurStuffAddon.NPCs.Bosses
         {
             if (!Main.expertMode)
             {
-                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("SandSifterMandible"), Main.rand.Next(3, 5));
-                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("SandSifterScale"), Main.rand.Next(3, 5));
+                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("SandSifterMandible"), Main.rand.Next(7, 10));
+                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("SandSifterScale"), Main.rand.Next(7, 10));
+                int loots = Main.rand.Next(5);
+                switch (loots)
+                {
+                    case 1:
+                        Item.NewItem(npc.getRect(), mod.ItemType("SandSifterScale"), Main.rand.Next(1, 1));
+                        break;
+                    case 2:
+                        Item.NewItem(npc.getRect(), mod.ItemType("SandTome"), Main.rand.Next(1, 1));
+                        break;
+                    case 3:
+                        Item.NewItem(npc.getRect(), mod.ItemType("DesertDuster"), Main.rand.Next(1, 1));
+                        break;
+                    case 4:
+                        Item.NewItem(npc.getRect(), mod.ItemType("DesertFang"), Main.rand.Next(100, 100));
+                        break;
+                }
+            }
+        
 
-
-
+            {
+                int loots2 = Main.rand.Next(10);
+                switch (loots2)
+                {
+                    case 1: Item.NewItem(npc.getRect(), mod.ItemType("GiantSandSifterTrophy"), 1); break;
+                    case 2: break;
+                }
             }
 
-            if (Main.expertMode)
+                if (Main.expertMode)
             {
                 npc.DropBossBags();
             }
-
+            OurStuffAddonWorld.downedGiantSandSifter = true;
         }
 
 
@@ -176,6 +200,8 @@ namespace OurStuffAddon.NPCs.Bosses
 
         public override void AI()
         {
+            if (Main.player[npc.target].statLife == 0) npc.position.Y += 100;
+            npc.dontTakeDamage = !Main.player[npc.target].ZoneDesert;
             if (npc.localAI[1] == 0f)
             {
                 npc.localAI[1] = 1f;

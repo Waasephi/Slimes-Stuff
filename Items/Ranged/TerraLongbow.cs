@@ -12,13 +12,13 @@ namespace OurStuffAddon.Items.Ranged
 		}
 		public override void SetDefaults()
 		{
-			item.damage = 100;
+			item.damage = 80;
 			item.noMelee = true;
 			item.ranged = true;
 			item.width = 40;
 			item.height = 40;
-			item.useTime = 4;
-			item.useAnimation = 8;
+			item.useTime = 10;
+			item.useAnimation = 10;
 			item.useStyle = 5;
 			item.useAmmo = AmmoID.Arrow;
 			item.shoot = 4;

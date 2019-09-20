@@ -1,3 +1,6 @@
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -19,9 +22,8 @@ namespace OurStuffAddon.Items.Consumables
             item.useAnimation = 45;
             item.useTime = 45;
             item.useStyle = 4;
-            item.UseSound = SoundID.Item44;
+            item.UseSound = SoundID.Item15;
             item.consumable = true;
-            item.shoot = mod.ProjectileType("GiantSandSifterSpawn");
         }
 
         public override bool CanUseItem(Player player)
@@ -33,7 +35,7 @@ namespace OurStuffAddon.Items.Consumables
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(ItemID.AntlionMandible, 5);
-            recipe.AddIngredient(mod, "SandSifterScale", 10);
+            recipe.AddIngredient(mod, "SandSifterScale", 5);
             recipe.AddTile(26);
             recipe.SetResult(this);
             recipe.AddRecipe();

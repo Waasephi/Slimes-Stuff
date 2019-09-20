@@ -36,7 +36,7 @@ namespace OurStuffAddon.Items.Ranged
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(mod, "SpiriciteCrystal");
-            recipe.AddTile(TileID.Anvils);
+            recipe.AddTile(mod, "SpiritInfuser");
             recipe.SetResult(this, 50);
             recipe.AddRecipe();
         }

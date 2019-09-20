@@ -20,7 +20,7 @@ namespace OurStuffAddon.Items.Melee
 			item.melee = true;
 			item.width = 344;
 			item.height = 344;
-            item.shoot = 132;
+            item.shoot = 116;
             item.useTime = 10;
 			item.useAnimation = 10;
 			item.useStyle = 1;
@@ -29,7 +29,6 @@ namespace OurStuffAddon.Items.Melee
 			item.rare = 12;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
-            item.shoot = mod.ProjectileType("AwokenProjectile");
             item.shootSpeed = 8f;
 		}
 

@@ -16,12 +16,12 @@ namespace OurStuffAddon.Items.Ranged
         }
         public override void SetDefaults()
         {
-            item.damage = 100;
+            item.damage = 80;
             item.ranged = true;
             item.width = 36;
             item.height = 28;
-            item.useTime = 5;
-            item.useAnimation = 5;
+            item.useTime = 10;
+            item.useAnimation = 10;
             item.useStyle = 5;
             item.noMelee = true; //so the item's animation doesn't do damage
             item.knockBack = 4;

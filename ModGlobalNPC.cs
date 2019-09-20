@@ -13,9 +13,18 @@ namespace OurStuffAddon
 
             if (npc.type == NPCID.Mothron)
             {
-                if (Main.rand.Next(4) == 0) //25% chance
+                int loots = Main.rand.Next(5);
+                switch (loots)
                 {
-                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("BrokenHeroBow"));
+                    case 1:
+                        Item.NewItem(npc.getRect(), mod.ItemType("BrokenHeroBow"), Main.rand.Next(1, 1));
+                        break;
+                    case 2:
+                        Item.NewItem(npc.getRect(), mod.ItemType("BrokenHeroBlaster"), Main.rand.Next(1, 1));
+                        break;
+                    case 3:
+                        Item.NewItem(npc.getRect(), mod.ItemType("BrokenHeroJavelin"), Main.rand.Next(1, 1));
+                        break;
                 }
             }
             if (npc.type == NPCID.IceTortoise)
@@ -31,6 +40,152 @@ namespace OurStuffAddon
                 {
                     Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("AncientBlaster"));
                 }
+            }
+            if (npc.type == NPCID.Vulture)
+            {
+                if (Main.rand.Next(2) == 0) //50% chance
+                {
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("SandFeather"));
+                }
+            }
+            if (npc.type == 517)
+            {
+                if (Main.rand.Next(1) == 0) //100% chance
+                {
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("CosmicFragment"), Main.rand.Next(15, 20));
+                }
+            }
+            if (npc.type == 493)
+            {
+                if (Main.rand.Next(1) == 0) //100% chance
+                {
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("CosmicFragment"), Main.rand.Next(15, 20));
+                }
+            }
+            if (npc.type == 507)
+            {
+                if (Main.rand.Next(1) == 0) //100% chance
+                {
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("CosmicFragment"), Main.rand.Next(15, 20));
+                }
+            }
+            if (npc.type == 50)
+            {
+                if (Main.rand.Next(10) == 0) //100% chance
+                {
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("CrownJewel"));
+                }
+            }
+            if (npc.type == 4)
+            {
+                if (Main.rand.Next(10) == 0) //100% chance
+                {
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("TheEye"));
+                }
+            }
+            if (npc.type == 422)
+            {
+                if (Main.rand.Next(1) == 0) //100% chance
+                {
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("CosmicFragment"), Main.rand.Next(15, 20));
+                }
+            }
+            if (npc.type == 517)
+            {
+                if (Main.rand.Next(1) == 0) //100% chance
+                {
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("LuminaFragment"), Main.rand.Next(15, 20));
+                }
+            }
+            if (npc.type == 493)
+            {
+                if (Main.rand.Next(1) == 0) //100% chance
+                {
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("LuminaFragment"), Main.rand.Next(15, 20));
+                }
+            }
+            if (npc.type == 507)
+            {
+                if (Main.rand.Next(1) == 0) //100% chance
+                {
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("LuminaFragment"), Main.rand.Next(15, 20));
+                }
+            }
+            if (npc.type == 422)
+            {
+                if (Main.rand.Next(1) == 0) //100% chance
+                {
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("LuminaFragment"), Main.rand.Next(15, 20));
+                }
+            }
+            if (npc.type == 62)
+            {
+                if (Main.rand.Next(100) == 0) //1% chance
+                {
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("ReaperScythe"));
+                }
+            }
+            if (npc.type == 66)
+            {
+                if (Main.rand.Next(50) == 0) //2% chance
+                {
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("ReaperScythe"));
+                }
+            }
+            if (npc.type == 113)
+            {
+                if (Main.rand.Next(5) == 0) //20% chance
+                {
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("ThrowerEmblem"));
+                }
+            }
+            if (Main.player[(int)Player.FindClosest(npc.position, npc.width, npc.height)].ZoneUnderworldHeight && Main.rand.Next(800) == 0)
+            {
+                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("LavaShard"));
+            }
+            if (Main.player[(int)Player.FindClosest(npc.position, npc.width, npc.height)].ZoneCrimson && Main.rand.Next(800) == 0)
+            {
+                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("TaintedCore"));
+            }
+            if (Main.player[(int)Player.FindClosest(npc.position, npc.width, npc.height)].ZoneCorrupt && Main.rand.Next(800) == 0)
+            {
+                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("CursedCore"));
+            }
+            if (Main.player[(int)Player.FindClosest(npc.position, npc.width, npc.height)].ZoneBeach && Main.rand.Next(800) == 0)
+            {
+                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("PsychicSand"));
+            }
+            if (Main.player[(int)Player.FindClosest(npc.position, npc.width, npc.height)].ZoneRain && Main.rand.Next(800) == 0)
+            {
+                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("RainEssence"));
+            }
+            if (Main.player[(int)Player.FindClosest(npc.position, npc.width, npc.height)].ZoneSkyHeight && Main.rand.Next(3) == 0)
+            {
+                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("SkyEssence"));
+            }
+            if (Main.player[(int)Player.FindClosest(npc.position, npc.width, npc.height)].ZoneJungle && Main.rand.Next(800) == 0)
+            {
+                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("LivingMush"));
+            }
+            if (Main.player[(int)Player.FindClosest(npc.position, npc.width, npc.height)].ZoneSnow && Main.rand.Next(800) == 0)
+            {
+                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("IceChip"));
+            }
+            if (Main.player[(int)Player.FindClosest(npc.position, npc.width, npc.height)].ZoneRockLayerHeight && Main.rand.Next(800) == 0)
+            {
+                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("AncientCore"));
+            }
+            if (Main.player[(int)Player.FindClosest(npc.position, npc.width, npc.height)].ZoneHoly && Main.rand.Next(800) == 0)
+            {
+                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("CrystalCore"));
+            }
+            if (Main.player[(int)Player.FindClosest(npc.position, npc.width, npc.height)].ZoneDungeon && Main.rand.Next(800) == 0)
+            {
+                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("Ectoheart"));
+            }
+            if (Main.player[(int)Player.FindClosest(npc.position, npc.width, npc.height)].ZoneDesert && Main.rand.Next(800) == 0)
+            {
+                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("BottledDune"));
             }
         }
     }

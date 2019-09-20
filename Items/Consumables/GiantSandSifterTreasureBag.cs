@@ -19,7 +19,6 @@ namespace OurStuffAddon.Items.Consumables
             item.height = 24;
             item.rare = 9;
             item.expert = true;
-            bossBagNPC = mod.NPCType("GiantSandSifterHead");
         }
 
         public override bool CanRightClick()
@@ -32,9 +31,26 @@ namespace OurStuffAddon.Items.Consumables
 
             if (Main.rand.Next(0) == 0)
 
-            player.QuickSpawnItem(mod.ItemType("SandSifterScale"), Main.rand.Next(3, 5));
-            player.QuickSpawnItem(mod.ItemType("SandSifterMandible"), Main.rand.Next(3, 5));
+            player.QuickSpawnItem(mod.ItemType("SandSifterScale"), Main.rand.Next(10, 15));
+            player.QuickSpawnItem(mod.ItemType("SandSifterMandible"), Main.rand.Next(10, 15));
             player.QuickSpawnItem(mod.ItemType("GiantSandSifterEye"));
+            int loots = Main.rand.Next(5);
+            switch (loots)
+            {
+                case 1:
+                    player.QuickSpawnItem(mod.ItemType("SiftersTooth"), Main.rand.Next(1, 1));
+                    break;
+                case 2:
+                    player.QuickSpawnItem(mod.ItemType("SandTome"), Main.rand.Next(1, 1));
+                    break;
+                case 3:
+                    player.QuickSpawnItem(mod.ItemType("DesertDuster"), Main.rand.Next(1, 1));
+                    break;
+                case 4:
+                    player.QuickSpawnItem(mod.ItemType("DesertFang"), Main.rand.Next(100, 100));
+                    break;
+            }
         }
+        public override int BossBagNPC => mod.NPCType("GiantSandSifterHead");
     }
 }

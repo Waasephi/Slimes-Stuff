@@ -1,0 +1,65 @@
+using Microsoft.Xna.Framework;
+using Terraria;
+using Terraria.ID;
+using Terraria.ModLoader;
+
+namespace OurStuffAddon.Items.Summoner
+{
+    //imported from my tAPI mod because I'm lazy
+    public class ShroomStaff : ModItem
+    {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Shroom Staff");
+            Tooltip.SetDefault("Summons a flying mushroom to fight for you.,(Due to a bug that I am unaware of how to fix...the buff doesnt disappear on removing the buff,the only way to remove them is to leave the game/die)");
+        }
+
+        public override void SetDefaults()
+        {
+            item.damage = 5;
+            item.summon = true;
+            item.mana = 10;
+            item.width = 26;
+            item.height = 28;
+            item.useTime = 36;
+            item.useAnimation = 36;
+            item.useStyle = 1;
+            item.noMelee = true;
+            item.knockBack = 3;
+            item.value = Item.buyPrice(0, 0, 50, 0);
+            item.rare = 9;
+            item.UseSound = SoundID.Item44;
+            item.shoot = mod.ProjectileType("Shroomy");
+            item.shootSpeed = 10f;
+            item.buffType = mod.BuffType("ShroomBuff"); //The buff added to player after used the item
+            item.buffTime = 3600;               //The duration of the buff, here is 60 seconds
+        }
+
+        public override bool AltFunctionUse(Player player)
+        {
+            return true;
+        }
+
+        public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
+        {
+            return player.altFunctionUse != 2;
+        }
+
+        public override bool UseItem(Player player)
+        {
+            if (player.altFunctionUse == 2)
+            {
+                player.MinionNPCTargetAim();
+            }
+            return base.UseItem(player);
+        }
+        public override void AddRecipes()
+        {
+            ModRecipe recipe = new ModRecipe(mod);
+            recipe.AddIngredient(ItemID.GlowingMushroom, 20);
+            recipe.AddTile(TileID.Anvils);
+            recipe.SetResult(this);
+            recipe.AddRecipe();
+        }
+    }
+}

@@ -28,7 +28,7 @@ namespace OurStuffAddon.Items.Armor.SandScale
             item.height = 10;
             item.value = 100;
             item.rare = 2;
-            item.defense = 5;
+            item.defense = 3;
         }
 
         public override void UpdateEquip(Player player)
@@ -41,14 +41,12 @@ namespace OurStuffAddon.Items.Armor.SandScale
 
         public override bool IsArmorSet(Item head, Item body, Item legs)
         {
-            return body.type == mod.ItemType("SandScalePlate") && legs.type == mod.ItemType("SandScaleBoots");
+            return body.type == mod.ItemType("SandScalemail") && legs.type == mod.ItemType("SandScaleBoots");
         }
 
         public override void UpdateArmorSet(Player player)
         {
-            player.setBonus = "Increased Life Regen, +20 Max Life, and Gives Creature Detection.";
-            player.lifeRegen += 1;
-            player.statLifeMax2 += 20;
+            player.setBonus = " Gives Creature Detection.";
             player.detectCreature = true;
         }
 

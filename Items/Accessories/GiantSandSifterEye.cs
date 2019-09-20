@@ -9,12 +9,15 @@ namespace OurStuffAddon.Items.Accessories
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Sand Sifter Eye");
-            Tooltip.SetDefault("Wait... They have eyes? (+1 minion and gives 3 defence)");
+            Tooltip.SetDefault("Wait... They have eyes? (+1 minion, gives good sight, and gives 3 defence)");
         }
         public override void UpdateAccessory(Player player, bool hideVisual) //Where it says "p" is the variable used to represent "player". In this case, every p stands for player. This is called when the accessory is on.
         {
-            player.magmaStone = true;
+            player.maxMinions += 1;
             player.statDefense += 3;
+            player.detectCreature = true;
+            player.dangerSense = true;
+            player.findTreasure = true;
         }
         public override void SetDefaults()
         {

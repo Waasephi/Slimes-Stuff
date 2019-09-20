@@ -1,3 +1,4 @@
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -9,10 +10,11 @@ namespace OurStuffAddon.Items.Magic
         {
             DisplayName.SetDefault("Spiricite Staff");
             Tooltip.SetDefault("Shoots a homing spirit.");
+            Item.staff[item.type] = true;
         }
         public override void SetDefaults()
         {
-            item.damage = 20;
+            item.damage = 10;
             item.magic = true;
             item.width = 22;
             item.height = 22;
@@ -34,7 +36,7 @@ namespace OurStuffAddon.Items.Magic
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(mod, "SpiriciteCrystal", 10);
-            recipe.AddTile(TileID.Anvils);
+            recipe.AddTile(mod, "SpiritInfuser");
             recipe.SetResult(this);
             recipe.AddRecipe();
         }

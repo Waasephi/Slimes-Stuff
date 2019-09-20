@@ -11,7 +11,7 @@ namespace OurStuffAddon.Items.Armor.SandScale
         {
             base.SetStaticDefaults();
             DisplayName.SetDefault("Sand Scale Boots");
-            Tooltip.SetDefault("\n+10 %Movement Speed"
+            Tooltip.SetDefault("\n+5% Movement Speed"
             + "\n+20 Mana");
         }
 
@@ -21,14 +21,14 @@ namespace OurStuffAddon.Items.Armor.SandScale
             item.height = 10;
             item.value = 100;
             item.rare = 2;
-            item.defense = 6;
+            item.defense = 3;
         }
 
 
 
         public override void UpdateEquip(Player player)
         {
-            player.moveSpeed *= 1.10f;
+            player.moveSpeed *= 1.05f;
             player.statManaMax2 += 20;
             //player.maxMinions+=2;
             //player.AddBuff(BuffID.Shine, 2);

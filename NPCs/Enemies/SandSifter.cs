@@ -15,9 +15,9 @@ namespace OurStuffAddon.NPCs.Enemies
             npc.CloneDefaults(NPCID.DiggerHead);
             npc.width = 40;
             npc.height = 48;
-            npc.damage = 20;
-            npc.defense = 10;
-            npc.lifeMax = 400;
+            npc.damage = 10;
+            npc.defense = 5;
+            npc.lifeMax = 300;
             npc.HitSound = SoundID.NPCHit1;
             npc.DeathSound = SoundID.NPCDeath1;
             npc.aiStyle = -1;
@@ -33,7 +33,7 @@ namespace OurStuffAddon.NPCs.Enemies
         
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            return spawnInfo.player.ZoneDesert ? 0.1f : 0f;
+            return spawnInfo.player.ZoneUndergroundDesert ? 0.1f : 0f;
         }
 
         int attackCounter = 0;
@@ -63,9 +63,9 @@ namespace OurStuffAddon.NPCs.Enemies
             npc.CloneDefaults(NPCID.DiggerBody);
             npc.width = 26;
             npc.height = 44;
-            npc.damage = 10;
-            npc.defense = 30;
-            npc.lifeMax = 100;
+            npc.damage = 5;
+            npc.defense = 15;
+            npc.lifeMax = 600;
             npc.HitSound = SoundID.NPCHit1;
             npc.DeathSound = SoundID.NPCDeath1;
             npc.aiStyle = -1;
@@ -83,9 +83,9 @@ namespace OurStuffAddon.NPCs.Enemies
             npc.CloneDefaults(NPCID.DiggerTail);
             npc.width = 26;
             npc.height = 52;
-            npc.damage = 5;
-            npc.defense = 26;
-            npc.lifeMax = 800;
+            npc.damage = 10;
+            npc.defense = 13;
+            npc.lifeMax = 600;
             npc.HitSound = SoundID.NPCHit1;
             npc.DeathSound = SoundID.NPCDeath1;
             npc.aiStyle = -1;
@@ -115,18 +115,18 @@ namespace OurStuffAddon.NPCs.Enemies
             tailType = mod.NPCType<SandSifterTail>();
             bodyType = mod.NPCType<SandSifterBody>();
             headType = mod.NPCType<SandSifterHead>();
-            speed = 5.0f;
-            turnSpeed = 0.2f;
+            speed = 2.0f;
+            turnSpeed = 0.1f;
             npc.buffImmune[24] = false;
         }
 
 
         public override void NPCLoot()
         {
-            int loots = Main.rand.Next(5);
+            int loots = Main.rand.Next(2);
             switch (loots)
             {
-                case 1: Item.NewItem(npc.getRect(), mod.ItemType("SandSifterScale"), Main.rand.Next(1,2));
+                case 1: Item.NewItem(npc.getRect(), mod.ItemType("SandSifterScale"), Main.rand.Next(2,3));
                 break;
             }
         }

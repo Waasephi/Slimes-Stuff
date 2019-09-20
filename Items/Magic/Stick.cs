@@ -1,3 +1,4 @@
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -9,6 +10,7 @@ namespace OurStuffAddon.Items.Magic
         {
             DisplayName.SetDefault("Stick");
             Tooltip.SetDefault("The go to for any beginning wizard");
+            Item.staff[item.type] = true;
         }
         public override void SetDefaults()
         {

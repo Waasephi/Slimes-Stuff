@@ -15,19 +15,19 @@ namespace OurStuffAddon.Items.Materials{
     {
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Spirit Shard");
+			DisplayName.SetDefault("Spirit Essence");
 			Tooltip.SetDefault("A fragment of emotion");
-			Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(4, 8));
+			Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(4, 4));
 		}
         public override void SetDefaults()
         {
             item.maxStack = 999;                 //this is where you set the max stack of item
             item.consumable = false;           //this make that the item is consumable when used
-            item.width = 80;
-            item.height = 112;
-            item.value = 100;                
+            item.width = 22;
+            item.height = 22;
+            item.value = 9000;                
             item.rare = 4;
-			item.expert = true;
+			item.expert = false;
 			item.autoReuse = true;
         }
     }

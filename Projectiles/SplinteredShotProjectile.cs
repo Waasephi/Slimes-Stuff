@@ -14,7 +14,7 @@ namespace OurStuffAddon.Projectiles
             projectile.width = 8;
             projectile.height = 8;
             projectile.friendly = true;
-            projectile.penetrate = 10;                       //this is the projectile penetration
+            projectile.penetrate = 2;                       //this is the projectile penetration
             Main.projFrames[projectile.type] = 4;           //this is projectile frames
             projectile.hostile = false;
             projectile.ranged = true;

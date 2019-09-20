@@ -23,8 +23,8 @@ namespace OurStuffAddon.Items.Materials{
         {
             item.maxStack = 999;                 //this is where you set the max stack of item
             item.consumable = false;           //this make that the item is consumable when used
-            item.width = 80;
-            item.height = 112;
+            item.width = 14;
+            item.height = 28;
             item.value = 100;                
             item.rare = 4;
 			item.expert = true;
@@ -35,7 +35,7 @@ namespace OurStuffAddon.Items.Materials{
         {
             ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod, "SpiritShard", 5);
-            recipe.AddTile(TileID.Anvils);
+            recipe.AddTile(mod, "SpiritInfuser");
             recipe.SetResult(this);
             recipe.AddRecipe();
         }

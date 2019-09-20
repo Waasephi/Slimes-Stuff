@@ -36,7 +36,7 @@ namespace OurStuffAddon.Items.Ranged
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(mod, "SpiritArrow", 4000);
-            recipe.AddTile(TileID.Anvils);
+            recipe.AddTile(mod, "SpiritInfuser");
             recipe.SetResult(this, 1);
             recipe.AddRecipe();
         }
