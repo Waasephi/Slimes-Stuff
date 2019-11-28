@@ -20,7 +20,7 @@ namespace OurStuffAddon.Items.Armor.SpiritRobe
         {
             base.SetStaticDefaults();
             DisplayName.SetDefault("Spirit Hood");
-            Tooltip.SetDefault("+15% [c/00f2ff:Spirit Damage]" +
+            Tooltip.SetDefault("+20% [c/00f2ff:Spirit Damage]" +
                 "\n[c/00f2ff:-Spirit Class-]");
         }
 
@@ -30,7 +30,7 @@ namespace OurStuffAddon.Items.Armor.SpiritRobe
             item.height = 10;
             item.value = 100;
             item.rare = 2;
-            item.defense = 15;
+            item.defense = 16;
         }
 
         public override void UpdateEquip(Player player)
@@ -38,7 +38,7 @@ namespace OurStuffAddon.Items.Armor.SpiritRobe
             SpiritDamagePlayer modPlayer = SpiritDamagePlayer.ModPlayer(player);
             //player.endurance *= 1.05f;
             //player.statManaMax2 += 20;
-            modPlayer.spiritDamageMult *= 1.15f; // add 20% to the multiplicative bonus
+            modPlayer.spiritDamageMult *= 1.2f; // add 20% to the multiplicative bonus
             //player.AddBuff(BuffID.Shine, 2);
         }
 
@@ -49,9 +49,11 @@ namespace OurStuffAddon.Items.Armor.SpiritRobe
 
         public override void UpdateArmorSet(Player player)
         {
-            player.setBonus = "Greatly Increased Life Regen, +8 Defence.";
+            player.setBonus = "Greatly Increased Life Regen, +8 Defence, +12% [c/00f2ff:Spirit Damage].";
             player.lifeRegen += 3;
             player.statDefense += 8;
+            SpiritDamagePlayer modPlayer = SpiritDamagePlayer.ModPlayer(player);
+            modPlayer.spiritDamageMult *= 1.12f;
         }
 
         public override void AddRecipes()

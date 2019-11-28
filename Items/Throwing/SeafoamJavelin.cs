@@ -35,8 +35,8 @@ namespace OurStuffAddon.Items.Throwing
             item.shoot = mod.ProjectileType("SeafoamJavelinProjectile");
             item.shootSpeed = 10f;     //projectile speed
             item.useTurn = true;
-            item.maxStack = 1;       //this is the max stack of this item
-            item.consumable = false;  //this make the item consumable when used
+            item.maxStack = 999;       //this is the max stack of this item
+            item.consumable = true;  //this make the item consumable when used
             item.noUseGraphic = true;
  
 
@@ -44,10 +44,10 @@ namespace OurStuffAddon.Items.Throwing
         public override void AddRecipes()  //How to craft this item
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(mod, "SeafoamCrystal", 10);
-            recipe.AddIngredient(mod, "SeafoamScale", 10);
+            recipe.AddIngredient(mod, "SeafoamCrystal", 2);
+            recipe.AddIngredient(mod, "SeafoamScale", 2);
             recipe.AddTile(TileID.Anvils);
-            recipe.SetResult(this, 1);
+            recipe.SetResult(this, 150);
             recipe.AddRecipe();
         }
     }

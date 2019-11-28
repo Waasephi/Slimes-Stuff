@@ -35,8 +35,9 @@ namespace OurStuffAddon.NPCs.Bosses.LifeEnforcer
             aiType = NPCID.GraniteGolem;
             animationType = NPCID.GraniteGolem;
             Lighting.AddLight(npc.Center, 3f, 2f, 2f);
-            music = 5;
+            music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/LifeEnforcerTheme");
             bossBag = mod.ItemType("LifeEnforcerTreasureBag");
+            npc.lavaImmune = true;
         }
         public override void NPCLoot()
         {
@@ -66,37 +67,37 @@ namespace OurStuffAddon.NPCs.Bosses.LifeEnforcer
             if (npc.life < npc.lifeMax * .8 && phase == 1)
             {
                 phase = 2;
-                NPC.NewNPC((int)npc.position.X - 5, (int)npc.position.Y - 0, mod.NPCType<EnforcerAssister>());
-                NPC.NewNPC((int)npc.position.X - 0, (int)npc.position.Y - 5, mod.NPCType<EnforcerAssister>());
-                NPC.NewNPC((int)npc.position.X - 0, (int)npc.position.Y - 0, mod.NPCType<EnforcerAssister>());
-                NPC.NewNPC((int)npc.position.X - 5, (int)npc.position.Y - 5, mod.NPCType<EnforcerAssister>());
+                NPC.NewNPC((int)npc.position.X - 5, (int)npc.position.Y - 0, ModContent.NPCType<EnforcerAssister>());
+                NPC.NewNPC((int)npc.position.X - 0, (int)npc.position.Y - 5, ModContent.NPCType<EnforcerAssister>());
+                NPC.NewNPC((int)npc.position.X - 0, (int)npc.position.Y - 0, ModContent.NPCType<EnforcerAssister>());
+                NPC.NewNPC((int)npc.position.X - 5, (int)npc.position.Y - 5, ModContent.NPCType<EnforcerAssister>());
             }
             if (npc.life < npc.lifeMax * .6 && phase == 2)
             {
-                NPC.NewNPC((int)npc.position.X - 5, (int)npc.position.Y, mod.NPCType<EnforcerAssister>());
-                NPC.NewNPC((int)npc.position.X - 5, (int)npc.position.Y - 5, mod.NPCType<EnforcerAssister>());
-                NPC.NewNPC((int)npc.position.X - 0, (int)npc.position.Y - 5, mod.NPCType<EnforcerAssister>());
-                NPC.NewNPC((int)npc.position.X - 0, (int)npc.position.Y - 0, mod.NPCType<EnforcerAssister>());
+                NPC.NewNPC((int)npc.position.X - 5, (int)npc.position.Y, ModContent.NPCType<EnforcerAssister>());
+                NPC.NewNPC((int)npc.position.X - 5, (int)npc.position.Y - 5, ModContent.NPCType<EnforcerAssister>());
+                NPC.NewNPC((int)npc.position.X - 0, (int)npc.position.Y - 5, ModContent.NPCType<EnforcerAssister>());
+                NPC.NewNPC((int)npc.position.X - 0, (int)npc.position.Y - 0, ModContent.NPCType<EnforcerAssister>());
                 phase = 3;
             }
             if (npc.life < npc.lifeMax * .4 && phase == 3)
             {
-                NPC.NewNPC((int)npc.position.X - 5, (int)npc.position.Y, mod.NPCType<EnforcerAssister>());
-                NPC.NewNPC((int)npc.position.X - 0, (int)npc.position.Y, mod.NPCType<EnforcerAssister>());
-                NPC.NewNPC((int)npc.position.X - 0, (int)npc.position.Y - 5, mod.NPCType<EnforcerAssister>());
-                NPC.NewNPC((int)npc.position.X - 5, (int)npc.position.Y - 5, mod.NPCType<EnforcerAssister>());
+                NPC.NewNPC((int)npc.position.X - 5, (int)npc.position.Y, ModContent.NPCType<EnforcerAssister>());
+                NPC.NewNPC((int)npc.position.X - 0, (int)npc.position.Y, ModContent.NPCType<EnforcerAssister>());
+                NPC.NewNPC((int)npc.position.X - 0, (int)npc.position.Y - 5, ModContent.NPCType<EnforcerAssister>());
+                NPC.NewNPC((int)npc.position.X - 5, (int)npc.position.Y - 5, ModContent.NPCType<EnforcerAssister>());
                 phase = 4;
             }
             if (npc.life < npc.lifeMax * .2 && phase == 4 && Main.expertMode)
             {
-                NPC.NewNPC((int)npc.position.X - 5, (int)npc.position.Y, mod.NPCType<EnforcerAssister>());
-                NPC.NewNPC((int)npc.position.X - 5, (int)npc.position.Y - 5, mod.NPCType<EnforcerAssister>());
-                NPC.NewNPC((int)npc.position.X - 10, (int)npc.position.Y - 10, mod.NPCType<EnforcerAssister>());
-                NPC.NewNPC((int)npc.position.X - 10, (int)npc.position.Y, mod.NPCType<EnforcerAssister>());
-                NPC.NewNPC((int)npc.position.X - 0, (int)npc.position.Y - 5, mod.NPCType<EnforcerAssister>());
-                NPC.NewNPC((int)npc.position.X - 0, (int)npc.position.Y - 10, mod.NPCType<EnforcerAssister>());
-                NPC.NewNPC((int)npc.position.X - 0, (int)npc.position.Y, mod.NPCType<EnforcerAssister>());
-                NPC.NewNPC((int)npc.position.X - 0, (int)npc.position.Y, mod.NPCType<EnforcerAssister>());
+                NPC.NewNPC((int)npc.position.X - 5, (int)npc.position.Y, ModContent.NPCType<EnforcerAssister>());
+                NPC.NewNPC((int)npc.position.X - 5, (int)npc.position.Y - 5, ModContent.NPCType<EnforcerAssister>());
+                NPC.NewNPC((int)npc.position.X - 10, (int)npc.position.Y - 10, ModContent.NPCType<EnforcerAssister>());
+                NPC.NewNPC((int)npc.position.X - 10, (int)npc.position.Y, ModContent.NPCType<EnforcerAssister>());
+                NPC.NewNPC((int)npc.position.X - 0, (int)npc.position.Y - 5, ModContent.NPCType<EnforcerAssister>());
+                NPC.NewNPC((int)npc.position.X - 0, (int)npc.position.Y - 10, ModContent.NPCType<EnforcerAssister>());
+                NPC.NewNPC((int)npc.position.X - 0, (int)npc.position.Y, ModContent.NPCType<EnforcerAssister>());
+                NPC.NewNPC((int)npc.position.X - 0, (int)npc.position.Y, ModContent.NPCType<EnforcerAssister>());
                 phase = 5;
             }
         }
@@ -109,15 +110,14 @@ namespace OurStuffAddon.NPCs.Bosses.LifeEnforcer
                     Main.NewText("I could not stop it...", 250, 200, 200);
                 }
 
-               /* if (OurStuffAddonWorld.HeartStone == false)
+                if (OurStuffAddonWorld.heartStone == false)
                 {
-                    OurStuffAddonWorld.HeartStone = true;
+                    OurStuffAddonWorld.heartStone = true;
                     Main.NewText("Life bursts through the world", 250, 200, 200);
-                    GenerateHeartStone();
                 }
             }
 
-        private void GenerateHeartStone()
+        /*private void GenerateHeartStone()
         {
             int sizeMult = (int)(Math.Floor(Main.maxTilesX / 4200f));
             for (int i = 0; i < 30 * sizeMult; i++)
@@ -131,7 +131,7 @@ namespace OurStuffAddon.NPCs.Bosses.LifeEnforcer
             for (int i = 0; i < 120 * sizeMult; i++)
             {
                 HeartStone.StructureGenSmall(Main.rand.Next(200, Main.maxTilesX - 200), Main.rand.Next(350 * sizeMult, Main.maxTilesY - 400));
-            }*/
-        }
+            }
+        }*/
     }
 }

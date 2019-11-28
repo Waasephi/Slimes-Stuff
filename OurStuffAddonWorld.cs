@@ -18,10 +18,11 @@ namespace OurStuffAddon
         public static bool downedGiantSandSifter = false;
         public static bool downedNeoMothership = false;
         public static bool downedNeoParasite = false;
+        public static bool downedAncientObserver = false;
         public static int LuminescentLagoon = 0;
         public static int Ruin = 0;
         public static int Plague = 0;
-        public static bool HeartStone = false;
+        public static bool heartStone = false;
         public static int sizeMult = (int)(Math.Round(Main.maxTilesX / 4200f)); //Small = 2; Medium = ~3; Large = 4;
 
         public override void Initialize()
@@ -32,7 +33,8 @@ namespace OurStuffAddon
             downedGiantSandSifter = false;
             downedNeoMothership = false;
             downedNeoParasite = false;
-            HeartStone = false;
+            downedAncientObserver = false;
+            heartStone = false;
         }
 
         public override void Load(TagCompound tag)
@@ -42,25 +44,30 @@ namespace OurStuffAddon
             downedCosmicSlime = downed.Contains("CosmicSlime");
             downedLifeEnforcer = downed.Contains("LifeEnforcer");
             downedNeoMothership = downed.Contains("NeoMothership");
-            HeartStone = tag.GetBool("HeartStone");
+            downedAncientObserver = downed.Contains("AncientObserver");
+            heartStone = tag.GetBool("heartStone");
         }
 
         public override TagCompound Save()
         {
+            TagCompound tag = new TagCompound();
             var downed = new List<string>();
             bool obs = false;
             int pwr = 0;
+            tag["heartStone"] = heartStone;
             if (downedGiantSandSifter) downed.Add("GiantSandSifter");
             if (downedLifeEnforcer) downed.Add("LifeEnforcer");
             if (downedCosmicSlime) downed.Add("CosmicSlime");
             if (downedNeoParasite) downed.Add("NeoParasite");
             if (downedNeoMothership) downed.Add("NeoMothership");
+            if (downedAncientObserver) downed.Add("AncientObserver");
 
             return new TagCompound {
                 {"downed", downed},
                 {"enforced", downedLifeEnforcer},
-                {"HeartStone", HeartStone },
+                {"heartStone", heartStone },
             };
+            return tag;
         }
 
         public override void ResetNearbyTileEffects()

@@ -18,6 +18,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.UI;
 
+
 namespace OurStuffAddon
 {
     class OurStuffAddon : Mod
@@ -87,41 +88,81 @@ namespace OurStuffAddon
 });
             RecipeGroup.RegisterGroup("OurStuffAddon:EvilGem", EvilGem);
 
-            RecipeGroup TrueEvilJavelin = new RecipeGroup(() => Lang.misc[37] + " True Evil Javelin", new int[]
+            RecipeGroup TrueEvilDagger = new RecipeGroup(() => Lang.misc[37] + " True Evil Dagger", new int[]
             {
-                ItemType("TrueNightJavelin"),
-                ItemType("TrueClotJavelin"),
+                ItemType("TrueNightDagger"),
+                ItemType("TrueClotDagger"),
             });
 
-            RecipeGroup.RegisterGroup("OurStuffAddon:TrueEvilJavelin", TrueEvilJavelin);
+            RecipeGroup.RegisterGroup("OurStuffAddon:TrueEvilDagger", TrueEvilDagger);
+
+
 
             RecipeGroup TrueEvilBlaster = new RecipeGroup(() => Lang.misc[37] + " True Evil Blaster", new int[]
             {
                 ItemType("TrueNoctem"),
                 ItemType("TrueClotCannon"),
             });
-
-            RecipeGroup.RegisterGroup("OurStuffAddon:TrueEvilBlaster", TrueEvilBlaster);
             RecipeGroup EvilBar = new RecipeGroup(() => Lang.misc[37] + " Evil Bar", new int[]
-{
-                ItemType("DemoniteBar"),
-                ItemType("CrimtaneBar"),
-});
-
+            {
+                ItemID.DemoniteBar,
+                ItemID.CrimtaneBar
+            });
             RecipeGroup.RegisterGroup("OurStuffAddon:EvilBar", EvilBar);
 
+            RecipeGroup EvilMaterial = new RecipeGroup(() => Lang.misc[37] + " Evil Material", new int[]
+            {
+
+                ItemID.ShadowScale,
+                ItemID.TissueSample
+            });
+            RecipeGroup.RegisterGroup("OurStuffAddon:EvilMaterial", EvilMaterial);
+
+            RecipeGroup.RegisterGroup("OurStuffAddon:TrueEvilBlaster", TrueEvilBlaster);
+
         }
-        //BossChecklist
-        public override void PostSetupContent()
+
+    
+
+    //BossChecklist
+    public override void PostSetupContent()
         {
             Mod bossChecklist = ModLoader.GetMod("BossChecklist");
 
             if (bossChecklist != null)
             {
-                bossChecklist.Call("AddBossWithInfo", "Giant Sand Sifter", 1.001f, (Func<bool>)(() => OurStuffAddonWorld.downedGiantSandSifter), string.Format("Use [i:{0}] in the desert", ItemType("SandEmblem")));
+                bossChecklist.Call("AddBossWithInfo", "Giant Sand Sifter", 2.001f, (Func<bool>)(() => OurStuffAddonWorld.downedGiantSandSifter), string.Format("Use [i:{0}] in the desert", ItemType("SandEmblem")));
                 bossChecklist.Call("AddBossWithInfo", "Life Enforcer", 2.001f, (Func<bool>)(() => OurStuffAddonWorld.downedLifeEnforcer), string.Format("Use [i:{0}] underground", ItemType("CrystalHeart")));
                 bossChecklist.Call("AddBossWithInfo", "Cosmic Slime", 15.001f, (Func<bool>)(() => OurStuffAddonWorld.downedCosmicSlime), string.Format("Use [i:{0}] anytime, anywhere.", ItemType("CosmicStarMesh")));
                 bossChecklist.Call("AddBossWithInfo", "Neo Mothership", 5.001f, (Func<bool>)(() => OurStuffAddonWorld.downedNeoMothership), string.Format("Use [i:{0}] anytime, anywhere.", ItemType("NeoLocator")));
+                bossChecklist.Call("AddBossWithInfo", "Ancient Observer", 4.001f, (Func<bool>)(() => OurStuffAddonWorld.downedAncientObserver), string.Format("Use [i:{0}] anytime, in the ruin.", ItemType("RelicPebble")));
+            }
+            Mod bossAssist = ModLoader.GetMod("BossAssist");
+            if (bossAssist != null)
+            {
+                bossAssist.Call("AddBoss", NPCType("GiantSandSifter"), "returned to the sands");
+                bossAssist.Call("AddBoss", NPCType("LifeEnforcer"), "has completed its goal");
+                bossAssist.Call("AddBoss", NPCType("NeoMothership"), "returned to the skies");
+                bossAssist.Call("AddBoss", NPCType("NeoParasite"), "returned to its mothership");
+                bossAssist.Call("AddBoss", NPCType("CosmicSlime"), "returned to the cosmos");
+                bossAssist.Call("AddBoss", NPCType("AncientObserver"), "dissipated into the void");
+                // Example - bossAssist.Call("AddBoss", NPCType("WolfBoss"), " has tainted the heroes");
+                /* List<int> BossLoot = new List<int>()
+                 {
+                     ItemType("CosmicSlimeTreasureBag"), // Order does not matter NEXT UPDATE (v1.2)
+                     ItemType("CosmicCore"),
+                     ItemType("CosmicFragment"),
+                 };
+                     bossAssist.Call("AddStatPage",
+                         1f, // This is progression  position. Refer to Boss Checklist's prog list
+                         NPCType("CosmicSlime"), // NPC ID
+                         Name, // Internal name of your mod
+                         "Cosmic Slime",
+                         (Func<bool>)(() => OurStuffAddonWorld.downedCosmicSlime), // Downed boss bool
+                         ItemType("CosmicStarMesh"), // Spawn Item
+                         BossCollection,
+                         BossLoot,
+                         "CosmicSlime"); // I need a single frame of your boss, a wiki image for example inside your mo*/
             }
         }
     }

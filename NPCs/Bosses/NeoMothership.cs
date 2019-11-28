@@ -58,9 +58,9 @@ namespace OurStuffAddon.NPCs.Bosses
         public override void AI()
         {
             //Phases
-            if (npc.life < npc.lifeMax * 0.1 && phase == 1)
+            if (npc.life < npc.lifeMax * 0.1f && phase == 1)
             {
-                NPC.NewNPC((int)npc.position.X - 50, (int)npc.position.Y, mod.NPCType<NeoParasite>());
+                NPC.NewNPC((int)npc.position.X - 50, (int)npc.position.Y, ModContent.NPCType<NeoParasite>());
                 phase = 2;
             }
         }

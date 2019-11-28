@@ -31,8 +31,8 @@ namespace OurStuffAddon.Items.Melee
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.NightsEdge, 1);
 			recipe.AddIngredient(ItemID.HellstoneBar, 50);
-			recipe.AddTile(TileID.Anvils);
-			recipe.SetResult(this);
+            recipe.AddTile(26);
+            recipe.SetResult(this);
 			recipe.AddRecipe();
 		}
 	}

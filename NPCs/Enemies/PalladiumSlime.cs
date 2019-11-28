@@ -17,8 +17,8 @@ namespace OurStuffAddon.NPCs.Enemies
 			npc.width = 38;
 			npc.height = 28;
             npc.damage = 26;
-            npc.lifeMax = 320;
-            npc.life = 320;
+            npc.lifeMax = 100;
+            npc.life = 100;
 			npc.defense = 10;
 			npc.HitSound = SoundID.NPCHit1;
 			npc.DeathSound = SoundID.NPCDeath1;

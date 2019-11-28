@@ -29,7 +29,7 @@ namespace OurStuffAddon.Items.SpiritDamageClass
 
         private static float PlayerOnGetWeaponKnockback(On.Terraria.Player.orig_GetWeaponKnockback orig, Player self, Item sitem, float knockback)
         {
-            bool isSpiritCaster = sitem.type == OurStuffAddon.Instance.ItemType<LuminaGem>();
+            bool isSpiritCaster = sitem.type == ModContent.ItemType<LuminaVortex>();
             if (isSpiritCaster) sitem.ranged = true;
 
             float kb = orig(self, sitem, knockback);
@@ -39,7 +39,7 @@ namespace OurStuffAddon.Items.SpiritDamageClass
 
         private static int PlayerOnGetWeaponDamage(On.Terraria.Player.orig_GetWeaponDamage orig, Player self, Item sitem)
         {
-            bool isSpiritCaster = sitem.type == OurStuffAddon.Instance.ItemType<LuminaGem>();
+            bool isSpiritCaster = sitem.type == ModContent.ItemType<LuminaVortex>();
             if (isSpiritCaster) sitem.ranged = true;
 
             int dmg = orig(self, sitem);
@@ -58,7 +58,7 @@ namespace OurStuffAddon.Items.SpiritDamageClass
             item.useStyle = 5;
             item.noMelee = true;
             item.Size = new Vector2(18, 46);
-            item.damage = 70;
+            item.damage = 87;
             item.crit = 2;
             item.knockBack = 2;
             item.autoReuse = true;

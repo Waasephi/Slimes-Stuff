@@ -46,7 +46,7 @@ namespace OurStuffAddon.Items.Throwing
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(ItemID.StoneBlock, 10);
             recipe.AddTile(TileID.Anvils);
-            recipe.SetResult(this, 10);
+            recipe.SetResult(this, 50);
             recipe.AddRecipe();
         }
     }

@@ -16,8 +16,8 @@ namespace OurStuffAddon.Items.Consumables
         public override void SetStaticDefaults()
         {
             // DisplayName and Tooltip are automatically set from the .lang files, but below is how it is done normally.
-            // DisplayName.SetDefault("Paper Airplane");
-            // Tooltip.SetDefault("Summons a Paper Airplane to follow aimlessly behind you");
+             DisplayName.SetDefault("Soul of Spirit");
+             Tooltip.SetDefault("Summons an innocent spirit.");
             Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(4, 4));
         }
 
@@ -34,6 +34,14 @@ namespace OurStuffAddon.Items.Consumables
             {
                 player.AddBuff(item.buffType, 3600, true);
             }
+        }
+        public override void AddRecipes()
+        {
+            ModRecipe recipe = new ModRecipe(mod);
+            recipe.AddIngredient(mod, "SpiritShard", 50);
+            recipe.AddTile(mod, "SpiritInfuser");
+            recipe.SetResult(this);
+            recipe.AddRecipe();
         }
     }
 }

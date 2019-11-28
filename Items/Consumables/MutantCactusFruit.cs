@@ -16,8 +16,8 @@ namespace OurStuffAddon.Items.Consumables
         public override void SetStaticDefaults()
         {
             // DisplayName and Tooltip are automatically set from the .lang files, but below is how it is done normally.
-            // DisplayName.SetDefault("Paper Airplane");
-            // Tooltip.SetDefault("Summons a Paper Airplane to follow aimlessly behind you");
+             DisplayName.SetDefault("Mutant Cactus Fruit");
+             Tooltip.SetDefault("Grows a small cactus.");
         }
 
         public override void SetDefaults()

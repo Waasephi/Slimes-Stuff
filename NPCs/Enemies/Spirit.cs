@@ -36,7 +36,7 @@ namespace OurStuffAddon.NPCs.Enemies
                 case 1: Item.NewItem(npc.getRect(), ItemID.Diamond, 1); break;
                 case 2: break;
             }
-            int loots2 = Main.rand.Next(4);
+            int loots2 = Main.rand.Next(3);
             switch (loots2)
             {
                 case 2:
@@ -51,18 +51,12 @@ namespace OurStuffAddon.NPCs.Enemies
 
                     break;
 			}
-            int loots4 = Main.rand.Next(100);
-            switch (loots)
-            {
-                case 1: Item.NewItem(npc.getRect(), mod.ItemType("SoulOfSpirit"), 1); break;
-                case 2: break;
-            }
 
         }
 
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
 		{
-			return SpawnCondition.OverworldNightMonster.Chance * 0.6f;
+			return SpawnCondition.OverworldNightMonster.Chance * 0.7f;
 		}
 
 	}

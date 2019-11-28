@@ -11,7 +11,7 @@ namespace OurStuffAddon.Projectiles.Minions
     {
         public override void SetStaticDefaults()
         {
-            Main.projFrames[projectile.type] = 5;
+            Main.projFrames[projectile.type] = 1;
             Main.projPet[projectile.type] = true;
             ProjectileID.Sets.MinionSacrificable[projectile.type] = true;
             ProjectileID.Sets.MinionTargettingFeature[projectile.type] = true; //This is necessary for right-click targeting
@@ -56,7 +56,7 @@ namespace OurStuffAddon.Projectiles.Minions
         	projectile.rotation += projectile.velocity.X * 0.04f;
         	bool flag64 = projectile.type == mod.ProjectileType("Shroomy");
 			Player player = Main.player[projectile.owner];
-			ModPlayer modPlayer = player.GetModPlayer<ModPlayer>(mod);
+			ModPlayer modPlayer = player.GetModPlayer<ModPlayer>();
 			player.AddBuff(mod.BuffType("ShroomBuff"), 3600);
 			if (flag64)
 			{

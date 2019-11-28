@@ -120,9 +120,9 @@ namespace OurStuffAddon.NPCs.Bosses
         {
             minLength = 20;
             maxLength = 20;
-            tailType = mod.NPCType<GiantSandSifterTail>();
-            bodyType = mod.NPCType<GiantSandSifterBody>();
-            headType = mod.NPCType<GiantSandSifterHead>();
+            tailType = ModContent.NPCType<GiantSandSifterTail>();
+            bodyType = ModContent.NPCType<GiantSandSifterBody>();
+            headType = ModContent.NPCType<GiantSandSifterHead>();
             speed = 5.0f;
             turnSpeed = 0.2f;
             npc.buffImmune[24] = false;

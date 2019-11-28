@@ -1,5 +1,6 @@
 using Terraria;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace OurStuffAddon.Buffs
 {
@@ -17,8 +18,8 @@ namespace OurStuffAddon.Buffs
         public override void Update(Player player, ref int buffIndex)
         {
             player.buffTime[buffIndex] = 18000;
-            player.GetModPlayer<OurStuffAddonPlayer>().BabyCactus = true;
-            bool petProjectileNotSpawned = player.ownedProjectileCounts[mod.ProjectileType("SpiritPet")] <= 0;
+            player.GetModPlayer<OurStuffAddonPlayer>().SpiritPet = true;
+            bool petProjectileNotSpawned = player.ownedProjectileCounts[ProjectileType<Projectiles.Pets.SpiritPet>()] <= 0;
             if (petProjectileNotSpawned && player.whoAmI == Main.myPlayer)
             {
                 Projectile.NewProjectile(player.position.X + (float)(player.width / 2), player.position.Y + (float)(player.height / 2), 0f, 0f, mod.ProjectileType("SpiritPet"), 0, 0f, player.whoAmI, 0f, 0f);

@@ -17,8 +17,8 @@ namespace OurStuffAddon.NPCs.Enemies
 			npc.width = 32;
 			npc.height = 46;
             npc.damage = 50;
-            npc.lifeMax = 300;
-            npc.life = 300;
+            npc.lifeMax = 400;
+            npc.life = 400;
 			npc.defense = 20;
 			npc.HitSound = SoundID.NPCHit4;
 			npc.DeathSound = SoundID.NPCDeath3;
@@ -53,6 +53,15 @@ namespace OurStuffAddon.NPCs.Enemies
                     Item.NewItem(npc.getRect(), mod.ItemType("RelicSword"), Main.rand.Next(1, 1));
                     break;
             }
+            int loots2 = Main.rand.Next(3);
+            if (Main.hardMode) ;
+            switch (loots2)
+            {
+                case 1:
+                    Item.NewItem(npc.getRect(), mod.ItemType("SoulofAntiquity"), Main.rand.Next(1, 1));
+                    break;
+            }
         }
     }
+    
 }

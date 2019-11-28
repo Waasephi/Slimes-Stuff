@@ -34,6 +34,24 @@ namespace OurStuffAddon.NPCs.Enemies
 			aiType = NPCID.ArmoredSkeleton;
 			animationType = NPCID.Skeleton;
 		}
+        public override void NPCLoot()
+        {
+            int loots = Main.rand.Next(2);
+            switch (loots)
+            {
+                case 1:
+                    Item.NewItem(npc.getRect(), mod.ItemType("RelicShard"), Main.rand.Next(2, 3));
+                    break;
+            }
+            int loots2 = Main.rand.Next(3);
+            if (Main.hardMode) ;
+            switch (loots2)
+            {
+                case 1:
+                    Item.NewItem(npc.getRect(), mod.ItemType("SoulofAntiquity"), Main.rand.Next(1, 1));
+                    break;
+            }
+        }
 
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {

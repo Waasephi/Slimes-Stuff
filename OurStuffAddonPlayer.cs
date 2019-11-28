@@ -18,14 +18,13 @@ namespace OurStuffAddon
         public bool BabyCactus;
         public bool blueSlime;
 
-        public float cactusDamage = 1f;
         public override void ResetEffects()
         {
             SpiritPet = false;
             Tippi = false;
             ShroomBuff = false;
-            cactusDamage = 1f;
             blueSlime = false;
+            BabyCactus = false;
         }
         public bool ZoneLuminescentLagoon;
         public bool ZoneRuin;
@@ -40,16 +39,35 @@ namespace OurStuffAddon
         {
             BitsByte flags = new BitsByte();
             flags[0] = ZoneLuminescentLagoon;
-            flags[0] = ZoneRuin;
-            flags[0] = ZonePlague;
+            flags[1] = ZoneRuin;
+            flags[2] = ZonePlague;
             writer.Write(flags);
         }
         public override void ReceiveCustomBiomes(BinaryReader reader)
         {
             BitsByte flags = reader.ReadByte();
             ZoneLuminescentLagoon = flags[0];
-            ZoneRuin = flags[0];
-            ZonePlague = flags[0];
+            ZoneRuin = flags[1];
+            ZonePlague = flags[2];
+        }
+        public override void CopyCustomBiomesTo(Player other)
+        {
+            OurStuffAddonPlayer modOther = other.GetModPlayer<OurStuffAddonPlayer>();
+            modOther.ZoneRuin = ZoneRuin;
+            modOther.ZoneLuminescentLagoon = ZoneLuminescentLagoon;
+        }
+        public override bool CustomBiomesMatch(Player other)
+        {
+            OurStuffAddonPlayer modOther = other.GetModPlayer<OurStuffAddonPlayer>();
+            return ZoneRuin == modOther.ZoneRuin;
+            return ZoneLuminescentLagoon == modOther.ZoneLuminescentLagoon;
+            // If you have several Zones, you might find the &= operator or other logic operators useful:
+            // bool allMatch = true;
+            // allMatch &= ZoneExample == modOther.ZoneExample;
+            // allMatch &= ZoneModel == modOther.ZoneModel;
+            // return allMatch;
+            // Here is an example just using && chained together in one statemeny 
+            // return ZoneExample == modOther.ZoneExample && ZoneModel == modOther.ZoneModel;
         }
     }
 }

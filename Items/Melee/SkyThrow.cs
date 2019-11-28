@@ -35,7 +35,7 @@ namespace OurStuffAddon.Items.Melee
 
             item.UseSound = SoundID.Item1;
             item.value = Item.sellPrice(gold: 2);
-            item.shoot = mod.ProjectileType<SkyThrowProjectile>();
+            item.shoot = ModContent.ProjectileType<SkyThrowProjectile>();
         }
 
         public override void AddRecipes()

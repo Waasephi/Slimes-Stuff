@@ -21,8 +21,8 @@ namespace OurStuffAddon.Items.Accessories
         }
         public override void SetDefaults()
         {
-            item.width = 22;
-            item.height = 20;
+            item.width = 32;
+            item.height = 32;
             item.value = 10000;
             item.rare = 2;
             item.accessory = true;

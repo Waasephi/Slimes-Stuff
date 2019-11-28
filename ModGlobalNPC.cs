@@ -23,7 +23,7 @@ namespace OurStuffAddon
                         Item.NewItem(npc.getRect(), mod.ItemType("BrokenHeroBlaster"), Main.rand.Next(1, 1));
                         break;
                     case 3:
-                        Item.NewItem(npc.getRect(), mod.ItemType("BrokenHeroJavelin"), Main.rand.Next(1, 1));
+                        Item.NewItem(npc.getRect(), mod.ItemType("BrokenHeroDagger"), Main.rand.Next(1, 1));
                         break;
                 }
             }
@@ -134,9 +134,15 @@ namespace OurStuffAddon
             }
             if (npc.type == 113)
             {
-                if (Main.rand.Next(5) == 0) //20% chance
+                    int loots = Main.rand.Next(3);
+                switch (loots)
                 {
+                    case 1:
                     Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("ThrowerEmblem"));
+                        break;
+                    case 2:
+                        Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("SpiricistEmblem"));
+                        break;
                 }
             }
             if (Main.player[(int)Player.FindClosest(npc.position, npc.width, npc.height)].ZoneUnderworldHeight && Main.rand.Next(800) == 0)
@@ -186,6 +192,27 @@ namespace OurStuffAddon
             if (Main.player[(int)Player.FindClosest(npc.position, npc.width, npc.height)].ZoneDesert && Main.rand.Next(800) == 0)
             {
                 Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("BottledDune"));
+            }
+            if (npc.type == 198)
+            {
+                if (Main.rand.Next(2) == 0) //50% chance
+                {
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("SolarPebble"), Main.rand.Next(1, 2));
+                }
+            }
+            if (npc.type == 199)
+            {
+                if (Main.rand.Next(2) == 0) //50% chance
+                {
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("SolarPebble"), Main.rand.Next(1, 2));
+                }
+            }
+            if (npc.type == 226)
+            {
+                if (Main.rand.Next(3) == 0) //33% chance
+                {
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("SolarPebble"), Main.rand.Next(2, 3));
+                }
             }
         }
     }

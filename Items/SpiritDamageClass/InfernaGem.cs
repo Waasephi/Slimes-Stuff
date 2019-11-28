@@ -29,7 +29,7 @@ namespace OurStuffAddon.Items.SpiritDamageClass
 
         private static float PlayerOnGetWeaponKnockback(On.Terraria.Player.orig_GetWeaponKnockback orig, Player self, Item sitem, float knockback)
         {
-            bool isSpiritCaster = sitem.type == OurStuffAddon.Instance.ItemType<InfernaGem>();
+            bool isSpiritCaster = sitem.type == ModContent.ItemType<InfernaGem>();
             if (isSpiritCaster) sitem.ranged = true;
 
             float kb = orig(self, sitem, knockback);
@@ -39,7 +39,7 @@ namespace OurStuffAddon.Items.SpiritDamageClass
 
         private static int PlayerOnGetWeaponDamage(On.Terraria.Player.orig_GetWeaponDamage orig, Player self, Item sitem)
         {
-            bool isSpiritCaster = sitem.type == OurStuffAddon.Instance.ItemType<InfernaGem>();
+            bool isSpiritCaster = sitem.type == ModContent.ItemType<InfernaGem>();
             if (isSpiritCaster) sitem.ranged = true;
 
             int dmg = orig(self, sitem);
@@ -76,7 +76,7 @@ namespace OurStuffAddon.Items.SpiritDamageClass
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddRecipeGroup("OurStuffAddon:EvilGem");
-            recipe.AddIngredient(ItemID.Hellstone, 20);
+            recipe.AddIngredient(ItemID.HellstoneBar, 20);
             recipe.AddTile(mod, "SpiritInfuser");
             recipe.SetResult(this);
             recipe.AddRecipe();

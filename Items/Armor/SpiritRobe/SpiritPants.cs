@@ -21,7 +21,7 @@ namespace OurStuffAddon.Items.Armor.SpiritRobe
             item.height = 10;
             item.value = 100;
             item.rare = 2;
-            item.defense = 18;
+            item.defense = 15;
         }
 
 

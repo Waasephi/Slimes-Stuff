@@ -42,8 +42,6 @@ namespace OurStuffAddon.NPCs.Bosses
         {
             if (!Main.expertMode)
             {
-
-                if (Main.rand.Next(0) == 0)
                     Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("NeoPickaxe"));
                 Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("NeoniumBar"), Main.rand.Next(10, 15));
             }

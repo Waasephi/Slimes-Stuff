@@ -25,8 +25,8 @@ namespace OurStuffAddon.Items.Materials{
             item.width = 14;
             item.height = 28;
             item.value = 100;                
-            item.rare = 4;
-			item.expert = true;
+            item.rare = 9;
+			item.expert = false;
 			item.autoReuse = true;
         }
 
@@ -34,8 +34,8 @@ namespace OurStuffAddon.Items.Materials{
         {
             ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod, "SpiriciteCrystal", 5);
-            recipe.AddIngredient(ItemID.ChlorophyteBar, 5);
-            recipe.AddIngredient(ItemID.Ectoplasm, 5);
+            recipe.AddIngredient(ItemID.ChlorophyteBar, 2);
+            recipe.AddIngredient(ItemID.Ectoplasm, 2);
             recipe.AddTile(mod, "SpiritInfuser");
             recipe.SetResult(this);
             recipe.AddRecipe();

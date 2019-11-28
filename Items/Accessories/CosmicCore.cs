@@ -16,12 +16,12 @@ namespace OurStuffAddon.Items.Accessories
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Cosmic Core");
-            Tooltip.SetDefault("Greatly Increased Thrown Speed");
+            Tooltip.SetDefault("Greatly Increased Thrown Velocity");
             Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(6, 4));
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-            player.meleeSpeed += 3f;
+            player.thrownVelocity += 3f;
         }
         public override void SetDefaults()
         {

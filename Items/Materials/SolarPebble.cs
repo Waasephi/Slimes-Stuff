@@ -16,7 +16,7 @@ namespace OurStuffAddon.Items.Materials{
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Solar Pebble");
-            Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(11, 11));
+            Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(7, 11));
         }
         public override void SetDefaults()
         {
@@ -25,7 +25,7 @@ namespace OurStuffAddon.Items.Materials{
             item.width = 18;
             item.height = 18;
             item.value = 100;                
-            item.rare = 4;
+            item.rare = 3;
 			item.expert = false;
 			item.autoReuse = true;
         }

@@ -25,7 +25,7 @@ namespace OurStuffAddon.Items.Armor.Outlaw
 
         public override void UpdateEquip(Player player)
         {
-            player.thrownDamage *= 1.7f;
+            player.thrownDamage *= 1.07f;
             player.statLifeMax2 += 10;
             //player.maxMinions++;
             //player.AddBuff(BuffID.Shine, 2);

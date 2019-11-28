@@ -81,13 +81,13 @@ namespace OurStuffAddon.NPCs.Bosses
             if (npc.life < npc.lifeMax * .8 && phase == 1)
             {
                 phase = 2;
-                NPC.NewNPC((int)npc.position.X - 50, (int)npc.position.Y, mod.NPCType<CosmicSlimeMinion>());
+                NPC.NewNPC((int)npc.position.X - 50, (int)npc.position.Y, ModContent.NPCType<CosmicSlimeMinion>());
                 Main.PlaySound(15, (int)npc.position.X, (int)npc.position.Y, 0);
                 Main.NewText("Assist me my minion!", 200, 0, 200);
             }
             if (npc.life < npc.lifeMax * .6 && phase == 2)
             {
-                NPC.NewNPC((int)npc.position.X - 50, (int)npc.position.Y, mod.NPCType<CosmicSlimeMinion>());
+                NPC.NewNPC((int)npc.position.X - 50, (int)npc.position.Y, ModContent.NPCType<CosmicSlimeMinion>());
                 phase = 3;
                 Main.PlaySound(15, (int)npc.position.X, (int)npc.position.Y, 0);
                 Main.NewText("I see you are stronger then I first thought. No matter!", 200, 0, 100);
@@ -95,7 +95,7 @@ namespace OurStuffAddon.NPCs.Bosses
             }
             if (npc.life < npc.lifeMax * .4 && phase == 3)
             {
-                NPC.NewNPC((int)npc.position.X - 50, (int)npc.position.Y, mod.NPCType<CosmicSlimeMinion>());
+                NPC.NewNPC((int)npc.position.X - 50, (int)npc.position.Y, ModContent.NPCType<CosmicSlimeMinion>());
                 phase = 4;
                 Main.PlaySound(15, (int)npc.position.X, (int)npc.position.Y, 0);
                 Main.NewText("ENOUGH!", 200, 0, 0);
@@ -103,11 +103,11 @@ namespace OurStuffAddon.NPCs.Bosses
             }
             if (npc.life < npc.lifeMax * .2 && phase == 4 && Main.expertMode)
             {
-                NPC.NewNPC((int)npc.position.X - 50, (int)npc.position.Y, mod.NPCType<CosmicSlimeMinion>());
-                NPC.NewNPC((int)npc.position.X - 50, (int)npc.position.Y, mod.NPCType<SolarSlimeMinion>());
-                NPC.NewNPC((int)npc.position.X - 50, (int)npc.position.Y, mod.NPCType<NebulaSlimeMinion>());
-                NPC.NewNPC((int)npc.position.X - 50, (int)npc.position.Y, mod.NPCType<StardustSlimeMinion>());
-                NPC.NewNPC((int)npc.position.X - 50, (int)npc.position.Y, mod.NPCType<VortexSlimeMinion>());
+                NPC.NewNPC((int)npc.position.X - 50, (int)npc.position.Y, ModContent.NPCType<CosmicSlimeMinion>());
+                NPC.NewNPC((int)npc.position.X - 50, (int)npc.position.Y, ModContent.NPCType<SolarSlimeMinion>());
+                NPC.NewNPC((int)npc.position.X - 50, (int)npc.position.Y, ModContent.NPCType<NebulaSlimeMinion>());
+                NPC.NewNPC((int)npc.position.X - 50, (int)npc.position.Y, ModContent.NPCType<StardustSlimeMinion>());
+                NPC.NewNPC((int)npc.position.X - 50, (int)npc.position.Y, ModContent.NPCType<VortexSlimeMinion>());
                 phase = 5;
                 Main.PlaySound(15, (int)npc.position.X, (int)npc.position.Y, 0);
                 Main.NewText("ASSIST ME MY COMRADES! WE MUST DEFEAT THIS MENACE!", 225, 0, 0);

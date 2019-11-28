@@ -22,8 +22,8 @@ namespace OurStuffAddon.Items.Ranged
 			item.ranged = true;
 			item.width = 40;
 			item.height = 40;
-			item.useTime = 20;
-			item.useAnimation = 20;
+			item.useTime = 30;
+			item.useAnimation = 30;
 			item.useStyle = 5;
 			item.useAmmo = AmmoID.Arrow;
 			item.shoot = 4;

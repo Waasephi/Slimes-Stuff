@@ -33,7 +33,7 @@ namespace OurStuffAddon.NPCs.Enemies
         
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            return spawnInfo.player.ZoneUndergroundDesert ? 0.1f : 0f;
+            return spawnInfo.player.ZoneUndergroundDesert && NPC.downedBoss1 ? 0.1f : 0f;
         }
 
         int attackCounter = 0;
@@ -112,9 +112,9 @@ namespace OurStuffAddon.NPCs.Enemies
         {
             minLength = 10;
             maxLength = 20;
-            tailType = mod.NPCType<SandSifterTail>();
-            bodyType = mod.NPCType<SandSifterBody>();
-            headType = mod.NPCType<SandSifterHead>();
+            tailType = ModContent.NPCType<SandSifterTail>();
+            bodyType = ModContent.NPCType<SandSifterBody>();
+            headType = ModContent.NPCType<SandSifterHead>();
             speed = 2.0f;
             turnSpeed = 0.1f;
             npc.buffImmune[24] = false;

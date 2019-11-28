@@ -14,7 +14,6 @@ namespace OurStuffAddon.Items.Tools
 
         public override void SetDefaults()
         {
-            item.damage = 1;
             item.melee = true;
             item.width = 40;
             item.height = 40;

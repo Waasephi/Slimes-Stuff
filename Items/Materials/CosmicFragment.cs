@@ -25,10 +25,11 @@ namespace OurStuffAddon.Items.Materials{
             item.width = 32;
             item.height = 32;
             item.value = 100;                
-            item.rare = 4;
-			item.expert = true;
+            item.rare = 11;
+			item.expert = false;
 			item.autoReuse = true;
             ItemID.Sets.ItemNoGravity[item.type] = true;
+            ItemID.Sets.ItemIconPulse[item.type] = true;
         }
 
         public override void AddRecipes()

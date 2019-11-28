@@ -9,20 +9,20 @@ namespace OurStuffAddon.Projectiles.Pets
         public override void SetStaticDefaults()
         {
             // DisplayName.SetDefault("Paper Airplane"); // Automatic from .lang files
-            Main.projFrames[projectile.type] = 8;
+            Main.projFrames[projectile.type] = 4;
             Main.projPet[projectile.type] = true;
         }
 
         public override void SetDefaults()
         {
-            projectile.CloneDefaults(ProjectileID.Bunny);
-            aiType = ProjectileID.Bunny;
+            projectile.CloneDefaults(ProjectileID.ZephyrFish);
+            aiType = ProjectileID.ZephyrFish;
         }
 
         public override bool PreAI()
         {
             Player player = Main.player[projectile.owner];
-            player.bunny = false; // Relic from aiType
+            player.zephyrfish = false; // Relic from aiType
             return true;
         }
 

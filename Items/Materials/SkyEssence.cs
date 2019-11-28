@@ -27,7 +27,7 @@ namespace OurStuffAddon.Items.Materials
             item.width = 80;
             item.height = 112;
             item.value = 10000;                
-            item.rare = 4;
+            item.rare = 0;
 			item.expert = false;
 			item.autoReuse = true;
             ItemID.Sets.ItemNoGravity[item.type] = true;

@@ -9,12 +9,12 @@ namespace OurStuffAddon.Items.Accessories
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Golden Soul");
-            Tooltip.SetDefault("Brings the fragility of the mind out into the body (Doubles damage but halves defence)");
+            Tooltip.SetDefault("Brings the fragility of the mind out into the body (+50% damage but halves defence)");
         }
         public override void UpdateAccessory(Player player, bool hideVisual) //Where it says "p" is the variable used to represent "player". In this case, every p stands for player. This is called when the accessory is on.
         {
             player.statDefense /= 2;
-            player.allDamage *= 2;
+            player.allDamage *= 1.5f;
         }
         public override void SetDefaults()
         {

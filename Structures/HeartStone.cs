@@ -1,5 +1,6 @@
 ﻿using Terraria;
 using Terraria.ID;
+using OurStuffAddon.Tiles;
 
 namespace OurStuffAddon.Structures
 {

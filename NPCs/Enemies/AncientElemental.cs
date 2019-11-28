@@ -17,13 +17,13 @@ namespace OurStuffAddon.NPCs.Enemies
 			npc.width = 40;
 			npc.height = 40;
             npc.damage = 25;
-            npc.lifeMax = 700;
-            npc.life = 700;
+            npc.lifeMax = 200;
+            npc.life = 200;
 			npc.defense = 3;
 			npc.HitSound = SoundID.NPCHit7;
 			npc.DeathSound = SoundID.NPCDeath14;
 			npc.value = 100f;
-			npc.knockBackResist = 0f;
+			npc.knockBackResist = 0.1f;
 			npc.aiStyle = 91;
 			aiType = NPCID.GraniteFlyer;
 			animationType = NPCID.GraniteFlyer;
@@ -36,6 +36,14 @@ namespace OurStuffAddon.NPCs.Enemies
             {
                 case 1:
                     Item.NewItem(npc.getRect(), mod.ItemType("RelicShard"), Main.rand.Next(2, 3));
+                    break;
+            }
+                        int loots2 = Main.rand.Next(3);
+            if (Main.hardMode);
+            switch (loots2)
+            {
+                case 1:
+                    Item.NewItem(npc.getRect(), mod.ItemType("SoulofAntiquity"), Main.rand.Next(1, 1));
                     break;
             }
         }

@@ -24,7 +24,7 @@ namespace OurStuffAddon.Items.Materials{
             item.width = 32;
             item.height = 19;
             item.value = 100;                
-            item.rare = 4;
+            item.rare = 7;
 			item.expert = false;
 			item.autoReuse = true;
         }

@@ -15,9 +15,9 @@ namespace OurStuffAddon.Tiles
             Main.tileLighted[Type] = false;
             Main.tileBlockLight[Type] = true;
             Main.tileSpelunker[Type] = true;
-            AddMapEntry(new Color(0, 255, 0));
+            AddMapEntry(new Color(0, 200, 0));
             mineResist = 1f;
-            minPick = 101;
+            minPick = 120;
             drop = mod.ItemType("ParepheneOre");
             soundType = 21;
             dustType = 1;

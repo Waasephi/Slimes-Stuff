@@ -1,5 +1,5 @@
 author = Waasephi
-version = 1.2
-displayName = [c/b00000:Slime's Stuff] [c/00f2ff:Spirit Class Update!]
+version = 1.2.3.4
+displayName = [c/00f2ff:Slime's Stuff]
 homepage = https://discord.gg/7cfCTMJ
 

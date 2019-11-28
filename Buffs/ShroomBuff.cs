@@ -1,5 +1,6 @@
 using Terraria;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace OurStuffAddon.Buffs
 {
@@ -16,7 +17,7 @@ namespace OurStuffAddon.Buffs
         public override void Update(Player player, ref int buffIndex)
         {
             OurStuffAddonPlayer modPlayer = player.GetModPlayer<OurStuffAddonPlayer>();
-            if (player.ownedProjectileCounts[mod.ProjectileType("Shroomy")] > 0)
+            if (player.ownedProjectileCounts[ProjectileType<Projectiles.Minions.Shroomy>()] > 0)
             {
                 modPlayer.ShroomBuff = true;
             }

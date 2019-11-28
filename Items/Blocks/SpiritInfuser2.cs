@@ -5,8 +5,10 @@ namespace OurStuffAddon.Items.Blocks
 {
     public class SpiritInfuser2 : ModItem
     {
-
-
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Spirit Infuser");
+        }
 
         public override void SetDefaults()
         {

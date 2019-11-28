@@ -22,10 +22,10 @@ namespace OurStuffAddon.Items.Materials
         {
             item.maxStack = 999;                 //this is where you set the max stack of item
             item.consumable = false;           //this make that the item is consumable when used
-            item.width = 80;
-            item.height = 112;
+            item.width = 28;
+            item.height = 42;
             item.value = 10000;                
-            item.rare = 4;
+            item.rare = 3;
 			item.expert = false;
 			item.autoReuse = true;
         }

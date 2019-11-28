@@ -29,7 +29,7 @@ namespace OurStuffAddon.Items.SpiritDamageClass
 
         private static float PlayerOnGetWeaponKnockback(On.Terraria.Player.orig_GetWeaponKnockback orig, Player self, Item sitem, float knockback)
         {
-            bool isSpiritCaster = sitem.type == OurStuffAddon.Instance.ItemType<CorroGem>();
+            bool isSpiritCaster = sitem.type == ModContent.ItemType<CorroGem>();
             if (isSpiritCaster) sitem.ranged = true;
 
             float kb = orig(self, sitem, knockback);
@@ -39,7 +39,7 @@ namespace OurStuffAddon.Items.SpiritDamageClass
 
         private static int PlayerOnGetWeaponDamage(On.Terraria.Player.orig_GetWeaponDamage orig, Player self, Item sitem)
         {
-            bool isSpiritCaster = sitem.type == OurStuffAddon.Instance.ItemType<CorroGem>();
+            bool isSpiritCaster = sitem.type == ModContent.ItemType<CorroGem>();
             if (isSpiritCaster) sitem.ranged = true;
 
             int dmg = orig(self, sitem);

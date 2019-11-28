@@ -15,7 +15,7 @@ namespace OurStuffAddon.Tiles
             Main.tileLighted[Type] = true;
             Main.tileBlockLight[Type] = true;
             Main.tileSpelunker[Type] = true;
-            AddMapEntry(new Color(0, 200, 0));
+            AddMapEntry(new Color(0, 255, 0));
             mineResist = 1f;
             minPick = 101;
             drop = mod.ItemType("NeoniumOre");

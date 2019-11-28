@@ -21,7 +21,7 @@ namespace OurStuffAddon.Items.Blocks
             item.width = 12;
             item.height = 14;
             item.value = 80;
-            item.createTile = mod.TileType<Tiles.PlaguePetal>();
+            item.createTile = ModContent.TileType<Tiles.PlaguePetal>();
         }
     }
 }

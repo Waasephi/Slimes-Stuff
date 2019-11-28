@@ -14,7 +14,7 @@ namespace OurStuffAddon.Tiles
             Main.tileSolid[Type] = true;
             Main.tileLighted[Type] = false;
             Main.tileBlockLight[Type] = true;
-            AddMapEntry(new Color(40, 40, 40));
+            AddMapEntry(new Color(30, 30, 50));
             mineResist = 1f;
             minPick = 20;
             drop = mod.ItemType("SpiriciteBrick");

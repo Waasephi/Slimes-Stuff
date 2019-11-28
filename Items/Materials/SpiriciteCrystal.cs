@@ -16,18 +16,17 @@ namespace OurStuffAddon.Items.Materials{
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Spiricite Crystal");
-			Tooltip.SetDefault("It eminates pure emotion.");
-			Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(1, 7));
+			Tooltip.SetDefault("It eminates pure emotion... Its so cold.");
 		}
         public override void SetDefaults()
         {
             item.maxStack = 999;                 //this is where you set the max stack of item
             item.consumable = false;           //this make that the item is consumable when used
-            item.width = 14;
-            item.height = 28;
+            item.width = 18;
+            item.height = 18;
             item.value = 100;                
-            item.rare = 4;
-			item.expert = true;
+            item.rare = 9;
+			item.expert = false;
 			item.autoReuse = true;
         }
 

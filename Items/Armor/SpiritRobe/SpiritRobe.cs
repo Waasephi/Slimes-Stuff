@@ -12,7 +12,7 @@ namespace OurStuffAddon.Items.Armor.SpiritRobe
         {
             base.SetStaticDefaults();
             DisplayName.SetDefault("Spirit Robe");
-            Tooltip.SetDefault("+10% [c/00f2ff:Spirit Crit]" +
+            Tooltip.SetDefault("+20% [c/00f2ff:Spirit Crit], +15% Endurance" +
                 "\n[c/00f2ff:-Spirit Class-]");
         }
 
@@ -28,7 +28,8 @@ namespace OurStuffAddon.Items.Armor.SpiritRobe
         public override void UpdateEquip(Player player)
         {
             SpiritDamagePlayer modPlayer = SpiritDamagePlayer.ModPlayer(player);
-            modPlayer.spiritCrit += 10; // add 5% crit
+            modPlayer.spiritCrit += 20; // add 5% crit
+            player.endurance *= 1.15f;
             //player.statManaMax2 += 20;
             //player.maxMinions++;
             //player.AddBuff(BuffID.Shine, 2);
@@ -40,6 +41,7 @@ namespace OurStuffAddon.Items.Armor.SpiritRobe
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(mod, "SpiritInfusedBar", 20);
+            recipe.AddIngredient(mod, "Ectoheart");
             recipe.AddTile(mod, "SpiritInfuser");
             recipe.SetResult(this);
             recipe.AddRecipe();

@@ -40,7 +40,7 @@ namespace OurStuffAddon.Tiles
             {
                 2, //TileID.Grass
 				109, // TileId.HallowedGrass
-				mod.TileType<PlaguedSoil>()
+				ModContent.TileType<PlaguedSoil>()
             };
             TileObjectData.newTile.AnchorAlternateTiles = new[]
             {
@@ -67,8 +67,8 @@ namespace OurStuffAddon.Tiles
             int stage = Main.tile[i, j].frameX / 18;
             if (stage == 2)
             {
-                Item.NewItem(i * 16, j * 16, 0, 0, mod.ItemType<Items.Blocks.PlaguePetalSeeds>());
-                Item.NewItem(i * 16, j * 16, 0, 0, mod.ItemType<Items.Materials.PlaguePetal>());
+                Item.NewItem(i * 16, j * 16, 0, 0, ModContent.ItemType<Items.Blocks.PlaguePetalSeeds>());
+                Item.NewItem(i * 16, j * 16, 0, 0, ModContent.ItemType<Items.Materials.PlaguePetal>());
             }
             return false;
         }

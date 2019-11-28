@@ -31,13 +31,17 @@ namespace OurStuffAddon.Projectiles
             if (projectile.ai[0] >= 99999f)       //how much time the projectile can travel before landing
             {
                 projectile.velocity.Y = projectile.velocity.Y + 5f;    // projectile fall velocity
-                projectile.velocity.X = projectile.velocity.X * 1f;    // projectile velocity
+                projectile.velocity.X = projectile.velocity.X * 1.5f;    // projectile velocity
             }
         }
         public override bool OnTileCollide(Vector2 oldVelocity)
         {                                                           // sound that the projectile make when hitting the terrain
             {
                 projectile.Kill();
+                if (Main.rand.Next(2) == 0)
+                {
+                    Item.NewItem((int)projectile.position.X, (int)projectile.position.Y, projectile.width, projectile.height, (mod.ItemType("SeafoamJavelin")));
+                }
 
                 Main.PlaySound(2, (int)projectile.position.X, (int)projectile.position.Y, 10);
             }

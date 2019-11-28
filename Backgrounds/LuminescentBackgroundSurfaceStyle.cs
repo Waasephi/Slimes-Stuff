@@ -14,7 +14,7 @@ namespace OurStuffAddon.Backgrounds
     {
         public override bool ChooseBgStyle()
         {
-            return !Main.gameMenu && Main.player[Main.myPlayer].GetModPlayer<OurStuffAddonPlayer>(mod).ZoneLuminescentLagoon;   //ZoneCustomBiome is the bool that u add in MyPlayer so make sure they are the same
+            return !Main.gameMenu && Main.player[Main.myPlayer].GetModPlayer<OurStuffAddonPlayer>().ZoneLuminescentLagoon;   //ZoneCustomBiome is the bool that u add in MyPlayer so make sure they are the same
         }
 
         // Use this to keep far Backgrounds like the mountains.

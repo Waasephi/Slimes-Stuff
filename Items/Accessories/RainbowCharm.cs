@@ -8,6 +8,7 @@ using Terraria.ModLoader;
 using Terraria.Graphics.Effects;
 using Terraria.Graphics.Shaders;
 using Terraria.DataStructures;
+using OurStuffAddon.Items.SpiritDamageClass;
 
 namespace OurStuffAddon.Items.Accessories
 {
@@ -17,7 +18,7 @@ namespace OurStuffAddon.Items.Accessories
         {
             DisplayName.SetDefault("Rainbow Charm");
             Tooltip.SetDefault("Gives slightly weaker effects of all charms without the downsides.");
-            Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(8, 7));
+            Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(8, 8));
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
@@ -28,6 +29,8 @@ namespace OurStuffAddon.Items.Accessories
             player.rangedDamage += .1f;
             player.thrownDamage += .1f;
             player.pickSpeed += .1f;
+            SpiritDamagePlayer modPlayer = SpiritDamagePlayer.ModPlayer(player);
+            modPlayer.spiritDamageMult += .1f;
             player.detectCreature = true;
             player.dangerSense = true;
             player.findTreasure = true;
@@ -35,8 +38,8 @@ namespace OurStuffAddon.Items.Accessories
         }
         public override void SetDefaults()
         {
-            item.width = 22;
-            item.height = 20;
+            item.width = 32;
+            item.height = 32;
             item.value = 10000;
             item.rare = 2;
             item.accessory = true;
@@ -51,6 +54,7 @@ namespace OurStuffAddon.Items.Accessories
             recipe.AddIngredient(mod, "SummonerCharm");
             recipe.AddIngredient(mod, "WarriorCharm");
             recipe.AddIngredient(mod, "RangerCharm");
+            recipe.AddIngredient(mod, "SpiricistCharm");
             recipe.AddTile(114);
             recipe.SetResult(this);
             recipe.AddRecipe();

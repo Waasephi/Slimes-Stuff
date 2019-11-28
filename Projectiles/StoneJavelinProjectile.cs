@@ -28,17 +28,20 @@ namespace OurStuffAddon.Projectiles
         public override void AI()
         {
             projectile.ai[0] += 1f;
-            if (projectile.ai[0] >= 75f)       //how much time the projectile can travel before landing
+            if (projectile.ai[0] >= 310f)       //how much time the projectile can travel before landing
             {
-                projectile.velocity.Y = projectile.velocity.Y + 5f;    // projectile fall velocity
-                projectile.velocity.X = projectile.velocity.X * 0.5f;    // projectile velocity
+                projectile.velocity.Y = projectile.velocity.Y * 0.2f;    // projectile fall velocity
+                projectile.velocity.X = projectile.velocity.X * 2f;    // projectile velocity
             }
         }
         public override bool OnTileCollide(Vector2 oldVelocity)
         {                                                           // sound that the projectile make when hitting the terrain
             {
                 projectile.Kill();
-
+                if (Main.rand.Next(3) == 0)
+                {
+                    Item.NewItem((int)projectile.position.X, (int)projectile.position.Y, projectile.width, projectile.height, (mod.ItemType("StoneJavelin")));
+                }
                 Main.PlaySound(2, (int)projectile.position.X, (int)projectile.position.Y, 10);
             }
             return false;

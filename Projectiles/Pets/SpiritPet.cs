@@ -22,7 +22,7 @@ namespace OurStuffAddon.Projectiles.Pets
         public override bool PreAI()
         {
             Player player = Main.player[projectile.owner];
-            player.bunny = false; // Relic from aiType
+            player.zephyrfish = false; // Relic from aiType
             return true;
         }
 
