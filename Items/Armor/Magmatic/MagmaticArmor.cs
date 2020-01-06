@@ -21,7 +21,7 @@ namespace OurStuffAddon.Items.Armor.Magmatic
             item.width = 24;
             item.height = 24;
             item.value = 100;
-            item.rare = 5;
+            item.rare = 10;
             item.defense = 10;
         }
 

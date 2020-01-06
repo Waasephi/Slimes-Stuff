@@ -214,6 +214,13 @@ namespace OurStuffAddon
                     Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("SolarPebble"), Main.rand.Next(2, 3));
                 }
             }
+            if (npc.type == 541)
+            {
+                if (Main.rand.Next(3) == 0) //33% chance
+                {
+                    Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("SunBlade"));
+                }
+            }
         }
     }
 }

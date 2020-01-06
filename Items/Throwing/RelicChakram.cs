@@ -26,7 +26,7 @@ namespace OurStuffAddon.Items.Throwing
                 item.useStyle = 1;
                 item.knockBack = 3;
                 item.value = 8;
-                item.rare = 6;
+                item.rare = -1;
                 item.shootSpeed = 12f;
                 item.shoot = mod.ProjectileType("RelicChakramProjectile");
                 item.UseSound = SoundID.Item1;

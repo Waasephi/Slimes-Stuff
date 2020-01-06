@@ -28,19 +28,16 @@ namespace OurStuffAddon
         }
         public bool ZoneLuminescentLagoon;
         public bool ZoneRuin;
-        public bool ZonePlague;
         public override void UpdateBiomes()
         {
             ZoneLuminescentLagoon = OurStuffAddonWorld.LuminescentLagoon > 100;
             ZoneRuin = OurStuffAddonWorld.Ruin > 100;
-            ZonePlague = OurStuffAddonWorld.Plague > 100;
         }
         public override void SendCustomBiomes(BinaryWriter writer)
         {
             BitsByte flags = new BitsByte();
             flags[0] = ZoneLuminescentLagoon;
             flags[1] = ZoneRuin;
-            flags[2] = ZonePlague;
             writer.Write(flags);
         }
         public override void ReceiveCustomBiomes(BinaryReader reader)
@@ -48,7 +45,6 @@ namespace OurStuffAddon
             BitsByte flags = reader.ReadByte();
             ZoneLuminescentLagoon = flags[0];
             ZoneRuin = flags[1];
-            ZonePlague = flags[2];
         }
         public override void CopyCustomBiomesTo(Player other)
         {

@@ -28,7 +28,7 @@ namespace OurStuffAddon.Items.Throwing
             item.useStyle = 1;
             item.knockBack = 4;
             item.value = 10;
-            item.rare = 2;
+            item.rare = -1;
             item.reuseDelay = 3;    //this is the item delay
             item.UseSound = SoundID.Item1;
             item.autoReuse = false;       //this make the item auto reuse

@@ -22,7 +22,7 @@ namespace OurStuffAddon.Items.Accessories
         {
             item.width = 22;
             item.height = 20;
-            item.value = 10000;
+            item.value = Item.sellPrice(gold: 2);
             item.rare = 2;
             item.accessory = true;
         }
