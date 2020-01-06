@@ -31,7 +31,8 @@ namespace OurStuffAddon.Items.Consumables
 
             if (Main.rand.Next(0) == 0)
                 player.QuickSpawnItem(mod.ItemType("RelicShard"), Main.rand.Next(3, 5));
-                player.QuickSpawnItem(mod.ItemType("AncientPebble"), Main.rand.Next(1, 1));
+            player.QuickSpawnItem(mod.ItemType("ChippedStone"), Main.rand.Next(12, 24));
+            player.QuickSpawnItem(mod.ItemType("AncientPebble"), Main.rand.Next(1, 1));
         }
         public override int BossBagNPC => mod.NPCType("AncientObserver");
     }

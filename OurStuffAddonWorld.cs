@@ -21,7 +21,6 @@ namespace OurStuffAddon
         public static bool downedAncientObserver = false;
         public static int LuminescentLagoon = 0;
         public static int Ruin = 0;
-        public static int Plague = 0;
         public static bool heartStone = false;
         public static int sizeMult = (int)(Math.Round(Main.maxTilesX / 4200f)); //Small = 2; Medium = ~3; Large = 4;
 
@@ -74,14 +73,12 @@ namespace OurStuffAddon
         {
             LuminescentLagoon = 0;
             Ruin = 0;
-            Plague = 0;
         }
 
         public override void TileCountsAvailable(int[] tileCounts)
         {
             LuminescentLagoon = tileCounts[mod.TileType("LuminescentRock")];       //this make the public static int customBiome counts as customtileblock
             Ruin = tileCounts[mod.TileType("AncientStone")] + tileCounts[mod.TileType("FadedStone")] + tileCounts[mod.TileType("BlueFadedStone")] + tileCounts[mod.TileType("RedFadedStone")] + tileCounts[mod.TileType("GreenFadedStone")];
-            Plague = tileCounts[mod.TileType("PlagueRock")] + tileCounts[mod.TileType("PlaguedSoil")];
         }
         public override void ModifyWorldGenTasks(List<GenPass> tasks, ref float totalWeight)
         {

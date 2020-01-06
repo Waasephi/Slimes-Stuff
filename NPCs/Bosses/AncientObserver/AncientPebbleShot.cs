@@ -15,6 +15,8 @@ namespace OurStuffAddon.NPCs.Bosses.AncientObserver
             projectile.width = 20;
             projectile.height = 26;
             projectile.friendly = false;
+            projectile.hostile = true;
+            projectile.damage = 5;
             projectile.aiStyle = 0;
             projectile.thrown = true;
             projectile.penetrate = 1;      //this is how many enemy this projectile penetrate before disappear
@@ -30,10 +32,32 @@ namespace OurStuffAddon.NPCs.Bosses.AncientObserver
             projectile.ai[0] += 1f;
             projectile.rotation = (float)Math.Atan2((double)projectile.velocity.Y, (double)projectile.velocity.X) + 1.57f;
             projectile.localAI[0] += 1f;
-            if (projectile.ai[0] >= 100f)       //how much time the projectile can travel before landing
+            if (projectile.ai[0] >= 300f)       //how much time the projectile can travel before landing
             {
                 projectile.velocity.X = projectile.velocity.X * 1.5f;    // projectile velocity
                 projectile.Kill();
+            }
+            {
+                projectile.rotation = (float)Math.Atan2((double)projectile.velocity.Y, (double)projectile.velocity.X) + 1.57f;
+                if (projectile.localAI[0] == 0f)
+                {
+                    Main.PlaySound(SoundID.Item20, projectile.position);
+                    projectile.localAI[0] = 1f;
+                }
+                int dust = Dust.NewDust(projectile.position, projectile.width, projectile.height, 66, 0f, 0f, 100, new Color(140, 150, 140), 1f);
+                Main.dust[dust].velocity *= 0.1f;
+                if (projectile.velocity == Vector2.Zero)
+                {
+                    Main.dust[dust].velocity.Y -= 1f;
+                    Main.dust[dust].scale = 1.2f;
+                }
+                else
+                {
+                    Main.dust[dust].velocity += projectile.velocity * 0.2f;
+                }
+                Main.dust[dust].position.X = projectile.Center.X + 4f + (float)Main.rand.Next(-2, 3);
+                Main.dust[dust].position.Y = projectile.Center.Y + (float)Main.rand.Next(-2, 3);
+                Main.dust[dust].noGravity = true;
             }
         }
         public override bool OnTileCollide(Vector2 oldVelocity)
@@ -45,17 +69,5 @@ namespace OurStuffAddon.NPCs.Bosses.AncientObserver
             }
             return false;
         }
-        /*public override bool PreDraw(SpriteBatch sb, Color lightColor) //this is where the animation happens
-        {
-            projectile.frameCounter++; //increase the frameCounter by one
-            if (projectile.frameCounter >= 5) //once the frameCounter has reached 10 - change the 10 to change how fast the projectile animates
-            {
-                projectile.frame++; //go to the next frame
-                projectile.frameCounter = 0; //reset the counter
-                if (projectile.frame > 3) //if past the last frame
-                    projectile.frame = 0; //go back to the first frame
-            }
-            return true;
-        }*/
     }
 }

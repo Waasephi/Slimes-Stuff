@@ -57,6 +57,7 @@ namespace OurStuffAddon.Items.SpiritDamageClass
             item.useAnimation = 20;
             item.useStyle = 5;
             item.noMelee = true;
+            item.value = Item.sellPrice(gold: 1);
             item.Size = new Vector2(18, 46);
             item.damage = 20;
             item.crit = 2;

@@ -22,10 +22,10 @@ namespace OurStuffAddon.Items.Magic
             item.useStyle = 5;
             item.knockBack = 2;
             item.value = 100;
-            item.rare = 6;
+            item.rare = -1;
             item.UseSound = SoundID.Item43;
             item.autoReuse = true;
-            item.shoot = 597;
+            item.shoot = 126;
             item.shootSpeed = 6f;
             item.mana = 5;
             item.noMelee = true;

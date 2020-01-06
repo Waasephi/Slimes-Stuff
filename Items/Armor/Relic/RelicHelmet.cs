@@ -27,7 +27,7 @@ namespace OurStuffAddon.Items.Armor.Relic
             item.width = 18;
             item.height = 10;
             item.value = 100;
-            item.rare = 2;
+            item.rare = -1;
             item.defense = 4;
         }
 
@@ -56,6 +56,7 @@ namespace OurStuffAddon.Items.Armor.Relic
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(ItemID.GoldHelmet);
             recipe.AddIngredient(mod, "RelicShard", 10);
+            recipe.AddIngredient(mod, "ChippedStone", 5);
             recipe.AddTile(TileID.Anvils);
             recipe.SetResult(this);
             recipe.AddRecipe();

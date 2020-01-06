@@ -21,9 +21,9 @@ namespace OurStuffAddon.NPCs.Bosses.AncientObserver
         {
             npc.width = 92;
             npc.height = 68;
-            npc.damage = 20;
-            npc.lifeMax = 8000;
-            npc.life = 8000;
+            npc.damage = 30;
+            npc.lifeMax = 5000;
+            npc.life = 5000;
             npc.defense = 5;
             npc.HitSound = SoundID.NPCHit7;
             npc.DeathSound = SoundID.NPCDeath5;
@@ -32,6 +32,7 @@ namespace OurStuffAddon.NPCs.Bosses.AncientObserver
             npc.boss = true;
             Lighting.AddLight(npc.Center, 0.7f, 0.7f, 0f);
             bossBag = mod.ItemType("AncientObserverTreasureBag");
+            music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/boss2");
             npc.lavaImmune = true;
             npc.noGravity = true;
             npc.noTileCollide = true;
@@ -41,6 +42,7 @@ namespace OurStuffAddon.NPCs.Bosses.AncientObserver
             if (!Main.expertMode)
             {
                 Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("AncientShard"), Main.rand.Next(3, 5));
+                Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("ChippedStone"), Main.rand.Next(10, 20));
             }
 
 
@@ -63,6 +65,9 @@ namespace OurStuffAddon.NPCs.Bosses.AncientObserver
             npc.TargetClosest(true);
             return true;
         }
+
+
+
         public override void BossLoot(ref string name, ref int potionType)
         {
             potionType = 188;
@@ -71,49 +76,47 @@ namespace OurStuffAddon.NPCs.Bosses.AncientObserver
                 if (OurStuffAddonWorld.downedAncientObserver == false)
                 {
                     Main.NewText("*Unintelligable Screech*", 70, 70, 0);
+                    Main.NewText("Ancient knowledge has been given to you.", 70, 70, 0);
                 }
                 else
                     Main.NewText("Very well...", 70, 70, 0);
-            }
-
-            if (OurStuffAddonWorld.downedAncientObserver == false)
-            {
-                Main.NewText("*Unintelligable Screech*", 70, 70, 0);
-                Main.NewText("Ancient knowledge has been given to you.", 70, 70, 0);
             }
         }
 
         public override void AI()
         {
-            if (attackTimer == 0)
-            {
-                if (attackState >= 1 && attackState <= 4)
-                {
-                    attackState = 5;
-                    attackTimer = 30;
-                }
-                else
-                {
-                    attackState = Main.rand.Next(4) + 1;
-                    attackTimer = 30;
-                }
-            }
+
 
             if (attackState >= 1 && attackState <= 4)
             {
                 Vector2 goalPosition = Main.LocalPlayer.position + new Vector2(240, 0).RotatedBy(MathHelper.Pi / 2 * attackState) - npc.position;
                 Vector2 shootDirection = new Vector2(-6, 0).RotatedBy(MathHelper.Pi / 2 * attackState);
                 npc.position += goalPosition * 0.4f;
-                if (attackTimer % 40 == 0)
+                if (attackTimer % 30 == 0)
                 {
-                    Projectile.NewProjectile(npc.Center, shootDirection, mod.ProjectileType("AncientPebbleShot"), npc.damage, 5, Main.LocalPlayer.whoAmI);
+                    Projectile.NewProjectile(npc.Center, shootDirection, mod.ProjectileType("AncientPebbleShot"), 5, 5, Main.LocalPlayer.whoAmI);
                 }
             }
-            else if (attackState == 5 && attackTimer == 30)
+            else if (attackState == 5 && attackTimer == 0)
             {
                 npc.velocity = npc.DirectionTo(Main.LocalPlayer.position) * 8f;
             }
+
             attackTimer--;
+
+            if (attackTimer == 0)
+            {
+                if (attackState >= 1 && attackState <= 4)
+                {
+                    attackState = 5;
+                    attackTimer = 35;
+                }
+                else
+                {
+                    attackState = Main.rand.Next(4) + 1;
+                    attackTimer = 35;
+                }
+            }
         }
     }
 }
