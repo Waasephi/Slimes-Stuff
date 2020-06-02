@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 
 namespace OurStuffAddon.Dusts
 {
-	public class PlagueWaterSplash : ModDust
+	public class PlagueWaterSplashDust : ModDust
 	{
 		public override void SetDefaults()
 		{
