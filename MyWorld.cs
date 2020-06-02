@@ -76,17 +76,16 @@ namespace OurStuffAddon
 
 		public override void TileCountsAvailable(int[] tileCounts)
 		{
-			LuminescentLagoon = tileCounts[mod.TileType("LuminescentRock")];       //this make the public static int customBiome counts as customtileblock
+			LuminescentLagoon = tileCounts[mod.TileType("LuminescentRock")]; //this make the public static int customBiome counts as customtileblock
 			Ruin = tileCounts[mod.TileType("AncientStone")] + tileCounts[mod.TileType("FadedStone")] + tileCounts[mod.TileType("BlueFadedStone")] + tileCounts[mod.TileType("RedFadedStone")] + tileCounts[mod.TileType("GreenFadedStone")];
 		}
 
 		public override void ModifyWorldGenTasks(List<GenPass> tasks, ref float totalWeight)
 		{
 			int genIndex = tasks.FindIndex(genpass => genpass.Name.Equals("Shinies"));
+
 			if (genIndex == -1)
-			{
 				return;
-			}
 
 			// Because world generation is like layering several images ontop of each other, we need to do some steps between the original world generation steps.
 
@@ -99,7 +98,6 @@ namespace OurStuffAddon
 				// ExampleModOres is a method seen below.
 				tasks.Insert(ShiniesIndex + 1, new PassLegacy("Submerging Crystals", SeafoamCrystals));
 				// Next, we insert our step directly after the original "Shinies" step.
-				// ExampleModOres is a method seen below.
 				tasks.Insert(ShiniesIndex + 1, new PassLegacy("Generating Trenagon", TrenagonOre));
 				tasks.Insert(ShiniesIndex + 1, new PassLegacy("Generating Phasite", PhasiteOre));
 				tasks.Insert(ShiniesIndex + 1, new PassLegacy("Generating Parephene", ParepheneOre));
@@ -110,6 +108,7 @@ namespace OurStuffAddon
 			tasks.Insert(genIndex + 1, new PassLegacy("Ruin", delegate (GenerationProgress progress)
 			{
 				progress.Message = "Destroying Civilizations";
+
 				for (int i = 3; i < Main.maxTilesX / 1400; i++)       //900 is how many biomes. the bigger is the number = less biomes
 				{
 					int X = WorldGen.genRand.Next(3, Main.maxTilesX - 1000);
@@ -119,9 +118,11 @@ namespace OurStuffAddon
 					WorldGen.TileRunner(X, Y, 400, WorldGen.genRand.Next(2, 3), TileType, false, 1f, 2f, true, true);  //350 is how big is the biome     100, 200 this changes how random it looks.
 				}
 			}));
+
 			tasks.Insert(genIndex + 1, new PassLegacy("LuminescentLagoon", delegate (GenerationProgress progress)
 			{
 				progress.Message = "Illuminating The Underground";
+
 				for (int i = 0; i < Main.maxTilesX / 1300; i++)       //900 is how many biomes. the bigger is the number = less biomes
 				{
 					int X = WorldGen.genRand.Next(1, Main.maxTilesX - 800);
@@ -175,13 +176,6 @@ namespace OurStuffAddon
 
 				// Then, we call WorldGen.TileRunner with random "strength" and random "steps", as well as the Tile we wish to place. Feel free to experiment with strength and step to see the shape they generate.
 				WorldGen.TileRunner(x, y, WorldGen.genRand.Next(6, 8), WorldGen.genRand.Next(4, 6), mod.TileType("TrenagonOre"), false, 0f, 0f, false, true);
-
-				// Alternately, we could check the tile already present in the coordinate we are interested. Wrapping WorldGen.TileRunner in the following condition would make the ore only generate in Snow.
-				// Tile tile = Framing.GetTileSafely(x, y);
-				// if (tile.active() && tile.type == TileID.SnowBlock)
-				// {
-				// 	WorldGen.TileRunner(.....);
-				// }
 			}
 		}
 
@@ -201,13 +195,6 @@ namespace OurStuffAddon
 
 				// Then, we call WorldGen.TileRunner with random "strength" and random "steps", as well as the Tile we wish to place. Feel free to experiment with strength and step to see the shape they generate.
 				WorldGen.TileRunner(x, y, WorldGen.genRand.Next(5, 7), WorldGen.genRand.Next(6, 8), mod.TileType("ParepheneOre"), false, 0f, 0f, false, true);
-
-				// Alternately, we could check the tile already present in the coordinate we are interested. Wrapping WorldGen.TileRunner in the following condition would make the ore only generate in Snow.
-				// Tile tile = Framing.GetTileSafely(x, y);
-				// if (tile.active() && tile.type == TileID.SnowBlock)
-				// {
-				// 	WorldGen.TileRunner(.....);
-				// }
 			}
 		}
 
@@ -227,13 +214,6 @@ namespace OurStuffAddon
 
 				// Then, we call WorldGen.TileRunner with random "strength" and random "steps", as well as the Tile we wish to place. Feel free to experiment with strength and step to see the shape they generate.
 				WorldGen.TileRunner(x, y, WorldGen.genRand.Next(7, 9), WorldGen.genRand.Next(4, 6), mod.TileType("PhasiteOre"), false, 0f, 0f, false, true);
-
-				// Alternately, we could check the tile already present in the coordinate we are interested. Wrapping WorldGen.TileRunner in the following condition would make the ore only generate in Snow.
-				// Tile tile = Framing.GetTileSafely(x, y);
-				// if (tile.active() && tile.type == TileID.SnowBlock)
-				// {
-				// 	WorldGen.TileRunner(.....);
-				// }
 			}
 		}
 
@@ -253,13 +233,6 @@ namespace OurStuffAddon
 
 				// Then, we call WorldGen.TileRunner with random "strength" and random "steps", as well as the Tile we wish to place. Feel free to experiment with strength and step to see the shape they generate.
 				WorldGen.TileRunner(x, y, WorldGen.genRand.Next(2, 4), WorldGen.genRand.Next(2, 4), mod.TileType("ShadowCrystalOre"), false, 0f, 0f, false, true);
-
-				// Alternately, we could check the tile already present in the coordinate we are interested. Wrapping WorldGen.TileRunner in the following condition would make the ore only generate in Snow.
-				// Tile tile = Framing.GetTileSafely(x, y);
-				// if (tile.active() && tile.type == TileID.SnowBlock)
-				// {
-				// 	WorldGen.TileRunner(.....);
-				// }
 			}
 		}
 
@@ -279,13 +252,6 @@ namespace OurStuffAddon
 
 				// Then, we call WorldGen.TileRunner with random "strength" and random "steps", as well as the Tile we wish to place. Feel free to experiment with strength and step to see the shape they generate.
 				WorldGen.TileRunner(x, y, WorldGen.genRand.Next(6, 8), WorldGen.genRand.Next(4, 6), mod.TileType("NeoniumOre"), false, 0f, 0f, false, true);
-
-				// Alternately, we could check the tile already present in the coordinate we are interested. Wrapping WorldGen.TileRunner in the following condition would make the ore only generate in Snow.
-				// Tile tile = Framing.GetTileSafely(x, y);
-				// if (tile.active() && tile.type == TileID.SnowBlock)
-				// {
-				// 	WorldGen.TileRunner(.....);
-				// }
 			}
 		}
 	}
