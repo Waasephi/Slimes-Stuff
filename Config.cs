@@ -14,7 +14,7 @@ namespace OurStuffAddon
 		public static void Load()
 		{
 			bool success = ReadConfig();
-
+			
 			if (!success)
 			{
 				ErrorLogger.Log("Could not read OurStuffAddon's config file, creating new config file");

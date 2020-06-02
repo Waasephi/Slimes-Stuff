@@ -2,4 +2,3 @@ author = Waasephi
 version = 1.2.3.4
 displayName = [c/77765e:Slime's] [c/00cda5:Stuff]
 homepage = https://discord.gg/7cfCTMJ
-
