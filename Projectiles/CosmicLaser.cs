@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 
 namespace OurStuffAddon.Projectiles
 {
-	public class CosmicLaser : ModProjectile
+	public class CosmicLaserProjectile : ModProjectile
 	{
 		public int grounded = 0;
 
