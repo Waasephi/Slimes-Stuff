@@ -6,24 +6,24 @@ namespace OurStuffAddon.Structures
 	public class HeartStone
 	{
 		private static readonly int[,] _HeartStoneBig = new int[,]
-{
+		{
 			{ 0,1,1,0,1,1,0},
 			{ 1,1,1,1,1,1,1},
 			{ 1,1,1,1,1,1,1},
 			{ 0,1,1,1,1,1,0},
 			{ 0,1,1,1,1,0,0},
 			{ 0,0,0,1,0,0,0},
-};
+		};
 
 		private static readonly int[,] _HeartStoneMed = new int[,]
-{
+		{
 			{ 0,1,1,0,1,1,0},
 			{ 1,1,1,1,1,1,1},
 			{ 1,1,1,1,1,1,1},
 			{ 0,1,1,1,1,1,0},
 			{ 0,1,1,1,1,0,0},
 			{ 0,0,0,1,0,0,0},
-};
+		};
 
 		private static readonly int[,] _HeartStoneSmall = new int[,]
 		{
@@ -35,10 +35,10 @@ namespace OurStuffAddon.Structures
 			{ 0,0,0,1,0,0,0},
 		};
 
-		/**
+		/*
          * 0 = Do Nothing
          * 1 = Heart Stone
-         * */
+         */
 
 		public static void StructureGenBig(int xPosO, int yPosO)
 		{
@@ -51,7 +51,7 @@ namespace OurStuffAddon.Structures
 						if (_HeartStoneBig[j, i] == 1)
 						{
 							WorldGen.KillTile(xPosO + i, yPosO + j);
-							WorldGen.PlaceTile(xPosO + i, yPosO + j, SlimesStuffMod.instance.TileType("HeartStone"), true, true);
+							WorldGen.PlaceTile(xPosO + i, yPosO + j, SlimesStuffMod.Instance.TileType("HeartStone"), true, true);
 						}
 					}
 				}
@@ -69,7 +69,7 @@ namespace OurStuffAddon.Structures
 						if (_HeartStoneMed[j, i] == 1)
 						{
 							WorldGen.KillTile(xPosO + i, yPosO + j);
-							WorldGen.PlaceTile(xPosO + i, yPosO + j, SlimesStuffMod.instance.TileType("HeartStone"), true, true);
+							WorldGen.PlaceTile(xPosO + i, yPosO + j, SlimesStuffMod.Instance.TileType("HeartStone"), true, true);
 						}
 					}
 				}
@@ -87,7 +87,7 @@ namespace OurStuffAddon.Structures
 						if (_HeartStoneSmall[j, i] == 1)
 						{
 							WorldGen.KillTile(xPosO + i, yPosO + j);
-							WorldGen.PlaceTile(xPosO + i, yPosO + j, SlimesStuffMod.instance.TileType("HeartStone"), true, true);
+							WorldGen.PlaceTile(xPosO + i, yPosO + j, SlimesStuffMod.Instance.TileType("HeartStone"), true, true);
 						}
 					}
 				}
@@ -97,8 +97,10 @@ namespace OurStuffAddon.Structures
 		private static bool TileCheckSafe(int i, int j)
 		{
 			int type = Main.tile[i, j].type;
+
 			if (i > 0 && i < Main.maxTilesX - 1 && j > 0 && j < Main.maxTilesY - 1 && (type == TileID.Stone))
 				return true;
+
 			return false;
 		}
 	}
