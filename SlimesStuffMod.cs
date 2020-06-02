@@ -1,4 +1,3 @@
-using ReLogic.Graphics;
 using System;
 using Terraria;
 using Terraria.ID;
@@ -6,6 +5,7 @@ using Terraria.ModLoader;
 
 namespace OurStuffAddon
 {
+	//TODO Please make homepage a forum
 	public class SlimesStuffMod : Mod
 	{
 		public static SlimesStuffMod Instance => ModContent.GetInstance<SlimesStuffMod>();
@@ -29,6 +29,7 @@ namespace OurStuffAddon
 		}
 
 		//TODO plz no obsolete
+		[Obsolete]
 		public override void AddRecipeGroups()
 		{
 			RecipeGroup EvilBlade = new RecipeGroup(() => Lang.misc[37] + " Evil Blade", new int[]
