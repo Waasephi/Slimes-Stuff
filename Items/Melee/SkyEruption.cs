@@ -23,10 +23,10 @@ namespace OurStuffAddon.Items.Melee
             item.knockBack = 4;
             item.value = 10000;
             item.rare = 2;
-            item.shoot = 9;
+            item.shoot = mod.ProjectileType("EruptionProjectile");
             item.UseSound = SoundID.Item1;
             item.autoReuse = true;
-            item.shootSpeed = 7f;
+            item.shootSpeed = 10f;
         }
 
         public override void AddRecipes()
@@ -39,13 +39,6 @@ namespace OurStuffAddon.Items.Melee
             recipe.AddTile(26);
             recipe.SetResult(this);
             recipe.AddRecipe();
-        }
-        public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
-        {
-            // Here we manually spawn the 2nd projectile, manually specifying the projectile type that we wish to shoot.
-            Projectile.NewProjectile(position.X, position.Y, speedX *= 2, speedY *= 2, ProjectileID.EnchantedBeam, damage, knockBack, player.whoAmI);
-            Projectile.NewProjectile(position.X, position.Y, speedX *= 2, speedY *= 2, ProjectileID.IceBolt, damage, knockBack, player.whoAmI);
-            return true;
         }
     }
 }

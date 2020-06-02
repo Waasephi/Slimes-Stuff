@@ -19,7 +19,7 @@ namespace OurStuffAddon.Items.Armor.Neonium
         {
             base.SetStaticDefaults();
             DisplayName.SetDefault("Neonium Helmet");
-            Tooltip.SetDefault("Increased ranged crit.");
+            Tooltip.SetDefault("7% Increased ranged crit.");
         }
 
         public override void SetDefaults()

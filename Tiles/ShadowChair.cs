@@ -23,6 +23,7 @@ namespace OurStuffAddon.Tiles
             TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
             TileObjectData.newAlternate.Direction = TileObjectDirection.PlaceRight; //allows me to place example chairs facing the same way as the player
             TileObjectData.addAlternate(1); //facing right will use the second texture style
+            TileObjectData.newTile.DrawYOffset = 2;
             TileObjectData.addTile(Type);
             AddToArray(ref TileID.Sets.RoomNeeds.CountsAsChair);
             ModTranslation name = CreateMapEntryName();

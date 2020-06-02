@@ -22,6 +22,7 @@ namespace OurStuffAddon.Items.Accessories
             item.value = 10000;
             item.rare = 2;
             item.accessory = true;
+            item.expert = true;
         }
     }
 }

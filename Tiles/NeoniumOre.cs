@@ -15,14 +15,15 @@ namespace OurStuffAddon.Tiles
             Main.tileLighted[Type] = true;
             Main.tileBlockLight[Type] = true;
             Main.tileSpelunker[Type] = true;
-            AddMapEntry(new Color(0, 255, 0));
+            Main.tileMergeDirt[Type] = true;
             mineResist = 1f;
-            minPick = 101;
+            minPick = 100;
             drop = mod.ItemType("NeoniumOre");
             soundType = 21;
             dustType = 1;
             ModTranslation name = CreateMapEntryName();
             name.SetDefault("Neonium Ore");
+            AddMapEntry(new Color(0, 255, 0), name);
             //soundStyle = 1;
         }
 

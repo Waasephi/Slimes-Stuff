@@ -8,7 +8,7 @@ namespace OurStuffAddon.Items.Consumables
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Neo Parasite Treasure Bag");
-            Tooltip.SetDefault("{$CommonItemTooltip.RightClickToOpen}(2 Expert Items, Both Ranged, Not Guaranteed)");
+            Tooltip.SetDefault("{$CommonItemTooltip.RightClickToOpen}(2 Expert Items, Both Ranged)");
         }
 
         public override void SetDefaults()
@@ -33,7 +33,7 @@ namespace OurStuffAddon.Items.Consumables
             if (Main.rand.Next(0) == 0)
                 player.QuickSpawnItem(mod.ItemType("NeoPickaxe"));
             player.QuickSpawnItem(mod.ItemType("NeoniumBar"), Main.rand.Next(10, 15));
-            int loots = Main.rand.Next(5);
+            int loots = Main.rand.Next(2);
             switch (loots)
             {
                 case 1:

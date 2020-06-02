@@ -15,7 +15,7 @@ namespace OurStuffAddon.Tiles
             Main.tileLighted[Type] = false;
             Main.tileBlockLight[Type] = true;
             Main.tileSpelunker[Type] = true;
-            AddMapEntry(new Color(0, 200, 0));
+            Main.tileMergeDirt[Type] = true;
             mineResist = 1f;
             minPick = 50;
             drop = mod.ItemType("TrenagonOre");
@@ -23,6 +23,7 @@ namespace OurStuffAddon.Tiles
             dustType = 1;
             ModTranslation name = CreateMapEntryName();
             name.SetDefault("Trenagon Ore");
+            AddMapEntry(new Color(0, 200, 0), name);
             //soundStyle = 1;
         }
 

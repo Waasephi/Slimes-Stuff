@@ -9,7 +9,7 @@ namespace OurStuffAddon.Items.Accessories
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Summoner Charm");
-            Tooltip.SetDefault("Harness the power of the Mind and push your Leadership beyond (Lowers Minion Damage By 1/5 But Gives 2 Minion Slots).");
+            Tooltip.SetDefault("Harness the power of the Mind and push your Leadership beyond (Lowers Minion Damage By 20% But Gives 2 Minion Slots).");
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {

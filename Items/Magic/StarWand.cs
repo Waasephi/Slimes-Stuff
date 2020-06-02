@@ -20,13 +20,13 @@ namespace OurStuffAddon.Items.Magic
             item.height = 20;
             item.useTime = 25;
             item.useAnimation = 25;
-            item.useStyle = 1;
+            item.useStyle = 5;
             item.knockBack = 2;
             item.value = 100;
             item.rare = 6;
             item.UseSound = SoundID.Item43;
             item.autoReuse = true;
-            item.shoot = mod.ProjectileType("StarWandProjectile");
+            item.shoot = 12;
             item.shootSpeed = 7f;
             item.mana = 5;
             item.noMelee = true;

@@ -27,7 +27,7 @@ namespace OurStuffAddon.Items.Ranged
             item.knockBack = 4;
             item.value = 10000;
             item.rare = 2;
-            item.UseSound = SoundID.Item41;
+            item.UseSound = SoundID.Item11;
             item.autoReuse = true;
             item.shoot = 10;    //idk why but all the guns in the vanilla source have this
             item.shootSpeed = 12f;
@@ -38,7 +38,6 @@ namespace OurStuffAddon.Items.Ranged
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(mod, "BlasterGunparts", 1);
             recipe.AddIngredient(mod, "BrokenHeroBlaster", 1);
             recipe.AddIngredient(mod, "Nox", 1);
             recipe.AddTile(134);

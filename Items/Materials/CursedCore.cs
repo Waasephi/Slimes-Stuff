@@ -16,6 +16,7 @@ namespace OurStuffAddon.Items.Materials{
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Cursed Core");
+            Tooltip.SetDefault("It burns to hold.");
         }
         public override void SetDefaults()
         {
@@ -23,7 +24,7 @@ namespace OurStuffAddon.Items.Materials{
             item.consumable = false;           //this make that the item is consumable when used
             item.width = 42;
             item.height = 42;
-            item.value = 100;                
+            item.value = Item.sellPrice(0, 1, 25, 0);
             item.rare = 7;
 			item.expert = false;
 			item.autoReuse = true;

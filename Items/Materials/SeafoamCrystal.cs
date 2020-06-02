@@ -31,6 +31,7 @@ namespace OurStuffAddon.Items.Materials{
             item.expert = false;
 			item.autoReuse = true;
             item.useTurn = true;
+            item.createTile = mod.TileType("SeafoamCrystal");
         }
     }
 }

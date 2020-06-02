@@ -14,8 +14,8 @@ namespace OurStuffAddon.NPCs.Enemies
 
 		public override void SetDefaults()
 		{
-			npc.width = 38;
-			npc.height = 28;
+			npc.width = 24;
+			npc.height = 22;
             npc.damage = 26;
             npc.lifeMax = 100;
             npc.life = 100;

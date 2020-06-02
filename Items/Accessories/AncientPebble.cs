@@ -15,9 +15,6 @@ namespace OurStuffAddon.Items.Accessories
         {
 
             player.allDamage *= 1.07f;
-            player.detectCreature = true;
-            player.dangerSense = true;
-            player.findTreasure = true;
         }
         public override void SetDefaults()
         {

@@ -19,7 +19,7 @@ namespace OurStuffAddon.Items.Armor.Relic
         {
             base.SetStaticDefaults();
             DisplayName.SetDefault("Relic Helmet");
-            Tooltip.SetDefault("Increased Thrown Crit");
+            Tooltip.SetDefault("7% Increased Thrown Crit");
         }
 
         public override void SetDefaults()

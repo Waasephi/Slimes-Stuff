@@ -28,6 +28,7 @@ namespace OurStuffAddon.NPCs.Enemies
 			aiType = NPCID.BlueJellyfish;
 			animationType = NPCID.BlueJellyfish;
             Lighting.AddLight(npc.Center, 0, 1.5f, 2f);
+            npc.noGravity = true;
         }
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {

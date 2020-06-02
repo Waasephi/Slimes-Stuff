@@ -28,10 +28,21 @@ namespace OurStuffAddon.NPCs.Enemies
 			aiType = NPCID.CaveBat;
 			animationType = NPCID.CaveBat;
             Lighting.AddLight(npc.Center, 0, 5f, 7f);
+            npc.noGravity = true;
         }
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
             return spawnInfo.player.GetModPlayer<OurStuffAddonPlayer>().ZoneLuminescentLagoon ? 0.4f : 0f;
+        }
+        public override void NPCLoot()
+        {
+            int loots = Main.rand.Next(2);
+            switch (loots)
+            {
+                case 1:
+                    Item.NewItem(npc.getRect(), mod.ItemType("SeafoamScale"), Main.rand.Next(1, 2));
+                    break;
+            }
         }
     }
 }

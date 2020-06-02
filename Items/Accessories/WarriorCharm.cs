@@ -9,7 +9,7 @@ namespace OurStuffAddon.Items.Accessories
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Warrior Charm");
-            Tooltip.SetDefault("Harness the power of the Body and push your Strength beyond (Raises Melee Damage By 1/3 But Lowers Melee Speed).");
+            Tooltip.SetDefault("Harness the power of the Body and push your Strength beyond (Raises Melee Damage By 30% But Lowers Melee Speed).");
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {

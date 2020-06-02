@@ -24,7 +24,8 @@ namespace OurStuffAddon.Items.Materials{
             item.consumable = false;           //this make that the item is consumable when used
             item.width = 14;
             item.height = 28;
-            item.value = 100;                
+            item.value = Item.sellPrice(0, 0, 50, 0);
+            item.value = Item.buyPrice(0, 2, 0, 0);
             item.rare = 9;
 			item.expert = false;
 			item.autoReuse = true;

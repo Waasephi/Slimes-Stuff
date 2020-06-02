@@ -34,7 +34,7 @@ namespace OurStuffAddon.Items.Consumables
             player.QuickSpawnItem(mod.ItemType("SandSifterScale"), Main.rand.Next(10, 15));
             player.QuickSpawnItem(mod.ItemType("SandSifterMandible"), Main.rand.Next(10, 15));
             player.QuickSpawnItem(mod.ItemType("GiantSandSifterEye"));
-            int loots = Main.rand.Next(5);
+            int loots = Main.rand.Next(6);
             switch (loots)
             {
                 case 1:
@@ -48,6 +48,9 @@ namespace OurStuffAddon.Items.Consumables
                     break;
                 case 4:
                     player.QuickSpawnItem(mod.ItemType("DesertFang"), Main.rand.Next(100, 100));
+                    break;
+                case 5:
+                    player.QuickSpawnItem(mod.ItemType("SifterStaff"), Main.rand.Next(1, 1));
                     break;
             }
         }

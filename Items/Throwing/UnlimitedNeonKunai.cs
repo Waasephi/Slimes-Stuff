@@ -21,8 +21,8 @@ namespace OurStuffAddon.Items.Throwing
             item.damage = 30;           //this is the item damage
             item.thrown = true;             //this make the item do throwing damage
             item.noMelee = true;
-            item.width = 22;
-            item.height = 22;
+            item.width = 30;
+            item.height = 30;
             item.useTime = 10;       //this is how fast you use the item
             item.useAnimation = 10;   //this is how fast the animation when the item is used
             item.useStyle = 1;

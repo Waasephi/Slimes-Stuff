@@ -17,6 +17,8 @@ namespace OurStuffAddon.Tiles
             AddMapEntry(new Color(140, 150, 140));
             mineResist = 1f;
             minPick = 20;
+            Main.tileMerge[1][ModContent.TileType<Tiles.AncientStone>()] = true;
+            Main.tileMerge[ModContent.TileType<Tiles.AncientStone>()][ModContent.TileType<Tiles.LuminescentRock>()] = true;
             drop = mod.ItemType("AncientStone");
             soundType = 21;
             dustType = 1;

@@ -1,6 +1,8 @@
-﻿using Terraria;
+﻿using Microsoft.Xna.Framework;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using System.Collections.Generic;
 
 namespace OurStuffAddon.Items.Accessories
 {
@@ -9,16 +11,14 @@ namespace OurStuffAddon.Items.Accessories
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Obsidian Gauntlet");
-            Tooltip.SetDefault("Harness the power of the fire and ice in your hands. (+4 Defence, Buffed Fire Gauntlet and Frost Stone Buffs)");
+            Tooltip.SetDefault("Harness the power of the stone in your hands. Attacks inflict Obsidiflame.");
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
-            player.magmaStone = true;
-            player.frostBurn = true;
+           // OurStuffAddonPlayer.Obsidiflame = true;
             player.meleeSpeed += 0.3f;
             player.kbGlove = true;
             player.meleeDamage += 0.3f;
-            player.statDefense += 4;
         }
         public override void SetDefaults()
         {

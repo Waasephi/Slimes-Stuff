@@ -12,8 +12,8 @@ namespace OurStuffAddon.Projectiles
 
         public override void SetDefaults()
         {
-            projectile.width = 12;
-            projectile.height = 12;
+            projectile.width = 30;
+            projectile.height = 34;
             projectile.friendly = true;
             projectile.aiStyle = 1;
             projectile.thrown = true;

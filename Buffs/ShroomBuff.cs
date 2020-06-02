@@ -1,6 +1,10 @@
+using Microsoft.Xna.Framework;
+using System;
 using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
+using OurStuffAddon.Projectiles.Minions;
 
 namespace OurStuffAddon.Buffs
 {
@@ -9,26 +13,21 @@ namespace OurStuffAddon.Buffs
         public override void SetDefaults()
         {
             DisplayName.SetDefault("Shroomy");
-            Description.SetDefault("The mushrooms will fight for you");
+            Description.SetDefault("A Mushroom will fight for you");
             Main.buffNoSave[Type] = true;
             Main.buffNoTimeDisplay[Type] = true;
         }
 
         public override void Update(Player player, ref int buffIndex)
         {
-            OurStuffAddonPlayer modPlayer = player.GetModPlayer<OurStuffAddonPlayer>();
-            if (player.ownedProjectileCounts[ProjectileType<Projectiles.Minions.Shroomy>()] > 0)
+            if (player.ownedProjectileCounts[ProjectileType<Shroomy>()] > 0)
             {
-                modPlayer.ShroomBuff = true;
-            }
-            if (!modPlayer.ShroomBuff)
-            {
-                player.DelBuff(buffIndex);
-                buffIndex--;
+                player.buffTime[buffIndex] = 18000;
             }
             else
             {
-                player.buffTime[buffIndex] = 18000;
+                player.DelBuff(buffIndex);
+                buffIndex--;
             }
         }
     }

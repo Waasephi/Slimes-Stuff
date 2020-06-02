@@ -28,7 +28,7 @@ namespace OurStuffAddon.Items.Consumables
 
         public override bool CanUseItem(Player player)
         {
-            return player.ZoneDesert;
+            return player.ZoneUndergroundDesert;
         }
 
         public override void AddRecipes()

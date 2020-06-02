@@ -9,7 +9,7 @@ namespace OurStuffAddon.Items.Accessories
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Wizard Charm");
-            Tooltip.SetDefault("Harness the power of the soul and push your Magic beyond (Increases Magic Damage By 1/3 But Doubles Mana Cost).");
+            Tooltip.SetDefault("Harness the power of the soul and push your Magic beyond (Increases Magic Damage By 30% But Doubles Mana Cost).");
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {

@@ -16,7 +16,9 @@ namespace OurStuffAddon.Tiles
             Main.tileTable[Type] = true;
             Main.tileLavaDeath[Type] = true;
             TileObjectData.newTile.CopyFrom(TileObjectData.Style3x2);
-            TileObjectData.newTile.CoordinateHeights = new[] { 16, 16 };
+            TileObjectData.newTile.CoordinateHeights = new[] { 16, 18 };
+            TileObjectData.newTile.DrawYOffset = 2;
+            AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTable);
             TileObjectData.addTile(Type);
             ModTranslation name = CreateMapEntryName();
             name.SetDefault("Seafoam Table");

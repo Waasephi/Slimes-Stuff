@@ -1,10 +1,7 @@
-using System;
-using System.IO;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 using Terraria;
-using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.ID;
 
 namespace OurStuffAddon.Items.Melee
 {
@@ -17,7 +14,7 @@ namespace OurStuffAddon.Items.Melee
 		}
 		public override void SetDefaults()
 		{
-			item.damage = 60;
+			item.damage = 65;
 			item.melee = true;
 			item.width = 40;
 			item.height = 40;
@@ -25,8 +22,9 @@ namespace OurStuffAddon.Items.Melee
 			item.useAnimation = 16;
 			item.useStyle = 1;
 			item.knockBack = 6;
-			item.value = 10000;
-            item.shoot = 156;
+			item.value = Item.sellPrice(0, 3, 0, 0);
+			item.value = Item.buyPrice(0, 5, 0, 0);
+			item.shoot = 156;
             item.shootSpeed = 6f;
 			item.rare = 2;
 			item.UseSound = SoundID.Item1;
@@ -36,7 +34,7 @@ namespace OurStuffAddon.Items.Melee
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "InfernalBlade");
+			recipe.AddIngredient(mod, "VenomBlade");
             recipe.AddIngredient(ItemID.HallowedBar, 20);
             recipe.AddTile(mod, "SpiritInfuser");
             recipe.SetResult(this);

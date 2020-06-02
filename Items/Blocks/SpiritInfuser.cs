@@ -6,12 +6,15 @@ namespace OurStuffAddon.Items.Blocks
     public class SpiritInfuser : ModItem
     {
 
-
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Spirit Infuser");
+        }
 
         public override void SetDefaults()
         {
-            item.width = 16;
-            item.height = 16;
+            item.width = 32;
+            item.height = 38;
             item.maxStack = 999;
             item.useTurn = true;
             item.autoReuse = true;
@@ -26,7 +29,7 @@ namespace OurStuffAddon.Items.Blocks
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(mod, "SpiritShard", 10);
-            recipe.AddIngredient(35);
+            recipe.AddRecipeGroup("OurStuffAddon:Anvils");
             recipe.AddTile(TileID.Anvils);
             recipe.SetResult(this);
             recipe.AddRecipe();

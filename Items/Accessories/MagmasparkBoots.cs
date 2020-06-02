@@ -9,7 +9,7 @@ namespace OurStuffAddon.Items.Accessories
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Magmaspark Boots");
-            Tooltip.SetDefault("Run like the wind! (+1 Defence, Frostspark Boots, and Lava Wader Buffs)");
+            Tooltip.SetDefault("Run like the wind! (Frostspark Boots, and Lava Wader Buffs)");
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
@@ -19,7 +19,6 @@ namespace OurStuffAddon.Items.Accessories
             player.maxRunSpeed += 2.5f;
             player.iceSkate = true;
             player.rocketBoots = 2;
-            player.statDefense += 1;
         }
         public override void SetDefaults()
         {

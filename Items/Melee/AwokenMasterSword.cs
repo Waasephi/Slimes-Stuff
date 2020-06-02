@@ -18,8 +18,8 @@ namespace OurStuffAddon.Items.Melee
 		{
 			item.damage = 100;
 			item.melee = true;
-			item.width = 344;
-			item.height = 344;
+			item.width = 64;
+			item.height = 64;
             item.shoot = 116;
             item.useTime = 10;
 			item.useAnimation = 10;

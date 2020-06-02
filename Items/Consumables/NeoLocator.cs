@@ -26,8 +26,8 @@ namespace OurStuffAddon.Items.Consumables
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemID.Bone, 50);
-            recipe.AddIngredient(ItemID.HellstoneBar, 20);
+            recipe.AddIngredient(ItemID.Wire, 50);
+            recipe.AddIngredient(ItemID.HellstoneBar, 10);
             recipe.AddTile(TileID.Anvils);
             recipe.SetResult(this);
             recipe.AddRecipe();

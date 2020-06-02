@@ -8,6 +8,8 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using OurStuffAddon.Items.SpiritDamageClass;
+using OurStuffAddon.Items.MusicBoxes;
+using OurStuffAddon.Tiles.MusicBoxes;
 using Terraria;
 using Terraria.GameContent.Dyes;
 using Terraria.GameContent.UI;
@@ -52,7 +54,47 @@ namespace OurStuffAddon
             //	AutoloadBackgrounds = true
             //};
         }
-        public static OurStuffAddon instance;
+        public override void Load()
+        {
+
+            if (!Main.dedServ)
+            {
+                // Register a new music box
+                AddMusicBox(GetSoundSlot(SoundType.Music, "Sounds/Music/LuminescentLagoon"), ItemType("Luminescent"), TileType("Luminescent"));
+                AddMusicBox(GetSoundSlot(SoundType.Music, "Sounds/Music/GiantSandSifterTheme"), ItemType("GiantSandSifter"), TileType("GiantSandSifter"));
+                AddMusicBox(GetSoundSlot(SoundType.Music, "Sounds/Music/LifeEnforcerTheme"), ItemType("LifeEnforcer"), TileType("LifeEnforcer"));
+                AddMusicBox(GetSoundSlot(SoundType.Music, "Sounds/Music/Ruin"), ItemType("Ruin"), TileType("Ruin"));
+                AddMusicBox(GetSoundSlot(SoundType.Music, "Sounds/Music/AncientObserverTheme"), ItemType("AncientObserver"), TileType("AncientObserver"));
+                AddMusicBox(GetSoundSlot(SoundType.Music, "Sounds/Music/NeoParasiteTheme"), ItemType("NeoParasite"), TileType("NeoParasite"));
+
+                // Change the vanilla loom texture
+                //Main.instance.LoadTiles(TileID.Loom); // First load the tile texture
+                //Main.tileTexture[TileID.Loom] = GetTexture("Tiles/AnimatedLoom"); // Now we change it
+
+                //What if....Replace a vanilla item texture and equip texture.
+                //Main.itemTexture[ItemID.CopperHelmet] = GetTexture("Resprite/CopperHelmet_Item");
+                //Item copperHelmet = new Item();
+                //copperHelmet.SetDefaults(ItemID.CopperHelmet);
+                //Main.armorHeadLoaded[copperHelmet.headSlot] = true;
+                //Main.armorHeadTexture[copperHelmet.headSlot] = GetTexture("Resprite/CopperHelmet_Head");
+            }
+          /*  Mod yabhb = ModLoader.GetMod("FKBossHealthBar");
+            if (yabhb != null)
+            {
+                yabhb.Call("hbStart");
+                yabhb.Call("hbSetTexture",
+                    GetTexture("UI/LEHBStart"),
+                    GetTexture("UI/LEHBMiddle"),
+                    GetTexture("UI/LEHBEnd"),
+                    GetTexture("UI/LEHBFill"));
+                yabhb.Call("hbSetMidBarOffset", 20, 10);
+                yabhb.Call("hbSetBossHeadCentre", 22, 44);
+                yabhb.Call("hbSetFillDecoOffsetSmall", 16);
+                yabhb.Call("hbFinishSingle", mod,"LifeEnforcer");
+            }*/
+        }
+
+    public static OurStuffAddon instance;
         public override void UpdateMusic(ref int music, ref MusicPriority priority)
         {
             if (Main.myPlayer == -1 || Main.gameMenu || !Main.LocalPlayer.active)
@@ -64,6 +106,17 @@ namespace OurStuffAddon
             if (Main.LocalPlayer.GetModPlayer<OurStuffAddonPlayer>().ZoneLuminescentLagoon)
             {
                 music = GetSoundSlot(SoundType.Music, "Sounds/Music/LuminescentLagoon");
+                priority = MusicPriority.BiomeHigh;
+            }
+            if (Main.LocalPlayer.GetModPlayer<OurStuffAddonPlayer>().ZonePhoenix)
+            {
+                if (Main.player[Main.myPlayer].ZoneRockLayerHeight)
+                {
+                    music = GetSoundSlot(SoundType.Music, "Sounds/Music/PhoenixUnderground");
+                    priority = MusicPriority.BiomeHigh;
+                }
+                else;
+                music = GetSoundSlot(SoundType.Music, "Sounds/Music/PhoenixUnderground");
                 priority = MusicPriority.BiomeHigh;
             }
             if (Main.LocalPlayer.GetModPlayer<OurStuffAddonPlayer>().ZoneRuin)
@@ -98,11 +151,12 @@ namespace OurStuffAddon
 
 
 
-            RecipeGroup TrueEvilBlaster = new RecipeGroup(() => Lang.misc[37] + " True Evil Blaster", new int[]
+            RecipeGroup TrueEvilBlaster = new RecipeGroup(() => Lang.misc[37] + " Evil Gun", new int[]
             {
-                ItemType("TrueNoctem"),
-                ItemType("TrueClotCannon"),
+                ItemType("BloodyMusket"),
+                ItemType("CorruptRevolver"),
             });
+            RecipeGroup.RegisterGroup("OurStuffAddon:EvilGun", TrueEvilBlaster);
             RecipeGroup EvilBar = new RecipeGroup(() => Lang.misc[37] + " Evil Bar", new int[]
             {
                 ItemID.DemoniteBar,
@@ -118,20 +172,37 @@ namespace OurStuffAddon
             });
             RecipeGroup.RegisterGroup("OurStuffAddon:EvilMaterial", EvilMaterial);
 
-            RecipeGroup.RegisterGroup("OurStuffAddon:TrueEvilBlaster", TrueEvilBlaster);
+            RecipeGroup EvilRod = new RecipeGroup(() => Lang.misc[37] + " Evil Rod", new int[]
+{
+                ItemType("BloodRod"),
+                ItemType("CursedRod"),
+});
+            RecipeGroup.RegisterGroup("OurStuffAddon:EvilRod", EvilRod);
+            RecipeGroup EvilStaff = new RecipeGroup(() => Lang.misc[37] + " Evil Staff", new int[]
+{
+                ItemType("CrimStaff"),
+                ItemType("CorroStaff"),
+});
+            RecipeGroup.RegisterGroup("OurStuffAddon:EvilStaff", EvilStaff);
+            RecipeGroup Anvils = new RecipeGroup(() => Lang.misc[37] + " Pre Hardmode Anvil", new int[]
+{
+                ItemID.IronAnvil,
+                ItemID.LeadAnvil
+});
+            RecipeGroup.RegisterGroup("OurStuffAddon:Anvils", Anvils);
 
         }
 
-    
 
-    //BossChecklist
-    public override void PostSetupContent()
+
+        //BossChecklist
+        public override void PostSetupContent()
         {
             Mod bossChecklist = ModLoader.GetMod("BossChecklist");
 
             if (bossChecklist != null)
             {
-                bossChecklist.Call("AddBossWithInfo", "Giant Sand Sifter", 2.001f, (Func<bool>)(() => OurStuffAddonWorld.downedGiantSandSifter), string.Format("Use [i:{0}] in the desert", ItemType("SandEmblem")));
+                bossChecklist.Call("AddBossWithInfo", "Giant Sand Sifter", 2.001f, (Func<bool>)(() => OurStuffAddonWorld.downedGiantSandSifter), string.Format("Use [i:{0}] in the underground desert", ItemType("SandEmblem")));
                 bossChecklist.Call("AddBossWithInfo", "Life Enforcer", 2.001f, (Func<bool>)(() => OurStuffAddonWorld.downedLifeEnforcer), string.Format("Use [i:{0}] underground", ItemType("CrystalHeart")));
                 bossChecklist.Call("AddBossWithInfo", "Cosmic Slime", 15.001f, (Func<bool>)(() => OurStuffAddonWorld.downedCosmicSlime), string.Format("Use [i:{0}] anytime, anywhere.", ItemType("CosmicStarMesh")));
                 bossChecklist.Call("AddBossWithInfo", "Neo Mothership", 5.001f, (Func<bool>)(() => OurStuffAddonWorld.downedNeoMothership), string.Format("Use [i:{0}] anytime, anywhere.", ItemType("NeoLocator")));
@@ -169,4 +240,4 @@ namespace OurStuffAddon
 }
 
 
-		
+

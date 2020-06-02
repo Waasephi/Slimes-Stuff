@@ -55,8 +55,8 @@ namespace OurStuffAddon.Items.SpiritDamageClass
             item.shootSpeed = 6f;
             item.shoot = 173;
             item.UseSound = SoundID.Item1;
-            item.useTime = 16;
-            item.useAnimation = 16;
+            item.useTime = 35;
+            item.useAnimation = 35;
             item.useStyle = 5;
             item.noMelee = false;
             item.Size = new Vector2(18, 46);

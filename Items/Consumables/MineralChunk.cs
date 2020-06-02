@@ -8,7 +8,7 @@ namespace OurStuffAddon.Items.Consumables
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("MineralChunk");
+            DisplayName.SetDefault("Mineral Chunk");
             Tooltip.SetDefault("{$CommonItemTooltip.RightClickToOpen}");
         }
 

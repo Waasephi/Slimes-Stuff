@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria.ModLoader.IO;
 using Terraria.DataStructures;
+using OurStuffAddon.Projectiles.Minions;
 using Terraria.GameInput;
 
 namespace OurStuffAddon.Items.Armor.SandScale
@@ -46,8 +47,9 @@ namespace OurStuffAddon.Items.Armor.SandScale
 
         public override void UpdateArmorSet(Player player)
         {
-            player.setBonus = " Gives Creature Detection.";
+            player.setBonus = " Gives Creature Detection and a Sand Sifter Minion.";
             player.detectCreature = true;
+            player.AddBuff(mod.BuffType("Sifter2"), 2);
         }
 
         public override void AddRecipes()

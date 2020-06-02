@@ -29,7 +29,7 @@ namespace OurStuffAddon.NPCs.Friendly
             NPCID.Sets.ExtraFramesCount[npc.type] = 9;
             NPCID.Sets.AttackFrameCount[npc.type] = 4;
             NPCID.Sets.DangerDetectRange[npc.type] = 700;
-            NPCID.Sets.AttackType[npc.type] = 0;
+            NPCID.Sets.AttackType[npc.type] = 1;
             NPCID.Sets.AttackTime[npc.type] = 90;
             NPCID.Sets.AttackAverageChance[npc.type] = 30;
             NPCID.Sets.HatOffsetY[npc.type] = 4;
@@ -48,7 +48,7 @@ namespace OurStuffAddon.NPCs.Friendly
             npc.HitSound = SoundID.NPCHit1;
             npc.DeathSound = SoundID.NPCDeath1;
             npc.knockBackResist = 0.5f;
-            animationType = 441; //that is the NPCID for the tax collector
+			animationType = NPCID.ArmsDealer;
         }
         public override bool CanTownNPCSpawn(int numTownNPCs, int money) //Whether or not the conditions have been met for this town NPC to be able to move into town.
         {
@@ -125,13 +125,20 @@ namespace OurStuffAddon.NPCs.Friendly
                 shop.item[nextSlot].SetDefaults(ItemID.Bone);
                 nextSlot++;
             }
-            shop.item[nextSlot].SetDefaults(mod.ItemType("RelicShard"));  //this is an example of how to add a modded item
-            nextSlot++;
+            if (OurStuffAddonWorld.downedAncientObserver)
+            {
+                shop.item[nextSlot].SetDefaults(mod.ItemType("RelicShard"));  //this is an example of how to add a modded item
+                nextSlot++;
+            }
             shop.item[nextSlot].SetDefaults(mod.ItemType("SkyEssence"));  //this is an example of how to add a modded item
             nextSlot++;
             shop.item[nextSlot].SetDefaults(mod.ItemType("SpiritShard"));  //this is an example of how to add a modded item
             nextSlot++;
             shop.item[nextSlot].SetDefaults(ItemID.Lens);
+            nextSlot++;
+            shop.item[nextSlot].SetDefaults(mod.ItemType("LuminescentRock"));  //this is an example of how to add a modded item
+            nextSlot++;
+            shop.item[nextSlot].SetDefaults(mod.ItemType("AncientStone"));  //this is an example of how to add a modded item
             nextSlot++;
             if (NPC.downedMoonlord)   //this make so when Skeletron is killed the town npc will sell this
             {
@@ -156,13 +163,13 @@ namespace OurStuffAddon.NPCs.Friendly
             switch (Main.rand.Next(6))    //this are the messages when you talk to the npc
             {
                 case 0:
-                    return "You wanna buy something? These days I usually just stay around here so I dont have much use for any of it... Yes you still have to pay!";
+                    return "You wanna buy something? These days I usually just stay around here so I don't have much use for any of it... Yes you still have to pay!";
                 case 1:
-                    return "You want to know how I got all of this stuff? Thats for me to know, and for you to never find out!";
+                    return "You want to know how I got all of this stuff? That's for me to know, and for you to never find out!";
                 case 2:
                     return "What is that look you are giving me? No I do not have a hoarding problem!";
                 case 3:
-                    return "I've travelled all around this land and obtained many an item... Want to take a look?";
+                    return "I've traveled all around this land and obtained many an item... Want to take a look?";
                 case 4:
                     return "Hey thanks for the home and stuff... What? No I'm not going to give you a discount...";
                 case 5:
@@ -172,50 +179,36 @@ namespace OurStuffAddon.NPCs.Friendly
 
             }
         }
-        public override void TownNPCAttackStrength(ref int damage, ref float knockback)//  Allows you to determine the damage and knockback of this town NPC attack
-        {
-            damage = 40;  //npc damage
-            knockback = 2f;   //npc knockback
-        }
+		public override void TownNPCAttackStrength(ref int damage, ref float knockback)
+		{
+			damage = 20;
+			knockback = 4f;
+		}
 
-        public override void TownNPCAttackCooldown(ref int cooldown, ref int randExtraCooldown)  //Allows you to determine the cooldown between each of this town NPC's attack. The cooldown will be a number greater than or equal to the first parameter, and less then the sum of the two parameters.
-        {
-            cooldown = 5;
-            randExtraCooldown = 10;
-        }
-        //------------------------------------This is an example of how to make the npc use a sward attack-------------------------------
-        public override void DrawTownAttackSwing(ref Texture2D item, ref int itemSize, ref float scale, ref Vector2 offset)//Allows you to customize how this town NPC's weapon is drawn when this NPC is swinging it (this NPC must have an attack type of 3). Item is the Texture2D instance of the item to be drawn (use Main.itemTexture[id of item]), itemSize is the width and height of the item's hitbox
-        {
-            scale = 1f;
-            item = Main.itemTexture[ItemID.EnchantedSword]; //this defines the item that this npc will use
-            itemSize = 56;
-        }
+		public override void TownNPCAttackCooldown(ref int cooldown, ref int randExtraCooldown)
+		{
+			cooldown = 30;
+			randExtraCooldown = 30;
+		}
 
-        public override void TownNPCAttackSwing(ref int itemWidth, ref int itemHeight) //  Allows you to determine the width and height of the item this town NPC swings when it attacks, which controls the range of this NPC's swung weapon.
-        {
-            itemWidth = 56;
-            itemHeight = 56;
-        }
+		public override void TownNPCAttackProj(ref int projType, ref int attackDelay)
+		{
+			projType = ProjectileID.Bullet;
+			attackDelay = 1;
+		}
 
-        //----------------------------------This is an example of how to make the npc use a gun and a projectile ----------------------------------
-        /*public override void DrawTownAttackGun(ref float scale, ref int item, ref int closeness) //Allows you to customize how this town NPC's weapon is drawn when this NPC is shooting (this NPC must have an attack type of 1). Scale is a multiplier for the item's drawing size, item is the ID of the item to be drawn, and closeness is how close the item should be drawn to the NPC.
-          {
-              scale = 1f;
-              item = mod.ItemType("GunName");  
-              closeness = 20;
-          }
-          public override void TownNPCAttackProj(ref int projType, ref int attackDelay)//Allows you to determine the projectile type of this town NPC's attack, and how long it takes for the projectile to actually appear
-          {
-              projType = ProjectileID.CrystalBullet;
-              attackDelay = 1;
-          }
- 
-          public override void TownNPCAttackProjSpeed(ref float multiplier, ref float gravityCorrection, ref float randomOffset)//Allows you to determine the speed at which this town NPC throws a projectile when it attacks. Multiplier is the speed of the projectile, gravityCorrection is how much extra the projectile gets thrown upwards, and randomOffset allows you to randomize the projectile's velocity in a square centered around the original velocity
-          {
-              multiplier = 7f;
-             // randomOffset = 4f;
- 
-          }   */
+		public override void TownNPCAttackProjSpeed(ref float multiplier, ref float gravityCorrection, ref float randomOffset)
+		{
+			multiplier = 12f;
+			randomOffset = 2f;
+		}
+		
+		public override void DrawTownAttackGun(ref float scale, ref int item, ref int closeness)
+		{
+			scale = 0.5f;
+			item = 95;
+			closeness = 2;
+		}	 
 
     }
 }

@@ -15,14 +15,16 @@ namespace OurStuffAddon.Tiles
             Main.tileLighted[Type] = false;
             Main.tileBlockLight[Type] = true;
             Main.tileSpelunker[Type] = true;
-            AddMapEntry(new Color(250, 200, 200));
+
             mineResist = 1f;
             minPick = 50;
             drop = mod.ItemType("HeartStone");
+            Main.tileMerge[ModContent.TileType<Tiles.HeartStone>()][2] = true;
             soundType = 21;
             dustType = 12;
             ModTranslation name = CreateMapEntryName();
-            name.SetDefault("Heart Stone");
+            name.SetDefault("HeartStone");
+            AddMapEntry(new Color(250, 100, 100), name);
             //soundStyle = 1;
         }
 

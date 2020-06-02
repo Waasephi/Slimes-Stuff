@@ -24,11 +24,8 @@ namespace OurStuffAddon.Items.Consumables.Potions
             item.consumable = true;
             item.rare = 3;
             item.value = Item.buyPrice(gold: 1);
-        }
-        public override bool UseItem(Player player)
-        {
-            player.AddBuff(mod.BuffType("ThrowingPowerPotionBuff"), 5 * 60 * 60, true);
-            return true;
+            item.buffType = mod.BuffType("ThrowingPowerPotionBuff");
+            item.buffTime = 10800;
         }
         public override void AddRecipes()
         {

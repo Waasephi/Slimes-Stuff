@@ -19,7 +19,7 @@ namespace OurStuffAddon.Items.Armor.Dark
         {
             base.SetStaticDefaults();
             DisplayName.SetDefault("Dark Mask");
-            Tooltip.SetDefault("Increased Melee Crit");
+            Tooltip.SetDefault("10% Increased Melee Crit");
         }
 
         public override void SetDefaults()

@@ -9,7 +9,7 @@ namespace OurStuffAddon.Items.Accessories
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Ninja Charm");
-            Tooltip.SetDefault("Harness the power of the spirit and push your Throwing beyond (Increases Throwing Damage By 1/3 But Lowers Attack Speed).");
+            Tooltip.SetDefault("Harness the power of the spirit and push your Throwing beyond (Increases Throwing Damage By 30% But Lowers Attack Speed).");
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {

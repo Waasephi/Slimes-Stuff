@@ -25,11 +25,15 @@ namespace OurStuffAddon.Tiles
             TileObjectData.newTile.CoordinateHeights = new[] { 16, 16 };
             TileObjectData.newTile.AnchorInvalidTiles = new[] { 127 };
             TileObjectData.newTile.StyleHorizontal = true;
+            TileObjectData.newTile.DrawYOffset = 2;
             TileObjectData.addTile(Type);
             ModTranslation name = CreateMapEntryName();
             name.SetDefault("Demon Altar");
             AddMapEntry(new Color(30, 0, 30), name);
-            disableSmartCursor = true;
+            disableSmartCursor = true;            
+            adjTiles = new int[] { 26 };
+            //this is just here for later to show how you make tiles with multiple stations in it
+            //adjTiles = new int[]{ ModContent.TileType<Cauldron>(), TileID.CookingPots };
         }
 
         public override void NumDust(int i, int j, bool fail, ref int num)

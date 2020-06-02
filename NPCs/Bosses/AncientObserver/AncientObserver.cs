@@ -15,8 +15,9 @@ namespace OurStuffAddon.NPCs.Bosses.AncientObserver
             DisplayName.SetDefault("Ancient Observer");
 
         }
-        public int attackTimer = 30;
+        public int attackTimer = 60;
         public int attackState = 0;
+        int _despawn = 0;
         public override void SetDefaults()
         {
             npc.width = 92;
@@ -24,6 +25,7 @@ namespace OurStuffAddon.NPCs.Bosses.AncientObserver
             npc.damage = 30;
             npc.lifeMax = 5000;
             npc.life = 5000;
+            _despawn = 0;
             npc.defense = 5;
             npc.HitSound = SoundID.NPCHit7;
             npc.DeathSound = SoundID.NPCDeath5;
@@ -32,7 +34,7 @@ namespace OurStuffAddon.NPCs.Bosses.AncientObserver
             npc.boss = true;
             Lighting.AddLight(npc.Center, 0.7f, 0.7f, 0f);
             bossBag = mod.ItemType("AncientObserverTreasureBag");
-            music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/boss2");
+            music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/AncientObserverTheme");
             npc.lavaImmune = true;
             npc.noGravity = true;
             npc.noTileCollide = true;
@@ -60,11 +62,6 @@ namespace OurStuffAddon.NPCs.Bosses.AncientObserver
                 npc.DropBossBags();
             }
         }
-        public override bool PreAI()
-        {
-            npc.TargetClosest(true);
-            return true;
-        }
 
 
 
@@ -85,8 +82,22 @@ namespace OurStuffAddon.NPCs.Bosses.AncientObserver
 
         public override void AI()
         {
-
-
+            Player player = Main.player[npc.target];
+            if (npc.target < 0 || npc.target == 255 || Main.player[npc.target].dead || !Main.player[npc.target].active)
+            {
+                npc.TargetClosest(true);
+            }
+            npc.netUpdate = true;
+            //DESPAWN
+            if (!Main.player[npc.target].active || Main.player[npc.target].dead)
+            {
+                npc.TargetClosest(true);
+                if (!Main.player[npc.target].active || Main.player[npc.target].dead)
+                {
+                    if (_despawn == 0)
+                        _despawn++;
+                }
+            }
             if (attackState >= 1 && attackState <= 4)
             {
                 Vector2 goalPosition = Main.LocalPlayer.position + new Vector2(240, 0).RotatedBy(MathHelper.Pi / 2 * attackState) - npc.position;
@@ -109,12 +120,12 @@ namespace OurStuffAddon.NPCs.Bosses.AncientObserver
                 if (attackState >= 1 && attackState <= 4)
                 {
                     attackState = 5;
-                    attackTimer = 35;
+                    attackTimer = 60;
                 }
                 else
                 {
                     attackState = Main.rand.Next(4) + 1;
-                    attackTimer = 35;
+                    attackTimer = 60;
                 }
             }
         }

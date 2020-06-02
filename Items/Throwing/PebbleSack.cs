@@ -35,7 +35,7 @@ namespace OurStuffAddon.Items.Throwing
             item.shoot = 51;
             item.shootSpeed = 10f;     //projectile speed
             item.useTurn = true;
-            item.maxStack = 999;       //this is the max stack of this item
+            item.maxStack = 1;       //this is the max stack of this item
             item.consumable = false;  //this make the item consumable when used
             item.noUseGraphic = true;
  
@@ -46,7 +46,7 @@ namespace OurStuffAddon.Items.Throwing
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(mod, "ChippedStone", 10);
             recipe.AddTile(TileID.Anvils);
-            recipe.SetResult(this, 333);
+            recipe.SetResult(this);
             recipe.AddRecipe();
         }
     }

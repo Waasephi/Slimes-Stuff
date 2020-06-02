@@ -19,7 +19,7 @@ namespace OurStuffAddon.Items.Armor.Sky
         {
             base.SetStaticDefaults();
             DisplayName.SetDefault("Sky Helmet");
-            Tooltip.SetDefault("Increased Melee Crit");
+            Tooltip.SetDefault("7% Increased Melee Crit");
         }
 
         public override void SetDefaults()

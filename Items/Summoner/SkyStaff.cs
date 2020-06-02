@@ -12,6 +12,7 @@ namespace OurStuffAddon.Items.Summoner
         {
             DisplayName.SetDefault("Sky Staff");
             Tooltip.SetDefault("Shoots a raining cloud.");
+            ItemID.Sets.GamepadWholeScreenUseRange[item.type] = true;
         }
 
         public override void SetDefaults()
@@ -27,10 +28,9 @@ namespace OurStuffAddon.Items.Summoner
             item.noMelee = true;
             item.knockBack = 3;
             item.value = Item.buyPrice(0, 1, 0, 0);
-            item.shoot = 237;
-            item.rare = 9;
+            item.shoot = 238;
+            item.rare = 2;
             item.UseSound = SoundID.Item44;
-            item.shootSpeed = 10f;
         }
 
         public override bool AltFunctionUse(Player player)
@@ -40,7 +40,8 @@ namespace OurStuffAddon.Items.Summoner
 
         public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
         {
-            return player.altFunctionUse != 2;
+            position = Main.MouseWorld;
+            return true;
         }
 
         public override bool UseItem(Player player)

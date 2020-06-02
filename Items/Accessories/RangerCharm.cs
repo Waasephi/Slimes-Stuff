@@ -9,7 +9,7 @@ namespace OurStuffAddon.Items.Accessories
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Ranger Charm");
-            Tooltip.SetDefault("Harness the power of the Sight and push your Ranged Abilities beyond (Increases Ranged Damage By 1/3 But Lowers Crit Chance).");
+            Tooltip.SetDefault("Harness the power of the Sight and push your Ranged Abilities beyond (Increases Ranged Damage By 30% But Lowers Crit Chance).");
         }
         public override void UpdateAccessory(Player player, bool hideVisual)
         {

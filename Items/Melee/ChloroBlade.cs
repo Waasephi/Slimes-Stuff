@@ -1,5 +1,7 @@
-using Terraria.ID;
+using Microsoft.Xna.Framework;
+using Terraria;
 using Terraria.ModLoader;
+using Terraria.ID;
 
 namespace OurStuffAddon.Items.Melee
 {
@@ -12,7 +14,7 @@ namespace OurStuffAddon.Items.Melee
 		}
 		public override void SetDefaults()
 		{
-			item.damage = 80;
+			item.damage = 74;
 			item.melee = true;
 			item.width = 40;
 			item.height = 40;
@@ -20,8 +22,9 @@ namespace OurStuffAddon.Items.Melee
 			item.useAnimation = 14;
 			item.useStyle = 1;
 			item.knockBack = 6;
-			item.value = 10000;
-            item.shoot = 228;
+			item.value = Item.sellPrice(0, 5, 0, 0);
+			item.value = Item.buyPrice(0, 7, 0, 0);
+			item.shoot = 228;
             item.shootSpeed = 7f;
 			item.rare = 2;
 			item.UseSound = SoundID.Item1;

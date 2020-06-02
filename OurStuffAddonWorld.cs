@@ -21,7 +21,9 @@ namespace OurStuffAddon
         public static bool downedAncientObserver = false;
         public static int LuminescentLagoon = 0;
         public static int Ruin = 0;
+        public static int Phoenix = 0;
         public static bool heartStone = false;
+        public static bool neonium = false;
         public static int sizeMult = (int)(Math.Round(Main.maxTilesX / 4200f)); //Small = 2; Medium = ~3; Large = 4;
 
         public override void Initialize()
@@ -34,6 +36,7 @@ namespace OurStuffAddon
             downedNeoParasite = false;
             downedAncientObserver = false;
             heartStone = false;
+            neonium = false;
         }
 
         public override void Load(TagCompound tag)
@@ -77,7 +80,8 @@ namespace OurStuffAddon
 
         public override void TileCountsAvailable(int[] tileCounts)
         {
-            LuminescentLagoon = tileCounts[mod.TileType("LuminescentRock")];       //this make the public static int customBiome counts as customtileblock
+            LuminescentLagoon = tileCounts[mod.TileType("LuminescentRock")]; 
+            Phoenix = tileCounts[mod.TileType("PhoenixStone")] + tileCounts[mod.TileType("PhoenixMoss")] + tileCounts[mod.TileType("PhoenixSand")]; //this make the public static int customBiome counts as customtileblock
             Ruin = tileCounts[mod.TileType("AncientStone")] + tileCounts[mod.TileType("FadedStone")] + tileCounts[mod.TileType("BlueFadedStone")] + tileCounts[mod.TileType("RedFadedStone")] + tileCounts[mod.TileType("GreenFadedStone")];
         }
         public override void ModifyWorldGenTasks(List<GenPass> tasks, ref float totalWeight)
@@ -104,7 +108,6 @@ namespace OurStuffAddon
                 tasks.Insert(ShiniesIndex + 1, new PassLegacy("Generating Phasite", PhasiteOre));
                 tasks.Insert(ShiniesIndex + 1, new PassLegacy("Generating Parephene", ParepheneOre));
                 tasks.Insert(ShiniesIndex + 1, new PassLegacy("Darkening Diamonds", ShadowCrystal));
-                tasks.Insert(ShiniesIndex + 1, new PassLegacy("Generating Neonium", NeoniumOre));
             }
 
             tasks.Insert(genIndex + 1, new PassLegacy("Ruin", delegate (GenerationProgress progress)
@@ -151,7 +154,7 @@ namespace OurStuffAddon
                 // The inside of this for loop corresponds to one single splotch of our Ore.
                 // First, we randomly choose any coordinate in the world by choosing a random x and y value.
                 int x = WorldGen.genRand.Next(0, Main.maxTilesX);
-                int y = WorldGen.genRand.Next((int)WorldGen.worldSurfaceLow, Main.maxTilesY); // WorldGen.worldSurfaceLow is actually the highest surface tile. In practice you might want to use WorldGen.rockLayer or other WorldGen values.
+                int y = WorldGen.genRand.Next((int)WorldGen.rockLayer, Main.maxTilesY); // WorldGen.worldSurfaceLow is actually the highest surface tile. In practice you might want to use WorldGen.rockLayer or other WorldGen values.
 
                 // Then, we call WorldGen.TileRunner with random "strength" and random "steps", as well as the Tile we wish to place. Feel free to experiment with strength and step to see the shape they generate.
                 //WorldGen.TileRunner(x, y, (double)WorldGen.genRand.Next(3, 6), WorldGen.genRand.Next(2, 6), mod.TileType("SeafoamStone"), false, 0f, 0f, false, true);
@@ -160,7 +163,7 @@ namespace OurStuffAddon
                 Tile tile = Framing.GetTileSafely(x, y);
                 if (tile.active() && tile.type == mod.TileType("LuminescentRock"))
                 {
-                    WorldGen.TileRunner(x, y, 10, WorldGen.genRand.Next(50, 100), mod.TileType("SeafoamStone"), false, 0f, 0f, true, true);
+                    WorldGen.TileRunner(x, y, 10, WorldGen.genRand.Next(20, 25), mod.TileType("SeafoamStone"), false, 0f, 0f, true, true);
                     int Y = WorldGen.genRand.Next((int)WorldGen.rockLayer - -400, Main.maxTilesY - (int)WorldGen.rockLayer - -500);
                 }
             }
@@ -177,7 +180,7 @@ namespace OurStuffAddon
                 // The inside of this for loop corresponds to one single splotch of our Ore.
                 // First, we randomly choose any coordinate in the world by choosing a random x and y value.
                 int x = WorldGen.genRand.Next(5, Main.maxTilesX - 400);
-                int y = WorldGen.genRand.Next((int)WorldGen.worldSurfaceLow, Main.maxTilesY); // WorldGen.worldSurfaceLow is actually the highest surface tile. In practice you might want to use WorldGen.rockLayer or other WorldGen values.
+                int y = WorldGen.genRand.Next((int)WorldGen.rockLayer, Main.maxTilesY); // WorldGen.worldSurfaceLow is actually the highest surface tile. In practice you might want to use WorldGen.rockLayer or other WorldGen values.
 
                 // Then, we call WorldGen.TileRunner with random "strength" and random "steps", as well as the Tile we wish to place. Feel free to experiment with strength and step to see the shape they generate.
                 WorldGen.TileRunner(x, y, (double)WorldGen.genRand.Next(6, 8), WorldGen.genRand.Next(4, 6), mod.TileType("TrenagonOre"), false, 0f, 0f, false, true);
@@ -203,7 +206,7 @@ namespace OurStuffAddon
                 // The inside of this for loop corresponds to one single splotch of our Ore.
                 // First, we randomly choose any coordinate in the world by choosing a random x and y value.
                 int x = WorldGen.genRand.Next(10, Main.maxTilesX - 800);
-                int y = WorldGen.genRand.Next((int)WorldGen.worldSurfaceLow, Main.maxTilesY); // WorldGen.worldSurfaceLow is actually the highest surface tile. In practice you might want to use WorldGen.rockLayer or other WorldGen values.
+                int y = WorldGen.genRand.Next((int)WorldGen.rockLayer, Main.maxTilesY); // WorldGen.worldSurfaceLow is actually the highest surface tile. In practice you might want to use WorldGen.rockLayer or other WorldGen values.
 
                 // Then, we call WorldGen.TileRunner with random "strength" and random "steps", as well as the Tile we wish to place. Feel free to experiment with strength and step to see the shape they generate.
                 WorldGen.TileRunner(x, y, (double)WorldGen.genRand.Next(5, 7), WorldGen.genRand.Next(6, 8), mod.TileType("ParepheneOre"), false, 0f, 0f, false, true);
@@ -229,7 +232,7 @@ namespace OurStuffAddon
                 // The inside of this for loop corresponds to one single splotch of our Ore.
                 // First, we randomly choose any coordinate in the world by choosing a random x and y value.
                 int x = WorldGen.genRand.Next(7, Main.maxTilesX - 600);
-                int y = WorldGen.genRand.Next((int)WorldGen.worldSurfaceLow, Main.maxTilesY); // WorldGen.worldSurfaceLow is actually the highest surface tile. In practice you might want to use WorldGen.rockLayer or other WorldGen values.
+                int y = WorldGen.genRand.Next((int)WorldGen.rockLayer, Main.maxTilesY); // WorldGen.worldSurfaceLow is actually the highest surface tile. In practice you might want to use WorldGen.rockLayer or other WorldGen values.
 
                 // Then, we call WorldGen.TileRunner with random "strength" and random "steps", as well as the Tile we wish to place. Feel free to experiment with strength and step to see the shape they generate.
                 WorldGen.TileRunner(x, y, (double)WorldGen.genRand.Next(7, 9), WorldGen.genRand.Next(4, 6), mod.TileType("PhasiteOre"), false, 0f, 0f, false, true);
@@ -255,36 +258,10 @@ namespace OurStuffAddon
                 // The inside of this for loop corresponds to one single splotch of our Ore.
                 // First, we randomly choose any coordinate in the world by choosing a random x and y value.
                 int x = WorldGen.genRand.Next(5, Main.maxTilesX);
-                int y = WorldGen.genRand.Next((int)WorldGen.worldSurfaceLow, Main.maxTilesY); // WorldGen.worldSurfaceLow is actually the highest surface tile. In practice you might want to use WorldGen.rockLayer or other WorldGen values.
+                int y = WorldGen.genRand.Next((int)WorldGen.rockLayer, Main.maxTilesY); // WorldGen.worldSurfaceLow is actually the highest surface tile. In practice you might want to use WorldGen.rockLayer or other WorldGen values.
 
                 // Then, we call WorldGen.TileRunner with random "strength" and random "steps", as well as the Tile we wish to place. Feel free to experiment with strength and step to see the shape they generate.
-                WorldGen.TileRunner(x, y, (double)WorldGen.genRand.Next(2, 4), WorldGen.genRand.Next(2, 4), mod.TileType("ShadowCrystalOre"), false, 0f, 0f, false, true);
-
-                // Alternately, we could check the tile already present in the coordinate we are interested. Wrapping WorldGen.TileRunner in the following condition would make the ore only generate in Snow.
-                // Tile tile = Framing.GetTileSafely(x, y);
-                // if (tile.active() && tile.type == TileID.SnowBlock)
-                // {
-                // 	WorldGen.TileRunner(.....);
-                // }
-            }
-
-        }
-        private void NeoniumOre(GenerationProgress progress)
-        {
-            // progress.Message is the message shown to the user while the following code is running. Try to make your message clear. You can be a little bit clever, but make sure it is descriptive enough for troubleshooting purposes. 
-            progress.Message = "Neonium Ore Generating";
-
-            // Ores are quite simple, we simply use a for loop and the WorldGen.TileRunner to place splotches of the specified Tile in the world.
-            // "6E-05" is "scientific notation". It simply means 0.00006 but in some ways is easier to read.
-            for (int k = 0; k < (int)((double)(Main.maxTilesX * Main.maxTilesY) * 6E-05); k++)
-            {
-                // The inside of this for loop corresponds to one single splotch of our Ore.
-                // First, we randomly choose any coordinate in the world by choosing a random x and y value.
-                int x = WorldGen.genRand.Next(5, Main.maxTilesX - 500);
-                int y = WorldGen.genRand.Next((int)WorldGen.worldSurfaceLow, Main.maxTilesY); // WorldGen.worldSurfaceLow is actually the highest surface tile. In practice you might want to use WorldGen.rockLayer or other WorldGen values.
-
-                // Then, we call WorldGen.TileRunner with random "strength" and random "steps", as well as the Tile we wish to place. Feel free to experiment with strength and step to see the shape they generate.
-                WorldGen.TileRunner(x, y, (double)WorldGen.genRand.Next(6, 8), WorldGen.genRand.Next(4, 6), mod.TileType("NeoniumOre"), false, 0f, 0f, false, true);
+                WorldGen.TileRunner(x, y, (double)WorldGen.genRand.Next(2, 4), WorldGen.genRand.Next(6, 8), mod.TileType("ShadowCrystalOre"), false, 0f, 0f, false, true);
 
                 // Alternately, we could check the tile already present in the coordinate we are interested. Wrapping WorldGen.TileRunner in the following condition would make the ore only generate in Snow.
                 // Tile tile = Framing.GetTileSafely(x, y);

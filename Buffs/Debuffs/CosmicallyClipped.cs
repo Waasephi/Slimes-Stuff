@@ -17,15 +17,8 @@ namespace OurStuffAddon.Buffs.Debuffs
         public override void Update(Player player, ref int buffIndex)
         {
             OurStuffAddonPlayer p = player.GetModPlayer<OurStuffAddonPlayer>();
-                // Some other effects:
-                //player.lifeRegen++;
-                //player.meleeCrit += 2;
-                player.wingTimeMax = -1;
-                //player.meleeSpeed += 0.051f;
-                //player.statDefense += 3;
-                //player.moveSpeed += 0.05f;
-
-            
+            player.wingTime = 0;
+            player.wingTimeMax = 0;
         }
     }
 }

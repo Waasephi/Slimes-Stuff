@@ -45,7 +45,7 @@ namespace OurStuffAddon.Items.Armor.Ancient
 
         public override void UpdateArmorSet(Player player)
         {
-            player.setBonus = "Greatly Increased Life Regen, +20 Max Life, Increased Thrown Damage.";
+            player.setBonus = "Greatly Increased Life Regen, +20 Max Life, 11% Increased Thrown Damage.";
             player.lifeRegen += 4;
             player.statLifeMax2 += 20;
             player.thrownDamage *= 1.11f;

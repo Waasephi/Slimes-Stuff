@@ -16,10 +16,13 @@ namespace OurStuffAddon.Tiles
             Main.tileBlockLight[Type] = true;
             Main.tileSpelunker[Type] = true;
             Main.tileValue[Type] = 411;
-            AddMapEntry(new Color(0, 0, 0));
+            Main.tileMergeDirt[Type] = true;
             mineResist = 1f;
             minPick = 20;
             drop = mod.ItemType("ShadowCrystal");
+            ModTranslation name = CreateMapEntryName();
+            name.SetDefault("Shadow Crystal");
+            AddMapEntry(new Color(0, 0, 0), name);
             soundType = 21;
             dustType = 1;
             //soundStyle = 1;

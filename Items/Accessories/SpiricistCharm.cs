@@ -10,7 +10,7 @@ namespace OurStuffAddon.Items.Accessories
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Spiricist Charm");
-            Tooltip.SetDefault("Harness the power of the Heart and push your Spiritual Abilities beyond (Increases [c/00f2ff:Spirit Damage] By 1/3 But Lowers Defence)." +
+            Tooltip.SetDefault("Harness the power of the Heart and push your Spiritual Abilities beyond (Increases [c/00f2ff:Spirit Damage] By 30% But Lowers Defence)." +
                 "\n[c/00f2ff:-Spirit Class-]");
         }
         public override void UpdateAccessory(Player player, bool hideVisual)

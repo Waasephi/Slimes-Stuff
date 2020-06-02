@@ -15,10 +15,13 @@ namespace OurStuffAddon.Tiles
             Main.tileLighted[Type] = true;
             Main.tileBlockLight[Type] = true;
             Main.tileSpelunker[Type] = true;
-            AddMapEntry(new Color(100, 200, 200));
+            Main.tileMerge[ModContent.TileType<Tiles.SeafoamStone>()][ModContent.TileType<Tiles.LuminescentRock>()] = true;
             mineResist = 1f;
             minPick = 20;
             drop = mod.ItemType("SeafoamCrystal");
+            ModTranslation name = CreateMapEntryName();
+            name.SetDefault("Seafoam Stone");
+            AddMapEntry(new Color(100, 200, 200), name);
             soundType = 21;
             dustType = 1;
             //soundStyle = 1;

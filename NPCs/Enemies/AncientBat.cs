@@ -28,6 +28,7 @@ namespace OurStuffAddon.NPCs.Enemies
 			aiType = NPCID.CaveBat;
 			animationType = NPCID.CaveBat;
             Lighting.AddLight(npc.Center, 0, 0f, 0f);
+            npc.noGravity = true;
         }
         public override void NPCLoot()
         {

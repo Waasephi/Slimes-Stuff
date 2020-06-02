@@ -15,7 +15,7 @@ namespace OurStuffAddon.Tiles
             Main.tileLighted[Type] = false;
             Main.tileBlockLight[Type] = true;
             Main.tileSpelunker[Type] = true;
-            AddMapEntry(new Color(200, 0, 200));
+            Main.tileMergeDirt[Type] = true;
             mineResist = 1f;
             minPick = 80;
             drop = mod.ItemType("PhasiteOre");
@@ -23,6 +23,7 @@ namespace OurStuffAddon.Tiles
             dustType = 1;
             ModTranslation name = CreateMapEntryName();
             name.SetDefault("Phasite Ore");
+            AddMapEntry(new Color(200, 0, 200), name);
             //soundStyle = 1;
         }
 

@@ -37,6 +37,14 @@ namespace OurStuffAddon.Items.Accessories.GrapplingHooks
             item.shootSpeed = 18f; // how quickly the hook is shot.
             item.shoot = mod.ProjectileType("SeafoamHookProjectile");
         }
+        public override void AddRecipes()
+        {
+            ModRecipe recipe = new ModRecipe(mod);
+            recipe.AddIngredient(mod, "SeafoamCrystal", 15);
+            recipe.AddTile(TileID.Anvils);
+            recipe.SetResult(this);
+            recipe.AddRecipe();
+        }
     }
 
     internal class SeafoamHookProjectile : ModProjectile
@@ -72,7 +80,7 @@ namespace OurStuffAddon.Items.Accessories.GrapplingHooks
                     hooksOut++;
                 }
             }
-            if (hooksOut > 2) // This hook can have 3 hooks out.
+            if (hooksOut > 1) // This hook can have 1 hooks out.
             {
                 return false;
             }
@@ -80,10 +88,10 @@ namespace OurStuffAddon.Items.Accessories.GrapplingHooks
         }
 
         // Return true if it is like: Hook, CandyCaneHook, BatHook, GemHooks
-        //public override bool? SingleGrappleHook(Player player)
-        //{
-        //	return true;
-        //}
+        public override bool? SingleGrappleHook(Player player)
+        {
+        	return true;
+        }
 
         // Use this to kill oldest hook. For hooks that kill the oldest when shot, not when the newest latches on: Like SkeletronHand
         // You can also change the projectile like: Dual Hook, Lunar Hook

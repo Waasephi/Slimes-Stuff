@@ -1,5 +1,7 @@
-using Terraria.ID;
+using Microsoft.Xna.Framework;
+using Terraria;
 using Terraria.ModLoader;
+using Terraria.ID;
 
 namespace OurStuffAddon.Items.Melee
 {
@@ -20,7 +22,8 @@ namespace OurStuffAddon.Items.Melee
 			item.useAnimation = 18;
 			item.useStyle = 1;
 			item.knockBack = 6;
-			item.value = 10000;
+			item.value = Item.sellPrice(0, 0, 20, 0);
+			item.value = Item.buyPrice(0, 1, 0, 0);
             item.shoot = 304;
             item.shootSpeed = 8f;
 			item.rare = 2;

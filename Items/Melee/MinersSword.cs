@@ -29,9 +29,9 @@ namespace OurStuffAddon.Items.Melee
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.Diamond, 30);
-			recipe.AddIngredient(ItemID.Wood, 50);
-			recipe.AddTile(TileID.Anvils);
+			recipe.AddIngredient(ItemID.Diamond, 2);
+			recipe.AddIngredient(ItemID.Wood);
+			recipe.AddTile(18);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

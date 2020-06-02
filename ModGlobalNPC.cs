@@ -2,12 +2,67 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using System.Collections.Generic;
 
 namespace OurStuffAddon
 {
     public class ModGlobalNPC : GlobalNPC
     {
-        public override void NPCLoot(NPC npc)
+        /*public override bool InstancePerEntity
+        {
+            get
+            {
+                return true;
+            }
+        }
+
+        public bool Obsidiflame;
+
+        public override void ResetEffects(NPC npc)
+        {
+            Obsidiflame = false;
+        }
+
+        public override void DrawEffects(NPC npc, ref Color drawColor)
+        {
+            if (Obsidiflame)
+            {
+                if (Main.rand.Next(4) < 3)
+                {
+                    int dust = Dust.NewDust(new Vector2(npc.position.X - 2f, npc.position.Y - 2f), npc.width + 4, npc.height + 4, 14, npc.velocity.X * 0.4f, npc.velocity.Y * 0.4f, 100);
+                    Main.dust[dust].noGravity = true;
+                    Main.dust[dust].shader = GameShaders.Armor.GetSecondaryShader(56, Main.LocalPlayer);
+
+                    Dust expr_1CCF_cp_0 = Main.dust[dust];
+                    expr_1CCF_cp_0.velocity.Y = expr_1CCF_cp_0.velocity.Y - 0.5f;
+                    if (Main.rand.Next(4) == 0)
+                    {
+                        Main.dust[dust].noGravity = false;
+                        Main.dust[dust].scale *= 0.5f;
+                    }
+                }
+            }
+
+        }
+        public override void UpdateLifeRegen(NPC npc, ref int damage)
+        {
+            Player player = Main.player[Main.myPlayer];
+            OurStuffAddonPlayer modPlayer = player.GetModPlayer<OurStuffAddonPlayer>();
+            int dmg;
+
+            if (Obsidiflame)
+            {
+                if (npc.lifeRegen > 0)
+                    npc.lifeRegen = 0;
+
+                npc.lifeRegen -= npc.lifeMax / 10;
+
+                if (damage < npc.lifeMax / 100)
+                    damage = npc.lifeMax / 100;
+            }
+        }*/
+
+    public override void NPCLoot(NPC npc)
         {
             //The if (Main.rand.Next(x) == 0) determines how rare the drop is. To find the percent of a drop, divide 100 by your desired percent, minus the percent sign. Ex: A 2% chance would be 100% / 2%, or 50. This is what you put in place of x.
 
