@@ -4,7 +4,7 @@ using Terraria.ID;
 
 namespace OurStuffAddon.Items.Accessories
 {
-	public class FrostGauntlet : ModItem //replace ItemName with the name of your accessory
+	public class FrostGauntletItem : ModItem
 	{
 		public override void SetStaticDefaults()
 		{
