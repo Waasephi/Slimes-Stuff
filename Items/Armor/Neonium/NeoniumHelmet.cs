@@ -40,7 +40,7 @@ namespace OurStuffAddon.Items.Armor.Neonium
 		{
 			player.setBonus = "Increased Life Regen, Gives a green glow.";
 			player.lifeRegen += 1;
-			Lighting.AddLight((int)(player.position.X + (float)(player.width / 2)) / 16, (int)(player.position.Y + (float)(player.height / 2)) / 16, 0f, 2f, 0f);
+			Lighting.AddLight((int)(player.position.X + player.width / 2) / 16, (int)(player.position.Y + player.height / 2) / 16, 0f, 2f, 0f);
 		}
 
 		public override void AddRecipes()

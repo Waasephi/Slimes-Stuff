@@ -41,7 +41,7 @@ namespace OurStuffAddon.Items.Armor.Mushroom
 			player.setBonus = "Increased Life Regen, +1 Minion, Gives a dim blue glow.";
 			player.lifeRegen += 1;
 			player.maxMinions += 1;
-			Lighting.AddLight((int)(player.position.X + (float)(player.width / 2)) / 16, (int)(player.position.Y + (float)(player.height / 2)) / 16, 0f, 0f, 1f);
+			Lighting.AddLight((int)(player.position.X + player.width / 2) / 16, (int)(player.position.Y + player.height / 2) / 16, 0f, 0f, 1f);
 		}
 
 		public override void AddRecipes()

@@ -30,7 +30,7 @@ namespace OurStuffAddon.Projectiles
 
 		public override void AI()
 		{
-			projectile.rotation = (float)Math.Atan2((double)projectile.velocity.Y, (double)projectile.velocity.X) + 1.57f;
+			projectile.rotation = (float)Math.Atan2(projectile.velocity.Y, projectile.velocity.X) + 1.57f;
 			if (projectile.localAI[0] == 0f)
 			{
 				Main.PlaySound(SoundID.Item20, projectile.position);
@@ -47,8 +47,8 @@ namespace OurStuffAddon.Projectiles
 			{
 				Main.dust[dust].velocity += projectile.velocity * 0.2f;
 			}
-			Main.dust[dust].position.X = projectile.Center.X + 4f + (float)Main.rand.Next(-2, 3);
-			Main.dust[dust].position.Y = projectile.Center.Y + (float)Main.rand.Next(-2, 3);
+			Main.dust[dust].position.X = projectile.Center.X + 4f + Main.rand.Next(-2, 3);
+			Main.dust[dust].position.Y = projectile.Center.Y + Main.rand.Next(-2, 3);
 			Main.dust[dust].noGravity = true;
 		}
 

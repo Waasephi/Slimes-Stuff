@@ -57,14 +57,6 @@ namespace OurStuffAddon
 		{
 			OurStuffAddonPlayer modOther = other.GetModPlayer<OurStuffAddonPlayer>();
 			return ZoneRuin == modOther.ZoneRuin;
-			return ZoneLuminescentLagoon == modOther.ZoneLuminescentLagoon;
-			// If you have several Zones, you might find the &= operator or other logic operators useful:
-			// bool allMatch = true;
-			// allMatch &= ZoneExample == modOther.ZoneExample;
-			// allMatch &= ZoneModel == modOther.ZoneModel;
-			// return allMatch;
-			// Here is an example just using && chained together in one statemeny
-			// return ZoneExample == modOther.ZoneExample && ZoneModel == modOther.ZoneModel;
 		}
 	}
 }

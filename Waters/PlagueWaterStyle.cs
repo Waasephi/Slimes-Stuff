@@ -7,16 +7,24 @@ namespace OurStuffAddon.Waters
 	public class PlagueWaterStyle : ModWaterStyle
 	{
 		public override bool ChooseWaterStyle()
-			=> Main.bgStyle == mod.GetSurfaceBgStyleSlot("PlagueBackroundSurfaceStyle");
+		{
+			return Main.bgStyle == mod.GetSurfaceBgStyleSlot("PlagueBackroundSurfaceStyle");
+		}
 
 		public override int ChooseWaterfallStyle()
-			=> mod.GetWaterfallStyleSlot("PlagueWaterfallStyle");
+		{
+			return mod.GetWaterfallStyleSlot("PlagueWaterfallStyle");
+		}
 
 		public override int GetSplashDust()
-			=> mod.DustType("PlagueWaterSplash");
+		{
+			return mod.DustType("PlagueWaterSplash");
+		}
 
 		public override int GetDropletGore()
-			=> mod.GetGoreSlot("Gores/PlagueDroplet");
+		{
+			return mod.GetGoreSlot("Gores/PlagueDroplet");
+		}
 
 		public override void LightColorMultiplier(ref float r, ref float g, ref float b)
 		{
@@ -26,6 +34,8 @@ namespace OurStuffAddon.Waters
 		}
 
 		public override Color BiomeHairColor()
-			=> Color.Purple;
+		{
+			return Color.Purple;
+		}
 	}
 }

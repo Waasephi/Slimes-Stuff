@@ -46,7 +46,7 @@ namespace OurStuffAddon.Structures
 			{
 				for (int j = 0; j < _HeartStoneBig.GetLength(0); j++)
 				{
-					if (TileCheckSafe((int)(xPosO + i), (int)(yPosO + j)))
+					if (TileCheckSafe(xPosO + i, yPosO + j))
 					{
 						if (_HeartStoneBig[j, i] == 1)
 						{
@@ -64,7 +64,7 @@ namespace OurStuffAddon.Structures
 			{
 				for (int j = 0; j < _HeartStoneMed.GetLength(0); j++)
 				{
-					if (TileCheckSafe((int)(xPosO + i), (int)(yPosO + j)))
+					if (TileCheckSafe(xPosO + i, yPosO + j))
 					{
 						if (_HeartStoneMed[j, i] == 1)
 						{
@@ -82,7 +82,7 @@ namespace OurStuffAddon.Structures
 			{
 				for (int j = 0; j < _HeartStoneSmall.GetLength(0); j++)
 				{
-					if (TileCheckSafe((int)(xPosO + i), (int)(yPosO + j)))
+					if (TileCheckSafe(xPosO + i, yPosO + j))
 					{
 						if (_HeartStoneSmall[j, i] == 1)
 						{

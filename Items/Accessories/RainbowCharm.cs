@@ -28,7 +28,7 @@ namespace OurStuffAddon.Items.Accessories
 			player.detectCreature = true;
 			player.dangerSense = true;
 			player.findTreasure = true;
-			Lighting.AddLight((int)(player.position.X + (float)(player.width / 2)) / 16, (int)(player.position.Y + (float)(player.height / 2)) / 16, 0.8f, 0.95f, 1f);
+			Lighting.AddLight((int)(player.position.X + player.width / 2) / 16, (int)(player.position.Y + player.height / 2) / 16, 0.8f, 0.95f, 1f);
 		}
 
 		public override void SetDefaults()

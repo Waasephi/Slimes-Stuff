@@ -19,7 +19,6 @@ namespace OurStuffAddon.Items.Materials
 			ItemID.Sets.ItemNoGravity[item.type] = true;
 		}
 
-		// TODO -- Velocity Y smaller, post NewItem?
 		public override void SetDefaults()
 		{
 			Item refItem = new Item();

@@ -20,7 +20,7 @@ namespace OurStuffAddon
 		internal static OurStuffAddon Instance;
 
 		internal UserInterface ExamplePersonUserInterface;
-		private UserInterface _exampleUserInterface;
+		private readonly UserInterface _exampleUserInterface;
 		// Your mod instance has a Logger field, use it.
 		// OPTIONAL: You can create your own logger this way, recommended is a custom logging class if you do a lot of logging
 		// You need to reference the log4net library to do this, this can be found in the tModLoader repository

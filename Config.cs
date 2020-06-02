@@ -8,8 +8,8 @@ namespace OurStuffAddon
 	public static class Config
 	{
 		public static bool HeartStoneNotices = true;
-		private static string ConfigPath = Path.Combine(Main.SavePath, "Mod Configs", "OurStuffAddonConfig.json");
-		private static Preferences Configuration = new Preferences(ConfigPath);
+		private static readonly string ConfigPath = Path.Combine(Main.SavePath, "Mod Configs", "OurStuffAddonConfig.json");
+		private static readonly Preferences Configuration = new Preferences(ConfigPath);
 
 		public static void Load()
 		{

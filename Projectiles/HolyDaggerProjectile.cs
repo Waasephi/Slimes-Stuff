@@ -24,7 +24,7 @@ namespace OurStuffAddon.Projectiles
 
 		public override void AI()
 		{
-			projectile.rotation = (float)Math.Atan2((double)projectile.velocity.Y, (double)projectile.velocity.X) + 1.57f;
+			projectile.rotation = (float)Math.Atan2(projectile.velocity.Y, projectile.velocity.X) + 1.57f;
 			projectile.localAI[0] += 1f;
 			projectile.ai[0] += 1f;
 			if (projectile.ai[0] >= 100000f)       //how much time the projectile can travel before landing

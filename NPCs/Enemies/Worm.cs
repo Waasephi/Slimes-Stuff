@@ -1,80 +1,10 @@
-using Microsoft.Xna.Framework;
-using System.IO;
+﻿using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace OurStuffAddon.NPCs.Bosses
+namespace OurStuffAddon.NPCs.Enemies
 {
-	// I made this 2nd base class to limit code repetition.
-	public abstract class GiantSandSifter : Worm
-	{
-		public override void SetStaticDefaults()
-		{
-			DisplayName.SetDefault("Giant Sand Sifter");
-		}
-
-		public override void Init()
-		{
-			minLength = 20;
-			maxLength = 20;
-			tailType = ModContent.NPCType<GiantSandSifterTail>();
-			bodyType = ModContent.NPCType<GiantSandSifterBody>();
-			headType = ModContent.NPCType<GiantSandSifterHead>();
-			speed = 5.0f;
-			turnSpeed = 0.2f;
-			npc.buffImmune[24] = false;
-		}
-
-		public override void NPCLoot()
-		{
-			if (!Main.expertMode)
-			{
-				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("SandSifterMandible"), Main.rand.Next(7, 10));
-				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("SandSifterScale"), Main.rand.Next(7, 10));
-				int loots = Main.rand.Next(5);
-				switch (loots)
-				{
-					case 1:
-						Item.NewItem(npc.getRect(), mod.ItemType("SandSifterScale"), Main.rand.Next(1, 1));
-						break;
-
-					case 2:
-						Item.NewItem(npc.getRect(), mod.ItemType("SandTome"), Main.rand.Next(1, 1));
-						break;
-
-					case 3:
-						Item.NewItem(npc.getRect(), mod.ItemType("DesertDuster"), Main.rand.Next(1, 1));
-						break;
-
-					case 4:
-						Item.NewItem(npc.getRect(), mod.ItemType("DesertFang"), Main.rand.Next(100, 100));
-						break;
-				}
-			}
-
-			{
-				int loots2 = Main.rand.Next(10);
-				switch (loots2)
-				{
-					case 1: Item.NewItem(npc.getRect(), mod.ItemType("GiantSandSifterTrophy"), 1); break;
-					case 2: break;
-				}
-			}
-
-			if (Main.expertMode)
-			{
-				npc.DropBossBags();
-			}
-			OurStuffAddonWorld.downedGiantSandSifter = true;
-		}
-
-		public override void BossLoot(ref string name, ref int potionType)
-		{
-			potionType = 188;
-		}
-	}
-
 	// This abstract class can be used for non splitting worm type NPC.
 	public abstract class Worm : ModNPC
 	{
@@ -97,8 +27,6 @@ namespace OurStuffAddon.NPCs.Bosses
 
 		public override void AI()
 		{
-			if (Main.player[npc.target].statLife == 0) npc.position.Y += 100;
-			npc.dontTakeDamage = !Main.player[npc.target].ZoneDesert;
 			if (npc.localAI[1] == 0f)
 			{
 				npc.localAI[1] = 1f;
@@ -194,13 +122,17 @@ namespace OurStuffAddon.NPCs.Bosses
 							Vector2 vector17;
 							vector17.X = num184 * 16;
 							vector17.Y = num185 * 16;
-
 							if (npc.position.X + npc.width > vector17.X && npc.position.X < vector17.X + 16f && npc.position.Y + npc.height > vector17.Y && npc.position.Y < vector17.Y + 16f)
 							{
 								flag18 = true;
-
 								if (Main.rand.Next(100) == 0 && npc.behindTiles && Main.tile[num184, num185].nactive())
+								{
 									WorldGen.KillTile(num184, num185, true, true, false);
+								}
+								if (Main.netMode != 1 && Main.tile[num184, num185].type == 2)
+								{
+									ushort arg_BFCA_0 = Main.tile[num184, num185 - 1].type;
+								}
 							}
 						}
 					}
@@ -559,104 +491,6 @@ namespace OurStuffAddon.NPCs.Bosses
 		public override bool? DrawHealthBar(byte hbPosition, ref float scale, ref Vector2 position)
 		{
 			return head ? (bool?)null : false;
-		}
-	}
-
-	[AutoloadBossHead]
-	internal class GiantSandSifterHead : GiantSandSifter
-	{
-		private int attackCounter = 0;
-
-		public override string Texture => "OurStuffAddon/NPCs/Bosses/GiantSandSifterHead";
-
-		public override void SetDefaults()
-		{
-			npc.CloneDefaults(NPCID.DiggerHead);
-			npc.width = 112;
-			npc.height = 104;
-			npc.damage = 20;
-			npc.defense = 0;
-			npc.lifeMax = 6000;
-			npc.HitSound = SoundID.NPCHit1;
-			npc.DeathSound = SoundID.NPCDeath1;
-			npc.aiStyle = -1;
-			npc.lavaImmune = true;
-			npc.buffImmune[24] = true;
-			bossBag = mod.ItemType("GiantSandSifterTreasureBag");
-			npc.boss = true;
-			music = 40;
-		}
-
-		public override void Init()
-		{
-			base.Init();
-			head = true;
-		}
-
-		public override void SendExtraAI(BinaryWriter writer)
-		{
-			writer.Write(attackCounter);
-		}
-
-		public override void ReceiveExtraAI(BinaryReader reader)
-		{
-			attackCounter = reader.ReadInt32();
-		}
-
-		public override void CustomBehavior()
-		{
-		}
-	}
-
-	internal class GiantSandSifterBody : GiantSandSifter
-	{
-		public override string Texture => "OurStuffAddon/NPCs/Bosses/GiantSandSifterBody";
-
-		public override void SetDefaults()
-		{
-			npc.CloneDefaults(NPCID.DiggerBody);
-			npc.width = 96;
-			npc.height = 96;
-			npc.damage = 15;
-			npc.defense = 1;
-			npc.lifeMax = 6000;
-			npc.HitSound = SoundID.NPCHit1;
-			npc.DeathSound = SoundID.NPCDeath1;
-			npc.aiStyle = -1;
-			npc.lavaImmune = true;
-			npc.buffImmune[24] = true;
-			bossBag = mod.ItemType("GiantSandSifterTreasureBag");
-			npc.boss = false;
-			music = 40;
-		}
-	}
-
-	internal class GiantSandSifterTail : GiantSandSifter
-	{
-		public override string Texture => "OurStuffAddon/NPCs/Bosses/GiantSandSifterTail";
-
-		public override void SetDefaults()
-		{
-			npc.CloneDefaults(NPCID.DiggerTail);
-			npc.width = 120;
-			npc.height = 76;
-			npc.damage = 20;
-			npc.defense = 0;
-			npc.lifeMax = 6000;
-			npc.HitSound = SoundID.NPCHit1;
-			npc.DeathSound = SoundID.NPCDeath1;
-			npc.aiStyle = -1;
-			npc.lavaImmune = true;
-			npc.buffImmune[24] = true;
-			bossBag = mod.ItemType("GiantSandSifterTreasureBag");
-			npc.boss = false;
-			music = 40;
-		}
-
-		public override void Init()
-		{
-			base.Init();
-			tail = true;
 		}
 	}
 }

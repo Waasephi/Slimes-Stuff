@@ -43,7 +43,7 @@ namespace OurStuffAddon.Items.Armor.Crystallus
 		{
 			player.setBonus = "Spelunker effect, Shine effect, +3 Defence, +16% [c/00f2ff:Spirit Damage].";
 			player.findTreasure = true;
-			Lighting.AddLight((int)(player.position.X + (float)(player.width / 2)) / 16, (int)(player.position.Y + (float)(player.height / 2)) / 16, 0.8f, 0.95f, 1f);
+			Lighting.AddLight((int)(player.position.X + player.width / 2) / 16, (int)(player.position.Y + player.height / 2) / 16, 0.8f, 0.95f, 1f);
 			player.statDefense += 3;
 			SpiritDamagePlayer modPlayer = SpiritDamagePlayer.ModPlayer(player);
 			modPlayer.spiritDamageMult *= 1.16f;

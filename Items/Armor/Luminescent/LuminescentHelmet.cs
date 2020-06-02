@@ -41,7 +41,7 @@ namespace OurStuffAddon.Items.Armor.Luminescent
 			player.setBonus = "Gives Flippers And Gills Buffs, Gives a dim glow.";
 			player.AddBuff(BuffID.Gills, 2);
 			player.AddBuff(BuffID.Flipper, 2);
-			Lighting.AddLight((int)(player.position.X + (float)(player.width / 2)) / 16, (int)(player.position.Y + (float)(player.height / 2)) / 16, 0f, 2f, 1f);
+			Lighting.AddLight((int)(player.position.X + player.width / 2) / 16, (int)(player.position.Y + player.height / 2) / 16, 0f, 2f, 1f);
 		}
 
 		public override void AddRecipes()

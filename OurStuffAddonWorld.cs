@@ -46,24 +46,26 @@ namespace OurStuffAddon
 
 		public override TagCompound Save()
 		{
-			TagCompound tag = new TagCompound();
-			var downed = new List<string>();
-			bool obs = false;
-			int pwr = 0;
-			tag["heartStone"] = heartStone;
-			if (downedGiantSandSifter) downed.Add("GiantSandSifter");
-			if (downedLifeEnforcer) downed.Add("LifeEnforcer");
-			if (downedCosmicSlime) downed.Add("CosmicSlime");
-			if (downedNeoParasite) downed.Add("NeoParasite");
-			if (downedNeoMothership) downed.Add("NeoMothership");
-			if (downedAncientObserver) downed.Add("AncientObserver");
+			List<string> downed = new List<string>();
+
+			if (downedGiantSandSifter)
+				downed.Add("GiantSandSifter");
+			if (downedLifeEnforcer)
+				downed.Add("LifeEnforcer");
+			if (downedCosmicSlime)
+				downed.Add("CosmicSlime");
+			if (downedNeoParasite)
+				downed.Add("NeoParasite");
+			if (downedNeoMothership)
+				downed.Add("NeoMothership");
+			if (downedAncientObserver)
+				downed.Add("AncientObserver");
 
 			return new TagCompound {
 				{"downed", downed},
 				{"enforced", downedLifeEnforcer},
 				{"heartStone", heartStone },
 			};
-			return tag;
 		}
 
 		public override void ResetNearbyTileEffects()
@@ -139,7 +141,7 @@ namespace OurStuffAddon
 
 			// Ores are quite simple, we simply use a for loop and the WorldGen.TileRunner to place splotches of the specified Tile in the world.
 			// "6E-05" is "scientific notation". It simply means 0.00006 but in some ways is easier to read.
-			for (int k = 0; k < (int)((double)(Main.maxTilesX * Main.maxTilesY) * 6E-05); k++)
+			for (int k = 0; k < (int)(Main.maxTilesX * Main.maxTilesY * 6E-05); k++)
 			{
 				// The inside of this for loop corresponds to one single splotch of our Ore.
 				// First, we randomly choose any coordinate in the world by choosing a random x and y value.
@@ -151,11 +153,9 @@ namespace OurStuffAddon
 
 				// Alternately, we could check the tile already present in the coordinate we are interested. Wrapping WorldGen.TileRunner in the following condition would make the ore only generate in Snow.
 				Tile tile = Framing.GetTileSafely(x, y);
+
 				if (tile.active() && tile.type == mod.TileType("LuminescentRock"))
-				{
 					WorldGen.TileRunner(x, y, 10, WorldGen.genRand.Next(50, 100), mod.TileType("SeafoamStone"), false, 0f, 0f, true, true);
-					int Y = WorldGen.genRand.Next((int)WorldGen.rockLayer - -400, Main.maxTilesY - (int)WorldGen.rockLayer - -500);
-				}
 			}
 		}
 
@@ -166,7 +166,7 @@ namespace OurStuffAddon
 
 			// Ores are quite simple, we simply use a for loop and the WorldGen.TileRunner to place splotches of the specified Tile in the world.
 			// "6E-05" is "scientific notation". It simply means 0.00006 but in some ways is easier to read.
-			for (int k = 0; k < (int)((double)(Main.maxTilesX * Main.maxTilesY) * 6E-05); k++)
+			for (int k = 0; k < (int)(Main.maxTilesX * Main.maxTilesY * 6E-05); k++)
 			{
 				// The inside of this for loop corresponds to one single splotch of our Ore.
 				// First, we randomly choose any coordinate in the world by choosing a random x and y value.
@@ -174,7 +174,7 @@ namespace OurStuffAddon
 				int y = WorldGen.genRand.Next((int)WorldGen.worldSurfaceLow, Main.maxTilesY); // WorldGen.worldSurfaceLow is actually the highest surface tile. In practice you might want to use WorldGen.rockLayer or other WorldGen values.
 
 				// Then, we call WorldGen.TileRunner with random "strength" and random "steps", as well as the Tile we wish to place. Feel free to experiment with strength and step to see the shape they generate.
-				WorldGen.TileRunner(x, y, (double)WorldGen.genRand.Next(6, 8), WorldGen.genRand.Next(4, 6), mod.TileType("TrenagonOre"), false, 0f, 0f, false, true);
+				WorldGen.TileRunner(x, y, WorldGen.genRand.Next(6, 8), WorldGen.genRand.Next(4, 6), mod.TileType("TrenagonOre"), false, 0f, 0f, false, true);
 
 				// Alternately, we could check the tile already present in the coordinate we are interested. Wrapping WorldGen.TileRunner in the following condition would make the ore only generate in Snow.
 				// Tile tile = Framing.GetTileSafely(x, y);
@@ -192,7 +192,7 @@ namespace OurStuffAddon
 
 			// Ores are quite simple, we simply use a for loop and the WorldGen.TileRunner to place splotches of the specified Tile in the world.
 			// "6E-05" is "scientific notation". It simply means 0.00006 but in some ways is easier to read.
-			for (int k = 0; k < (int)((double)(Main.maxTilesX * Main.maxTilesY) * 6E-05); k++)
+			for (int k = 0; k < (int)(Main.maxTilesX * Main.maxTilesY * 6E-05); k++)
 			{
 				// The inside of this for loop corresponds to one single splotch of our Ore.
 				// First, we randomly choose any coordinate in the world by choosing a random x and y value.
@@ -200,7 +200,7 @@ namespace OurStuffAddon
 				int y = WorldGen.genRand.Next((int)WorldGen.worldSurfaceLow, Main.maxTilesY); // WorldGen.worldSurfaceLow is actually the highest surface tile. In practice you might want to use WorldGen.rockLayer or other WorldGen values.
 
 				// Then, we call WorldGen.TileRunner with random "strength" and random "steps", as well as the Tile we wish to place. Feel free to experiment with strength and step to see the shape they generate.
-				WorldGen.TileRunner(x, y, (double)WorldGen.genRand.Next(5, 7), WorldGen.genRand.Next(6, 8), mod.TileType("ParepheneOre"), false, 0f, 0f, false, true);
+				WorldGen.TileRunner(x, y, WorldGen.genRand.Next(5, 7), WorldGen.genRand.Next(6, 8), mod.TileType("ParepheneOre"), false, 0f, 0f, false, true);
 
 				// Alternately, we could check the tile already present in the coordinate we are interested. Wrapping WorldGen.TileRunner in the following condition would make the ore only generate in Snow.
 				// Tile tile = Framing.GetTileSafely(x, y);
@@ -218,7 +218,7 @@ namespace OurStuffAddon
 
 			// Ores are quite simple, we simply use a for loop and the WorldGen.TileRunner to place splotches of the specified Tile in the world.
 			// "6E-05" is "scientific notation". It simply means 0.00006 but in some ways is easier to read.
-			for (int k = 0; k < (int)((double)(Main.maxTilesX * Main.maxTilesY) * 6E-05); k++)
+			for (int k = 0; k < (int)(Main.maxTilesX * Main.maxTilesY * 6E-05); k++)
 			{
 				// The inside of this for loop corresponds to one single splotch of our Ore.
 				// First, we randomly choose any coordinate in the world by choosing a random x and y value.
@@ -226,7 +226,7 @@ namespace OurStuffAddon
 				int y = WorldGen.genRand.Next((int)WorldGen.worldSurfaceLow, Main.maxTilesY); // WorldGen.worldSurfaceLow is actually the highest surface tile. In practice you might want to use WorldGen.rockLayer or other WorldGen values.
 
 				// Then, we call WorldGen.TileRunner with random "strength" and random "steps", as well as the Tile we wish to place. Feel free to experiment with strength and step to see the shape they generate.
-				WorldGen.TileRunner(x, y, (double)WorldGen.genRand.Next(7, 9), WorldGen.genRand.Next(4, 6), mod.TileType("PhasiteOre"), false, 0f, 0f, false, true);
+				WorldGen.TileRunner(x, y, WorldGen.genRand.Next(7, 9), WorldGen.genRand.Next(4, 6), mod.TileType("PhasiteOre"), false, 0f, 0f, false, true);
 
 				// Alternately, we could check the tile already present in the coordinate we are interested. Wrapping WorldGen.TileRunner in the following condition would make the ore only generate in Snow.
 				// Tile tile = Framing.GetTileSafely(x, y);
@@ -244,7 +244,7 @@ namespace OurStuffAddon
 
 			// Ores are quite simple, we simply use a for loop and the WorldGen.TileRunner to place splotches of the specified Tile in the world.
 			// "6E-05" is "scientific notation". It simply means 0.00006 but in some ways is easier to read.
-			for (int k = 0; k < (int)((double)(Main.maxTilesX * Main.maxTilesY) * 6E-05); k++)
+			for (int k = 0; k < (int)(Main.maxTilesX * Main.maxTilesY * 6E-05); k++)
 			{
 				// The inside of this for loop corresponds to one single splotch of our Ore.
 				// First, we randomly choose any coordinate in the world by choosing a random x and y value.
@@ -252,7 +252,7 @@ namespace OurStuffAddon
 				int y = WorldGen.genRand.Next((int)WorldGen.worldSurfaceLow, Main.maxTilesY); // WorldGen.worldSurfaceLow is actually the highest surface tile. In practice you might want to use WorldGen.rockLayer or other WorldGen values.
 
 				// Then, we call WorldGen.TileRunner with random "strength" and random "steps", as well as the Tile we wish to place. Feel free to experiment with strength and step to see the shape they generate.
-				WorldGen.TileRunner(x, y, (double)WorldGen.genRand.Next(2, 4), WorldGen.genRand.Next(2, 4), mod.TileType("ShadowCrystalOre"), false, 0f, 0f, false, true);
+				WorldGen.TileRunner(x, y, WorldGen.genRand.Next(2, 4), WorldGen.genRand.Next(2, 4), mod.TileType("ShadowCrystalOre"), false, 0f, 0f, false, true);
 
 				// Alternately, we could check the tile already present in the coordinate we are interested. Wrapping WorldGen.TileRunner in the following condition would make the ore only generate in Snow.
 				// Tile tile = Framing.GetTileSafely(x, y);
@@ -270,7 +270,7 @@ namespace OurStuffAddon
 
 			// Ores are quite simple, we simply use a for loop and the WorldGen.TileRunner to place splotches of the specified Tile in the world.
 			// "6E-05" is "scientific notation". It simply means 0.00006 but in some ways is easier to read.
-			for (int k = 0; k < (int)((double)(Main.maxTilesX * Main.maxTilesY) * 6E-05); k++)
+			for (int k = 0; k < (int)(Main.maxTilesX * Main.maxTilesY * 6E-05); k++)
 			{
 				// The inside of this for loop corresponds to one single splotch of our Ore.
 				// First, we randomly choose any coordinate in the world by choosing a random x and y value.
@@ -278,7 +278,7 @@ namespace OurStuffAddon
 				int y = WorldGen.genRand.Next((int)WorldGen.worldSurfaceLow, Main.maxTilesY); // WorldGen.worldSurfaceLow is actually the highest surface tile. In practice you might want to use WorldGen.rockLayer or other WorldGen values.
 
 				// Then, we call WorldGen.TileRunner with random "strength" and random "steps", as well as the Tile we wish to place. Feel free to experiment with strength and step to see the shape they generate.
-				WorldGen.TileRunner(x, y, (double)WorldGen.genRand.Next(6, 8), WorldGen.genRand.Next(4, 6), mod.TileType("NeoniumOre"), false, 0f, 0f, false, true);
+				WorldGen.TileRunner(x, y, WorldGen.genRand.Next(6, 8), WorldGen.genRand.Next(4, 6), mod.TileType("NeoniumOre"), false, 0f, 0f, false, true);
 
 				// Alternately, we could check the tile already present in the coordinate we are interested. Wrapping WorldGen.TileRunner in the following condition would make the ore only generate in Snow.
 				// Tile tile = Framing.GetTileSafely(x, y);
