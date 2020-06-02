@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 
 namespace OurStuffAddon.Gores
 {
-	public class PlagueDroplet : ModGore
+	public class PlagueDropletGore : ModGore
 	{
 		public override void OnSpawn(Gore gore)
 		{

@@ -5,7 +5,7 @@ using Terraria.ID;
 
 namespace OurStuffAddon.Gores
 {
-	public class LuminescentWaterDroplet : ModGore
+	public class LuminescentWaterDropletGore : ModGore
 	{
 		public override void OnSpawn(Gore gore)
 		{
