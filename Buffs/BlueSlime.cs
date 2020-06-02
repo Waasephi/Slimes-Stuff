@@ -15,7 +15,7 @@ namespace OurStuffAddon.Buffs
 
 		public override void Update(Player player, ref int buffIndex)
 		{
-			OurStuffAddonPlayer modPlayer = player.GetModPlayer<OurStuffAddonPlayer>();
+			MyPlayer modPlayer = player.GetModPlayer<MyPlayer>();
 			if (player.ownedProjectileCounts[mod.ProjectileType("BlueSlime")] > 0)
 			{
 				modPlayer.blueSlime = true;

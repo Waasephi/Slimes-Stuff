@@ -16,7 +16,7 @@ namespace OurStuffAddon.Buffs
 
 		public override void Update(Player player, ref int buffIndex)
 		{
-			OurStuffAddonPlayer p = player.GetModPlayer<OurStuffAddonPlayer>();
+			MyPlayer p = player.GetModPlayer<MyPlayer>();
 			// Some other effects:
 			//player.lifeRegen++;
 			//player.meleeCrit += 2;

@@ -29,7 +29,7 @@ namespace OurStuffAddon.Projectiles.Pets
 		public override void AI()
 		{
 			Player player = Main.player[projectile.owner];
-			OurStuffAddonPlayer modPlayer = player.GetModPlayer<OurStuffAddonPlayer>();
+			MyPlayer modPlayer = player.GetModPlayer<MyPlayer>();
 			if (player.dead)
 			{
 				modPlayer.SpiritPet = false;

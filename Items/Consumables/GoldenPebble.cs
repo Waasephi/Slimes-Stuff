@@ -35,12 +35,12 @@ namespace OurStuffAddon.Items.Consumables
 
 		public override bool CanUseItem(Player player)
 		{
-			return player.GetModPlayer<OurStuffAddonPlayer>().ZoneRuin;
+			return player.GetModPlayer<MyPlayer>().ZoneRuin;
 		}
 
 		public override bool UseItem(Player player)
 		{
-			if (OurStuffAddonWorld.downedAncientObserver == true)
+			if (MyWorld.downedAncientObserver == true)
 			{
 				Main.NewText("Why do you do this to the creatures of this world?", 70, 70, 0);
 			}

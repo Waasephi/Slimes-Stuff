@@ -7,7 +7,7 @@ namespace OurStuffAddon.Backgrounds
 	{
 		public override bool ChooseBgStyle()
 		{
-			return Main.LocalPlayer.GetModPlayer<OurStuffAddonPlayer>().ZoneLuminescentLagoon;
+			return Main.LocalPlayer.GetModPlayer<MyPlayer>().ZoneLuminescentLagoon;
 		}
 
 		public override void FillTextureArray(int[] textureSlots)

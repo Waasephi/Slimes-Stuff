@@ -51,7 +51,7 @@ namespace OurStuffAddon.Structures
 						if (_HeartStoneBig[j, i] == 1)
 						{
 							WorldGen.KillTile(xPosO + i, yPosO + j);
-							WorldGen.PlaceTile(xPosO + i, yPosO + j, OurStuffAddon.instance.TileType("HeartStone"), true, true);
+							WorldGen.PlaceTile(xPosO + i, yPosO + j, SlimesStuffMod.instance.TileType("HeartStone"), true, true);
 						}
 					}
 				}
@@ -69,7 +69,7 @@ namespace OurStuffAddon.Structures
 						if (_HeartStoneMed[j, i] == 1)
 						{
 							WorldGen.KillTile(xPosO + i, yPosO + j);
-							WorldGen.PlaceTile(xPosO + i, yPosO + j, OurStuffAddon.instance.TileType("HeartStone"), true, true);
+							WorldGen.PlaceTile(xPosO + i, yPosO + j, SlimesStuffMod.instance.TileType("HeartStone"), true, true);
 						}
 					}
 				}
@@ -87,7 +87,7 @@ namespace OurStuffAddon.Structures
 						if (_HeartStoneSmall[j, i] == 1)
 						{
 							WorldGen.KillTile(xPosO + i, yPosO + j);
-							WorldGen.PlaceTile(xPosO + i, yPosO + j, OurStuffAddon.instance.TileType("HeartStone"), true, true);
+							WorldGen.PlaceTile(xPosO + i, yPosO + j, SlimesStuffMod.instance.TileType("HeartStone"), true, true);
 						}
 					}
 				}

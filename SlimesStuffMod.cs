@@ -3,42 +3,12 @@ using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.UI;
 
 namespace OurStuffAddon
 {
-	internal class OurStuffAddon : Mod
+	public class SlimesStuffMod : Mod
 	{
-		public static ModHotKey RandomBuffHotKey;
-		public static int FaceCustomCurrencyId;
-
-		// With the new fonts in 1.3.5, font files are pretty big now so you need to generate the font file before building the mod.
-		// You can use https://forums.terraria.org/index.php?threads/dynamicspritefontgenerator-0-4-generate-fonts-without-xna-game-studio.57127/ to make dynamicspritefonts
-		public static DynamicSpriteFont exampleFont;
-
-		public static OurStuffAddon instance;
-		internal static OurStuffAddon Instance;
-
-		internal UserInterface ExamplePersonUserInterface;
-		private readonly UserInterface _exampleUserInterface;
-		// Your mod instance has a Logger field, use it.
-		// OPTIONAL: You can create your own logger this way, recommended is a custom logging class if you do a lot of logging
-		// You need to reference the log4net library to do this, this can be found in the tModLoader repository
-		// inside the references folder. You do not have to add this to build.txt as tML has it natively.
-		// internal ILog Logging = LogManager.GetLogger("ExampleMod");
-
-		public OurStuffAddon()
-		{
-			Instance = this;
-			// By default, all Autoload properties are True. You only need to change this if you know what you are doing.
-			//Properties = new ModProperties()
-			//{
-			//	Autoload = true,
-			//	AutoloadGores = true,
-			//	AutoloadSounds = true,
-			//	AutoloadBackgrounds = true
-			//};
-		}
+		public static SlimesStuffMod Instance => ModContent.GetInstance<SlimesStuffMod>();
 
 		public override void UpdateMusic(ref int music, ref MusicPriority priority)
 		{
@@ -48,12 +18,12 @@ namespace OurStuffAddon
 			}
 
 			// Make sure your logic here goes from lowest priority to highest so your intended priority is maintained.
-			if (Main.LocalPlayer.GetModPlayer<OurStuffAddonPlayer>().ZoneLuminescentLagoon)
+			if (Main.LocalPlayer.GetModPlayer<MyPlayer>().ZoneLuminescentLagoon)
 			{
 				music = GetSoundSlot(SoundType.Music, "Sounds/Music/LuminescentLagoon");
 				priority = MusicPriority.BiomeHigh;
 			}
-			if (Main.LocalPlayer.GetModPlayer<OurStuffAddonPlayer>().ZoneRuin)
+			if (Main.LocalPlayer.GetModPlayer<MyPlayer>().ZoneRuin)
 			{
 				music = GetSoundSlot(SoundType.Music, "Sounds/Music/Ruin");
 				priority = MusicPriority.BiomeHigh;
@@ -113,11 +83,11 @@ namespace OurStuffAddon
 
 			if (bossChecklist != null)
 			{
-				bossChecklist.Call("AddBossWithInfo", "Giant Sand Sifter", 2.001f, (Func<bool>)(() => OurStuffAddonWorld.downedGiantSandSifter), string.Format("Use [i:{0}] in the desert", ItemType("SandEmblem")));
-				bossChecklist.Call("AddBossWithInfo", "Life Enforcer", 2.001f, (Func<bool>)(() => OurStuffAddonWorld.downedLifeEnforcer), string.Format("Use [i:{0}] underground", ItemType("CrystalHeart")));
-				bossChecklist.Call("AddBossWithInfo", "Cosmic Slime", 15.001f, (Func<bool>)(() => OurStuffAddonWorld.downedCosmicSlime), string.Format("Use [i:{0}] anytime, anywhere.", ItemType("CosmicStarMesh")));
-				bossChecklist.Call("AddBossWithInfo", "Neo Mothership", 5.001f, (Func<bool>)(() => OurStuffAddonWorld.downedNeoMothership), string.Format("Use [i:{0}] anytime, anywhere.", ItemType("NeoLocator")));
-				bossChecklist.Call("AddBossWithInfo", "Ancient Observer", 4.001f, (Func<bool>)(() => OurStuffAddonWorld.downedAncientObserver), string.Format("Use [i:{0}] anytime, in the ruin.", ItemType("RelicPebble")));
+				bossChecklist.Call("AddBossWithInfo", "Giant Sand Sifter", 2.001f, (Func<bool>)(() => MyWorld.downedGiantSandSifter), string.Format("Use [i:{0}] in the desert", ItemType("SandEmblem")));
+				bossChecklist.Call("AddBossWithInfo", "Life Enforcer", 2.001f, (Func<bool>)(() => MyWorld.downedLifeEnforcer), string.Format("Use [i:{0}] underground", ItemType("CrystalHeart")));
+				bossChecklist.Call("AddBossWithInfo", "Cosmic Slime", 15.001f, (Func<bool>)(() => MyWorld.downedCosmicSlime), string.Format("Use [i:{0}] anytime, anywhere.", ItemType("CosmicStarMesh")));
+				bossChecklist.Call("AddBossWithInfo", "Neo Mothership", 5.001f, (Func<bool>)(() => MyWorld.downedNeoMothership), string.Format("Use [i:{0}] anytime, anywhere.", ItemType("NeoLocator")));
+				bossChecklist.Call("AddBossWithInfo", "Ancient Observer", 4.001f, (Func<bool>)(() => MyWorld.downedAncientObserver), string.Format("Use [i:{0}] anytime, in the ruin.", ItemType("RelicPebble")));
 			}
 			Mod bossAssist = ModLoader.GetMod("BossAssist");
 			if (bossAssist != null)

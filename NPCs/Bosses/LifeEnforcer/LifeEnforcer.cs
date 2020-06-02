@@ -53,7 +53,7 @@ namespace OurStuffAddon.NPCs.Bosses.LifeEnforcer
                      case 2: break;
                  }
              }*/
-			OurStuffAddonWorld.downedLifeEnforcer = true;
+			MyWorld.downedLifeEnforcer = true;
 			if (Main.expertMode)
 			{
 				npc.DropBossBags();
@@ -103,14 +103,14 @@ namespace OurStuffAddon.NPCs.Bosses.LifeEnforcer
 
 		public override void BossLoot(ref string name, ref int potionType)
 		{
-			if (OurStuffAddonWorld.downedLifeEnforcer)
+			if (MyWorld.downedLifeEnforcer)
 			{
 				Main.NewText("I could not stop it...", 250, 200, 200);
 			}
 
-			if (OurStuffAddonWorld.heartStone == false)
+			if (MyWorld.heartStone == false)
 			{
-				OurStuffAddonWorld.heartStone = true;
+				MyWorld.heartStone = true;
 				Main.NewText("Life bursts through the world", 250, 200, 200);
 			}
 		}

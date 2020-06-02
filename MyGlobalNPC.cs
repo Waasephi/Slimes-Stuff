@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace OurStuffAddon
 {
-	public class ModGlobalNPC : GlobalNPC
+	public class MyGlobalNPC : GlobalNPC
 	{
 		public override void NPCLoot(NPC npc)
 		{

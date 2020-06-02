@@ -31,7 +31,7 @@ namespace OurStuffAddon.NPCs.Enemies
 
 		public override float SpawnChance(NPCSpawnInfo spawnInfo)
 		{
-			return spawnInfo.player.GetModPlayer<OurStuffAddonPlayer>().ZoneRuin ? 0.2f : 0f;
+			return spawnInfo.player.GetModPlayer<MyPlayer>().ZoneRuin ? 0.2f : 0f;
 		}
 
 		public override void NPCLoot()

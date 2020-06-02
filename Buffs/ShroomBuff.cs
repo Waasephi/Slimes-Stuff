@@ -16,7 +16,7 @@ namespace OurStuffAddon.Buffs
 
 		public override void Update(Player player, ref int buffIndex)
 		{
-			OurStuffAddonPlayer modPlayer = player.GetModPlayer<OurStuffAddonPlayer>();
+			MyPlayer modPlayer = player.GetModPlayer<MyPlayer>();
 			if (player.ownedProjectileCounts[ProjectileType<Projectiles.Minions.Shroomy>()] > 0)
 			{
 				modPlayer.ShroomBuff = true;

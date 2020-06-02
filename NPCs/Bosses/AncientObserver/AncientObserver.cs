@@ -54,7 +54,7 @@ namespace OurStuffAddon.NPCs.Bosses.AncientObserver
                      case 2: break;
                  }
              }*/
-			OurStuffAddonWorld.downedAncientObserver = true;
+			MyWorld.downedAncientObserver = true;
 			if (Main.expertMode)
 			{
 				npc.DropBossBags();
@@ -70,9 +70,9 @@ namespace OurStuffAddon.NPCs.Bosses.AncientObserver
 		public override void BossLoot(ref string name, ref int potionType)
 		{
 			potionType = 188;
-			if (OurStuffAddonWorld.downedAncientObserver)
+			if (MyWorld.downedAncientObserver)
 			{
-				if (OurStuffAddonWorld.downedAncientObserver == false)
+				if (MyWorld.downedAncientObserver == false)
 				{
 					Main.NewText("*Unintelligable Screech*", 70, 70, 0);
 					Main.NewText("Ancient knowledge has been given to you.", 70, 70, 0);

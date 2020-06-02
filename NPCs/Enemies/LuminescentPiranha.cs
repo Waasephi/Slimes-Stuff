@@ -32,7 +32,7 @@ namespace OurStuffAddon.NPCs.Enemies
 
 		public override float SpawnChance(NPCSpawnInfo spawnInfo)
 		{
-			return spawnInfo.player.GetModPlayer<OurStuffAddonPlayer>().ZoneLuminescentLagoon ? 0.3f : 0f;
+			return spawnInfo.player.GetModPlayer<MyPlayer>().ZoneLuminescentLagoon ? 0.3f : 0f;
 		}
 
 		public override void NPCLoot()

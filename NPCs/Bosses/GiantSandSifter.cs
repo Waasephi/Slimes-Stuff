@@ -66,7 +66,7 @@ namespace OurStuffAddon.NPCs.Bosses
 			{
 				npc.DropBossBags();
 			}
-			OurStuffAddonWorld.downedGiantSandSifter = true;
+			MyWorld.downedGiantSandSifter = true;
 		}
 
 		public override void BossLoot(ref string name, ref int potionType)

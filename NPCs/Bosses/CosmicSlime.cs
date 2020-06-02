@@ -57,7 +57,7 @@ namespace OurStuffAddon.NPCs.Bosses
                      case 2: break;
                  }
              }*/
-			OurStuffAddonWorld.downedCosmicSlime = true;
+			MyWorld.downedCosmicSlime = true;
 			if (Main.expertMode)
 			{
 				npc.DropBossBags();

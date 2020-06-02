@@ -53,7 +53,7 @@ namespace OurStuffAddon.NPCs.Bosses
                      case 2: break;
                  }
              }*/
-			OurStuffAddonWorld.downedNeoMothership = true;
+			MyWorld.downedNeoMothership = true;
 			if (Main.expertMode)
 			{
 				npc.DropBossBags();

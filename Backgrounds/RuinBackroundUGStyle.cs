@@ -7,7 +7,7 @@ namespace OurStuffAddon.Backgrounds
 	{
 		public override bool ChooseBgStyle()
 		{
-			return Main.LocalPlayer.GetModPlayer<OurStuffAddonPlayer>().ZoneRuin;
+			return Main.LocalPlayer.GetModPlayer<MyPlayer>().ZoneRuin;
 		}
 
 		public override void FillTextureArray(int[] textureSlots)

@@ -8,7 +8,7 @@ using Terraria.World.Generation;
 
 namespace OurStuffAddon
 {
-	public class OurStuffAddonWorld : ModWorld
+	public class MyWorld : ModWorld
 	{
 		public static bool downedCosmicSlime = false;
 		public static bool downedLifeEnforcer = false;
