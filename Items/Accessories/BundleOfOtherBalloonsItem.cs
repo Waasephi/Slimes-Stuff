@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace OurStuffAddon.Items.Accessories
 {
-	public class BundleOfOtherBalloons : ModItem //replace ItemName with the name of your accessory
+	public class BundleOfOtherBalloonsItem : ModItem
 	{
 		public override void SetStaticDefaults()
 		{
