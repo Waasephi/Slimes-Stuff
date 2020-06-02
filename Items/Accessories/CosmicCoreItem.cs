@@ -5,7 +5,7 @@ using Terraria.ID;
 
 namespace OurStuffAddon.Items.Accessories
 {
-	public class CosmicCore : ModItem //replace ItemName with the name of your accessory
+	public class CosmicCoreItem : ModItem
 	{
 		public override void SetStaticDefaults()
 		{
