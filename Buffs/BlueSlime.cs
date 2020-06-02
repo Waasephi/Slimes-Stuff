@@ -16,19 +16,16 @@ namespace OurStuffAddon.Buffs
 		public override void Update(Player player, ref int buffIndex)
 		{
 			MyPlayer modPlayer = player.GetModPlayer<MyPlayer>();
+
 			if (player.ownedProjectileCounts[mod.ProjectileType("BlueSlime")] > 0)
-			{
-				modPlayer.blueSlime = true;
-			}
+			
 			if (!modPlayer.blueSlime)
 			{
 				player.DelBuff(buffIndex);
 				buffIndex--;
 			}
 			else
-			{
 				player.buffTime[buffIndex] = 18000;
-			}
 		}
 	}
 }

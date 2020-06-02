@@ -17,19 +17,17 @@ namespace OurStuffAddon.Buffs
 		public override void Update(Player player, ref int buffIndex)
 		{
 			MyPlayer modPlayer = player.GetModPlayer<MyPlayer>();
+
 			if (player.ownedProjectileCounts[ProjectileType<Projectiles.Minions.Shroomy>()] > 0)
-			{
 				modPlayer.ShroomBuff = true;
-			}
+			
 			if (!modPlayer.ShroomBuff)
 			{
 				player.DelBuff(buffIndex);
 				buffIndex--;
 			}
 			else
-			{
 				player.buffTime[buffIndex] = 18000;
-			}
 		}
 	}
 }
