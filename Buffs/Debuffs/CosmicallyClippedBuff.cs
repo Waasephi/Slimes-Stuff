@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 
 namespace OurStuffAddon.Buffs.Debuffs
 {
-	public class CosmicallyClipped : ModBuff
+	public class CosmicallyClippedBuff : ModBuff
 	{
 		public override void SetDefaults()
 		{

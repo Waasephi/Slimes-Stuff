@@ -4,7 +4,7 @@ using static Terraria.ModLoader.ModContent;
 
 namespace OurStuffAddon.Buffs
 {
-	public class BabyCactus : ModBuff
+	public class BabyCactusBuff : ModBuff
 	{
 		public override void SetDefaults()
 		{

@@ -1,9 +1,10 @@
+using OurStuffAddon.Projectiles.Minions;
 using Terraria;
 using Terraria.ModLoader;
 
 namespace OurStuffAddon.Buffs
 {
-	public class BlueSlime : ModBuff
+	public class BlueSlimeBuff : ModBuff
 	{
 		public override void SetDefaults()
 		{
@@ -17,7 +18,7 @@ namespace OurStuffAddon.Buffs
 		{
 			MyPlayer modPlayer = player.GetModPlayer<MyPlayer>();
 
-			if (player.ownedProjectileCounts[mod.ProjectileType("BlueSlime")] > 0)
+			if (player.ownedProjectileCounts[ModContent.ProjectileType<BlueSlimeProjectile>()] > 0)
 			
 			if (!modPlayer.blueSlime)
 			{
