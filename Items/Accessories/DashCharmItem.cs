@@ -4,7 +4,7 @@ using Terraria.ID;
 
 namespace OurStuffAddon.Items.Accessories
 {
-	public class DashCharm : ModItem //replace ItemName with the name of your accessory
+	public class DashCharmItem : ModItem
 	{
 		public override void SetStaticDefaults()
 		{
