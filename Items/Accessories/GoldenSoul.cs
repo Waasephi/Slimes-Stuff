@@ -31,7 +31,7 @@ namespace OurStuffAddon.Items.Accessories
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.GoldBar, 50);
-			recipe.AddTile(114);
+			recipe.AddTile(TileID.TinkerersWorkbench);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

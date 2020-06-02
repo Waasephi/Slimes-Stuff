@@ -31,9 +31,9 @@ namespace OurStuffAddon.Items.Accessories
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod, "ShadowCrystal", 50);
 			recipe.AddIngredient(ItemID.NinjaHood, 1);
-			recipe.AddIngredient(257, 1);
-			recipe.AddIngredient(258, 1);
-			recipe.AddTile(114);
+			recipe.AddIngredient(ItemID.NinjaShirt, 1);
+			recipe.AddIngredient(ItemID.NinjaPants, 1);
+			recipe.AddTile(TileID.TinkerersWorkbench);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

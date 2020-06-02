@@ -31,10 +31,10 @@ namespace OurStuffAddon.Items.Accessories
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.Amber, 50);
-			recipe.AddIngredient(2361, 1);
-			recipe.AddIngredient(2362, 1);
-			recipe.AddIngredient(2363, 1);
-			recipe.AddTile(114);
+			recipe.AddIngredient(ItemID.BeeHeadgear, 1);
+			recipe.AddIngredient(ItemID.BeeBreastplate, 1);
+			recipe.AddIngredient(ItemID.BeeGreaves, 1);
+			recipe.AddTile(TileID.TinkerersWorkbench);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}
