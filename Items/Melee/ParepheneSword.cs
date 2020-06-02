@@ -9,6 +9,7 @@ namespace OurStuffAddon.Items.Melee
 		{
 			DisplayName.SetDefault("Parephene Sword");
 		}
+
 		public override void SetDefaults()
 		{
 			item.damage = 48;
@@ -21,11 +22,11 @@ namespace OurStuffAddon.Items.Melee
 			item.knockBack = 4;
 			item.value = 10000;
 			item.rare = 2;
-            item.shoot = 228;
+			item.shoot = 228;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
-            item.shootSpeed = 6f;
-        }
+			item.shootSpeed = 6f;
+		}
 
 		public override void AddRecipes()
 		{

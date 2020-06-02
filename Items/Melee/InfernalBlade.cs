@@ -10,6 +10,7 @@ namespace OurStuffAddon.Items.Melee
 			DisplayName.SetDefault("Infernal Blade");
 			Tooltip.SetDefault("Use the power of the Underworld to cut your enemies down.");
 		}
+
 		public override void SetDefaults()
 		{
 			item.damage = 40;
@@ -21,8 +22,8 @@ namespace OurStuffAddon.Items.Melee
 			item.useStyle = 1;
 			item.knockBack = 6;
 			item.value = 10000;
-            item.shoot = 15;
-            item.shootSpeed = 4f;
+			item.shoot = 15;
+			item.shootSpeed = 4f;
 			item.rare = 2;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = false;
@@ -31,10 +32,10 @@ namespace OurStuffAddon.Items.Melee
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddRecipeGroup("OurStuffAddon:EvilBlade");
-            recipe.AddIngredient(ItemID.HellstoneBar, 20);
-            recipe.AddTile(mod, "SpiritInfuser");
-            recipe.SetResult(this);
+			recipe.AddRecipeGroup("OurStuffAddon:EvilBlade");
+			recipe.AddIngredient(ItemID.HellstoneBar, 20);
+			recipe.AddTile(mod, "SpiritInfuser");
+			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}
 	}

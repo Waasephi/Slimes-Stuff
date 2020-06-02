@@ -10,6 +10,7 @@ namespace OurStuffAddon.Items.Ranged
 			DisplayName.SetDefault("Skeletal Bow");
 			Tooltip.SetDefault("Somehow this bow is still useable after so long.");
 		}
+
 		public override void SetDefaults()
 		{
 			item.damage = 30;

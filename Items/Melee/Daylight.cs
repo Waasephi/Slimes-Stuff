@@ -9,6 +9,7 @@ namespace OurStuffAddon.Items.Melee
 		{
 			DisplayName.SetDefault("Daylight");
 		}
+
 		public override void SetDefaults()
 		{
 			item.damage = 35;
@@ -29,9 +30,9 @@ namespace OurStuffAddon.Items.Melee
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.LightShard, 3);
-            recipe.AddIngredient(520, 20);
-            recipe.AddTile(134);
-            recipe.SetResult(this);
+			recipe.AddIngredient(520, 20);
+			recipe.AddTile(134);
+			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}
 	}

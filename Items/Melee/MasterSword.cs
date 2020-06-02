@@ -10,6 +10,7 @@ namespace OurStuffAddon.Items.Melee
 			DisplayName.SetDefault("Master Sword");
 			Tooltip.SetDefault("A sword used by a masterful warrior. It looks like it is missing something.");
 		}
+
 		public override void SetDefaults()
 		{
 			item.damage = 50;
@@ -31,8 +32,8 @@ namespace OurStuffAddon.Items.Melee
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.NightsEdge, 1);
 			recipe.AddIngredient(ItemID.HellstoneBar, 50);
-            recipe.AddTile(26);
-            recipe.SetResult(this);
+			recipe.AddTile(26);
+			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}
 	}

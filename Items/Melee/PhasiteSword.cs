@@ -9,6 +9,7 @@ namespace OurStuffAddon.Items.Melee
 		{
 			DisplayName.SetDefault("Phasite Sword");
 		}
+
 		public override void SetDefaults()
 		{
 			item.damage = 30;

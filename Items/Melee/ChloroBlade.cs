@@ -10,6 +10,7 @@ namespace OurStuffAddon.Items.Melee
 			DisplayName.SetDefault("Chloro Blade");
 			Tooltip.SetDefault("Use the power of the Jungle to cut your enemies down.");
 		}
+
 		public override void SetDefaults()
 		{
 			item.damage = 80;
@@ -21,8 +22,8 @@ namespace OurStuffAddon.Items.Melee
 			item.useStyle = 1;
 			item.knockBack = 6;
 			item.value = 10000;
-            item.shoot = 228;
-            item.shootSpeed = 7f;
+			item.shoot = 228;
+			item.shootSpeed = 7f;
 			item.rare = 2;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
@@ -32,9 +33,9 @@ namespace OurStuffAddon.Items.Melee
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod, "HallowedBlade");
-            recipe.AddIngredient(ItemID.ChlorophyteBar, 20);
-            recipe.AddTile(mod, "SpiritInfuser");
-            recipe.SetResult(this);
+			recipe.AddIngredient(ItemID.ChlorophyteBar, 20);
+			recipe.AddTile(mod, "SpiritInfuser");
+			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}
 	}

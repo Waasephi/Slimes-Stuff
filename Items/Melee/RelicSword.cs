@@ -9,6 +9,7 @@ namespace OurStuffAddon.Items.Melee
 		{
 			DisplayName.SetDefault("Relic Sword");
 		}
+
 		public override void SetDefaults()
 		{
 			item.damage = 20;

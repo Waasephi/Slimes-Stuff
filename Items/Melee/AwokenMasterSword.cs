@@ -1,7 +1,3 @@
-using System;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -14,14 +10,15 @@ namespace OurStuffAddon.Items.Melee
 			DisplayName.SetDefault("Awoken Master Sword");
 			Tooltip.SetDefault("A sword used by a masterful warrior. It has shown its true power.");
 		}
+
 		public override void SetDefaults()
 		{
 			item.damage = 100;
 			item.melee = true;
 			item.width = 344;
 			item.height = 344;
-            item.shoot = 116;
-            item.useTime = 10;
+			item.shoot = 116;
+			item.useTime = 10;
 			item.useAnimation = 10;
 			item.useStyle = 1;
 			item.knockBack = 6;
@@ -29,7 +26,7 @@ namespace OurStuffAddon.Items.Melee
 			item.rare = 12;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
-            item.shootSpeed = 8f;
+			item.shootSpeed = 8f;
 		}
 
 		public override void AddRecipes()

@@ -9,6 +9,7 @@ namespace OurStuffAddon.Items.Melee
 		{
 			DisplayName.SetDefault("Sifter's Tooth");
 		}
+
 		public override void SetDefaults()
 		{
 			item.damage = 14;
@@ -23,8 +24,8 @@ namespace OurStuffAddon.Items.Melee
 			item.rare = 2;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
-            item.shoot = mod.ProjectileType("SifterToothProjectile");
-            item.shootSpeed = 6f;
-        }
+			item.shoot = mod.ProjectileType("SifterToothProjectile");
+			item.shootSpeed = 6f;
+		}
 	}
 }

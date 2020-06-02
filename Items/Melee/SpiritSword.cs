@@ -10,6 +10,7 @@ namespace OurStuffAddon.Items.Melee
 			DisplayName.SetDefault("Spirit Blade");
 			Tooltip.SetDefault("Use the power of the spirits to cut your enemies down.");
 		}
+
 		public override void SetDefaults()
 		{
 			item.damage = 15;
@@ -30,8 +31,8 @@ namespace OurStuffAddon.Items.Melee
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod, "SpiriciteCrystal", 10);
-            recipe.AddTile(mod, "SpiritInfuser");
-            recipe.SetResult(this);
+			recipe.AddTile(mod, "SpiritInfuser");
+			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}
 	}

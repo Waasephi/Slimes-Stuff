@@ -4,21 +4,21 @@ using Terraria.ModLoader;
 
 namespace OurStuffAddon.NPCs.Enemies
 {
-   	public class IronSlime : ModNPC
+	public class IronSlime : ModNPC
 	{
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Iron Slime");
-            Main.npcFrameCount[npc.type] = 2;
-        }
+			Main.npcFrameCount[npc.type] = 2;
+		}
 
 		public override void SetDefaults()
 		{
 			npc.width = 38;
 			npc.height = 28;
-            npc.damage = 7;
-            npc.lifeMax = 22;
-            npc.life = 22;
+			npc.damage = 7;
+			npc.lifeMax = 22;
+			npc.life = 22;
 			npc.defense = 1;
 			npc.HitSound = SoundID.NPCHit1;
 			npc.DeathSound = SoundID.NPCDeath1;
@@ -27,19 +27,21 @@ namespace OurStuffAddon.NPCs.Enemies
 			npc.aiStyle = 1;
 			aiType = NPCID.BlueSlime;
 			animationType = NPCID.BlueSlime;
-        }
-        public override float SpawnChance(NPCSpawnInfo spawnInfo)
-        {
-            return spawnInfo.player.ZoneRockLayerHeight ? 0.1f : 0f;
-        }
-        public override void NPCLoot()
-        {
-            int loots = Main.rand.Next(2);
-            switch (loots)
-            {
-                case 1:
-                    Item.NewItem(npc.getRect(), ItemID.IronOre, Main.rand.Next(1, 5)); break;
-            }
-        }
-    }
+		}
+
+		public override float SpawnChance(NPCSpawnInfo spawnInfo)
+		{
+			return spawnInfo.player.ZoneRockLayerHeight ? 0.1f : 0f;
+		}
+
+		public override void NPCLoot()
+		{
+			int loots = Main.rand.Next(2);
+			switch (loots)
+			{
+				case 1:
+					Item.NewItem(npc.getRect(), ItemID.IronOre, Main.rand.Next(1, 5)); break;
+			}
+		}
+	}
 }

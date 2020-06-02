@@ -10,6 +10,7 @@ namespace OurStuffAddon.Items.Melee
 			DisplayName.SetDefault("Demon Blade");
 			Tooltip.SetDefault("Use the power of the corruption to cut your enemies down.");
 		}
+
 		public override void SetDefaults()
 		{
 			item.damage = 20;
@@ -21,8 +22,8 @@ namespace OurStuffAddon.Items.Melee
 			item.useStyle = 1;
 			item.knockBack = 6;
 			item.value = 10000;
-            item.shoot = 307;
-            item.shootSpeed = 3f;
+			item.shoot = 307;
+			item.shootSpeed = 3f;
 			item.rare = 2;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = false;
@@ -32,9 +33,9 @@ namespace OurStuffAddon.Items.Melee
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod, "SpiritSword");
-            recipe.AddIngredient(ItemID.DemoniteBar, 20);
-            recipe.AddTile(mod, "SpiritInfuser");
-            recipe.SetResult(this);
+			recipe.AddIngredient(ItemID.DemoniteBar, 20);
+			recipe.AddTile(mod, "SpiritInfuser");
+			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}
 	}

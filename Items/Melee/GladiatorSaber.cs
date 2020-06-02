@@ -10,6 +10,7 @@ namespace OurStuffAddon.Items.Melee
 			DisplayName.SetDefault("Gladiator Saber");
 			Tooltip.SetDefault("A sword used by fierce ancient warriors.");
 		}
+
 		public override void SetDefaults()
 		{
 			item.damage = 25;

@@ -4,21 +4,21 @@ using Terraria.ModLoader;
 
 namespace OurStuffAddon.NPCs.Bosses
 {
-   	public class CosmicSlimeMinion : ModNPC
+	public class CosmicSlimeMinion : ModNPC
 	{
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Cosmic Slime Minion");
-            Main.npcFrameCount[npc.type] = 2;
-        }
+			Main.npcFrameCount[npc.type] = 2;
+		}
 
 		public override void SetDefaults()
 		{
 			npc.width = 132;
 			npc.height = 99;
-            npc.damage = 30;
-            npc.lifeMax = 50000;
-            npc.life = 50000;
+			npc.damage = 30;
+			npc.lifeMax = 50000;
+			npc.life = 50000;
 			npc.defense = 0;
 			npc.HitSound = SoundID.NPCHit1;
 			npc.DeathSound = SoundID.NPCDeath1;
@@ -27,7 +27,7 @@ namespace OurStuffAddon.NPCs.Bosses
 			npc.aiStyle = 1;
 			aiType = NPCID.BlueSlime;
 			animationType = NPCID.BlueSlime;
-            Lighting.AddLight(npc.Center, 4f, 2f, 0f);
-        }
-    }
+			Lighting.AddLight(npc.Center, 4f, 2f, 0f);
+		}
+	}
 }

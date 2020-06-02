@@ -10,6 +10,7 @@ namespace OurStuffAddon.Items.Ranged
 			DisplayName.SetDefault("True Hallowed Repeater");
 			Tooltip.SetDefault("This bow eminates powerful light energy.");
 		}
+
 		public override void SetDefaults()
 		{
 			item.damage = 70;
@@ -34,7 +35,7 @@ namespace OurStuffAddon.Items.Ranged
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.HallowedRepeater, 1);
-			recipe.AddIngredient(mod,"BrokenHeroBow");
+			recipe.AddIngredient(mod, "BrokenHeroBow");
 			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

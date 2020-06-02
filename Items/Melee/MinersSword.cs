@@ -10,6 +10,7 @@ namespace OurStuffAddon.Items.Melee
 			DisplayName.SetDefault("Miner's Sword");
 			Tooltip.SetDefault("Miner's Sword? More like minecraft diamond sword.");
 		}
+
 		public override void SetDefaults()
 		{
 			item.damage = 20;

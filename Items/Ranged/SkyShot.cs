@@ -9,6 +9,7 @@ namespace OurStuffAddon.Items.Ranged
 		{
 			DisplayName.SetDefault("Sky Shot");
 		}
+
 		public override void SetDefaults()
 		{
 			item.damage = 25;
@@ -29,13 +30,13 @@ namespace OurStuffAddon.Items.Ranged
 			item.autoReuse = true;
 		}
 
-        public override void AddRecipes()
-        {
-            ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(mod.ItemType("SkyEssence"), 20);
-            recipe.AddTile(TileID.SkyMill);
-            recipe.SetResult(this);
-            recipe.AddRecipe();
-        }
-    }
+		public override void AddRecipes()
+		{
+			ModRecipe recipe = new ModRecipe(mod);
+			recipe.AddIngredient(mod.ItemType("SkyEssence"), 20);
+			recipe.AddTile(TileID.SkyMill);
+			recipe.SetResult(this);
+			recipe.AddRecipe();
+		}
+	}
 }

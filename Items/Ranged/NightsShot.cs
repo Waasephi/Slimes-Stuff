@@ -10,6 +10,7 @@ namespace OurStuffAddon.Items.Ranged
 			DisplayName.SetDefault("Night's Shot");
 			Tooltip.SetDefault("This bow eminates dark energy.");
 		}
+
 		public override void SetDefaults()
 		{
 			item.damage = 50;
@@ -36,7 +37,7 @@ namespace OurStuffAddon.Items.Ranged
 			recipe.AddIngredient(ItemID.DemonBow, 1);
 			recipe.AddIngredient(ItemID.BeesKnees, 1);
 			recipe.AddIngredient(ItemID.MoltenFury, 1);
-			recipe.AddIngredient(mod,"SkeletalBow");
+			recipe.AddIngredient(mod, "SkeletalBow");
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

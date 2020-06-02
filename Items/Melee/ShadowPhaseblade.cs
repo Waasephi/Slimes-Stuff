@@ -9,6 +9,7 @@ namespace OurStuffAddon.Items.Melee
 		{
 			DisplayName.SetDefault("Shadow Phaseblade");
 		}
+
 		public override void SetDefaults()
 		{
 			item.damage = 21;
@@ -29,8 +30,8 @@ namespace OurStuffAddon.Items.Melee
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod, "ShadowCrystal", 10);
-            recipe.AddIngredient(ItemID.MeteoriteBar, 15);
-            recipe.AddTile(TileID.Anvils);
+			recipe.AddIngredient(ItemID.MeteoriteBar, 15);
+			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

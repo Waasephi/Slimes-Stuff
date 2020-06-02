@@ -10,6 +10,7 @@ namespace OurStuffAddon.Items.Ranged
 			DisplayName.SetDefault("Terra Longbow");
 			Tooltip.SetDefault("This bow eminates the energy of the earth.");
 		}
+
 		public override void SetDefaults()
 		{
 			item.damage = 80;

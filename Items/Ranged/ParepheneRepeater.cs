@@ -9,6 +9,7 @@ namespace OurStuffAddon.Items.Ranged
 		{
 			DisplayName.SetDefault("Parephene Repeater");
 		}
+
 		public override void SetDefaults()
 		{
 			item.damage = 45;
@@ -29,13 +30,13 @@ namespace OurStuffAddon.Items.Ranged
 			item.autoReuse = true;
 		}
 
-        public override void AddRecipes()
-        {
-            ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(mod, "ParepheneBar", 14);
-            recipe.AddTile(134);
-            recipe.SetResult(this);
-            recipe.AddRecipe();
-        }
-    }
+		public override void AddRecipes()
+		{
+			ModRecipe recipe = new ModRecipe(mod);
+			recipe.AddIngredient(mod, "ParepheneBar", 14);
+			recipe.AddTile(134);
+			recipe.SetResult(this);
+			recipe.AddRecipe();
+		}
+	}
 }

@@ -10,6 +10,7 @@ namespace OurStuffAddon.Items.Ranged
 			DisplayName.SetDefault("True Night's Shot");
 			Tooltip.SetDefault("This bow eminates powerful dark energy.");
 		}
+
 		public override void SetDefaults()
 		{
 			item.damage = 80;
@@ -34,7 +35,7 @@ namespace OurStuffAddon.Items.Ranged
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod, "NightsShot");
-			recipe.AddIngredient(mod,"BrokenHeroBow");
+			recipe.AddIngredient(mod, "BrokenHeroBow");
 			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
