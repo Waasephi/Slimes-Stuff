@@ -8,22 +8,26 @@ namespace OurStuffAddon.Waters
 	{
 		public override bool ChooseWaterStyle()
 		{
-			return Main.bgStyle == mod.GetSurfaceBgStyleSlot("LuminescentBackgroundSurfaceStyle");    //this is where u choose where the custom water/waterfalls will appear. it will appear in base of backgrounds so add your surface background name.
+			//this is where u choose where the custom water/waterfalls will appear. it will appear in base of backgrounds so add your surface background name.
+			return Main.bgStyle == mod.GetSurfaceBgStyleSlot("LuminescentBackgroundSurfaceStyle");
 		}
 
 		public override int ChooseWaterfallStyle()
 		{
-			return mod.GetWaterfallStyleSlot("LuminescentWaterfallStyle");   //this is the waterfall style
+			//this is the waterfall style
+			return mod.GetWaterfallStyleSlot("LuminescentWaterfallStyle");
 		}
 
 		public override int GetSplashDust()
 		{
-			return mod.DustType("LuminescentDust");   //this is the water splash dust
+			//this is the water splash dust
+			return mod.DustType("LuminescentDust");
 		}
 
 		public override int GetDropletGore()
 		{
-			return mod.GetGoreSlot("Gores/LuminescentWaterDroplet");     //this is the water droplet
+			//this is the water droplet
+			return mod.GetGoreSlot("Gores/LuminescentWaterDroplet"); 
 		}
 
 		public override void LightColorMultiplier(ref float r, ref float g, ref float b)
@@ -33,9 +37,6 @@ namespace OurStuffAddon.Waters
 			b = 1f;
 		}
 
-		public override Color BiomeHairColor()
-		{
-			return Color.White;
-		}
+		public override Color BiomeHairColor() => Color.White;
 	}
 }
