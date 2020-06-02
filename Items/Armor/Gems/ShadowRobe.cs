@@ -34,7 +34,7 @@ namespace OurStuffAddon.Items.Armor.Gems
 
 		public override bool IsArmorSet(Item head, Item body, Item legs)
 		{
-			return head.type == (ItemID.WizardHat);
+			return head.type == ItemID.WizardHat;
 		}
 
 		public override void UpdateArmorSet(Player player)

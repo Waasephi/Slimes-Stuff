@@ -32,7 +32,7 @@ namespace OurStuffAddon.Items.Armor.HMThrown
 
 		public override bool IsArmorSet(Item head, Item body, Item legs)
 		{
-			return body.type == (ItemID.PalladiumBreastplate) && legs.type == (ItemID.PalladiumLeggings);
+			return body.type == ItemID.PalladiumBreastplate && legs.type == ItemID.PalladiumLeggings;
 		}
 
 		public override void UpdateArmorSet(Player player)

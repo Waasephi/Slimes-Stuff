@@ -38,7 +38,7 @@ namespace OurStuffAddon.Projectiles
 				projectile.Kill();
 				if (Main.rand.Next(3) == 0)
 				{
-					Item.NewItem((int)projectile.position.X, (int)projectile.position.Y, projectile.width, projectile.height, (mod.ItemType("InfernalKunai")));
+					Item.NewItem((int)projectile.position.X, (int)projectile.position.Y, projectile.width, projectile.height, mod.ItemType("InfernalKunai"));
 				}
 
 				Main.PlaySound(2, (int)projectile.position.X, (int)projectile.position.Y, 10);

@@ -43,10 +43,10 @@ namespace OurStuffAddon.NPCs.Bosses
 			{
 				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("CosmicFragment"), Main.rand.Next(10, 15));
 				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("CosmicJelly"), Main.rand.Next(30, 45));
-				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, (3458), Main.rand.Next(10, 15));
-				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, (3456), Main.rand.Next(10, 15));
-				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, (3457), Main.rand.Next(10, 15));
-				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, (3459), Main.rand.Next(10, 15));
+				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, 3458, Main.rand.Next(10, 15));
+				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, 3456, Main.rand.Next(10, 15));
+				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, 3457, Main.rand.Next(10, 15));
+				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, 3459, Main.rand.Next(10, 15));
 			}
 
 			/* {

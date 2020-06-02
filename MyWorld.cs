@@ -19,11 +19,11 @@ namespace OurStuffAddon
 		public static int LuminescentLagoon = 0;
 		public static int Ruin = 0;
 		public static bool heartStone = false;
-		public static int sizeMult = (int)(Math.Round(Main.maxTilesX / 4200f)); //Small = 2; Medium = ~3; Large = 4;
+		public static int sizeMult = (int)Math.Round(Main.maxTilesX / 4200f); //Small = 2; Medium = ~3; Large = 4;
 
 		public override void Initialize()
 		{
-			sizeMult = (int)(Math.Floor(Main.maxTilesX / 4200f));
+			sizeMult = (int)Math.Floor(Main.maxTilesX / 4200f);
 			downedCosmicSlime = false;
 			downedLifeEnforcer = false;
 			downedGiantSandSifter = false;

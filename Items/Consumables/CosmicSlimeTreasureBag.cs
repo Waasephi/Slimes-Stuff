@@ -33,10 +33,10 @@ namespace OurStuffAddon.Items.Consumables
 			if (Main.rand.Next(0) == 0)
 				player.QuickSpawnItem(mod.ItemType("CosmicJelly"), Main.rand.Next(30, 45));
 			player.QuickSpawnItem(mod.ItemType("CosmicFragment"), Main.rand.Next(10, 15));
-			player.QuickSpawnItem((3458), Main.rand.Next(10, 15));
-			player.QuickSpawnItem((3456), Main.rand.Next(10, 15));
-			player.QuickSpawnItem((3457), Main.rand.Next(10, 15));
-			player.QuickSpawnItem((3459), Main.rand.Next(10, 15));
+			player.QuickSpawnItem(3458, Main.rand.Next(10, 15));
+			player.QuickSpawnItem(3456, Main.rand.Next(10, 15));
+			player.QuickSpawnItem(3457, Main.rand.Next(10, 15));
+			player.QuickSpawnItem(3459, Main.rand.Next(10, 15));
 			player.QuickSpawnItem(mod.ItemType("CosmicCore"), Main.rand.Next(1, 1));
 		}
 	}

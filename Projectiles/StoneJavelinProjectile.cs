@@ -37,7 +37,7 @@ namespace OurStuffAddon.Projectiles
 				projectile.Kill();
 				if (Main.rand.Next(3) == 0)
 				{
-					Item.NewItem((int)projectile.position.X, (int)projectile.position.Y, projectile.width, projectile.height, (mod.ItemType("StoneJavelin")));
+					Item.NewItem((int)projectile.position.X, (int)projectile.position.Y, projectile.width, projectile.height, mod.ItemType("StoneJavelin"));
 				}
 				Main.PlaySound(2, (int)projectile.position.X, (int)projectile.position.Y, 10);
 			}
