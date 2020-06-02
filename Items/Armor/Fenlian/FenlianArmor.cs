@@ -21,7 +21,7 @@ namespace OurStuffAddon.Items.Armor.Fenlian
 			item.width = 24;
 			item.height = 24;
 			item.value = 100;
-			item.rare = 7;
+			item.rare = ItemRarityID.Lime;
 			item.defense = 15;
 		}
 
@@ -40,7 +40,7 @@ namespace OurStuffAddon.Items.Armor.Fenlian
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.ChlorophyteBar, 20);
 			recipe.AddIngredient(mod, "LivingMush");
-			recipe.AddTile(134);
+			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

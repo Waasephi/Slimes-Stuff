@@ -32,18 +32,18 @@ namespace OurStuffAddon.Items.SpiritDamageClass
 		public override void SafeSetDefaults()
 		{
 			item.shootSpeed = 6f;
-			item.shoot = 409;
+			item.shoot = ProjectileID.Typhoon;
 			item.UseSound = SoundID.Item43;
 			item.useTime = 20;
 			item.useAnimation = 20;
-			item.useStyle = 5;
+			item.useStyle = ItemUseStyleID.HoldingOut;
 			item.noMelee = true;
 			item.Size = new Vector2(18, 46);
 			item.damage = 54;
 			item.crit = 2;
 			item.knockBack = 2;
 			item.autoReuse = true;
-			item.rare = 9;
+			item.rare = ItemRarityID.Cyan;
 			item.value = 20000;
 		}
 
@@ -61,7 +61,7 @@ namespace OurStuffAddon.Items.SpiritDamageClass
 			recipe.AddIngredient(mod, "PsychicSand");
 			recipe.AddIngredient(ItemID.Coral, 20);
 			recipe.AddIngredient(ItemID.HallowedBar, 15);
-			recipe.AddTile(134);
+			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

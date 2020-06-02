@@ -25,7 +25,7 @@ namespace OurStuffAddon.Items.Accessories
 			item.width = 28;
 			item.height = 48;
 			item.value = 10000;
-			item.rare = 5;
+			item.rare = ItemRarityID.Pink;
 			item.accessory = true;
 		}
 
@@ -34,7 +34,7 @@ namespace OurStuffAddon.Items.Accessories
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod, "BundleOfBundles");
 			recipe.AddIngredient(ItemID.LunarBar, 10);
-			recipe.AddTile(114);
+			recipe.AddTile(TileID.TinkerersWorkbench);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

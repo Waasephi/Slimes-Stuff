@@ -19,7 +19,7 @@ namespace OurStuffAddon.Items.Armor.Gel
 			item.width = 18;
 			item.height = 10;
 			item.value = 100;
-			item.rare = 2;
+			item.rare = ItemRarityID.Green;
 			item.defense = 3;
 		}
 
@@ -37,7 +37,7 @@ namespace OurStuffAddon.Items.Armor.Gel
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.Gel, 100);
 			recipe.AddIngredient(ItemID.Silk, 30);
-			recipe.AddTile(220);
+			recipe.AddTile(TileID.Solidifier);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

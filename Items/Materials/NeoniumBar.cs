@@ -17,7 +17,7 @@ namespace OurStuffAddon.Items.Materials
 			item.width = 80;
 			item.height = 112;
 			item.value = 100;
-			item.rare = 7;
+			item.rare = ItemRarityID.Lime;
 			item.expert = false;
 			item.autoReuse = true;
 		}

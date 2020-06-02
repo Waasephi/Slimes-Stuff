@@ -64,7 +64,7 @@ namespace OurStuffAddon.NPCs.Bosses.AncientObserver
 			{
 				projectile.Kill();
 
-				Main.PlaySound(2, (int)projectile.position.X, (int)projectile.position.Y, 10);
+				Main.PlaySound(SoundID.Item, (int)projectile.position.X, (int)projectile.position.Y, 10);
 			}
 			return false;
 		}

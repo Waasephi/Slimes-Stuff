@@ -23,7 +23,7 @@ namespace OurStuffAddon.Items.Summoner
 			item.height = 28;
 			item.useTime = 36;
 			item.useAnimation = 36;
-			item.useStyle = 1;
+			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.noMelee = true;
 			item.knockBack = 1;
 			item.value = Item.buyPrice(0, 3, 0, 0);

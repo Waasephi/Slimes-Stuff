@@ -38,7 +38,7 @@ namespace OurStuffAddon.Items.Accessories
 			item.width = 22;
 			item.height = 60;
 			item.value = 10000;
-			item.rare = 2;
+			item.rare = ItemRarityID.Green;
 			item.accessory = true;
 		}
 
@@ -48,7 +48,7 @@ namespace OurStuffAddon.Items.Accessories
 			recipe.AddIngredient(ItemID.AnkhCharm);
 			recipe.AddIngredient(mod, "MoltenShield");
 			recipe.AddIngredient(ItemID.ObsidianRose);
-			recipe.AddTile(114);
+			recipe.AddTile(TileID.TinkerersWorkbench);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

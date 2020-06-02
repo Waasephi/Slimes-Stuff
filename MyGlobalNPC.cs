@@ -49,91 +49,91 @@ namespace OurStuffAddon
 					Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("SandFeather"));
 				}
 			}
-			if (npc.type == 517)
+			if (npc.type == NPCID.LunarTowerSolar)
 			{
 				if (Main.rand.Next(1) == 0) //100% chance
 				{
 					Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("CosmicFragment"), Main.rand.Next(15, 20));
 				}
 			}
-			if (npc.type == 493)
+			if (npc.type == NPCID.LunarTowerStardust)
 			{
 				if (Main.rand.Next(1) == 0) //100% chance
 				{
 					Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("CosmicFragment"), Main.rand.Next(15, 20));
 				}
 			}
-			if (npc.type == 507)
+			if (npc.type == NPCID.LunarTowerNebula)
 			{
 				if (Main.rand.Next(1) == 0) //100% chance
 				{
 					Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("CosmicFragment"), Main.rand.Next(15, 20));
 				}
 			}
-			if (npc.type == 50)
+			if (npc.type == NPCID.KingSlime)
 			{
 				if (Main.rand.Next(10) == 0) //100% chance
 				{
 					Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("CrownJewel"));
 				}
 			}
-			if (npc.type == 4)
+			if (npc.type == NPCID.EyeofCthulhu)
 			{
 				if (Main.rand.Next(10) == 0) //100% chance
 				{
 					Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("TheEye"));
 				}
 			}
-			if (npc.type == 422)
+			if (npc.type == NPCID.LunarTowerVortex)
 			{
 				if (Main.rand.Next(1) == 0) //100% chance
 				{
 					Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("CosmicFragment"), Main.rand.Next(15, 20));
 				}
 			}
-			if (npc.type == 517)
+			if (npc.type == NPCID.LunarTowerSolar)
 			{
 				if (Main.rand.Next(1) == 0) //100% chance
 				{
 					Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("LuminaFragment"), Main.rand.Next(15, 20));
 				}
 			}
-			if (npc.type == 493)
+			if (npc.type == NPCID.LunarTowerStardust)
 			{
 				if (Main.rand.Next(1) == 0) //100% chance
 				{
 					Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("LuminaFragment"), Main.rand.Next(15, 20));
 				}
 			}
-			if (npc.type == 507)
+			if (npc.type == NPCID.LunarTowerNebula)
 			{
 				if (Main.rand.Next(1) == 0) //100% chance
 				{
 					Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("LuminaFragment"), Main.rand.Next(15, 20));
 				}
 			}
-			if (npc.type == 422)
+			if (npc.type == NPCID.LunarTowerVortex)
 			{
 				if (Main.rand.Next(1) == 0) //100% chance
 				{
 					Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("LuminaFragment"), Main.rand.Next(15, 20));
 				}
 			}
-			if (npc.type == 62)
+			if (npc.type == NPCID.Demon)
 			{
 				if (Main.rand.Next(100) == 0) //1% chance
 				{
 					Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("ReaperScythe"));
 				}
 			}
-			if (npc.type == 66)
+			if (npc.type == NPCID.VoodooDemon)
 			{
 				if (Main.rand.Next(50) == 0) //2% chance
 				{
 					Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("ReaperScythe"));
 				}
 			}
-			if (npc.type == 113)
+			if (npc.type == NPCID.WallofFlesh)
 			{
 				int loots = Main.rand.Next(3);
 				switch (loots)
@@ -195,28 +195,28 @@ namespace OurStuffAddon
 			{
 				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("BottledDune"));
 			}
-			if (npc.type == 198)
+			if (npc.type == NPCID.Lihzahrd)
 			{
 				if (Main.rand.Next(2) == 0) //50% chance
 				{
 					Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("SolarPebble"), Main.rand.Next(1, 2));
 				}
 			}
-			if (npc.type == 199)
+			if (npc.type == NPCID.LihzahrdCrawler)
 			{
 				if (Main.rand.Next(2) == 0) //50% chance
 				{
 					Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("SolarPebble"), Main.rand.Next(1, 2));
 				}
 			}
-			if (npc.type == 226)
+			if (npc.type == NPCID.FlyingSnake)
 			{
 				if (Main.rand.Next(3) == 0) //33% chance
 				{
 					Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("SolarPebble"), Main.rand.Next(2, 3));
 				}
 			}
-			if (npc.type == 541)
+			if (npc.type == NPCID.SandElemental)
 			{
 				if (Main.rand.Next(3) == 0) //33% chance
 				{

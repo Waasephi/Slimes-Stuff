@@ -1,6 +1,7 @@
 ﻿using OurStuffAddon.Items.SpiritDamageClass;
 using Terraria;
 using Terraria.ModLoader;
+using Terraria.ID;
 
 namespace OurStuffAddon.Items.Accessories
 {
@@ -25,7 +26,7 @@ namespace OurStuffAddon.Items.Accessories
 			item.width = 32;
 			item.height = 32;
 			item.value = 10000;
-			item.rare = 2;
+			item.rare = ItemRarityID.Green;
 			item.accessory = true;
 		}
 
@@ -36,7 +37,7 @@ namespace OurStuffAddon.Items.Accessories
 			recipe.AddIngredient(mod, "FelmarHelmet", 1);
 			recipe.AddIngredient(mod, "FelmarBodypiece", 1);
 			recipe.AddIngredient(mod, "FelmarCuisses", 1);
-			recipe.AddTile(114);
+			recipe.AddTile(TileID.TinkerersWorkbench);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

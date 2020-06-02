@@ -21,7 +21,7 @@ namespace OurStuffAddon.Items.Armor.Magmatic
 			item.width = 24;
 			item.height = 24;
 			item.value = 100;
-			item.rare = 10;
+			item.rare = ItemRarityID.Red;
 			item.defense = 10;
 		}
 
@@ -42,7 +42,7 @@ namespace OurStuffAddon.Items.Armor.Magmatic
 			recipe.AddIngredient(ItemID.AshBlock, 150);
 			recipe.AddIngredient(ItemID.HellstoneBar, 20);
 			recipe.AddIngredient(ItemID.HallowedBar, 20);
-			recipe.AddTile(134);
+			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

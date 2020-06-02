@@ -18,10 +18,10 @@ namespace OurStuffAddon.Items.Consumables
 			item.width = 16;
 			item.height = 20;
 			item.maxStack = 999;
-			item.rare = 1;
+			item.rare = ItemRarityID.Blue;
 			item.useAnimation = 45;
 			item.useTime = 45;
-			item.useStyle = 4;
+			item.useStyle = ItemUseStyleID.HoldingUp;
 			item.UseSound = SoundID.Item15;
 			item.consumable = true;
 		}
@@ -29,11 +29,11 @@ namespace OurStuffAddon.Items.Consumables
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(3459, 5);
-			recipe.AddIngredient(3458, 5);
-			recipe.AddIngredient(3457, 5);
-			recipe.AddIngredient(3456, 5);
-			recipe.AddTile(26);
+			recipe.AddIngredient(ItemID.FragmentStardust, 5);
+			recipe.AddIngredient(ItemID.FragmentSolar, 5);
+			recipe.AddIngredient(ItemID.FragmentNebula, 5);
+			recipe.AddIngredient(ItemID.FragmentVortex, 5);
+			recipe.AddTile(TileID.DemonAltar);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

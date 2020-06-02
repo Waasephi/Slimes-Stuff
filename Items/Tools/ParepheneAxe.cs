@@ -19,10 +19,10 @@ namespace OurStuffAddon.Items.Tools
 			item.useTime = 25;
 			item.useAnimation = 25;
 			item.axe = 20;
-			item.useStyle = 1;
+			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.knockBack = 7;
 			item.value = 10000;
-			item.rare = 2;
+			item.rare = ItemRarityID.Green;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
 		}
@@ -32,7 +32,7 @@ namespace OurStuffAddon.Items.Tools
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod, "ParepheneBar", 14);
 			recipe.AddIngredient(ItemID.Wood, 12);
-			recipe.AddTile(134);
+			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

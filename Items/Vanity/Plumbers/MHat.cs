@@ -17,7 +17,7 @@ namespace OurStuffAddon.Items.Vanity.Plumbers
 			item.width = 18;
 			item.height = 10;
 			item.value = 100;
-			item.rare = 2;
+			item.rare = ItemRarityID.Green;
 			item.vanity = true;
 		}
 

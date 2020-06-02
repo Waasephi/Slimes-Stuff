@@ -20,13 +20,13 @@ namespace OurStuffAddon.Items.Magic
 			item.height = 32;
 			item.useTime = 20;
 			item.useAnimation = 20;
-			item.useStyle = 5;
+			item.useStyle = ItemUseStyleID.HoldingOut;
 			item.knockBack = 2;
 			item.value = 100;
 			item.rare = -1;
 			item.UseSound = SoundID.Item43;
 			item.autoReuse = true;
-			item.shoot = 126;
+			item.shoot = ProjectileID.DiamondBolt;
 			item.shootSpeed = 6f;
 			item.mana = 5;
 			item.noMelee = true;

@@ -1,4 +1,5 @@
 using Terraria.ModLoader;
+using Terraria.ID;
 
 namespace OurStuffAddon.Items.Materials
 {
@@ -16,7 +17,7 @@ namespace OurStuffAddon.Items.Materials
 			item.width = 42;
 			item.height = 42;
 			item.value = 100;
-			item.rare = 7;
+			item.rare = ItemRarityID.Lime;
 			item.expert = false;
 			item.autoReuse = true;
 		}

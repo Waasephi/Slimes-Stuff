@@ -1,6 +1,7 @@
 using OurStuffAddon.Items.SpiritDamageClass;
 using Terraria;
 using Terraria.ModLoader;
+using Terraria.ID;
 
 namespace OurStuffAddon.Items.Armor.Spiricite
 {
@@ -20,7 +21,7 @@ namespace OurStuffAddon.Items.Armor.Spiricite
 			item.width = 24;
 			item.height = 24;
 			item.value = 100;
-			item.rare = 2;
+			item.rare = ItemRarityID.Green;
 			item.defense = 3;
 		}
 

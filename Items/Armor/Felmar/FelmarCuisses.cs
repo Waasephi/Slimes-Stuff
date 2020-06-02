@@ -20,7 +20,7 @@ namespace OurStuffAddon.Items.Armor.Felmar
 			item.width = 18;
 			item.height = 10;
 			item.value = 100;
-			item.rare = 8;
+			item.rare = ItemRarityID.Yellow;
 			item.defense = 7;
 		}
 

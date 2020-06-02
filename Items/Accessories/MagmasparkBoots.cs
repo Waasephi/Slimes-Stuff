@@ -28,7 +28,7 @@ namespace OurStuffAddon.Items.Accessories
 			item.width = 22;
 			item.height = 20;
 			item.value = 10000;
-			item.rare = 2;
+			item.rare = ItemRarityID.Green;
 			item.accessory = true;
 		}
 
@@ -37,10 +37,10 @@ namespace OurStuffAddon.Items.Accessories
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.FrostsparkBoots);
 			recipe.AddIngredient(ItemID.LavaWaders);
-			recipe.AddIngredient(547);
-			recipe.AddIngredient(548);
-			recipe.AddIngredient(549);
-			recipe.AddTile(114);
+			recipe.AddIngredient(ItemID.SoulofFright);
+			recipe.AddIngredient(ItemID.SoulofMight);
+			recipe.AddIngredient(ItemID.SoulofSight);
+			recipe.AddTile(TileID.TinkerersWorkbench);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

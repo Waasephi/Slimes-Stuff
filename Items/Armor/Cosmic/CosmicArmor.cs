@@ -19,7 +19,7 @@ namespace OurStuffAddon.Items.Armor.Cosmic
 			item.width = 24;
 			item.height = 24;
 			item.value = 100;
-			item.rare = 11;
+			item.rare = ItemRarityID.Purple;
 			item.defense = 29;
 		}
 
@@ -36,7 +36,7 @@ namespace OurStuffAddon.Items.Armor.Cosmic
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.LunarBar, 16);
 			recipe.AddIngredient(mod, "CosmicFragment", 20);
-			recipe.AddTile(412);
+			recipe.AddTile(TileID.LunarCraftingStation);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

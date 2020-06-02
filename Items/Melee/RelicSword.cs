@@ -18,7 +18,7 @@ namespace OurStuffAddon.Items.Melee
 			item.height = 40;
 			item.useTime = 20;
 			item.useAnimation = 20;
-			item.useStyle = 1;
+			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.knockBack = 6;
 			item.value = 10000;
 			item.rare = -1;

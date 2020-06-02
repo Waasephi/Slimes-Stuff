@@ -1,5 +1,6 @@
 using Terraria;
 using Terraria.ModLoader;
+using Terraria.ID;
 
 namespace OurStuffAddon.Items.Armor.Parephene
 {
@@ -18,7 +19,7 @@ namespace OurStuffAddon.Items.Armor.Parephene
 			item.width = 24;
 			item.height = 24;
 			item.value = 100;
-			item.rare = 2;
+			item.rare = ItemRarityID.Green;
 			item.defense = 12;
 		}
 
@@ -37,7 +38,7 @@ namespace OurStuffAddon.Items.Armor.Parephene
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod, "ParepheneBar", 20);
-			recipe.AddTile(134);
+			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

@@ -20,13 +20,13 @@ namespace OurStuffAddon.Items.Magic
 			item.height = 32;
 			item.useTime = 24;
 			item.useAnimation = 24;
-			item.useStyle = 5;
+			item.useStyle = ItemUseStyleID.HoldingOut;
 			item.knockBack = 2;
 			item.value = 100;
-			item.rare = 6;
+			item.rare = ItemRarityID.LightPurple;
 			item.UseSound = SoundID.Item43;
 			item.autoReuse = true;
-			item.shoot = 521;
+			item.shoot = ProjectileID.CrystalPulse;
 			item.shootSpeed = 9f;
 			item.mana = 15;
 			item.noMelee = true;
@@ -36,8 +36,8 @@ namespace OurStuffAddon.Items.Magic
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.CrystalShard, 25);
-			recipe.AddIngredient(520, 10);
-			recipe.AddTile(134);
+			recipe.AddIngredient(ItemID.SoulofLight, 10);
+			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

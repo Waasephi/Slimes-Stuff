@@ -20,11 +20,11 @@ namespace OurStuffAddon.Items.Melee
 			item.height = 60;
 			item.useTime = 20;
 			item.useAnimation = 20;
-			item.useStyle = 1;
+			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.knockBack = 4;
 			item.value = 10000;
-			item.rare = 10;
-			item.shoot = 661;
+			item.rare = ItemRarityID.Red;
+			item.shoot = ProjectileID.BlackBolt;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
 			item.shootSpeed = 8f;
@@ -36,7 +36,7 @@ namespace OurStuffAddon.Items.Melee
 			recipe.AddIngredient(mod, "Daylight");
 			recipe.AddIngredient(mod, "Moonlight");
 			recipe.AddIngredient(ItemID.HallowedBar, 10);
-			recipe.AddTile(134);
+			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

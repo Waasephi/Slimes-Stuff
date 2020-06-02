@@ -19,10 +19,10 @@ namespace OurStuffAddon.Items.Melee
 			item.height = 32;
 			item.useTime = 1;
 			item.useAnimation = 1;
-			item.useStyle = 1;
+			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.knockBack = 6;
 			item.value = 10000;
-			item.rare = 2;
+			item.rare = ItemRarityID.Green;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
 			item.noMelee = true;
@@ -31,10 +31,10 @@ namespace OurStuffAddon.Items.Melee
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(2, 9999);
-			recipe.AddIngredient(2, 9999);
-			recipe.AddIngredient(2, 9999);
-			recipe.AddIngredient(2, 9999);
+			recipe.AddIngredient(ItemID.DirtBlock, 9999);
+			recipe.AddIngredient(ItemID.DirtBlock, 9999);
+			recipe.AddIngredient(ItemID.DirtBlock, 9999);
+			recipe.AddIngredient(ItemID.DirtBlock, 9999);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
+using Terraria.ID;
 
 namespace OurStuffAddon.Items.Accessories
 {
@@ -36,7 +37,7 @@ namespace OurStuffAddon.Items.Accessories
 			item.width = 32;
 			item.height = 32;
 			item.value = 10000;
-			item.rare = 2;
+			item.rare = ItemRarityID.Green;
 			item.accessory = true;
 		}
 
@@ -51,7 +52,7 @@ namespace OurStuffAddon.Items.Accessories
 			recipe.AddIngredient(mod, "WarriorCharm");
 			recipe.AddIngredient(mod, "RangerCharm");
 			recipe.AddIngredient(mod, "SpiricistCharm");
-			recipe.AddTile(114);
+			recipe.AddTile(TileID.TinkerersWorkbench);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

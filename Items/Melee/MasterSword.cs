@@ -19,10 +19,10 @@ namespace OurStuffAddon.Items.Melee
 			item.height = 60;
 			item.useTime = 20;
 			item.useAnimation = 20;
-			item.useStyle = 1;
+			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.knockBack = 6;
 			item.value = 10000;
-			item.rare = 2;
+			item.rare = ItemRarityID.Green;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
 		}
@@ -32,7 +32,7 @@ namespace OurStuffAddon.Items.Melee
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.NightsEdge, 1);
 			recipe.AddIngredient(ItemID.HellstoneBar, 50);
-			recipe.AddTile(26);
+			recipe.AddTile(TileID.DemonAltar);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

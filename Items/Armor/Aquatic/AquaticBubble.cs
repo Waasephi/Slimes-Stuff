@@ -21,7 +21,7 @@ namespace OurStuffAddon.Items.Armor.Aquatic
 			item.width = 18;
 			item.height = 10;
 			item.value = 100;
-			item.rare = 9;
+			item.rare = ItemRarityID.Cyan;
 			item.defense = 13;
 		}
 
@@ -52,7 +52,7 @@ namespace OurStuffAddon.Items.Armor.Aquatic
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.Coral, 20);
 			recipe.AddIngredient(ItemID.HallowedBar, 10);
-			recipe.AddTile(134);
+			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

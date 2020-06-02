@@ -19,7 +19,7 @@ namespace OurStuffAddon.Items.Armor.Outlaw
 			item.width = 24;
 			item.height = 24;
 			item.value = 100;
-			item.rare = 10;
+			item.rare = ItemRarityID.Red;
 			item.defense = 7;
 		}
 
@@ -35,7 +35,7 @@ namespace OurStuffAddon.Items.Armor.Outlaw
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.HellstoneBar, 20);
-			recipe.AddIngredient(3267);
+			recipe.AddIngredient(ItemID.ObsidianShirt);
 			recipe.AddTile(TileID.Loom);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

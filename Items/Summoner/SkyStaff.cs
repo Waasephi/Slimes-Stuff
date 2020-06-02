@@ -23,12 +23,12 @@ namespace OurStuffAddon.Items.Summoner
 			item.height = 28;
 			item.useTime = 36;
 			item.useAnimation = 36;
-			item.useStyle = 1;
+			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.noMelee = true;
 			item.knockBack = 3;
 			item.value = Item.buyPrice(0, 1, 0, 0);
-			item.shoot = 237;
-			item.rare = 9;
+			item.shoot = ProjectileID.RainCloudMoving;
+			item.rare = ItemRarityID.Cyan;
 			item.UseSound = SoundID.Item44;
 			item.shootSpeed = 10f;
 		}

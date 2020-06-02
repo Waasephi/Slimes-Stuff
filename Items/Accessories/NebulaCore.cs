@@ -1,6 +1,7 @@
 ﻿using Terraria;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
+using Terraria.ID;
 
 namespace OurStuffAddon.Items.Accessories
 {
@@ -23,7 +24,7 @@ namespace OurStuffAddon.Items.Accessories
 			item.width = 22;
 			item.height = 20;
 			item.value = 10000;
-			item.rare = 2;
+			item.rare = ItemRarityID.Green;
 			item.accessory = true;
 			item.expert = true;
 		}

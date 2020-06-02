@@ -82,14 +82,14 @@ namespace OurStuffAddon.NPCs.Bosses
 			{
 				phase++;
 				NPC.NewNPC((int)npc.position.X - 50, (int)npc.position.Y, ModContent.NPCType<CosmicSlimeMinion>());
-				Main.PlaySound(15, (int)npc.position.X, (int)npc.position.Y, 0);
+				Main.PlaySound(SoundID.Roar, (int)npc.position.X, (int)npc.position.Y, 0);
 				Main.NewText("Assist me my minion!", 200, 0, 200);
 			}
 			if (npc.life < npc.lifeMax * .6 && phase == 2)
 			{
 				NPC.NewNPC((int)npc.position.X - 50, (int)npc.position.Y, ModContent.NPCType<CosmicSlimeMinion>());
 				phase++;
-				Main.PlaySound(15, (int)npc.position.X, (int)npc.position.Y, 0);
+				Main.PlaySound(SoundID.Roar, (int)npc.position.X, (int)npc.position.Y, 0);
 				Main.NewText("I see you are stronger then I first thought. No matter!", 200, 0, 100);
 				npc.damage += 20;
 			}
@@ -97,7 +97,7 @@ namespace OurStuffAddon.NPCs.Bosses
 			{
 				NPC.NewNPC((int)npc.position.X - 50, (int)npc.position.Y, ModContent.NPCType<CosmicSlimeMinion>());
 				phase++;
-				Main.PlaySound(15, (int)npc.position.X, (int)npc.position.Y, 0);
+				Main.PlaySound(SoundID.Roar, (int)npc.position.X, (int)npc.position.Y, 0);
 				Main.NewText("ENOUGH!", 200, 0, 0);
 				npc.damage += 50;
 			}
@@ -109,7 +109,7 @@ namespace OurStuffAddon.NPCs.Bosses
 				NPC.NewNPC((int)npc.position.X - 50, (int)npc.position.Y, ModContent.NPCType<StardustSlimeMinion>());
 				NPC.NewNPC((int)npc.position.X - 50, (int)npc.position.Y, ModContent.NPCType<VortexSlimeMinion>());
 				phase++;
-				Main.PlaySound(15, (int)npc.position.X, (int)npc.position.Y, 0);
+				Main.PlaySound(SoundID.Roar, (int)npc.position.X, (int)npc.position.Y, 0);
 				Main.NewText("ASSIST ME MY COMRADES! WE MUST DEFEAT THIS MENACE!", 225, 0, 0);
 				npc.damage += 50;
 			}

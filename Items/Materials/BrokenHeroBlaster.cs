@@ -1,4 +1,5 @@
 using Terraria.ModLoader;
+using Terraria.ID;
 
 namespace OurStuffAddon.Items.Materials
 {
@@ -16,7 +17,7 @@ namespace OurStuffAddon.Items.Materials
 			item.width = 80;
 			item.height = 112;
 			item.value = 100;
-			item.rare = 3;
+			item.rare = ItemRarityID.Orange;
 			item.expert = false;
 			item.autoReuse = true;
 		}
@@ -25,7 +26,7 @@ namespace OurStuffAddon.Items.Materials
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod, "BrokenHeroBow");
-			recipe.AddTile(114);
+			recipe.AddTile(TileID.TinkerersWorkbench);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

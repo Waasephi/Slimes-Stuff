@@ -9,7 +9,7 @@ namespace OurStuffAddon.Items.VanillaRecipes
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.WoodenArrow, 3996);
-			recipe.AddTile(18);
+			recipe.AddTile(TileID.WorkBenches);
 			recipe.SetResult(ItemID.EndlessQuiver);
 			recipe.AddRecipe();
 		}

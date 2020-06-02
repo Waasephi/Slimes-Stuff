@@ -32,18 +32,18 @@ namespace OurStuffAddon.Items.SpiritDamageClass
 		public override void SafeSetDefaults()
 		{
 			item.shootSpeed = 6f;
-			item.shoot = 504;
+			item.shoot = ProjectileID.Spark;
 			item.UseSound = SoundID.Item43;
 			item.useTime = 25;
 			item.useAnimation = 25;
-			item.useStyle = 5;
+			item.useStyle = ItemUseStyleID.HoldingOut;
 			item.noMelee = true;
 			item.Size = new Vector2(18, 46);
 			item.damage = 5;
 			item.crit = 2;
 			item.knockBack = 2;
 			item.autoReuse = true;
-			item.rare = 3;
+			item.rare = ItemRarityID.Orange;
 		}
 
 		public override void GetWeaponCrit(Player player, ref int crit)
@@ -59,7 +59,7 @@ namespace OurStuffAddon.Items.SpiritDamageClass
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.Torch, 10);
 			recipe.AddIngredient(ItemID.Wood, 25);
-			recipe.AddTile(18);
+			recipe.AddTile(TileID.WorkBenches);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

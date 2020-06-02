@@ -27,17 +27,17 @@ namespace OurStuffAddon.Items.Accessories
 			item.width = 22;
 			item.height = 20;
 			item.value = 10000;
-			item.rare = 2;
+			item.rare = ItemRarityID.Green;
 			item.accessory = true;
 		}
 
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(397, 1);
-			recipe.AddIngredient(175, 50);
-			recipe.AddIngredient(1322, 1);
-			recipe.AddTile(114);
+			recipe.AddIngredient(ItemID.ObsidianShield, 1);
+			recipe.AddIngredient(ItemID.HellstoneBar, 50);
+			recipe.AddIngredient(ItemID.MagmaStone, 1);
+			recipe.AddTile(TileID.TinkerersWorkbench);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

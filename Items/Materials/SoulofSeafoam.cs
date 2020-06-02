@@ -27,7 +27,7 @@ namespace OurStuffAddon.Items.Materials
 			item.height = refItem.height;
 			item.maxStack = 999;
 			item.value = 1000;
-			item.rare = 2;
+			item.rare = ItemRarityID.Green;
 		}
 
 		// The following 2 methods are purely to show off these 2 hooks. Don't use them in your own code.

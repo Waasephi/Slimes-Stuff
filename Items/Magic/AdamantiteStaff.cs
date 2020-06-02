@@ -20,13 +20,13 @@ namespace OurStuffAddon.Items.Magic
 			item.height = 32;
 			item.useTime = 27;
 			item.useAnimation = 27;
-			item.useStyle = 5;
+			item.useStyle = ItemUseStyleID.HoldingOut;
 			item.knockBack = 2;
 			item.value = 100;
-			item.rare = 6;
+			item.rare = ItemRarityID.LightPurple;
 			item.UseSound = SoundID.Item43;
 			item.autoReuse = true;
-			item.shoot = 125;
+			item.shoot = ProjectileID.RubyBolt;
 			item.shootSpeed = 8f;
 			item.mana = 20;
 			item.noMelee = true;
@@ -36,7 +36,7 @@ namespace OurStuffAddon.Items.Magic
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.AdamantiteBar, 12);
-			recipe.AddTile(134);
+			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

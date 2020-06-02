@@ -19,7 +19,7 @@ namespace OurStuffAddon.Items.Throwing
 			item.useTime = 25;
 			item.useAnimation = 25;
 			item.noUseGraphic = true;
-			item.useStyle = 1;
+			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.knockBack = 3;
 			item.value = 8;
 			item.rare = -1;

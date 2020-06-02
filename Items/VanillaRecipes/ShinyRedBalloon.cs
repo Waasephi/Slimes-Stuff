@@ -10,7 +10,7 @@ namespace OurStuffAddon.Items.VanillaRecipes
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.WhiteString);
 			recipe.AddIngredient(ItemID.Silk, 20);
-			recipe.AddTile(114);
+			recipe.AddTile(TileID.TinkerersWorkbench);
 			recipe.SetResult(ItemID.ShinyRedBalloon);
 			recipe.AddRecipe();
 		}

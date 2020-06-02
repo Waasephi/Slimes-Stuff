@@ -1,5 +1,6 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
+using Terraria.ID;
 
 namespace OurStuffAddon.Items.Accessories
 {
@@ -22,14 +23,14 @@ namespace OurStuffAddon.Items.Accessories
 			item.width = 22;
 			item.height = 20;
 			item.value = 10000;
-			item.rare = 2;
+			item.rare = ItemRarityID.Green;
 			item.accessory = true;
 		}
 
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(19, 50);
+			recipe.AddIngredient(ItemID.GoldBar, 50);
 			recipe.AddTile(114);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

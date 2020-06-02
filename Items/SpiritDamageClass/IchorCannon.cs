@@ -32,18 +32,18 @@ namespace OurStuffAddon.Items.SpiritDamageClass
 		public override void SafeSetDefaults()
 		{
 			item.shootSpeed = 15f;
-			item.shoot = 280;
+			item.shoot = ProjectileID.GoldenShowerFriendly;
 			item.UseSound = SoundID.Item43;
 			item.useTime = 13;
 			item.useAnimation = 13;
-			item.useStyle = 5;
+			item.useStyle = ItemUseStyleID.HoldingOut;
 			item.noMelee = true;
 			item.Size = new Vector2(18, 46);
 			item.damage = 56;
 			item.crit = 2;
 			item.knockBack = 2;
 			item.autoReuse = true;
-			item.rare = 8;
+			item.rare = ItemRarityID.Yellow;
 		}
 
 		public override void GetWeaponCrit(Player player, ref int crit)
@@ -59,8 +59,8 @@ namespace OurStuffAddon.Items.SpiritDamageClass
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod, "TaintedCore");
 			recipe.AddIngredient(ItemID.Ichor, 20);
-			recipe.AddIngredient(521, 15);
-			recipe.AddTile(134);
+			recipe.AddIngredient(ItemID.SoulofNight, 15);
+			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

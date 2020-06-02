@@ -20,13 +20,13 @@ namespace OurStuffAddon.Items.Ranged
 			item.height = 40;
 			item.useTime = 20;
 			item.useAnimation = 20;
-			item.useStyle = 5;
+			item.useStyle = ItemUseStyleID.HoldingOut;
 			item.useAmmo = AmmoID.Arrow;
-			item.shoot = 4;
+			item.shoot = ProjectileID.UnholyArrow;
 			item.shootSpeed = 10f;
 			item.knockBack = 6;
 			item.value = 10000;
-			item.rare = 11;
+			item.rare = ItemRarityID.Purple;
 			item.UseSound = SoundID.Item5;
 			item.autoReuse = true;
 		}

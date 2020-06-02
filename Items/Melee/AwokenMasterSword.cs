@@ -17,10 +17,10 @@ namespace OurStuffAddon.Items.Melee
 			item.melee = true;
 			item.width = 344;
 			item.height = 344;
-			item.shoot = 116;
+			item.shoot = ProjectileID.SwordBeam;
 			item.useTime = 10;
 			item.useAnimation = 10;
-			item.useStyle = 1;
+			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.knockBack = 6;
 			item.value = 10000;
 			item.rare = 12;

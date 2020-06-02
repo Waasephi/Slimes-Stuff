@@ -20,8 +20,8 @@ namespace OurStuffAddon.Items.Ranged.Ammo
 			item.consumable = false;             //You need to set the item consumable so that the ammo would automatically consumed
 			item.knockBack = 1.5f;
 			item.value = 1;
-			item.rare = 1;
-			item.shoot = 36;   //The projectile shoot when your weapon using this ammo
+			item.rare = ItemRarityID.Blue;
+			item.shoot = ProjectileID.MeteorShot;   //The projectile shoot when your weapon using this ammo
 			item.shootSpeed = 16f;                  //The speed of the projectile
 			item.ammo = AmmoID.Bullet;              //The ammo class this ammo belongs to.
 		}
@@ -30,7 +30,7 @@ namespace OurStuffAddon.Items.Ranged.Ammo
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.MeteorShot, 3996);
-			recipe.AddTile(18);
+			recipe.AddTile(TileID.WorkBenches);
 			recipe.SetResult(this, 1);
 			recipe.AddRecipe();
 		}

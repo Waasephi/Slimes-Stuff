@@ -19,7 +19,7 @@ namespace OurStuffAddon.Items.Blocks
 			item.autoReuse = true;
 			item.useAnimation = 15;
 			item.useTime = 10;
-			item.useStyle = 1;
+			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.consumable = true;
 			item.value = 0;
 			item.createTile = mod.TileType("SpiritInfuser");
@@ -29,7 +29,7 @@ namespace OurStuffAddon.Items.Blocks
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod, "SpiritShard", 10);
-			recipe.AddIngredient(716);
+			recipe.AddIngredient(ItemID.LeadAnvil);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(mod, "SpiritInfuser");
 			recipe.AddRecipe();

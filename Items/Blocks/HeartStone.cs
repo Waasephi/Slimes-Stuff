@@ -14,7 +14,7 @@ namespace OurStuffAddon.Items.Blocks
 			item.autoReuse = true;
 			item.useAnimation = 15;
 			item.useTime = 10;
-			item.useStyle = 1;
+			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.consumable = true;
 			item.value = 0;
 			item.createTile = mod.TileType("HeartStone");
@@ -24,7 +24,7 @@ namespace OurStuffAddon.Items.Blocks
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod, "HeartStone", 20);
-			recipe.AddTile(17);
+			recipe.AddTile(TileID.Furnaces);
 			recipe.SetResult(ItemID.LifeCrystal);
 			recipe.AddRecipe();
 		}

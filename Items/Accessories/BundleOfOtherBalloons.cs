@@ -25,7 +25,7 @@ namespace OurStuffAddon.Items.Accessories
 			item.width = 22;
 			item.height = 20;
 			item.value = 10000;
-			item.rare = 2;
+			item.rare = ItemRarityID.Green;
 			item.accessory = true;
 		}
 
@@ -34,8 +34,8 @@ namespace OurStuffAddon.Items.Accessories
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.SharkronBalloon);
 			recipe.AddIngredient(ItemID.FartInABalloon);
-			recipe.AddIngredient(3251);
-			recipe.AddTile(114);
+			recipe.AddIngredient(ItemID.BalloonHorseshoeHoney);
+			recipe.AddTile(TileID.TinkerersWorkbench);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

@@ -21,10 +21,10 @@ namespace OurStuffAddon.Items.Magic
 			item.height = 20;
 			item.useTime = 25;
 			item.useAnimation = 25;
-			item.useStyle = 1;
+			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.knockBack = 2;
 			item.value = 100;
-			item.rare = 6;
+			item.rare = ItemRarityID.LightPurple;
 			item.UseSound = SoundID.Item43;
 			item.autoReuse = true;
 			item.shoot = mod.ProjectileType("StarWandProjectile");
@@ -40,7 +40,7 @@ namespace OurStuffAddon.Items.Magic
 			recipe.AddIngredient(ItemID.Vilethorn, 1);
 			recipe.AddIngredient(ItemID.AquaScepter, 1);
 			recipe.AddIngredient(ItemID.Flamelash, 1);
-			recipe.AddTile(26);
+			recipe.AddTile(TileID.DemonAltar);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

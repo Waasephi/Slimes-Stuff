@@ -1,5 +1,6 @@
 using Terraria;
 using Terraria.ModLoader;
+using Terraria.ID;
 
 namespace OurStuffAddon.Items.Armor.Dark
 {
@@ -18,7 +19,7 @@ namespace OurStuffAddon.Items.Armor.Dark
 			item.width = 18;
 			item.height = 10;
 			item.value = 100;
-			item.rare = 2;
+			item.rare = ItemRarityID.Green;
 			item.defense = 8;
 		}
 
@@ -46,7 +47,7 @@ namespace OurStuffAddon.Items.Armor.Dark
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod.ItemType("DarkSteel"), 10);
-			recipe.AddTile(26);
+			recipe.AddTile(TileID.DemonAltar);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

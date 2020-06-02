@@ -19,7 +19,7 @@ namespace OurStuffAddon.Items.Armor.Ancient
 			item.width = 24;
 			item.height = 24;
 			item.value = 100;
-			item.rare = 11;
+			item.rare = ItemRarityID.Purple;
 			item.defense = 23;
 		}
 
@@ -35,7 +35,7 @@ namespace OurStuffAddon.Items.Armor.Ancient
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.LihzahrdBrick, 100);
 			recipe.AddIngredient(mod, "SolarPebble", 25);
-			recipe.AddTile(303);
+			recipe.AddTile(TileID.LihzahrdFurnace);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

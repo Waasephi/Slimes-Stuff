@@ -19,7 +19,7 @@ namespace OurStuffAddon.Items.Armor.HMThrown
 			item.width = 18;
 			item.height = 10;
 			item.value = 100;
-			item.rare = 10;
+			item.rare = ItemRarityID.Red;
 			item.defense = 8;
 		}
 

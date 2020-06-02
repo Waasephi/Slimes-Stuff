@@ -21,7 +21,7 @@ namespace OurStuffAddon.Items.Armor.Aquatic
 			item.width = 24;
 			item.height = 24;
 			item.value = 100;
-			item.rare = 9;
+			item.rare = ItemRarityID.Cyan;
 			item.defense = 16;
 		}
 
@@ -41,7 +41,7 @@ namespace OurStuffAddon.Items.Armor.Aquatic
 			recipe.AddIngredient(mod, "PsychicSand");
 			recipe.AddIngredient(ItemID.Coral, 30);
 			recipe.AddIngredient(ItemID.HallowedBar, 20);
-			recipe.AddTile(134);
+			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

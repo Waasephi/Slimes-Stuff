@@ -18,13 +18,13 @@ namespace OurStuffAddon.Items.Magic
 			item.height = 30;
 			item.useTime = 15;
 			item.useAnimation = 15;
-			item.useStyle = 5;
+			item.useStyle = ItemUseStyleID.HoldingOut;
 			item.knockBack = 2;
 			item.value = 10500;
-			item.rare = 3;
+			item.rare = ItemRarityID.Orange;
 			item.UseSound = SoundID.Item8;
 			item.autoReuse = true;
-			item.shoot = 532;
+			item.shoot = ProjectileID.BoneGloveProj;
 			item.shootSpeed = 8f;
 			item.mana = 4;
 			item.noMelee = true;
@@ -36,7 +36,7 @@ namespace OurStuffAddon.Items.Magic
 			recipe.AddIngredient(mod, "SoulofAntiquity", 15);
 			recipe.AddIngredient(mod, "RelicShard", 20);
 			recipe.AddIngredient(ItemID.SpellTome);
-			recipe.AddTile(101);
+			recipe.AddTile(TileID.Bookcases);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

@@ -21,7 +21,7 @@ namespace OurStuffAddon.Items.Armor.Glacial
 			item.width = 18;
 			item.height = 10;
 			item.value = 100;
-			item.rare = 9;
+			item.rare = ItemRarityID.Cyan;
 			item.defense = 5;
 		}
 

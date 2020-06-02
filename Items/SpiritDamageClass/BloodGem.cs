@@ -32,11 +32,11 @@ namespace OurStuffAddon.Items.SpiritDamageClass
 		public override void SafeSetDefaults()
 		{
 			item.shootSpeed = 20f;
-			item.shoot = 304;
+			item.shoot = ProjectileID.VampireKnife;
 			item.UseSound = SoundID.Item43;
 			item.useTime = 20;
 			item.useAnimation = 20;
-			item.useStyle = 5;
+			item.useStyle = ItemUseStyleID.HoldingOut;
 			item.noMelee = true;
 			item.value = Item.sellPrice(gold: 1);
 			item.Size = new Vector2(18, 46);
@@ -44,7 +44,7 @@ namespace OurStuffAddon.Items.SpiritDamageClass
 			item.crit = 2;
 			item.knockBack = 2;
 			item.autoReuse = true;
-			item.rare = 9;
+			item.rare = ItemRarityID.Cyan;
 		}
 
 		public override void GetWeaponCrit(Player player, ref int crit)

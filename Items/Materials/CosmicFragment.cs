@@ -18,7 +18,7 @@ namespace OurStuffAddon.Items.Materials
 			item.width = 32;
 			item.height = 32;
 			item.value = 100;
-			item.rare = 11;
+			item.rare = ItemRarityID.Purple;
 			item.expert = false;
 			item.autoReuse = true;
 			ItemID.Sets.ItemNoGravity[item.type] = true;
@@ -28,11 +28,11 @@ namespace OurStuffAddon.Items.Materials
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(3458, 1);
-			recipe.AddIngredient(3456, 1);
-			recipe.AddIngredient(3457, 1);
-			recipe.AddIngredient(3459, 1);
-			recipe.AddTile(412);
+			recipe.AddIngredient(ItemID.FragmentSolar, 1);
+			recipe.AddIngredient(ItemID.FragmentVortex, 1);
+			recipe.AddIngredient(ItemID.FragmentNebula, 1);
+			recipe.AddIngredient(ItemID.FragmentStardust, 1);
+			recipe.AddTile(TileID.LunarCraftingStation);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

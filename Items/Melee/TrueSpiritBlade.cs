@@ -21,12 +21,12 @@ namespace OurStuffAddon.Items.Melee
 			item.height = 40;
 			item.useTime = 12;
 			item.useAnimation = 12;
-			item.useStyle = 1;
+			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.knockBack = 6;
 			item.value = 10000;
-			item.shoot = 297;
+			item.shoot = ProjectileID.LostSoulFriendly;
 			item.shootSpeed = 8f;
-			item.rare = 2;
+			item.rare = ItemRarityID.Green;
 			item.UseSound = SoundID.Item103;
 			item.autoReuse = true;
 		}

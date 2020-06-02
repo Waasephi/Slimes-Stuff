@@ -1,5 +1,6 @@
 using Terraria;
 using Terraria.ModLoader;
+using Terraria.ID;
 
 namespace OurStuffAddon.Items.Consumables
 {
@@ -19,7 +20,7 @@ namespace OurStuffAddon.Items.Consumables
 			item.consumable = true;
 			item.width = 24;
 			item.height = 24;
-			item.rare = 9;
+			item.rare = ItemRarityID.Cyan;
 			item.expert = true;
 		}
 

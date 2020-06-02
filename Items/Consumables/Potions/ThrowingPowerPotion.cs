@@ -22,7 +22,7 @@ namespace OurStuffAddon.Items.Consumables.Potions
 			item.UseSound = SoundID.Item3;
 			item.maxStack = 30;
 			item.consumable = true;
-			item.rare = 3;
+			item.rare = ItemRarityID.Orange;
 			item.value = Item.buyPrice(gold: 1);
 		}
 
@@ -37,7 +37,7 @@ namespace OurStuffAddon.Items.Consumables.Potions
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.Daybloom, 2);
 			recipe.AddIngredient(ItemID.BottledWater, 1);
-			recipe.AddTile(13);
+			recipe.AddTile(TileID.Bottles);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

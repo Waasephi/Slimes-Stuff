@@ -34,18 +34,18 @@ namespace OurStuffAddon.Items.SpiritDamageClass
 		public override void SafeSetDefaults()
 		{
 			item.shootSpeed = 6f;
-			item.shoot = 173;
+			item.shoot = ProjectileID.EnchantedBeam;
 			item.UseSound = SoundID.Item1;
 			item.useTime = 16;
 			item.useAnimation = 16;
-			item.useStyle = 5;
+			item.useStyle = ItemUseStyleID.HoldingOut;
 			item.noMelee = false;
 			item.Size = new Vector2(18, 46);
 			item.damage = 20;
 			item.crit = 2;
 			item.knockBack = 2;
 			item.autoReuse = true;
-			item.rare = 9;
+			item.rare = ItemRarityID.Cyan;
 		}
 
 		public override void GetWeaponCrit(Player player, ref int crit)

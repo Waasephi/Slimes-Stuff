@@ -1,5 +1,6 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
+using Terraria.ID;
 
 namespace OurStuffAddon.Items.Accessories
 {
@@ -16,7 +17,7 @@ namespace OurStuffAddon.Items.Accessories
 			item.width = 22;
 			item.height = 20;
 			item.value = 10000;
-			item.rare = 2;
+			item.rare = ItemRarityID.Green;
 			item.accessory = true;
 		}
 
@@ -44,7 +45,7 @@ namespace OurStuffAddon.Items.Accessories
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(3467, 20);
+			recipe.AddIngredient(ItemID.LunarBar, 20);
 			recipe.AddIngredient(mod, "CosmicFragment", 14);
 			recipe.AddTile(412);
 			recipe.SetResult(this);

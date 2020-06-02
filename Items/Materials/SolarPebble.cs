@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
+using Terraria.ID;
 
 namespace OurStuffAddon.Items.Materials
 {
@@ -19,7 +20,7 @@ namespace OurStuffAddon.Items.Materials
 			item.width = 18;
 			item.height = 18;
 			item.value = 100;
-			item.rare = 3;
+			item.rare = ItemRarityID.Orange;
 			item.expert = false;
 			item.autoReuse = true;
 		}

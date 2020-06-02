@@ -18,7 +18,7 @@ namespace OurStuffAddon.Items.Armor.Phasite
 			item.width = 24;
 			item.height = 24;
 			item.value = 100;
-			item.rare = 2;
+			item.rare = ItemRarityID.Green;
 			item.defense = 6;
 		}
 

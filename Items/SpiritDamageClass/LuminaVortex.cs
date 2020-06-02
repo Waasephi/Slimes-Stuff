@@ -32,18 +32,18 @@ namespace OurStuffAddon.Items.SpiritDamageClass
 		public override void SafeSetDefaults()
 		{
 			item.shootSpeed = 5f;
-			item.shoot = 617;
+			item.shoot = ProjectileID.NebulaArcanum;
 			item.UseSound = SoundID.Item43;
 			item.useTime = 50;
 			item.useAnimation = 50;
-			item.useStyle = 5;
+			item.useStyle = ItemUseStyleID.HoldingOut;
 			item.noMelee = true;
 			item.Size = new Vector2(18, 46);
 			item.damage = 87;
 			item.crit = 2;
 			item.knockBack = 2;
 			item.autoReuse = true;
-			item.rare = 9;
+			item.rare = ItemRarityID.Cyan;
 		}
 
 		public override void GetWeaponCrit(Player player, ref int crit)
@@ -58,7 +58,7 @@ namespace OurStuffAddon.Items.SpiritDamageClass
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod, "LuminaFragment", 18);
-			recipe.AddTile(412);
+			recipe.AddTile(TileID.LunarCraftingStation);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

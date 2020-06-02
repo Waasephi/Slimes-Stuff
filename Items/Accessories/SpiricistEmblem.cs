@@ -25,7 +25,7 @@ namespace OurStuffAddon.Items.Accessories
 			item.width = 22;
 			item.height = 20;
 			item.value = Item.sellPrice(gold: 2);
-			item.rare = 2;
+			item.rare = ItemRarityID.Green;
 			item.accessory = true;
 		}
 
@@ -33,10 +33,10 @@ namespace OurStuffAddon.Items.Accessories
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod, "SpiricistEmblem");
-			recipe.AddIngredient(548, 5);
-			recipe.AddIngredient(547, 5);
-			recipe.AddIngredient(549, 5);
-			recipe.AddTile(114);
+			recipe.AddIngredient(ItemID.SoulofMight, 5);
+			recipe.AddIngredient(ItemID.SoulofFright, 5);
+			recipe.AddIngredient(ItemID.SoulofSight, 5);
+			recipe.AddTile(TileID.TinkerersWorkbench);
 			recipe.SetResult(ItemID.AvengerEmblem);
 			recipe.AddRecipe();
 		}

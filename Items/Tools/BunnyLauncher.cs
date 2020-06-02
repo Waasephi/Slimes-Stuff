@@ -17,10 +17,10 @@ namespace OurStuffAddon.Items.Tools
 			item.height = 32;
 			item.useTime = 20;
 			item.useAnimation = 20;
-			item.useStyle = 1;
+			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.value = 10000;
-			item.shoot = 111;
-			item.rare = 2;
+			item.shoot = ProjectileID.Bunny;
+			item.rare = ItemRarityID.Green;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
 			item.noUseGraphic = true;

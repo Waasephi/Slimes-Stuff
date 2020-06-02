@@ -20,10 +20,10 @@ namespace OurStuffAddon.Items.Throwing
 			item.height = 32;
 			item.useTime = 15;       //this is how fast you use the item
 			item.useAnimation = 15;   //this is how fast the animation when the item is used
-			item.useStyle = 1;
+			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.knockBack = 4;
 			item.value = 10;
-			item.rare = 2;
+			item.rare = ItemRarityID.Green;
 			item.reuseDelay = 6;    //this is the item delay
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;       //this make the item auto reuse
@@ -42,7 +42,7 @@ namespace OurStuffAddon.Items.Throwing
 			recipe.AddIngredient(mod, "BloodBoomerang", 2);
 			recipe.AddIngredient(mod, "SporeBag", 999);
 			recipe.AddIngredient(mod, "InfernalKunai", 999);
-			recipe.AddTile(26);
+			recipe.AddTile(TileID.DemonAltar);
 			recipe.SetResult(this, 1);
 			recipe.AddRecipe();
 		}

@@ -21,13 +21,13 @@ namespace OurStuffAddon.Items.Magic
 			item.height = 22;
 			item.useTime = 30;
 			item.useAnimation = 30;
-			item.useStyle = 5;
+			item.useStyle = ItemUseStyleID.HoldingOut;
 			item.knockBack = 2;
 			item.value = 100;
-			item.rare = 6;
+			item.rare = ItemRarityID.LightPurple;
 			item.UseSound = SoundID.Item43;
 			item.autoReuse = false;
-			item.shoot = 297;
+			item.shoot = ProjectileID.LostSoulFriendly;
 			item.shootSpeed = 4f;
 			item.mana = 2;
 			item.noMelee = true;

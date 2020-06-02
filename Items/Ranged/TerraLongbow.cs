@@ -20,9 +20,9 @@ namespace OurStuffAddon.Items.Ranged
 			item.height = 40;
 			item.useTime = 10;
 			item.useAnimation = 10;
-			item.useStyle = 5;
+			item.useStyle = ItemUseStyleID.HoldingOut;
 			item.useAmmo = AmmoID.Arrow;
-			item.shoot = 4;
+			item.shoot = ProjectileID.UnholyArrow;
 			item.shootSpeed = 15f;
 			item.knockBack = 6;
 			item.value = 10000;

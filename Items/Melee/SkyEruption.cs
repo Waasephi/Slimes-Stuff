@@ -20,11 +20,11 @@ namespace OurStuffAddon.Items.Melee
 			item.height = 40;
 			item.useTime = 30;
 			item.useAnimation = 30;
-			item.useStyle = 1;
+			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.knockBack = 4;
 			item.value = 10000;
-			item.rare = 2;
-			item.shoot = 9;
+			item.rare = ItemRarityID.Green;
+			item.shoot = ProjectileID.Starfury;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
 			item.shootSpeed = 7f;
@@ -37,7 +37,7 @@ namespace OurStuffAddon.Items.Melee
 			recipe.AddIngredient(ItemID.IceBlade);
 			recipe.AddIngredient(ItemID.Starfury);
 			recipe.AddIngredient(ItemID.EnchantedSword);
-			recipe.AddTile(26);
+			recipe.AddTile(TileID.DemonAltar);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

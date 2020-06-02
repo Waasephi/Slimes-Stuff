@@ -32,18 +32,18 @@ namespace OurStuffAddon.Items.SpiritDamageClass
 		public override void SafeSetDefaults()
 		{
 			item.shootSpeed = 12f;
-			item.shoot = 711;
+			item.shoot = ProjectileID.ApprenticeStaffT3Shot;
 			item.UseSound = SoundID.Item43;
 			item.useTime = 23;
 			item.useAnimation = 23;
-			item.useStyle = 5;
+			item.useStyle = ItemUseStyleID.HoldingOut;
 			item.noMelee = true;
 			item.Size = new Vector2(18, 46);
 			item.damage = 63;
 			item.crit = 100;
 			item.knockBack = 2;
 			item.autoReuse = true;
-			item.rare = 10;
+			item.rare = ItemRarityID.Red;
 			item.value = 20000;
 		}
 
@@ -62,7 +62,7 @@ namespace OurStuffAddon.Items.SpiritDamageClass
 			recipe.AddIngredient(ItemID.AshBlock, 50);
 			recipe.AddIngredient(ItemID.HellstoneBar, 15);
 			recipe.AddIngredient(ItemID.HallowedBar, 15);
-			recipe.AddTile(134);
+			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

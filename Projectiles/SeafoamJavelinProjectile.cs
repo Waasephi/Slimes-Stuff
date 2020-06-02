@@ -1,6 +1,7 @@
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
+using Terraria.ID;
 
 namespace OurStuffAddon.Projectiles
 {
@@ -40,7 +41,7 @@ namespace OurStuffAddon.Projectiles
 					Item.NewItem((int)projectile.position.X, (int)projectile.position.Y, projectile.width, projectile.height, mod.ItemType("SeafoamJavelin"));
 				}
 
-				Main.PlaySound(2, (int)projectile.position.X, (int)projectile.position.Y, 10);
+				Main.PlaySound(SoundID.Item, (int)projectile.position.X, (int)projectile.position.Y, 10);
 			}
 			return false;
 		}

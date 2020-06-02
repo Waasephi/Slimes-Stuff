@@ -16,10 +16,10 @@ namespace OurStuffAddon.Items.Consumables
 			item.width = 16;
 			item.height = 20;
 			item.maxStack = 999;
-			item.rare = 1;
+			item.rare = ItemRarityID.Blue;
 			item.useAnimation = 45;
 			item.useTime = 45;
-			item.useStyle = 4;
+			item.useStyle = ItemUseStyleID.HoldingUp;
 			item.UseSound = SoundID.Item15;
 			item.consumable = true;
 			item.shoot = mod.ProjectileType("CosmicSlimeSpawn");
@@ -30,7 +30,7 @@ namespace OurStuffAddon.Items.Consumables
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.LunarBar, 5);
 			recipe.AddIngredient(mod, "CosmicFragment", 10);
-			recipe.AddTile(412);
+			recipe.AddTile(TileID.LunarCraftingStation);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

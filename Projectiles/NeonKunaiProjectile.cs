@@ -1,6 +1,7 @@
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
+using Terraria.ID;
 
 namespace OurStuffAddon.Projectiles
 {
@@ -35,7 +36,7 @@ namespace OurStuffAddon.Projectiles
 		public override bool OnTileCollide(Vector2 oldVelocity)
 		{                                                           // sound that the projectile make when hitting the terrain
 			projectile.Kill();
-			Main.PlaySound(2, (int)projectile.position.X, (int)projectile.position.Y, 10);
+			Main.PlaySound(SoundID.Item, (int)projectile.position.X, (int)projectile.position.Y, 10);
 			if (Main.rand.Next(5) == 0)
 			{
 				Item.NewItem((int)projectile.position.X, (int)projectile.position.Y, projectile.width, projectile.height, mod.ItemType("NeonKunai"));

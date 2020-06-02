@@ -1,6 +1,7 @@
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
+using Terraria.ID;
 
 namespace OurStuffAddon.Tiles
 {
@@ -16,7 +17,7 @@ namespace OurStuffAddon.Tiles
 			mineResist = 1f;
 			minPick = 101;
 			drop = mod.ItemType("NeoniumOre");
-			soundType = 21;
+			soundType = SoundID.Tink;
 			dustType = 1;
 			ModTranslation name = CreateMapEntryName();
 			name.SetDefault("Neonium Ore");

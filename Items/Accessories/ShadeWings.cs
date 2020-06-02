@@ -17,7 +17,7 @@ namespace OurStuffAddon.Items.Accessories
 			item.width = 22;
 			item.height = 20;
 			item.value = 10000;
-			item.rare = 2;
+			item.rare = ItemRarityID.Green;
 			item.accessory = true;
 		}
 
@@ -46,8 +46,8 @@ namespace OurStuffAddon.Items.Accessories
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.Feather, 50);
-			recipe.AddIngredient(521, 50);
-			recipe.AddIngredient(575, 50);
+			recipe.AddIngredient(ItemID.SoulofNight, 50);
+			recipe.AddIngredient(ItemID.SoulofFlight, 50);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

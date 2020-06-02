@@ -17,7 +17,7 @@ namespace OurStuffAddon.Items.Materials
 			item.width = 80;
 			item.height = 112;
 			item.value = 100;
-			item.rare = 11;
+			item.rare = ItemRarityID.Purple;
 			item.expert = false;
 			item.autoReuse = true;
 		}
@@ -29,7 +29,7 @@ namespace OurStuffAddon.Items.Materials
 			recipe.AddIngredient(ItemID.Bone, 2);
 			recipe.AddIngredient(ItemID.JungleSpores, 2);
 			recipe.AddRecipeGroup("OurStuffAddon:EvilBar", 2);
-			recipe.AddTile(26);
+			recipe.AddTile(TileID.DemonAltar);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

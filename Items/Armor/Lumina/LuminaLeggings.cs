@@ -20,7 +20,7 @@ namespace OurStuffAddon.Items.Armor.Lumina
 			item.width = 18;
 			item.height = 10;
 			item.value = 100;
-			item.rare = 2;
+			item.rare = ItemRarityID.Green;
 			item.defense = 23;
 		}
 
@@ -37,7 +37,7 @@ namespace OurStuffAddon.Items.Armor.Lumina
 			recipe.AddIngredient(mod, "SpiritInfusedBar", 15);
 			recipe.AddIngredient(mod, "LuminaFragment", 15);
 			recipe.AddIngredient(ItemID.LunarBar, 12);
-			recipe.AddTile(412);
+			recipe.AddTile(TileID.LunarCraftingStation);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

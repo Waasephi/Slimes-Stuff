@@ -19,10 +19,10 @@ namespace OurStuffAddon.Items.Tools
 			item.useAnimation = 8;
 			item.axe = 30;
 			item.hammer = 100;
-			item.useStyle = 1;
+			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.knockBack = 6;
 			item.value = 10000;
-			item.rare = 2;
+			item.rare = ItemRarityID.Green;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
 			item.tileBoost += 4;
@@ -33,7 +33,7 @@ namespace OurStuffAddon.Items.Tools
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod, "CosmicFragment", 14);
 			recipe.AddIngredient(ItemID.LunarBar, 12);
-			recipe.AddTile(412);
+			recipe.AddTile(TileID.LunarCraftingStation);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

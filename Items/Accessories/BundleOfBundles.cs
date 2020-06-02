@@ -28,7 +28,7 @@ namespace OurStuffAddon.Items.Accessories
 			item.width = 22;
 			item.height = 20;
 			item.value = 10000;
-			item.rare = 5;
+			item.rare = ItemRarityID.Pink;
 			item.accessory = true;
 		}
 
@@ -37,9 +37,9 @@ namespace OurStuffAddon.Items.Accessories
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod, "BundledHorseShoeBalloon");
 			recipe.AddIngredient(mod, "BundleOfOtherBalloons");
-			recipe.AddIngredient(3730);
+			recipe.AddIngredient(ItemID.PartyBundleOfBalloonsAccessory);
 			recipe.AddIngredient(ItemID.HallowedBar, 10);
-			recipe.AddTile(114);
+			recipe.AddTile(TileID.TinkerersWorkbench);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

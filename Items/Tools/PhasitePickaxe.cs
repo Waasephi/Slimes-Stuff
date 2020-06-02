@@ -19,10 +19,10 @@ namespace OurStuffAddon.Items.Tools
 			item.useTime = 16;
 			item.useAnimation = 16;
 			item.pick = 95;
-			item.useStyle = 1;
+			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.knockBack = 4;
 			item.value = 10000;
-			item.rare = 2;
+			item.rare = ItemRarityID.Green;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
 		}
@@ -32,7 +32,7 @@ namespace OurStuffAddon.Items.Tools
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod, "PhasiteBar", 12);
 			recipe.AddIngredient(ItemID.Wood, 10);
-			recipe.AddTile(16);
+			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

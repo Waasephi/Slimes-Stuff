@@ -21,7 +21,7 @@ namespace OurStuffAddon.Items.Armor.Crystallus
 			item.width = 18;
 			item.height = 10;
 			item.value = 100;
-			item.rare = 5;
+			item.rare = ItemRarityID.Pink;
 			item.defense = 9;
 		}
 
@@ -54,8 +54,8 @@ namespace OurStuffAddon.Items.Armor.Crystallus
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.CrystalShard, 10);
 			recipe.AddIngredient(mod, "AncientCore");
-			recipe.AddIngredient(520, 5);
-			recipe.AddTile(134);
+			recipe.AddIngredient(ItemID.SoulofLight, 5);
+			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

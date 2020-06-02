@@ -19,12 +19,12 @@ namespace OurStuffAddon.Items.Melee
 			item.height = 40;
 			item.useTime = 22;
 			item.useAnimation = 22;
-			item.useStyle = 1;
+			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.knockBack = 6;
 			item.value = 10000;
-			item.shoot = 307;
+			item.shoot = ProjectileID.TinyEater;
 			item.shootSpeed = 3f;
-			item.rare = 2;
+			item.rare = ItemRarityID.Green;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = false;
 		}

@@ -20,10 +20,10 @@ namespace OurStuffAddon.Items.Throwing
 			item.height = 22;
 			item.useTime = 10;       //this is how fast you use the item
 			item.useAnimation = 10;   //this is how fast the animation when the item is used
-			item.useStyle = 1;
+			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.knockBack = 4;
 			item.value = 10;
-			item.rare = 2;
+			item.rare = ItemRarityID.Green;
 			item.reuseDelay = 6;    //this is the item delay
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;       //this make the item auto reuse
@@ -39,7 +39,7 @@ namespace OurStuffAddon.Items.Throwing
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod, "CosmicFragment", 18);
-			recipe.AddTile(412);
+			recipe.AddTile(TileID.LunarCraftingStation);
 			recipe.SetResult(this, 1);
 			recipe.AddRecipe();
 		}

@@ -1,6 +1,7 @@
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
+using Terraria.ID;
 
 namespace OurStuffAddon.Tiles
 {
@@ -17,7 +18,7 @@ namespace OurStuffAddon.Tiles
 			mineResist = 1f;
 			minPick = 20;
 			drop = mod.ItemType("ShadowCrystal");
-			soundType = 21;
+			soundType = SoundID.Tink;
 			dustType = 1;
 			//soundStyle = 1;
 		}

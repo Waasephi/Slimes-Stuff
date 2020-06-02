@@ -21,14 +21,14 @@ namespace OurStuffAddon.Items.Ranged
 			item.height = 32;
 			item.useTime = 20;
 			item.useAnimation = 20;
-			item.useStyle = 5;
+			item.useStyle = ItemUseStyleID.HoldingOut;
 			item.noMelee = true; //so the item's animation doesn't do damage
 			item.knockBack = 2;
 			item.value = 10000;
-			item.rare = 2;
+			item.rare = ItemRarityID.Green;
 			item.UseSound = SoundID.Item11;
 			item.autoReuse = true;
-			item.shoot = 297;    //idk why but all the guns in the vanilla source have this
+			item.shoot = ProjectileID.LostSoulFriendly;    //idk why but all the guns in the vanilla source have this
 			item.shootSpeed = 5f;
 			item.useAmmo = AmmoID.Bullet;
 		}

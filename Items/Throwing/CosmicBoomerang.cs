@@ -19,10 +19,10 @@ namespace OurStuffAddon.Items.Throwing
 			item.useTime = 10;
 			item.useAnimation = 10;
 			item.noUseGraphic = true;
-			item.useStyle = 1;
+			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.knockBack = 3;
 			item.value = 8;
-			item.rare = 6;
+			item.rare = ItemRarityID.LightPurple;
 			item.shootSpeed = 12f;
 			item.shoot = mod.ProjectileType("CosmicBoomerangProjectile");
 			item.UseSound = SoundID.Item1;
@@ -33,7 +33,7 @@ namespace OurStuffAddon.Items.Throwing
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod, "CosmicFragment", 18);
-			recipe.AddTile(412);
+			recipe.AddTile(TileID.LunarCraftingStation);
 			recipe.SetResult(this, 1);
 			recipe.AddRecipe();
 		}

@@ -14,7 +14,7 @@ namespace OurStuffAddon.Items.Blocks
 			item.autoReuse = true;
 			item.useAnimation = 15;
 			item.useTime = 10;
-			item.useStyle = 1;
+			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.consumable = true;
 			item.value = 0;
 			item.createTile = mod.TileType("ShadowBrick");
@@ -25,7 +25,7 @@ namespace OurStuffAddon.Items.Blocks
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddTile(TileID.Anvils);
 			recipe.AddIngredient(mod, "ShadowCrystal", 1);
-			recipe.AddIngredient(3, 50);
+			recipe.AddIngredient(ItemID.StoneBlock, 50);
 			recipe.SetResult(this, 50);
 			recipe.AddRecipe();
 		}

@@ -21,7 +21,7 @@ namespace OurStuffAddon.Items.Ranged.Ammo
 			item.knockBack = 1.5f;
 			item.value = 1;
 			item.expert = true;
-			item.rare = 1;
+			item.rare = ItemRarityID.Blue;
 			item.shoot = mod.ProjectileType("NeonBullet");   //The projectile shoot when your weapon using this ammo
 			item.shootSpeed = 16f;                  //The speed of the projectile
 			item.ammo = AmmoID.Bullet;              //The ammo class this ammo belongs to.

@@ -1,6 +1,7 @@
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
+using Terraria.ID;
 
 namespace OurStuffAddon.Tiles
 {
@@ -16,7 +17,7 @@ namespace OurStuffAddon.Tiles
 			mineResist = 1f;
 			minPick = 50;
 			drop = mod.ItemType("HeartStone");
-			soundType = 21;
+			soundType = SoundID.Tink;
 			dustType = 12;
 			ModTranslation name = CreateMapEntryName();
 			name.SetDefault("Heart Stone");

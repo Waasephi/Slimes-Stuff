@@ -17,7 +17,7 @@ namespace OurStuffAddon.Items.Melee
 
 		public override void SetDefaults()
 		{
-			item.useStyle = 5;
+			item.useStyle = ItemUseStyleID.HoldingOut;
 			item.width = 40;
 			item.height = 40;
 			item.useAnimation = 25;
@@ -25,7 +25,7 @@ namespace OurStuffAddon.Items.Melee
 			item.shootSpeed = 16f;
 			item.knockBack = 2.5f;
 			item.damage = 35;
-			item.rare = 0;
+			item.rare = ItemRarityID.White;
 
 			item.melee = true;
 			item.channel = true;

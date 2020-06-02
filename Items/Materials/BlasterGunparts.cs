@@ -17,7 +17,7 @@ namespace OurStuffAddon.Items.Materials
 			item.width = 80;
 			item.height = 112;
 			item.value = 100;
-			item.rare = 8;
+			item.rare = ItemRarityID.Yellow;
 			item.expert = false;
 			item.autoReuse = true;
 		}
@@ -25,7 +25,7 @@ namespace OurStuffAddon.Items.Materials
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(324);
+			recipe.AddIngredient(ItemID.IllegalGunParts);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

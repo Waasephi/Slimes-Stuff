@@ -21,10 +21,10 @@ namespace OurStuffAddon.Items.Magic
 			item.height = 22;
 			item.useTime = 40;
 			item.useAnimation = 40;
-			item.useStyle = 5;
+			item.useStyle = ItemUseStyleID.HoldingOut;
 			item.knockBack = 2;
 			item.value = 100;
-			item.rare = 6;
+			item.rare = ItemRarityID.LightPurple;
 			item.UseSound = SoundID.Item43;
 			item.autoReuse = false;
 			item.shoot = mod.ProjectileType("StickProjectile");

@@ -21,13 +21,13 @@ namespace OurStuffAddon.Items.Magic
 			item.height = 60;
 			item.useTime = 18;
 			item.useAnimation = 18;
-			item.useStyle = 5;
+			item.useStyle = ItemUseStyleID.HoldingOut;
 			item.knockBack = 2;
 			item.value = 100;
-			item.rare = 6;
+			item.rare = ItemRarityID.LightPurple;
 			item.UseSound = SoundID.Item43;
 			item.autoReuse = true;
-			item.shoot = 126;
+			item.shoot = ProjectileID.DiamondBolt;
 			item.shootSpeed = 6f;
 			item.mana = 15;
 			item.noMelee = true;
@@ -46,7 +46,7 @@ namespace OurStuffAddon.Items.Magic
 			recipe.AddIngredient(ItemID.DiamondStaff);
 			recipe.AddIngredient(ItemID.AmberStaff);
 			recipe.AddIngredient(ItemID.MagicMissile);
-			recipe.AddTile(26);
+			recipe.AddTile(TileID.DemonAltar);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}
