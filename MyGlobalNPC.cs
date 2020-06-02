@@ -13,6 +13,7 @@ namespace OurStuffAddon
 			if (npc.type == NPCID.Mothron)
 			{
 				int loots = Main.rand.Next(5);
+
 				switch (loots)
 				{
 					case 1:
