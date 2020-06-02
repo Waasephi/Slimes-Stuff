@@ -28,6 +28,7 @@ namespace OurStuffAddon
 			}
 		}
 
+		//TODO plz no obsolete
 		public override void AddRecipeGroups()
 		{
 			RecipeGroup EvilBlade = new RecipeGroup(() => Lang.misc[37] + " Evil Blade", new int[]
