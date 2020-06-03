@@ -4,7 +4,7 @@ using OurStuffAddon.Tiles.Misc;
 
 namespace OurStuffAddon.Items.Blocks
 {
-	public class Pancakes : ModItem
+	public class PancakesPlaceable : ModItem
 	{
 		public override void SetStaticDefaults()
 		{

@@ -6,7 +6,7 @@ using Terraria.ModLoader;
 
 namespace OurStuffAddon.Items.Accessories.GrapplingHooks
 {
-	internal class ShadowHook : ModItem
+	public class ShadowHook : ModItem
 	{
 		public override void SetStaticDefaults()
 		{
@@ -39,7 +39,7 @@ namespace OurStuffAddon.Items.Accessories.GrapplingHooks
 		}
 	}
 
-	internal class ShadowHookProjectile : ModProjectile
+	public class ShadowHookProjectile : ModProjectile
 	{
 		public override void SetStaticDefaults()
 		{
