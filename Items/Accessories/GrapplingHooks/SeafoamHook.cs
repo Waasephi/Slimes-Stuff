@@ -6,7 +6,7 @@ using Terraria.ModLoader;
 
 namespace OurStuffAddon.Items.Accessories.GrapplingHooks
 {
-	public class SeafoamHookItem : ModItem
+	public class SeafoamHook : ModItem
 	{
 		public override void SetStaticDefaults()
 		{
