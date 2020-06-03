@@ -8,7 +8,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace OurStuffAddon.Tiles
+namespace OurStuffAddon.Tiles.Ancient
 {
 	public class AncientChestTile : ModTile
 	{

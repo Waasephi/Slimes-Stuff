@@ -5,7 +5,7 @@ using Terraria.ID;
 
 namespace OurStuffAddon.Tiles
 {
-	public class RedFadedStone : ModTile
+	public class RedFadedStoneTile : ModTile
 	{
 		public override void SetDefaults()
 		{

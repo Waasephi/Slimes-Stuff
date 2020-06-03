@@ -9,7 +9,7 @@ using Terraria.ObjectData;
 
 namespace OurStuffAddon.Tiles
 {
-	public class ShadowTorch : ModTile
+	public class ShadowTorchTile : ModTile
 	{
 		public override void SetDefaults()
 		{
@@ -101,7 +101,7 @@ namespace OurStuffAddon.Tiles
 				float x = Utils.RandomInt(ref randSeed, -10, 11) * 0.15f;
 				float y = Utils.RandomInt(ref randSeed, -10, 1) * 0.35f;
 
-				Main.spriteBatch.Draw(mod.GetTexture("Tiles/ShadowTorch_Flame"), new Vector2(i * 16 - (int)Main.screenPosition.X - (width - 16f) / 2f + x, j * 16 - (int)Main.screenPosition.Y + offsetY + y) + zero, new Rectangle(frameX, frameY, width, height), color);
+				Main.spriteBatch.Draw(mod.GetTexture("Tiles/ShadowTorchTile_Flame"), new Vector2(i * 16 - (int)Main.screenPosition.X - (width - 16f) / 2f + x, j * 16 - (int)Main.screenPosition.Y + offsetY + y) + zero, new Rectangle(frameX, frameY, width, height), color);
 			}
 		}
 	}

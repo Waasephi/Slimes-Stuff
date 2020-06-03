@@ -5,17 +5,17 @@ using Terraria.ID;
 
 namespace OurStuffAddon.Tiles
 {
-	public class SpiriciteBrick : ModTile
+	public class SeafoamBrickTile : ModTile
 	{
 		public override void SetDefaults()
 		{
 			Main.tileSolid[Type] = true;
 			Main.tileLighted[Type] = false;
 			Main.tileBlockLight[Type] = true;
-			AddMapEntry(new Color(30, 30, 50));
+			AddMapEntry(new Color(0, 150, 75));
 			mineResist = 1f;
 			minPick = 20;
-			drop = mod.ItemType("SpiriciteBrick");
+			drop = mod.ItemType("SeafoamBrick");
 			soundType = SoundID.Tink;
 			dustType = 1;
 			//soundStyle = 1;

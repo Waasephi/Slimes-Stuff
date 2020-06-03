@@ -7,7 +7,7 @@ using Terraria.ObjectData;
 
 namespace OurStuffAddon.Tiles
 {
-	public class SeafoamChair : ModTile
+	public class SeafoamChairTile : ModTile
 	{
 		public override void SetDefaults()
 		{

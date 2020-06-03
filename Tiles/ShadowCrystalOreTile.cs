@@ -5,17 +5,19 @@ using Terraria.ID;
 
 namespace OurStuffAddon.Tiles
 {
-	public class ShadowBrick : ModTile
+	public class ShadowCrystalOreTile : ModTile
 	{
 		public override void SetDefaults()
 		{
 			Main.tileSolid[Type] = true;
 			Main.tileLighted[Type] = false;
 			Main.tileBlockLight[Type] = true;
+			Main.tileSpelunker[Type] = true;
+			Main.tileValue[Type] = 411;
 			AddMapEntry(new Color(0, 0, 0));
 			mineResist = 1f;
 			minPick = 20;
-			drop = mod.ItemType("ShadowBrick");
+			drop = mod.ItemType("ShadowCrystal");
 			soundType = SoundID.Tink;
 			dustType = 1;
 			//soundStyle = 1;

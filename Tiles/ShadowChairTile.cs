@@ -7,7 +7,7 @@ using Terraria.ObjectData;
 
 namespace OurStuffAddon.Tiles
 {
-	public class ShadowChair : ModTile
+	public class ShadowChairTile : ModTile
 	{
 		public override void SetDefaults()
 		{

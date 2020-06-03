@@ -5,19 +5,22 @@ using Terraria.ID;
 
 namespace OurStuffAddon.Tiles
 {
-	public class SeafoamBrick : ModTile
+	public class TrenagonOreTile : ModTile
 	{
 		public override void SetDefaults()
 		{
 			Main.tileSolid[Type] = true;
 			Main.tileLighted[Type] = false;
 			Main.tileBlockLight[Type] = true;
-			AddMapEntry(new Color(0, 150, 75));
+			Main.tileSpelunker[Type] = true;
+			AddMapEntry(new Color(0, 200, 0));
 			mineResist = 1f;
-			minPick = 20;
-			drop = mod.ItemType("SeafoamBrick");
+			minPick = 50;
+			drop = mod.ItemType("TrenagonOre");
 			soundType = SoundID.Tink;
 			dustType = 1;
+			ModTranslation name = CreateMapEntryName();
+			name.SetDefault("Trenagon Ore");
 			//soundStyle = 1;
 		}
 
@@ -26,16 +29,9 @@ namespace OurStuffAddon.Tiles
 			num = fail ? 1 : 3;
 		}
 
-		/*public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
-        {
-            r = 0.2f;
-            g = 0.1f;
-            b = 0.2f;
-        }
-
-        public override bool CanExplode(int i, int j)
-        {
-            return false;
-        }*/
+		public override bool CanExplode(int i, int j)
+		{
+			return true;
+		}
 	}
 }

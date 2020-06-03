@@ -6,7 +6,7 @@ using Terraria.ObjectData;
 
 namespace OurStuffAddon.Tiles
 {
-	public class SeafoamTable : ModTile
+	public class SeafoamTableTile : ModTile
 	{
 		public override void SetDefaults()
 		{

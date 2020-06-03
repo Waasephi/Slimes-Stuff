@@ -6,7 +6,7 @@ using Terraria.ObjectData;
 
 namespace OurStuffAddon.Tiles
 {
-	public class ShadowTable : ModTile
+	public class ShadowTableTile : ModTile
 	{
 		public override void SetDefaults()
 		{
