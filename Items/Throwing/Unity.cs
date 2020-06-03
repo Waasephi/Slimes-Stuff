@@ -1,4 +1,5 @@
 using Microsoft.Xna.Framework;
+using OurStuffAddon.Projectiles;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -49,7 +50,7 @@ namespace OurStuffAddon.Items.Throwing
 
 		public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
 		{
-			Vector2 perturbedSpeed = new Vector2(speedX, speedY).RotatedByRandom(MathHelper.ToRadians(80)); // 20 degree spread.
+			//Vector2 perturbedSpeed = new Vector2(speedX, speedY).RotatedByRandom(MathHelper.ToRadians(80)); // 20 degree spread.
 																											// Here we manually spawn the 2nd projectile, manually specifying the projectile type that we wish to shoot.
 			Projectile.NewProjectile(position.X - 20, position.Y, speedX *= 0.6f, speedY *= 0.6f, ModContent.ProjectileType<UTrueNightDaggerProjectile>(), damage, knockBack, player.whoAmI);
 			Projectile.NewProjectile(position.X - 20, position.Y, speedX *= 0.8f, speedY *= 0.8f, ModContent.ProjectileType<UTrueClotDaggerProjectile>(), damage, knockBack, player.whoAmI);

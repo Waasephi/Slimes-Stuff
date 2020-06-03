@@ -1,3 +1,4 @@
+using OurStuffAddon.Projectiles.Pets;
 using Terraria;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
@@ -22,7 +23,7 @@ namespace OurStuffAddon.Buffs
 			bool petProjectileNotSpawned = player.ownedProjectileCounts[ProjectileType<Projectiles.Pets.SpiritPetProjectile>()] <= 0;
 
 			if (petProjectileNotSpawned && player.whoAmI == Main.myPlayer)
-				Projectile.NewProjectile(player.position.X + player.width / 2, player.position.Y + player.height / 2, 0f, 0f, ModContent.ProjectileType<SpiritPet>(), 0, 0f, player.whoAmI, 0f, 0f);
+				Projectile.NewProjectile(player.position.X + player.width / 2, player.position.Y + player.height / 2, 0f, 0f, ModContent.ProjectileType<SpiritPetProjectile>(), 0, 0f, player.whoAmI, 0f, 0f);
 		}
 	}
 }

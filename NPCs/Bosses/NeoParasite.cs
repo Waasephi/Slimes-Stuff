@@ -1,3 +1,6 @@
+using OurStuffAddon.Items.Consumables;
+using OurStuffAddon.Items.Materials;
+using OurStuffAddon.Items.Tools;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;

@@ -1,6 +1,10 @@
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
+using OurStuffAddon.Items.Tools;
+using OurStuffAddon.Items.Materials;
+using OurStuffAddon.Items.Ranged.Ammo;
+using OurStuffAddon.NPCs.Bosses;
 
 namespace OurStuffAddon.Items.Consumables
 {

@@ -1,3 +1,4 @@
+using OurStuffAddon.Items.Materials;
 using Terraria.ID;
 using Terraria.ModLoader;
 

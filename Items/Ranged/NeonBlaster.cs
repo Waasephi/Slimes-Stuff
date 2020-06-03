@@ -1,4 +1,5 @@
 using Microsoft.Xna.Framework;
+using OurStuffAddon.Projectiles;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -54,7 +55,7 @@ namespace OurStuffAddon.Items.Ranged
 
 				if (type == ProjectileID.Bullet) // or ProjectileID.WoodenArrowFriendly
 				{
-					type = ModContent.ProjectileType<NeonBullet>(); // or ProjectileID.FireArrow;
+					type = ModContent.ProjectileType<NeonBulletProjectile>(); // or ProjectileID.FireArrow;
 				}
 				return true; // return true to allow tmodloader to call Projectile.NewProjectile as normal
 			}

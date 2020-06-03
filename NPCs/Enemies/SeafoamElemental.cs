@@ -35,8 +35,8 @@ namespace OurStuffAddon.NPCs.Enemies
 			int loots = Main.rand.Next(2);
 			switch (loots)
 			{
-				case 1:
-					Item.NewItem(npc.getRect(), ModContent.ItemType<SeafoamShard>(), Main.rand.Next(2, 3));
+				case 1: //TODO non existant
+					//Item.NewItem(npc.getRect(), ModContent.ItemType<SeafoamShard>(), Main.rand.Next(2, 3));
 					break;
 			}
 		}

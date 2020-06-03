@@ -1,3 +1,5 @@
+using OurStuffAddon.Buffs;
+using OurStuffAddon.Projectiles.Pets;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -16,8 +18,8 @@ namespace OurStuffAddon.Items.Consumables
 		public override void SetDefaults()
 		{
 			item.CloneDefaults(ItemID.ZephyrFish);
-			item.shoot = ModContent.ProjectileType<Tippi>();
-			item.buffType = ModContent.BuffType<Tippi>();
+			item.shoot = ModContent.ProjectileType<TippiProjectile>();
+			item.buffType = ModContent.BuffType<TippiBuff>();
 		}
 
 		public override void AddRecipes()

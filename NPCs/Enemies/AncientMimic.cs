@@ -1,3 +1,8 @@
+using OurStuffAddon.Items.Accessories;
+using OurStuffAddon.Items.Magic;
+using OurStuffAddon.Items.Materials;
+using OurStuffAddon.Items.Melee;
+using OurStuffAddon.Items.Throwing;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -59,8 +64,8 @@ namespace OurStuffAddon.NPCs.Enemies
 					Item.NewItem(npc.getRect(), ModContent.ItemType<RelicSword>(), Main.rand.Next(1, 1));
 					break;
 			}
+
 			int loots2 = Main.rand.Next(3);
-			if (Main.hardMode) ;
 			switch (loots2)
 			{
 				case 1:

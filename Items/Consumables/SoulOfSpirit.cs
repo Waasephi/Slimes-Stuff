@@ -1,3 +1,5 @@
+using OurStuffAddon.Buffs;
+using OurStuffAddon.Projectiles.Pets;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
@@ -18,8 +20,8 @@ namespace OurStuffAddon.Items.Consumables
 		public override void SetDefaults()
 		{
 			item.CloneDefaults(ItemID.Carrot);
-			item.shoot = ModContent.ProjectileType<SpiritPet>();
-			item.buffType = ModContent.BuffType<SpiritPet>();
+			item.shoot = ModContent.ProjectileType<SpiritPetProjectile>();
+			item.buffType = ModContent.BuffType<SpiritPetBuff>();
 		}
 
 		public override void UseStyle(Player player)

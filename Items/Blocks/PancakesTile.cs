@@ -1,9 +1,10 @@
 using Terraria.ModLoader;
 using Terraria.ID;
+using OurStuffAddon.Tiles.Misc;
 
 namespace OurStuffAddon.Items.Blocks
 {
-	public class PancakesTile : ModItem
+	public class Pancakes : ModItem
 	{
 		public override void SetStaticDefaults()
 		{
@@ -22,7 +23,7 @@ namespace OurStuffAddon.Items.Blocks
 			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.consumable = true;
 			item.value = 0;
-			item.createTile = ModContent.TileType<Pancakes>();
+			item.createTile = ModContent.TileType<PancakesTile>();
 		}
 
 		public override void AddRecipes()

@@ -1,3 +1,4 @@
+using OurStuffAddon.Items.Materials;
 using OurStuffAddon.Projectiles;
 using Terraria;
 using Terraria.ID;
