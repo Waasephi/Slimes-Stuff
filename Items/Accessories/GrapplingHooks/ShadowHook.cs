@@ -6,7 +6,7 @@ using Terraria.ModLoader;
 
 namespace OurStuffAddon.Items.Accessories.GrapplingHooks
 {
-	public class ShadowHookItem : ModItem
+	internal class ShadowHook : ModItem
 	{
 		public override void SetStaticDefaults()
 		{
@@ -15,6 +15,23 @@ namespace OurStuffAddon.Items.Accessories.GrapplingHooks
 
 		public override void SetDefaults()
 		{
+			/*
+				this.noUseGraphic = true;
+				this.damage = 0;
+				this.knockBack = 7f;
+				this.useStyle = 5;
+				this.name = "Amethyst Hook";
+				this.shootSpeed = 10f;
+				this.shoot = 230;
+				this.width = 18;
+				this.height = 28;
+				this.useSound = 1;
+				this.useAnimation = 20;
+				this.useTime = 20;
+				this.rare = 1;
+				this.noMelee = true;
+				this.value = 20000;
+			*/
 			// Instead of copying these values, we can clone and modify the ones we want to copy
 			item.CloneDefaults(ItemID.AmethystHook);
 			item.shootSpeed = 18f; // how quickly the hook is shot.
