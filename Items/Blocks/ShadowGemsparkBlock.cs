@@ -17,7 +17,7 @@ namespace OurStuffAddon.Items.Blocks
 			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.consumable = true;
 			item.value = 0;
-			item.createTile = ModContent.TileType<ShadowGemsparkBlock>();
+			//item.createTile = ModContent.TileType<ShadowGemsparkBlockTile>(); TODO no tile
 		}
 
 		/* public override void AddRecipes()

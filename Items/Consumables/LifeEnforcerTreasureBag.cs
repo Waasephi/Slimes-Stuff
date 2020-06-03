@@ -1,6 +1,8 @@
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
+using OurStuffAddon.Items.Accessories;
+using OurStuffAddon.NPCs.Bosses.LifeEnforcer;
 
 namespace OurStuffAddon.Items.Consumables
 {

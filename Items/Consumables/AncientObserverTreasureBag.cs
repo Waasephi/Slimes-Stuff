@@ -1,6 +1,9 @@
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
+using OurStuffAddon.NPCs.Bosses.AncientObserver;
+using OurStuffAddon.Items.Materials;
+using OurStuffAddon.Items.Accessories;
 
 namespace OurStuffAddon.Items.Consumables
 {

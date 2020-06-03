@@ -1,4 +1,6 @@
 using Microsoft.Xna.Framework;
+using OurStuffAddon.Buffs;
+using OurStuffAddon.Projectiles.Minions;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -29,9 +31,9 @@ namespace OurStuffAddon.Items.Summoner
 			item.value = Item.buyPrice(0, 3, 0, 0);
 			item.rare = -12;
 			item.UseSound = SoundID.Item44;
-			item.shoot = ModContent.ProjectileType<BlueSlime>();
+			item.shoot = ModContent.ProjectileType<BlueSlimeProjectile>();
 			item.shootSpeed = 10f;
-			item.buffType = ModContent.BuffType<BlueSlime>(); //The buff added to player after used the item
+			item.buffType = ModContent.BuffType<BlueSlimeBuff>(); //The buff added to player after used the item
 			item.buffTime = 3600;               //The duration of the buff, here is 60 seconds
 		}
 

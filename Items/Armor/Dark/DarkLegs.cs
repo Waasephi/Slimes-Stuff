@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
+using OurStuffAddon.Items.Materials;
 
 namespace OurStuffAddon.Items.Armor.Dark
 {

@@ -1,3 +1,4 @@
+using OurStuffAddon.Tiles.Misc;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -23,7 +24,7 @@ namespace OurStuffAddon.Items.Blocks
 			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.consumable = true;
 			item.value = 0;
-			item.createTile = ModContent.TileType<DemonAltar>();
+			item.createTile = ModContent.TileType<DemonAltarTile>();
 		}
 
 		public override void AddRecipes()

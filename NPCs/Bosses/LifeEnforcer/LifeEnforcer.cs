@@ -1,3 +1,4 @@
+using OurStuffAddon.Items.Consumables;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;

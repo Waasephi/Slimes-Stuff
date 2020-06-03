@@ -1,6 +1,9 @@
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
+using OurStuffAddon.Items.Accessories;
+using OurStuffAddon.Items.Materials;
+using OurStuffAddon.NPCs.Bosses;
 
 namespace OurStuffAddon.Items.Consumables
 {
@@ -33,6 +36,7 @@ namespace OurStuffAddon.Items.Consumables
 		{
 			if (Main.rand.Next(0) == 0)
 				player.QuickSpawnItem(ModContent.ItemType<CosmicJelly>(), Main.rand.Next(30, 45));
+
 			player.QuickSpawnItem(ModContent.ItemType<CosmicFragment>(), Main.rand.Next(10, 15));
 			player.QuickSpawnItem(3458, Main.rand.Next(10, 15));
 			player.QuickSpawnItem(3456, Main.rand.Next(10, 15));

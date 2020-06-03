@@ -1,5 +1,6 @@
 using Terraria.ModLoader;
 using Terraria.ID;
+using OurStuffAddon.Tiles;
 
 namespace OurStuffAddon.Items.Blocks
 {
@@ -18,7 +19,7 @@ namespace OurStuffAddon.Items.Blocks
 			item.consumable = true;
 			item.value = 50000;
 			item.rare = ItemRarityID.Blue;
-			item.createTile = ModContent.TileType<GiantSandSifterTrophy>();
+			item.createTile = ModContent.TileType<GiantSandSifterTrophyTile>();
 			item.placeStyle = 0;
 		}
 	}

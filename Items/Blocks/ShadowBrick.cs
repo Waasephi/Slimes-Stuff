@@ -1,3 +1,4 @@
+using OurStuffAddon.Tiles.Shadow;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -17,7 +18,7 @@ namespace OurStuffAddon.Items.Blocks
 			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.consumable = true;
 			item.value = 0;
-			item.createTile = ModContent.TileType<ShadowBrick>();
+			item.createTile = ModContent.TileType<ShadowBrickTile>();
 		}
 
 		public override void AddRecipes()

@@ -1,3 +1,4 @@
+using OurStuffAddon.Tiles;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -17,7 +18,7 @@ namespace OurStuffAddon.Items.Blocks
 			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.consumable = true;
 			item.value = 0;
-			item.createTile = ModContent.TileType<SpiritInfuser>();
+			item.createTile = ModContent.TileType<SpiritInfuserTile>();
 		}
 
 		public override void AddRecipes()

@@ -1,6 +1,13 @@
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
+using OurStuffAddon.Items.Ranged;
+using OurStuffAddon.Items.Throwing;
+using OurStuffAddon.Items.Magic;
+using OurStuffAddon.Items.Melee;
+using OurStuffAddon.Items.Accessories;
+using OurStuffAddon.Items.Materials;
+using OurStuffAddon.NPCs.Bosses;
 
 namespace OurStuffAddon.Items.Consumables
 {

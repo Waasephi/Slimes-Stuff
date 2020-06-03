@@ -1,3 +1,4 @@
+using OurStuffAddon.NPCs.Bosses.LifeEnforcer;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;

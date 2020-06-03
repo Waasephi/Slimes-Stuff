@@ -1,4 +1,10 @@
 using Microsoft.Xna.Framework;
+using OurStuffAddon.Items.Blocks;
+using OurStuffAddon.Items.Consumables;
+using OurStuffAddon.Items.Magic;
+using OurStuffAddon.Items.Materials;
+using OurStuffAddon.Items.Ranged;
+using OurStuffAddon.Items.Throwing;
 using System.IO;
 using Terraria;
 using Terraria.ID;
@@ -57,8 +63,8 @@ namespace OurStuffAddon.NPCs.Bosses
 				int loots2 = Main.rand.Next(10);
 				switch (loots2)
 				{
-					case 1: Item.NewItem(npc.getRect(), ModContent.ItemType<GiantSandSifterTrophy>(), 1); break;
-					case 2: break;
+					case 1: Item.NewItem(npc.getRect(), ModContent.ItemType<GiantSandSifterTrophy>(), 1);
+						break;
 				}
 			}
 

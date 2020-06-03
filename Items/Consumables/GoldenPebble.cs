@@ -1,3 +1,4 @@
+using OurStuffAddon.NPCs.Bosses.AncientObserver;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;

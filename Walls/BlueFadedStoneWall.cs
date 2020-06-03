@@ -1,4 +1,5 @@
 using Microsoft.Xna.Framework;
+using OurStuffAddon.Items.Blocks;
 using Terraria;
 using Terraria.ModLoader;
 
@@ -10,7 +11,7 @@ namespace OurStuffAddon.Walls
 		{
 			Main.wallHouse[Type] = true;
 			 
-			drop = ModContent.ItemType<BlueFadedStoneWall>();
+			drop = ModContent.ItemType<BlueFadedStoneWallItem>();
 			AddMapEntry(new Color(123, 104, 238));
 		}
 

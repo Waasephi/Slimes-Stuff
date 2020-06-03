@@ -1,3 +1,4 @@
+using OurStuffAddon.NPCs.Bosses;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -22,7 +23,7 @@ namespace OurStuffAddon.Items.Consumables
 			item.useStyle = ItemUseStyleID.HoldingUp;
 			item.UseSound = SoundID.Item15;
 			item.consumable = true;
-			item.shoot = ModContent.ProjectileType<CosmicSlimeSpawn>();
+			//item.shoot = ModContent.ProjectileType<CosmicSlimeSpawn>(); TODO non existant
 		}
 
 		public override void AddRecipes()

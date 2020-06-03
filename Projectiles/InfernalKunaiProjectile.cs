@@ -1,4 +1,5 @@
 using Microsoft.Xna.Framework;
+using OurStuffAddon.Items.Throwing;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;

@@ -1,4 +1,6 @@
 using Microsoft.Xna.Framework;
+using OurStuffAddon.Items.Consumables;
+using OurStuffAddon.Items.Materials;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -42,7 +44,7 @@ namespace OurStuffAddon.NPCs.Bosses.AncientObserver
 		{
 			if (!Main.expertMode)
 			{
-				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ModContent.ItemType<AncientShard>(), Main.rand.Next(3, 5));
+				//Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ModContent.ItemType<AncientShard>(), Main.rand.Next(3, 5)); TODO non existant
 				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ModContent.ItemType<ChippedStone>(), Main.rand.Next(10, 20));
 			}
 

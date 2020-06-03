@@ -1,3 +1,5 @@
+using OurStuffAddon.Buffs;
+using OurStuffAddon.Projectiles.Pets;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -16,8 +18,8 @@ namespace OurStuffAddon.Items.Consumables
 		public override void SetDefaults()
 		{
 			item.CloneDefaults(ItemID.Carrot);
-			item.shoot = ModContent.ProjectileType<BabyCactus>();
-			item.buffType = ModContent.BuffType<BabyCactus>();
+			item.shoot = ModContent.ProjectileType<BabyCactusProjectile>();
+			item.buffType = ModContent.BuffType<BabyCactusBuff>();
 		}
 
 		public override void UseStyle(Player player)

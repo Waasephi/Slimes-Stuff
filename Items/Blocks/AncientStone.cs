@@ -1,5 +1,6 @@
 using Terraria.ModLoader;
 using Terraria.ID;
+using OurStuffAddon.Tiles.Ancient;
 
 namespace OurStuffAddon.Items.Blocks
 {
@@ -17,7 +18,7 @@ namespace OurStuffAddon.Items.Blocks
 			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.consumable = true;
 			item.value = 0;
-			item.createTile = ModContent.TileType<AncientStone>();
+			item.createTile = ModContent.TileType<AncientStoneTile>();
 		}
 	}
 }
