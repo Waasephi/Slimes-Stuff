@@ -5,11 +5,11 @@ using Terraria.ID;
 namespace OurStuffAddon.Items.Accessories
 {
 	[AutoloadEquip(EquipType.Wings)]
-	public class CosmicWingsItem : ModItem
+	public class CosmicWings : ModItem
 	{
 		public override void SetStaticDefaults()
 		{
-			Tooltip.SetDefault("167 wing time, 2 accel");
+			Tooltip.SetDefault("(167 wing time, 2 accel");
 		}
 
 		public override void SetDefaults()
