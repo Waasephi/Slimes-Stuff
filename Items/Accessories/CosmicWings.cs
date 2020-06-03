@@ -47,7 +47,7 @@ namespace OurStuffAddon.Items.Accessories
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.LunarBar, 20);
 			recipe.AddIngredient(mod, "CosmicFragment", 14);
-			recipe.AddTile(TileID.LunarCraftingStation);
+			recipe.AddTile(412);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

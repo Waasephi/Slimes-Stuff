@@ -46,8 +46,8 @@ namespace OurStuffAddon.Items.Accessories
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.LunarBar, 1000);
-			recipe.AddIngredient(ItemID.SoulofFlight, 1000);
-			recipe.AddTile(TileID.LunarCraftingStation);
+			recipe.AddIngredient(575, 1000);
+			recipe.AddTile(412);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

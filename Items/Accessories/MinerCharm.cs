@@ -34,10 +34,10 @@ namespace OurStuffAddon.Items.Accessories
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.Topaz, 50);
-			recipe.AddIngredient(ItemID.MiningHelmet, 1);
-			recipe.AddIngredient(ItemID.MiningShirt, 1);
-			recipe.AddIngredient(ItemID.MiningPants, 1);
-			recipe.AddTile(TileID.TinkerersWorkbench);
+			recipe.AddIngredient(88, 1);
+			recipe.AddIngredient(410, 1);
+			recipe.AddIngredient(411, 1);
+			recipe.AddTile(114);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

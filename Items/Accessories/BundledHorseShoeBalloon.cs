@@ -5,7 +5,7 @@ using Terraria.ID;
 namespace OurStuffAddon.Items.Accessories
 {
 	[AutoloadEquip(EquipType.Balloon)]
-	public class BundledHorseShoeBalloonItem : ModItem
+	public class BundledHorseShoeBalloon : ModItem //replace ItemName with the name of your accessory
 	{
 		public override void SetStaticDefaults()
 		{
@@ -35,8 +35,8 @@ namespace OurStuffAddon.Items.Accessories
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.BundleofBalloons, 1);
-			recipe.AddIngredient(ItemID.LuckyHorseshoe, 1);
-			recipe.AddTile(TileID.TinkerersWorkbench);
+			recipe.AddIngredient(158, 1);
+			recipe.AddTile(114);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

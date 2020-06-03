@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace OurStuffAddon.Items.Accessories
 {
-	public class BundleOfBundlesItem : ModItem
+	public class BundleOfBundles : ModItem //replace ItemName with the name of your accessory
 	{
 		public override void SetStaticDefaults()
 		{

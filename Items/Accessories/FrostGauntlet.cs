@@ -36,7 +36,7 @@ namespace OurStuffAddon.Items.Accessories
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.FireGauntlet, 1);
 			recipe.AddIngredient(mod, "FrostStone");
-			recipe.AddTile(TileID.TinkerersWorkbench);
+			recipe.AddTile(114);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}
