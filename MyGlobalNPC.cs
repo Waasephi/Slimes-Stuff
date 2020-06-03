@@ -10,144 +10,107 @@ namespace OurStuffAddon
 		{
 			//The if (Main.rand.Next(x) == 0) determines how rare the drop is. To find the percent of a drop, divide 100 by your desired percent, minus the percent sign. Ex: A 2% chance would be 100% / 2%, or 50. This is what you put in place of x.
 
-			if (npc.type == NPCID.Mothron)
+			switch (npc.type)
 			{
-				int loots = Main.rand.Next(5);
+				case NPCID.Mothron:
+					switch (Main.rand.Next(5))
+					{
+						case 1:
+							Item.NewItem(npc.getRect(), mod.ItemType("BrokenHeroBow"), Main.rand.Next(1, 1));
+							break;
 
-				switch (loots)
-				{
-					case 1:
-						Item.NewItem(npc.getRect(), mod.ItemType("BrokenHeroBow"), Main.rand.Next(1, 1));
-						break;
+						case 2:
+							Item.NewItem(npc.getRect(), mod.ItemType("BrokenHeroBlaster"), Main.rand.Next(1, 1));
+							break;
 
-					case 2:
-						Item.NewItem(npc.getRect(), mod.ItemType("BrokenHeroBlaster"), Main.rand.Next(1, 1));
-						break;
+						case 3:
+							Item.NewItem(npc.getRect(), mod.ItemType("BrokenHeroDagger"), Main.rand.Next(1, 1));
+							break;
+					}
 
-					case 3:
-						Item.NewItem(npc.getRect(), mod.ItemType("BrokenHeroDagger"), Main.rand.Next(1, 1));
-						break;
-				}
-			}
-			if (npc.type == NPCID.IceTortoise)
-			{
-				if (Main.rand.Next(100) == 0) //1% chance
-				{
-					Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("FrostStone"));
-				}
-			}
-			if (npc.type == NPCID.DarkCaster)
-			{
-				if (Main.rand.Next(100) == 0) //1% chance
-				{
-					Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("AncientBlaster"));
-				}
-			}
-			if (npc.type == NPCID.Vulture)
-			{
-				if (Main.rand.Next(2) == 0) //50% chance
-				{
-					Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("SandFeather"));
-				}
-			}
-			if (npc.type == NPCID.LunarTowerSolar)
-			{
-				if (Main.rand.Next(1) == 0) //100% chance
-				{
-					Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("CosmicFragment"), Main.rand.Next(15, 20));
-				}
-			}
-			if (npc.type == NPCID.LunarTowerStardust)
-			{
-				if (Main.rand.Next(1) == 0) //100% chance
-				{
-					Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("CosmicFragment"), Main.rand.Next(15, 20));
-				}
-			}
-			if (npc.type == NPCID.LunarTowerNebula)
-			{
-				if (Main.rand.Next(1) == 0) //100% chance
-				{
-					Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("CosmicFragment"), Main.rand.Next(15, 20));
-				}
-			}
-			if (npc.type == NPCID.KingSlime)
-			{
-				if (Main.rand.Next(10) == 0) //100% chance
-				{
+					break;
+
+
+				case NPCID.IceTortoise:
+					if (Main.rand.Next(100) == 0) //1% chance
+					{
+						Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("FrostStone"));
+					}
+
+					break;
+
+				case NPCID.DarkCaster:
+					if (Main.rand.Next(100) == 0) //1% chance
+					{
+						Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("AncientBlaster"));
+					}
+
+					break;
+
+				case NPCID.Vulture:
+					if (Main.rand.Next(2) == 0) //50% chance
+					{
+						Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("SandFeather"));
+					}
+					break;
+
+				case NPCID.KingSlime:
 					Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("CrownJewel"));
-				}
-			}
-			if (npc.type == NPCID.EyeofCthulhu)
-			{
-				if (Main.rand.Next(10) == 0) //100% chance
-				{
-					Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("TheEye"));
-				}
-			}
-			if (npc.type == NPCID.LunarTowerVortex)
-			{
-				if (Main.rand.Next(1) == 0) //100% chance
-				{
-					Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("CosmicFragment"), Main.rand.Next(15, 20));
-				}
-			}
-			if (npc.type == NPCID.LunarTowerSolar)
-			{
-				if (Main.rand.Next(1) == 0) //100% chance
-				{
-					Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("LuminaFragment"), Main.rand.Next(15, 20));
-				}
-			}
-			if (npc.type == NPCID.LunarTowerStardust)
-			{
-				if (Main.rand.Next(1) == 0) //100% chance
-				{
-					Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("LuminaFragment"), Main.rand.Next(15, 20));
-				}
-			}
-			if (npc.type == NPCID.LunarTowerNebula)
-			{
-				if (Main.rand.Next(1) == 0) //100% chance
-				{
-					Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("LuminaFragment"), Main.rand.Next(15, 20));
-				}
-			}
-			if (npc.type == NPCID.LunarTowerVortex)
-			{
-				if (Main.rand.Next(1) == 0) //100% chance
-				{
-					Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("LuminaFragment"), Main.rand.Next(15, 20));
-				}
-			}
-			if (npc.type == NPCID.Demon)
-			{
-				if (Main.rand.Next(100) == 0) //1% chance
-				{
-					Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("ReaperScythe"));
-				}
-			}
-			if (npc.type == NPCID.VoodooDemon)
-			{
-				if (Main.rand.Next(50) == 0) //2% chance
-				{
-					Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("ReaperScythe"));
-				}
-			}
-			if (npc.type == NPCID.WallofFlesh)
-			{
-				int loots = Main.rand.Next(3);
-				switch (loots)
-				{
-					case 1:
-						Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("ThrowerEmblem"));
-						break;
+					break;
 
-					case 2:
-						Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("SpiricistEmblem"));
-						break;
-				}
+				case NPCID.EyeofCthulhu:
+					Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("TheEye"));
+					break;
+
+				case NPCID.LunarTowerSolar:
+					Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("LuminaFragment"), Main.rand.Next(15, 20));
+					Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("CosmicFragment"), Main.rand.Next(15, 20));
+					break;
+
+				case NPCID.LunarTowerStardust:
+					Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("LuminaFragment"), Main.rand.Next(15, 20));
+					Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("CosmicFragment"), Main.rand.Next(15, 20));
+					break;
+
+				case NPCID.LunarTowerNebula:
+					Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("LuminaFragment"), Main.rand.Next(15, 20));
+					Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("CosmicFragment"), Main.rand.Next(15, 20));
+					break;
+
+				case NPCID.LunarTowerVortex:
+					Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("LuminaFragment"), Main.rand.Next(15, 20));
+					Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("CosmicFragment"), Main.rand.Next(15, 20));
+					break;
+
+				case NPCID.Demon:
+					if (Main.rand.Next(100) == 0) //1% chance
+					{
+						Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("ReaperScythe"));
+					}
+
+					break;
+
+				case NPCID.VoodooDemon:
+					if (Main.rand.Next(50) == 0) //2% chance
+						Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("ReaperScythe"));
+
+					break;
+
+				case NPCID.WallofFlesh:
+					switch (Main.rand.Next(3))
+					{
+						case 1:
+							Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("ThrowerEmblem"));
+							break;
+
+						case 2:
+							Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("SpiricistEmblem"));
+							break;
+					}
+
+					break;
 			}
+
 			if (Main.player[Player.FindClosest(npc.position, npc.width, npc.height)].ZoneUnderworldHeight && Main.rand.Next(800) == 0)
 			{
 				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("LavaShard"));
