@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
 
-namespace OurStuffAddon.Tiles
+namespace OurStuffAddon.Tiles.Shadow
 {
 	public class ShadowBrickTile : ModTile
 	{

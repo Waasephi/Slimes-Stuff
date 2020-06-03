@@ -5,9 +5,9 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace OurStuffAddon.Tiles
+namespace OurStuffAddon.Tiles.Shadow
 {
-	public class SeafoamChairTile : ModTile
+	public class ShadowChairTile : ModTile
 	{
 		public override void SetDefaults()
 		{
@@ -26,8 +26,8 @@ namespace OurStuffAddon.Tiles
 			TileObjectData.addTile(Type);
 			AddToArray(ref TileID.Sets.RoomNeeds.CountsAsChair);
 			ModTranslation name = CreateMapEntryName();
-			name.SetDefault("Seafoam Chair");
-			AddMapEntry(new Color(0, 200, 150), name);
+			name.SetDefault("Shadow Chair");
+			AddMapEntry(new Color(1, 1, 1), name);
 			dustType = mod.DustType("Sparkle");
 			disableSmartCursor = true;
 			adjTiles = new int[] { TileID.Chairs };
@@ -40,7 +40,7 @@ namespace OurStuffAddon.Tiles
 
 		public override void KillMultiTile(int i, int j, int frameX, int frameY)
 		{
-			Item.NewItem(i * 16, j * 16, 16, 32, mod.ItemType("SeafoamChair"));
+			Item.NewItem(i * 16, j * 16, 16, 32, mod.ItemType("ShadowChair"));
 		}
 	}
 }

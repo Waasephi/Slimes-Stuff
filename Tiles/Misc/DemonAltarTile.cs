@@ -1,28 +1,31 @@
 using Microsoft.Xna.Framework;
 using Terraria;
-using Terraria.ID;
+using Terraria.DataStructures;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace OurStuffAddon.Tiles
+namespace OurStuffAddon.Tiles.Misc
 {
-	public class SeafoamTableTile : ModTile
+	public class DemonAltarTile : ModTile
 	{
 		public override void SetDefaults()
 		{
-			Main.tileSolidTop[Type] = true;
+			Main.tileSolidTop[Type] = false;
 			Main.tileFrameImportant[Type] = true;
 			Main.tileNoAttach[Type] = true;
-			Main.tileTable[Type] = true;
-			Main.tileLavaDeath[Type] = true;
+			Main.tileTable[Type] = false;
+			Main.tileContainer[Type] = true;
+			Main.tileLavaDeath[Type] = false;
 			TileObjectData.newTile.CopyFrom(TileObjectData.Style3x2);
+			TileObjectData.newTile.Origin = new Point16(1, 1);
 			TileObjectData.newTile.CoordinateHeights = new[] { 16, 16 };
+			TileObjectData.newTile.AnchorInvalidTiles = new[] { 127 };
+			TileObjectData.newTile.StyleHorizontal = true;
 			TileObjectData.addTile(Type);
 			ModTranslation name = CreateMapEntryName();
-			name.SetDefault("Seafoam Table");
-			AddMapEntry(new Color(0, 220, 110), name);
+			name.SetDefault("Demon Altar");
+			AddMapEntry(new Color(30, 0, 30), name);
 			disableSmartCursor = true;
-			adjTiles = new int[] { TileID.Tables };
 		}
 
 		public override void NumDust(int i, int j, bool fail, ref int num)
@@ -32,7 +35,7 @@ namespace OurStuffAddon.Tiles
 
 		public override void KillMultiTile(int i, int j, int frameX, int frameY)
 		{
-			Item.NewItem(i * 16, j * 16, 32, 48, mod.ItemType("SeafoamTable"));
+			Item.NewItem(i * 16, j * 16, 48, 32, mod.ItemType("DemonAltar"));
 		}
 	}
 }

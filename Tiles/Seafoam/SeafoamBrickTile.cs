@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
 
-namespace OurStuffAddon.Tiles
+namespace OurStuffAddon.Tiles.Seafoam
 {
 	public class SeafoamBrickTile : ModTile
 	{

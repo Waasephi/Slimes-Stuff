@@ -4,9 +4,9 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace OurStuffAddon.Tiles
+namespace OurStuffAddon.Tiles.Seafoam
 {
-	public class ShadowTableTile : ModTile
+	public class SeafoamTableTile : ModTile
 	{
 		public override void SetDefaults()
 		{
@@ -19,8 +19,8 @@ namespace OurStuffAddon.Tiles
 			TileObjectData.newTile.CoordinateHeights = new[] { 16, 16 };
 			TileObjectData.addTile(Type);
 			ModTranslation name = CreateMapEntryName();
-			name.SetDefault("Shadow Table");
-			AddMapEntry(new Color(220, 220, 220), name);
+			name.SetDefault("Seafoam Table");
+			AddMapEntry(new Color(0, 220, 110), name);
 			disableSmartCursor = true;
 			adjTiles = new int[] { TileID.Tables };
 		}
@@ -32,7 +32,7 @@ namespace OurStuffAddon.Tiles
 
 		public override void KillMultiTile(int i, int j, int frameX, int frameY)
 		{
-			Item.NewItem(i * 16, j * 16, 32, 48, mod.ItemType("ShadowTable"));
+			Item.NewItem(i * 16, j * 16, 32, 48, mod.ItemType("SeafoamTable"));
 		}
 	}
 }
