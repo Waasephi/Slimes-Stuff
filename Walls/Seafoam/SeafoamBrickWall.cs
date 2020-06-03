@@ -2,16 +2,16 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace OurStuffAddon.Walls
+namespace OurStuffAddon.Walls.Seafoam
 {
-	public class AncientPillarWall : ModWall
+	public class SeafoamBrickWall : ModWall
 	{
 		public override void SetDefaults()
 		{
 			Main.wallHouse[Type] = true;
 			dustType = mod.DustType("Sparkle");
-			drop = mod.ItemType("AncientPillarWall");
-			AddMapEntry(new Color(255, 239, 213));
+			drop = mod.ItemType("SeafoamBrickWall");
+			AddMapEntry(new Color(0, 200, 150));
 		}
 
 		public override void NumDust(int i, int j, bool fail, ref int num)

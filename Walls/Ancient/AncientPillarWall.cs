@@ -2,16 +2,16 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace OurStuffAddon.Walls
+namespace OurStuffAddon.Walls.Ancient
 {
-	public class PlagueWoodFence : ModWall
+	public class AncientPillarWall : ModWall
 	{
 		public override void SetDefaults()
 		{
 			Main.wallHouse[Type] = true;
 			dustType = mod.DustType("Sparkle");
-			drop = mod.ItemType("PlagueWoodFence");
-			AddMapEntry(new Color(125, 0, 180));
+			drop = mod.ItemType("AncientPillarWall");
+			AddMapEntry(new Color(255, 239, 213));
 		}
 
 		public override void NumDust(int i, int j, bool fail, ref int num)
@@ -21,9 +21,9 @@ namespace OurStuffAddon.Walls
 
 		public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
 		{
-			r = 0f;
-			g = 0f;
-			b = 0f;
+			r = 0.4f;
+			g = 0.4f;
+			b = 0.4f;
 		}
 	}
 }

@@ -2,16 +2,16 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace OurStuffAddon.Walls
+namespace OurStuffAddon.Walls.Ancient
 {
-	public class ShadowBrickWall : ModWall
+	public class AncientStoneWall : ModWall
 	{
 		public override void SetDefaults()
 		{
 			Main.wallHouse[Type] = true;
 			dustType = mod.DustType("Sparkle");
-			drop = mod.ItemType("ShadowBrickWall");
-			AddMapEntry(new Color(1, 1, 1));
+			drop = mod.ItemType("AncientStoneWall");
+			AddMapEntry(new Color(255, 239, 213));
 		}
 
 		public override void NumDust(int i, int j, bool fail, ref int num)

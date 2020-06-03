@@ -2,16 +2,16 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace OurStuffAddon.Walls
+namespace OurStuffAddon.Walls.Plague
 {
-	public class SeafoamBrickWall : ModWall
+	public class PlagueWoodWall : ModWall
 	{
 		public override void SetDefaults()
 		{
 			Main.wallHouse[Type] = true;
 			dustType = mod.DustType("Sparkle");
-			drop = mod.ItemType("SeafoamBrickWall");
-			AddMapEntry(new Color(0, 200, 150));
+			drop = mod.ItemType("PlagueWoodWall");
+			AddMapEntry(new Color(125, 0, 180));
 		}
 
 		public override void NumDust(int i, int j, bool fail, ref int num)
@@ -21,9 +21,9 @@ namespace OurStuffAddon.Walls
 
 		public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
 		{
-			r = 0.4f;
-			g = 0.4f;
-			b = 0.4f;
+			r = 0f;
+			g = 0f;
+			b = 0f;
 		}
 	}
 }
