@@ -10,7 +10,7 @@ using Terraria.ObjectData;
 
 namespace OurStuffAddon.Tiles
 {
-	public class AncientChest : ModTile
+	public class AncientChestTile : ModTile
 	{
 		public override void SetDefaults()
 		{
