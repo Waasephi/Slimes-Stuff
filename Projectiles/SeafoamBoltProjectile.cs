@@ -6,7 +6,7 @@ using Terraria.ModLoader;
 
 namespace OurStuffAddon.Projectiles
 {
-	public class SeafoamBolt : ModProjectile
+	public class SeafoamBoltProjectile : ModProjectile
 	{
 		public override void SetDefaults()
 		{
@@ -14,11 +14,11 @@ namespace OurStuffAddon.Projectiles
 			projectile.width = 22;
 			projectile.height = 22;
 			projectile.friendly = true;
-			projectile.penetrate = 1;                       //this is the projectile penetration
-			Main.projFrames[projectile.type] = 1;           //this is projectile frames
+			projectile.penetrate = 1;
+			Main.projFrames[projectile.type] = 1; //this is projectile frames
 			projectile.hostile = false;
-			projectile.magic = true;                        //this make the projectile do magic damage
-			projectile.tileCollide = true;                 //this make that the projectile does not go thru walls
+			projectile.magic = true;  //this make the projectile do magic damage
+			projectile.tileCollide = true; //this make that the projectile does not go thru walls
 			projectile.ignoreWater = false;
 		}
 

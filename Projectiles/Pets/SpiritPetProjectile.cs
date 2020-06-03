@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace OurStuffAddon.Projectiles.Pets
 {
-	public class BabyCactus : ModProjectile
+	public class SpiritPetProjectile : ModProjectile
 	{
 		public override void SetStaticDefaults()
 		{
@@ -32,9 +32,9 @@ namespace OurStuffAddon.Projectiles.Pets
 			MyPlayer modPlayer = player.GetModPlayer<MyPlayer>();
 			if (player.dead)
 			{
-				modPlayer.BabyCactus = false;
+				modPlayer.SpiritPet = false;
 			}
-			if (modPlayer.BabyCactus)
+			if (modPlayer.SpiritPet)
 			{
 				projectile.timeLeft = 2;
 			}

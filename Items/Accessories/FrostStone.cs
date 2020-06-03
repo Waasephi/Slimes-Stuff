@@ -4,7 +4,7 @@ using Terraria.ID;
 
 namespace OurStuffAddon.Items.Accessories
 {
-	public class FrostStone : ModItem //replace ItemName with the name of your accessory
+	public class FrostStone : ModItem
 	{
 		public override void SetStaticDefaults()
 		{

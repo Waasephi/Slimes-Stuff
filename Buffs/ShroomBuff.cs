@@ -18,7 +18,7 @@ namespace OurStuffAddon.Buffs
 		{
 			MyPlayer modPlayer = player.GetModPlayer<MyPlayer>();
 
-			if (player.ownedProjectileCounts[ProjectileType<Projectiles.Minions.Shroomy>()] > 0)
+			if (player.ownedProjectileCounts[ProjectileType<Projectiles.Minions.ShroomyProjectile>()] > 0)
 				modPlayer.ShroomBuff = true;
 			
 			if (!modPlayer.ShroomBuff)

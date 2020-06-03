@@ -31,7 +31,7 @@ namespace OurStuffAddon.Items.Summoner
 			item.value = Item.buyPrice(0, 0, 50, 0);
 			item.rare = ItemRarityID.Cyan;
 			item.UseSound = SoundID.Item44;
-			item.shoot = ProjectileType<Shroomy>();
+			item.shoot = ProjectileType<ShroomyProjectile>();
 			item.buffType = BuffType<Buffs.ShroomBuff>(); //The buff added to player after used the item
 		}
 

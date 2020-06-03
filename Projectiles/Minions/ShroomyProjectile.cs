@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 
 namespace OurStuffAddon.Projectiles.Minions
 {
-	public class Shroomy : ModProjectile
+	public class ShroomyProjectile : ModProjectile
 	{
 		public override void SetStaticDefaults()
 		{

@@ -4,8 +4,7 @@ using Terraria.ModLoader;
 
 namespace OurStuffAddon.Projectiles.Minions
 {
-	//ported from my tAPI mod because I'm lazy
-	public class BlueSlime : ModProjectile
+	public class BlueSlimeProjectile : ModProjectile
 	{
 		public override void SetStaticDefaults()
 		{
