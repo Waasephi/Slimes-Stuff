@@ -1,9 +1,10 @@
+using OurStuffAddon.Walls.Shadow;
 using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace OurStuffAddon.Items.Blocks
 {
-	public class SeafoamBrickWall : ModItem
+	public class ShadowBrickWallItem : ModItem
 	{
 		public override void SetDefaults()
 		{
@@ -17,14 +18,14 @@ namespace OurStuffAddon.Items.Blocks
 			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.consumable = true;
 			item.value = 0;
-			item.createWall = mod.WallType("SeafoamBrickWall");
+			item.createWall = ModContent.WallType<ShadowBrickWall>();
 		}
 
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddTile(TileID.Anvils);
-			recipe.AddIngredient(mod, "SeafoamBrick");
+			recipe.AddIngredient(mod, "ShadowBrick");
 			recipe.SetResult(this, 4);
 			recipe.AddRecipe();
 		}

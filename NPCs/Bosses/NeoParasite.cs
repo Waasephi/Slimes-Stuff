@@ -34,22 +34,22 @@ namespace OurStuffAddon.NPCs.Bosses
 			npc.boss = true;
 			Lighting.AddLight(npc.Center, 0f, 2f, 0f);
 			music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/CosmicSlimeTheme");
-			bossBag = mod.ItemType("NeoParasiteTreasureBag");
+			bossBag = ModContent.ItemType<NeoParasiteTreasureBag>();
 		}
 
 		public override void NPCLoot()
 		{
 			if (!Main.expertMode)
 			{
-				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("NeoPickaxe"));
-				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("NeoniumBar"), Main.rand.Next(10, 15));
+				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ModContent.ItemType<NeoPickaxe>());
+				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ModContent.ItemType<NeoniumBar>(), Main.rand.Next(10, 15));
 			}
 
 			/* {
                  int loots2 = Main.rand.Next(10);
                  switch (loots2)
                  {
-                     case 1: Item.NewItem(npc.getRect(), mod.ItemType("GiantSandSifterTrophy"), 1); break;
+                     case 1: Item.NewItem(npc.getRect(), ModContent.ItemType<GiantSandSifterTrophy>(), 1); break;
                      case 2: break;
                  }
              }*/

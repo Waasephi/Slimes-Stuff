@@ -6,7 +6,7 @@ namespace OurStuffAddon.Items.Consumables
 {
 	public class AncientObserverTreasureBag : ModItem
 	{
-		public override int BossBagNPC => mod.NPCType("AncientObserver");
+		public override int BossBagNPC => ModContent.NPCType<AncientObserver>();
 
 		public override void SetStaticDefaults()
 		{
@@ -32,9 +32,9 @@ namespace OurStuffAddon.Items.Consumables
 		public override void OpenBossBag(Player player)
 		{
 			if (Main.rand.Next(0) == 0)
-				player.QuickSpawnItem(mod.ItemType("RelicShard"), Main.rand.Next(3, 5));
-			player.QuickSpawnItem(mod.ItemType("ChippedStone"), Main.rand.Next(12, 24));
-			player.QuickSpawnItem(mod.ItemType("AncientPebble"), Main.rand.Next(1, 1));
+				player.QuickSpawnItem(ModContent.ItemType<RelicShard>(), Main.rand.Next(3, 5));
+			player.QuickSpawnItem(ModContent.ItemType<ChippedStone>(), Main.rand.Next(12, 24));
+			player.QuickSpawnItem(ModContent.ItemType<AncientPebble>(), Main.rand.Next(1, 1));
 		}
 	}
 }

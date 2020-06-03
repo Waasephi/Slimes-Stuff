@@ -18,7 +18,7 @@ namespace OurStuffAddon.Items.Blocks
 			item.consumable = true;
 			item.value = 50000;
 			item.rare = ItemRarityID.Blue;
-			item.createTile = mod.TileType("GiantSandSifterTrophy");
+			item.createTile = ModContent.TileType<GiantSandSifterTrophy>();
 			item.placeStyle = 0;
 		}
 	}

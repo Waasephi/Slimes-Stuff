@@ -36,7 +36,7 @@ namespace OurStuffAddon.Items.Armor.Fenlian
 
 		public override bool IsArmorSet(Item head, Item body, Item legs)
 		{
-			return body.type == mod.ItemType("FenlianArmor") && legs.type == mod.ItemType("FenlianBoots");
+			return body.type == ModContent.ItemType<FenlianArmor>() && legs.type == ModContent.ItemType<FenlianBoots>();
 		}
 
 		public override void UpdateArmorSet(Player player)

@@ -40,7 +40,7 @@ namespace OurStuffAddon.Items.Melee
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.ItemType("SkyEssence"), 20);
+			recipe.AddIngredient(ModContent.ItemType<SkyEssence>(), 20);
 			recipe.AddTile(TileID.SkyMill);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

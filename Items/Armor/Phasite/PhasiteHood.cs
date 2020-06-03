@@ -32,7 +32,7 @@ namespace OurStuffAddon.Items.Armor.Phasite
 
 		public override bool IsArmorSet(Item head, Item body, Item legs)
 		{
-			return body.type == mod.ItemType("PhasiteChestplate") && legs.type == mod.ItemType("PhasiteLeggings");
+			return body.type == ModContent.ItemType<PhasiteChestplate>() && legs.type == ModContent.ItemType<PhasiteLeggings>();
 		}
 
 		public override void UpdateArmorSet(Player player)

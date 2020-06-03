@@ -36,7 +36,7 @@ namespace OurStuffAddon.Items.Armor.Spiricite
 
 		public override bool IsArmorSet(Item head, Item body, Item legs)
 		{
-			return body.type == mod.ItemType("SpiriciteBreastplate") && legs.type == mod.ItemType("SpiriciteShoes");
+			return body.type == ModContent.ItemType<SpiriciteBreastplate>() && legs.type == ModContent.ItemType<SpiriciteShoes>();
 		}
 
 		public override void UpdateArmorSet(Player player)

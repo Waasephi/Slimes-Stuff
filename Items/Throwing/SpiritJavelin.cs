@@ -28,7 +28,7 @@ namespace OurStuffAddon.Items.Throwing
 			item.reuseDelay = 6;    //this is the item delay
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;       //this make the item auto reuse
-			item.shoot = mod.ProjectileType("SpiritJavelinProjectile");
+			item.shoot = ModContent.ProjectileType<SpiritJavelinProjectile>();
 			item.shootSpeed = 10f;     //projectile speed
 			item.useTurn = true;
 			item.maxStack = 1;       //this is the max stack of this item

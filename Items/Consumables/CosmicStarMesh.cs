@@ -22,7 +22,7 @@ namespace OurStuffAddon.Items.Consumables
 			item.useStyle = ItemUseStyleID.HoldingUp;
 			item.UseSound = SoundID.Item15;
 			item.consumable = true;
-			item.shoot = mod.ProjectileType("CosmicSlimeSpawn");
+			item.shoot = ModContent.ProjectileType<CosmicSlimeSpawn>();
 		}
 
 		public override void AddRecipes()
@@ -38,7 +38,7 @@ namespace OurStuffAddon.Items.Consumables
 		public override bool UseItem(Player player)
 		{
 			Main.NewText("You think all slimes are pushovers? Please... you havent seen our best.", 200, 0, 250);
-			NPC.SpawnOnPlayer(player.whoAmI, mod.NPCType("CosmicSlime"));
+			NPC.SpawnOnPlayer(player.whoAmI, ModContent.NPCType<CosmicSlime>());
 			return true;
 		}
 	}

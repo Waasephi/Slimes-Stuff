@@ -22,7 +22,7 @@ namespace OurStuffAddon.Items.Ranged.Ammo
 			item.knockBack = 1.5f;
 			item.value = 1;
 			item.rare = ItemRarityID.Blue;
-			item.shoot = mod.ProjectileType("SpiritArrowProjectile");   //The projectile shoot when your weapon using this ammo
+			item.shoot = ModContent.ProjectileType<SpiritArrowProjectile>();   //The projectile shoot when your weapon using this ammo
 			item.shootSpeed = 5f;                  //The speed of the projectile
 			item.ammo = AmmoID.Arrow;              //The ammo class this ammo belongs to.
 		}

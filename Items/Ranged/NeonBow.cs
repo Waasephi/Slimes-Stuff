@@ -54,7 +54,7 @@ namespace OurStuffAddon.Items.Ranged
 
 				if (type == ProjectileID.WoodenArrowFriendly)
 				{
-					type = mod.ProjectileType("NeonArrow"); // or ProjectileID.FireArrow;
+					type = ModContent.ProjectileType<NeonArrow>(); // or ProjectileID.FireArrow;
 				}
 				return true; // return true to allow tmodloader to call Projectile.NewProjectile as normal
 			}

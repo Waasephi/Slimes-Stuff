@@ -34,7 +34,7 @@ namespace OurStuffAddon.Items.Armor.Sky
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.ItemType("SkyEssence"), 15);
+			recipe.AddIngredient(ModContent.ItemType<SkyEssence>(), 15);
 			recipe.AddTile(TileID.SkyMill);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

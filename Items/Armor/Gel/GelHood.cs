@@ -33,7 +33,7 @@ namespace OurStuffAddon.Items.Armor.Gel
 
 		public override bool IsArmorSet(Item head, Item body, Item legs)
 		{
-			return body.type == mod.ItemType("GelRobe");
+			return body.type == ModContent.ItemType<GelRobe>();
 		}
 
 		public override void UpdateArmorSet(Player player)

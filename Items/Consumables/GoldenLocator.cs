@@ -35,7 +35,7 @@ namespace OurStuffAddon.Items.Consumables
 
 		public override bool UseItem(Player player)
 		{
-			NPC.SpawnOnPlayer(player.whoAmI, mod.NPCType("NeoMothership"));
+			NPC.SpawnOnPlayer(player.whoAmI, ModContent.NPCType<NeoMothership>());
 			return true;
 		}
 	}

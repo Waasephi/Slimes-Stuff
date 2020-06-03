@@ -47,7 +47,7 @@ namespace OurStuffAddon.Items.Consumables
 			}
 			else
 				Main.NewText("*Unintelligible Screeching*", 70, 70, 0);
-			NPC.SpawnOnPlayer(player.whoAmI, mod.NPCType("AncientObserver"));
+			NPC.SpawnOnPlayer(player.whoAmI, ModContent.NPCType<AncientObserver>());
 			return true;
 		}
 	}

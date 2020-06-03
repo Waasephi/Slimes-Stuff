@@ -23,7 +23,7 @@ namespace OurStuffAddon.Items.Blocks
 			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.consumable = true;
 			item.value = 0;
-			item.createTile = mod.TileType("DemonAltar");
+			item.createTile = ModContent.TileType<DemonAltar>();
 		}
 
 		public override void AddRecipes()

@@ -36,7 +36,7 @@ namespace OurStuffAddon.Items.Armor.Magmatic
 
 		public override bool IsArmorSet(Item head, Item body, Item legs)
 		{
-			return body.type == mod.ItemType("MagmaticArmor") && legs.type == mod.ItemType("MagmaticBoots");
+			return body.type == ModContent.ItemType<MagmaticArmor>() && legs.type == ModContent.ItemType<MagmaticBoots>();
 		}
 
 		public override void UpdateArmorSet(Player player)

@@ -1,4 +1,5 @@
 using Microsoft.Xna.Framework;
+using OurStuffAddon.Items.Blocks;
 using Terraria;
 using Terraria.ModLoader;
 
@@ -9,8 +10,8 @@ namespace OurStuffAddon.Walls.Shadow
 		public override void SetDefaults()
 		{
 			Main.wallHouse[Type] = true;
-			dustType = mod.DustType("Sparkle");
-			drop = mod.ItemType("ShadowBrickWall");
+			 
+			drop = ModContent.ItemType<ShadowBrickWallItem>();
 			AddMapEntry(new Color(1, 1, 1));
 		}
 

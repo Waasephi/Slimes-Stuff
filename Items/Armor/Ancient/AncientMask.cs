@@ -32,7 +32,7 @@ namespace OurStuffAddon.Items.Armor.Ancient
 
 		public override bool IsArmorSet(Item head, Item body, Item legs)
 		{
-			return body.type == mod.ItemType("AncientArmor") && legs.type == mod.ItemType("AncientLegs");
+			return body.type == ModContent.ItemType<AncientArmor>() && legs.type == ModContent.ItemType<AncientLegs>();
 		}
 
 		public override void UpdateArmorSet(Player player)

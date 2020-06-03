@@ -27,7 +27,7 @@ namespace OurStuffAddon.Items.Throwing
 			item.reuseDelay = 3;    //this is the item delay
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = false;       //this make the item auto reuse
-			item.shoot = mod.ProjectileType("RelicarverProjectile");
+			item.shoot = ModContent.ProjectileType<RelicarverProjectile>();
 			item.shootSpeed = 10f;     //projectile speed
 			item.useTurn = true;
 			item.maxStack = 1;       //this is the max stack of this item

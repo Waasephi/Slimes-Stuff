@@ -1,9 +1,10 @@
 using Terraria.ModLoader;
 using Terraria.ID;
+using OurStuffAddon.Walls.Ancient;
 
 namespace OurStuffAddon.Items.Blocks
 {
-	public class AncientPillarWall : ModItem
+	public class AncientPillarWallItem : ModItem
 	{
 		public override void SetDefaults()
 		{
@@ -17,7 +18,7 @@ namespace OurStuffAddon.Items.Blocks
 			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.consumable = true;
 			item.value = 0;
-			item.createWall = mod.WallType("AncientPillarWall");
+			item.createWall = ModContent.WallType<AncientPillarWall>();
 		}
 	}
 }

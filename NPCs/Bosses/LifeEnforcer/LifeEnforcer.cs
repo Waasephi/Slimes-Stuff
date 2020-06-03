@@ -34,7 +34,7 @@ namespace OurStuffAddon.NPCs.Bosses.LifeEnforcer
 			animationType = NPCID.GraniteGolem;
 			Lighting.AddLight(npc.Center, 3f, 2f, 2f);
 			music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/LifeEnforcerTheme");
-			bossBag = mod.ItemType("LifeEnforcerTreasureBag");
+			bossBag = ModContent.ItemType<LifeEnforcerTreasureBag>();
 			npc.lavaImmune = true;
 		}
 
@@ -42,14 +42,14 @@ namespace OurStuffAddon.NPCs.Bosses.LifeEnforcer
 		{
 			if (!Main.expertMode)
 			{
-				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("MineralChunk"), Main.rand.Next(3, 5));
+				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ModContent.ItemType<MineralChunk>(), Main.rand.Next(3, 5));
 			}
 
 			/* {
                  int loots2 = Main.rand.Next(10);
                  switch (loots2)
                  {
-                     case 1: Item.NewItem(npc.getRect(), mod.ItemType("GiantSandSifterTrophy"), 1); break;
+                     case 1: Item.NewItem(npc.getRect(), ModContent.ItemType<GiantSandSifterTrophy>(), 1); break;
                      case 2: break;
                  }
              }*/

@@ -28,7 +28,7 @@ namespace OurStuffAddon.Items.Throwing
 			item.reuseDelay = 6;    //this is the item delay
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;       //this make the item auto reuse
-			item.shoot = mod.ProjectileType("BloodBoomerangProjectile");
+			item.shoot = ModContent.ProjectileType<BloodBoomerangProjectile>();
 			item.shootSpeed = 11f;     //projectile speed
 			item.useTurn = true;
 			item.maxStack = 2;       //this is the max stack of this item

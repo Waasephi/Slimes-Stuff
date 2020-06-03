@@ -29,7 +29,7 @@ namespace OurStuffAddon.Items.Throwing
 			item.reuseDelay = 6;    //this is the item delay
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;       //this make the item auto reuse
-			item.shoot = mod.ProjectileType("UnityProjectile");
+			item.shoot = ModContent.ProjectileType<UnityProjectile>();
 			item.shootSpeed = 10f;     //projectile speed
 			item.useTurn = true;
 			item.maxStack = 1;       //this is the max stack of this item
@@ -51,9 +51,9 @@ namespace OurStuffAddon.Items.Throwing
 		{
 			Vector2 perturbedSpeed = new Vector2(speedX, speedY).RotatedByRandom(MathHelper.ToRadians(80)); // 20 degree spread.
 																											// Here we manually spawn the 2nd projectile, manually specifying the projectile type that we wish to shoot.
-			Projectile.NewProjectile(position.X - 20, position.Y, speedX *= 0.6f, speedY *= 0.6f, mod.ProjectileType("UTrueNightDaggerProjectile"), damage, knockBack, player.whoAmI);
-			Projectile.NewProjectile(position.X - 20, position.Y, speedX *= 0.8f, speedY *= 0.8f, mod.ProjectileType("UTrueClotDaggerProjectile"), damage, knockBack, player.whoAmI);
-			Projectile.NewProjectile(position.X - 20, position.Y, speedX *= 1, speedY *= 1, mod.ProjectileType("UTrueHolyDaggerProjectile"), damage, knockBack, player.whoAmI);
+			Projectile.NewProjectile(position.X - 20, position.Y, speedX *= 0.6f, speedY *= 0.6f, ModContent.ProjectileType<UTrueNightDaggerProjectile>(), damage, knockBack, player.whoAmI);
+			Projectile.NewProjectile(position.X - 20, position.Y, speedX *= 0.8f, speedY *= 0.8f, ModContent.ProjectileType<UTrueClotDaggerProjectile>(), damage, knockBack, player.whoAmI);
+			Projectile.NewProjectile(position.X - 20, position.Y, speedX *= 1, speedY *= 1, ModContent.ProjectileType<UTrueHolyDaggerProjectile>(), damage, knockBack, player.whoAmI);
 			return true;
 		}
 	}

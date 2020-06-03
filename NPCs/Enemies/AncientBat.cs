@@ -37,7 +37,7 @@ namespace OurStuffAddon.NPCs.Enemies
 			switch (loots2)
 			{
 				case 1:
-					Item.NewItem(npc.getRect(), mod.ItemType("SoulofAntiquity"), Main.rand.Next(1, 1));
+					Item.NewItem(npc.getRect(), ModContent.ItemType<SoulofAntiquity>(), Main.rand.Next(1, 1));
 					break;
 			}
 		}

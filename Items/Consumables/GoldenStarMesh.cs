@@ -36,7 +36,7 @@ namespace OurStuffAddon.Items.Consumables
 		public override bool UseItem(Player player)
 		{
 			Main.NewText("You think all slimes are pushovers? Please... you havent seen our best.", 200, 0, 250);
-			NPC.SpawnOnPlayer(player.whoAmI, mod.NPCType("CosmicSlime"));
+			NPC.SpawnOnPlayer(player.whoAmI, ModContent.NPCType<CosmicSlime>());
 			return true;
 		}
 	}

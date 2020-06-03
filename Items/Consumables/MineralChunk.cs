@@ -33,7 +33,7 @@ namespace OurStuffAddon.Items.Consumables
 			switch (loots)
 			{
 				case 1:
-					player.QuickSpawnItem(mod.ItemType("TrenagonBar"), Main.rand.Next(7, 10));
+					player.QuickSpawnItem(ModContent.ItemType<TrenagonBar>(), Main.rand.Next(7, 10));
 					break;
 
 				case 2:
@@ -93,11 +93,11 @@ namespace OurStuffAddon.Items.Consumables
 					break;
 
 				case 16:
-					player.QuickSpawnItem(mod.ItemType("ShadowCrystal"), Main.rand.Next(7, 10));
+					player.QuickSpawnItem(ModContent.ItemType<ShadowCrystal>(), Main.rand.Next(7, 10));
 					break;
 
 				case 17:
-					player.QuickSpawnItem(mod.ItemType("SeafoamCrystal"), Main.rand.Next(7, 10));
+					player.QuickSpawnItem(ModContent.ItemType<SeafoamCrystal>(), Main.rand.Next(7, 10));
 					break;
 			}
 		}

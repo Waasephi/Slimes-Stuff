@@ -17,7 +17,7 @@ namespace OurStuffAddon.Items.Blocks
 			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.consumable = true;
 			item.value = 0;
-			item.createTile = mod.TileType("ShadowTable");
+			item.createTile = ModContent.TileType<ShadowTable>();
 		}
 
 		public override void AddRecipes()

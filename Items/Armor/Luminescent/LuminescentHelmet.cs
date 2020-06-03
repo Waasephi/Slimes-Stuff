@@ -33,7 +33,7 @@ namespace OurStuffAddon.Items.Armor.Luminescent
 
 		public override bool IsArmorSet(Item head, Item body, Item legs)
 		{
-			return body.type == mod.ItemType("LuminescentChestplate") && legs.type == mod.ItemType("LuminescentLegs");
+			return body.type == ModContent.ItemType<LuminescentChestplate>() && legs.type == ModContent.ItemType<LuminescentLegs>();
 		}
 
 		public override void UpdateArmorSet(Player player)

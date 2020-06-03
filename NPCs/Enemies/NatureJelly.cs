@@ -35,7 +35,7 @@ namespace OurStuffAddon.NPCs.Enemies
 			switch (loots)
 			{
 				case 1:
-					Item.NewItem(npc.getRect(), mod.ItemType("EnchantedLeaf"), Main.rand.Next(2));
+					Item.NewItem(npc.getRect(), ModContent.ItemType<EnchantedLeaf>(), Main.rand.Next(2));
 					break;
 			}
 		}

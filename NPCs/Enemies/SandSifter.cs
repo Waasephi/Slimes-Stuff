@@ -31,7 +31,7 @@ namespace OurStuffAddon.NPCs.Enemies
 			switch (loots)
 			{
 				case 1:
-					Item.NewItem(npc.getRect(), mod.ItemType("SandSifterScale"), Main.rand.Next(2, 3));
+					Item.NewItem(npc.getRect(), ModContent.ItemType<SandSifterScale>(), Main.rand.Next(2, 3));
 					break;
 			}
 		}

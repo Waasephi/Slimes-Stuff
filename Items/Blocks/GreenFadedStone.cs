@@ -17,7 +17,7 @@ namespace OurStuffAddon.Items.Blocks
 			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.consumable = true;
 			item.value = 0;
-			item.createTile = mod.TileType("GreenFadedStone");
+			item.createTile = ModContent.TileType<GreenFadedStone>();
 		}
 
 		public override void AddRecipes()

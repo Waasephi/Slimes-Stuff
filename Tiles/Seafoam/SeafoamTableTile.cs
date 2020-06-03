@@ -1,4 +1,5 @@
 using Microsoft.Xna.Framework;
+using OurStuffAddon.Items.Blocks;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -32,7 +33,7 @@ namespace OurStuffAddon.Tiles.Seafoam
 
 		public override void KillMultiTile(int i, int j, int frameX, int frameY)
 		{
-			Item.NewItem(i * 16, j * 16, 32, 48, mod.ItemType("SeafoamTable"));
+			Item.NewItem(i * 16, j * 16, 32, 48, ModContent.ItemType<SeafoamTable>());
 		}
 	}
 }

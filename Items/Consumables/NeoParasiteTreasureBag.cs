@@ -6,7 +6,7 @@ namespace OurStuffAddon.Items.Consumables
 {
 	public class NeoParasiteTreasureBag : ModItem
 	{
-		public override int BossBagNPC => mod.NPCType("NeoParasite");
+		public override int BossBagNPC => ModContent.NPCType<NeoParasite>();
 
 		public override void SetStaticDefaults()
 		{
@@ -32,17 +32,17 @@ namespace OurStuffAddon.Items.Consumables
 		public override void OpenBossBag(Player player)
 		{
 			if (Main.rand.Next(0) == 0)
-				player.QuickSpawnItem(mod.ItemType("NeoPickaxe"));
-			player.QuickSpawnItem(mod.ItemType("NeoniumBar"), Main.rand.Next(10, 15));
+				player.QuickSpawnItem(ModContent.ItemType<NeoPickaxe>());
+			player.QuickSpawnItem(ModContent.ItemType<NeoniumBar>(), Main.rand.Next(10, 15));
 			int loots = Main.rand.Next(5);
 			switch (loots)
 			{
 				case 1:
-					player.QuickSpawnItem(mod.ItemType("NeoEnergyPouch"), Main.rand.Next(1, 1));
+					player.QuickSpawnItem(ModContent.ItemType<NeoEnergyPouch>(), Main.rand.Next(1, 1));
 					break;
 
 				case 2:
-					player.QuickSpawnItem(mod.ItemType("NeoQuiver"), Main.rand.Next(1, 1));
+					player.QuickSpawnItem(ModContent.ItemType<NeoQuiver>(), Main.rand.Next(1, 1));
 					break;
 			}
 		}

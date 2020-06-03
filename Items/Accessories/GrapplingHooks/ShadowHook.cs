@@ -35,7 +35,7 @@ namespace OurStuffAddon.Items.Accessories.GrapplingHooks
 			// Instead of copying these values, we can clone and modify the ones we want to copy
 			item.CloneDefaults(ItemID.AmethystHook);
 			item.shootSpeed = 18f; // how quickly the hook is shot.
-			item.shoot = mod.ProjectileType("ShadowHookProjectile");
+			item.shoot = ModContent.ProjectileType<ShadowHookProjectile>();
 		}
 	}
 

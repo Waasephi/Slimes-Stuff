@@ -1,5 +1,6 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using OurStuffAddon.Dusts;
 using System;
 using Terraria;
 using Terraria.ModLoader;
@@ -29,7 +30,7 @@ namespace OurStuffAddon.Projectiles
 			projectile.alpha = (int)projectile.localAI[0] * 2;
 			if (Main.rand.NextBool(3))
 			{
-				Dust.NewDust(projectile.position + projectile.velocity, projectile.width, projectile.height, mod.DustType("SeafoamDust"), projectile.velocity.X * 0.5f, projectile.velocity.Y * 0.5f);
+				Dust.NewDust(projectile.position + projectile.velocity, projectile.width, projectile.height, ModContent.DustType<SeafoamDust>(), projectile.velocity.X * 0.5f, projectile.velocity.Y * 0.5f);
 			}
 
 			if (projectile.localAI[0] > 500f) //projectile time left before disappears

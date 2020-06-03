@@ -34,15 +34,15 @@ namespace OurStuffAddon.NPCs.Bosses
 			npc.boss = true;
 			Lighting.AddLight(npc.Center, 4f, 2f, 0f);
 			music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/CosmicSlimeTheme");
-			bossBag = mod.ItemType("CosmicSlimeTreasureBag");
+			bossBag = ModContent.ItemType<CosmicSlimeTreasureBag>();
 		}
 
 		public override void NPCLoot()
 		{
 			if (!Main.expertMode)
 			{
-				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("CosmicFragment"), Main.rand.Next(10, 15));
-				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("CosmicJelly"), Main.rand.Next(30, 45));
+				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ModContent.ItemType<CosmicFragment>(), Main.rand.Next(10, 15));
+				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ModContent.ItemType<CosmicJelly>(), Main.rand.Next(30, 45));
 				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, 3458, Main.rand.Next(10, 15));
 				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, 3456, Main.rand.Next(10, 15));
 				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, 3457, Main.rand.Next(10, 15));
@@ -53,7 +53,7 @@ namespace OurStuffAddon.NPCs.Bosses
                  int loots2 = Main.rand.Next(10);
                  switch (loots2)
                  {
-                     case 1: Item.NewItem(npc.getRect(), mod.ItemType("GiantSandSifterTrophy"), 1); break;
+                     case 1: Item.NewItem(npc.getRect(), ModContent.ItemType<GiantSandSifterTrophy>(), 1); break;
                      case 2: break;
                  }
              }*/

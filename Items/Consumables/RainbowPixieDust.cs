@@ -16,8 +16,8 @@ namespace OurStuffAddon.Items.Consumables
 		public override void SetDefaults()
 		{
 			item.CloneDefaults(ItemID.ZephyrFish);
-			item.shoot = mod.ProjectileType("Tippi");
-			item.buffType = mod.BuffType("Tippi");
+			item.shoot = ModContent.ProjectileType<Tippi>();
+			item.buffType = ModContent.BuffType<Tippi>();
 		}
 
 		public override void AddRecipes()

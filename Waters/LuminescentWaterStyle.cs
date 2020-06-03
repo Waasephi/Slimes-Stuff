@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using OurStuffAddon.Dusts;
 using Terraria;
 using Terraria.ModLoader;
 
@@ -21,7 +22,7 @@ namespace OurStuffAddon.Waters
 		public override int GetSplashDust()
 		{
 			//this is the water splash dust
-			return mod.DustType("LuminescentDust");
+			return ModContent.DustType<LuminescentDust>();
 		}
 
 		public override int GetDropletGore()

@@ -2,6 +2,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
+using OurStuffAddon.Items.Blocks;
 
 namespace OurStuffAddon.Tiles
 {
@@ -16,7 +17,7 @@ namespace OurStuffAddon.Tiles
 			AddMapEntry(new Color(250, 200, 200));
 			mineResist = 1f;
 			minPick = 50;
-			drop = mod.ItemType("HeartStone");
+			drop = ModContent.ItemType<HeartStone>();
 			soundType = SoundID.Tink;
 			dustType = 12;
 			ModTranslation name = CreateMapEntryName();

@@ -1,4 +1,8 @@
-﻿using System;
+﻿using OurStuffAddon.Tiles;
+using OurStuffAddon.Tiles.Ancient;
+using OurStuffAddon.Tiles.Seafoam;
+using OurStuffAddon.Tiles.Shadow;
+using System;
 using System.Collections.Generic;
 using Terraria;
 using Terraria.GameContent.Generation;
@@ -76,8 +80,8 @@ namespace OurStuffAddon
 
 		public override void TileCountsAvailable(int[] tileCounts)
 		{
-			LuminescentLagoon = tileCounts[mod.TileType("LuminescentRock")]; //this make the public static int customBiome counts as customtileblock
-			Ruin = tileCounts[mod.TileType("AncientStone")] + tileCounts[mod.TileType("FadedStone")] + tileCounts[mod.TileType("BlueFadedStone")] + tileCounts[mod.TileType("RedFadedStone")] + tileCounts[mod.TileType("GreenFadedStone")];
+			LuminescentLagoon = tileCounts[ModContent.TileType<LuminescentRockTile>()]; //this make the public static int customBiome counts as customtileblock
+			Ruin = tileCounts[ModContent.TileType<AncientStoneTile>()] + tileCounts[ModContent.TileType<FadedStoneTile>()] + tileCounts[ModContent.TileType<BlueFadedStoneTile>()] + tileCounts[ModContent.TileType<RedFadedStoneTile>()] + tileCounts[ModContent.TileType<GreenFadedStoneTile>()];
 		}
 
 		public override void ModifyWorldGenTasks(List<GenPass> tasks, ref float totalWeight)
@@ -113,7 +117,7 @@ namespace OurStuffAddon
 				{
 					int X = WorldGen.genRand.Next(3, Main.maxTilesX - 1000);
 					int Y = WorldGen.genRand.Next((int)WorldGen.rockLayer - -500, Main.maxTilesY - (int)WorldGen.rockLayer - -600);
-					int TileType = mod.TileType("AncientStone");     //this is the tile u want to use for the biome , if u want to use a vanilla tile then its int TileType = 56; 56 is obsidian block
+					int TileType = ModContent.TileType<AncientStoneTile>();     //this is the tile u want to use for the biome , if u want to use a vanilla tile then its int TileType = 56; 56 is obsidian block
 
 					WorldGen.TileRunner(X, Y, 400, WorldGen.genRand.Next(2, 3), TileType, false, 1f, 2f, true, true);  //350 is how big is the biome     100, 200 this changes how random it looks.
 				}
@@ -127,7 +131,7 @@ namespace OurStuffAddon
 				{
 					int X = WorldGen.genRand.Next(1, Main.maxTilesX - 800);
 					int Y = WorldGen.genRand.Next((int)WorldGen.rockLayer - -400, Main.maxTilesY - (int)WorldGen.rockLayer - -500);
-					int TileType = mod.TileType("LuminescentRock");     //this is the tile u want to use for the biome , if u want to use a vanilla tile then its int TileType = 56; 56 is obsidian block
+					int TileType = ModContent.TileType<LuminescentRockTile>();     //this is the tile u want to use for the biome , if u want to use a vanilla tile then its int TileType = 56; 56 is obsidian block
 
 					WorldGen.TileRunner(X, Y, 300, WorldGen.genRand.Next(1, 2), TileType, false, 0f, 0f, true, true);  //350 is how big is the biome     100, 200 this changes how random it looks.
 				}
@@ -150,13 +154,13 @@ namespace OurStuffAddon
 				int y = WorldGen.genRand.Next((int)WorldGen.worldSurfaceLow, Main.maxTilesY); // WorldGen.worldSurfaceLow is actually the highest surface tile. In practice you might want to use WorldGen.rockLayer or other WorldGen values.
 
 				// Then, we call WorldGen.TileRunner with random "strength" and random "steps", as well as the Tile we wish to place. Feel free to experiment with strength and step to see the shape they generate.
-				//WorldGen.TileRunner(x, y, (double)WorldGen.genRand.Next(3, 6), WorldGen.genRand.Next(2, 6), mod.TileType("SeafoamStone"), false, 0f, 0f, false, true);
+				//WorldGen.TileRunner(x, y, (double)WorldGen.genRand.Next(3, 6), WorldGen.genRand.Next(2, 6), ModContent.TileType<SeafoamStone>(), false, 0f, 0f, false, true);
 
 				// Alternately, we could check the tile already present in the coordinate we are interested. Wrapping WorldGen.TileRunner in the following condition would make the ore only generate in Snow.
 				Tile tile = Framing.GetTileSafely(x, y);
 
-				if (tile.active() && tile.type == mod.TileType("LuminescentRock"))
-					WorldGen.TileRunner(x, y, 10, WorldGen.genRand.Next(50, 100), mod.TileType("SeafoamStone"), false, 0f, 0f, true, true);
+				if (tile.active() && tile.type == ModContent.TileType<LuminescentRockTile>())
+					WorldGen.TileRunner(x, y, 10, WorldGen.genRand.Next(50, 100), ModContent.TileType<SeafoamStoneTile>(), false, 0f, 0f, true, true);
 			}
 		}
 
@@ -175,7 +179,7 @@ namespace OurStuffAddon
 				int y = WorldGen.genRand.Next((int)WorldGen.worldSurfaceLow, Main.maxTilesY); // WorldGen.worldSurfaceLow is actually the highest surface tile. In practice you might want to use WorldGen.rockLayer or other WorldGen values.
 
 				// Then, we call WorldGen.TileRunner with random "strength" and random "steps", as well as the Tile we wish to place. Feel free to experiment with strength and step to see the shape they generate.
-				WorldGen.TileRunner(x, y, WorldGen.genRand.Next(6, 8), WorldGen.genRand.Next(4, 6), mod.TileType("TrenagonOre"), false, 0f, 0f, false, true);
+				WorldGen.TileRunner(x, y, WorldGen.genRand.Next(6, 8), WorldGen.genRand.Next(4, 6), ModContent.TileType<TrenagonOreTile>(), false, 0f, 0f, false, true);
 			}
 		}
 
@@ -194,7 +198,7 @@ namespace OurStuffAddon
 				int y = WorldGen.genRand.Next((int)WorldGen.worldSurfaceLow, Main.maxTilesY); // WorldGen.worldSurfaceLow is actually the highest surface tile. In practice you might want to use WorldGen.rockLayer or other WorldGen values.
 
 				// Then, we call WorldGen.TileRunner with random "strength" and random "steps", as well as the Tile we wish to place. Feel free to experiment with strength and step to see the shape they generate.
-				WorldGen.TileRunner(x, y, WorldGen.genRand.Next(5, 7), WorldGen.genRand.Next(6, 8), mod.TileType("ParepheneOre"), false, 0f, 0f, false, true);
+				WorldGen.TileRunner(x, y, WorldGen.genRand.Next(5, 7), WorldGen.genRand.Next(6, 8), ModContent.TileType<ParepheneOreTile>(), false, 0f, 0f, false, true);
 			}
 		}
 
@@ -213,7 +217,7 @@ namespace OurStuffAddon
 				int y = WorldGen.genRand.Next((int)WorldGen.worldSurfaceLow, Main.maxTilesY); // WorldGen.worldSurfaceLow is actually the highest surface tile. In practice you might want to use WorldGen.rockLayer or other WorldGen values.
 
 				// Then, we call WorldGen.TileRunner with random "strength" and random "steps", as well as the Tile we wish to place. Feel free to experiment with strength and step to see the shape they generate.
-				WorldGen.TileRunner(x, y, WorldGen.genRand.Next(7, 9), WorldGen.genRand.Next(4, 6), mod.TileType("PhasiteOre"), false, 0f, 0f, false, true);
+				WorldGen.TileRunner(x, y, WorldGen.genRand.Next(7, 9), WorldGen.genRand.Next(4, 6), ModContent.TileType<PhasiteOreTile>(), false, 0f, 0f, false, true);
 			}
 		}
 
@@ -232,7 +236,7 @@ namespace OurStuffAddon
 				int y = WorldGen.genRand.Next((int)WorldGen.worldSurfaceLow, Main.maxTilesY); // WorldGen.worldSurfaceLow is actually the highest surface tile. In practice you might want to use WorldGen.rockLayer or other WorldGen values.
 
 				// Then, we call WorldGen.TileRunner with random "strength" and random "steps", as well as the Tile we wish to place. Feel free to experiment with strength and step to see the shape they generate.
-				WorldGen.TileRunner(x, y, WorldGen.genRand.Next(2, 4), WorldGen.genRand.Next(2, 4), mod.TileType("ShadowCrystalOre"), false, 0f, 0f, false, true);
+				WorldGen.TileRunner(x, y, WorldGen.genRand.Next(2, 4), WorldGen.genRand.Next(2, 4), ModContent.TileType<ShadowCrystalOreTile>(), false, 0f, 0f, false, true);
 			}
 		}
 
@@ -251,7 +255,7 @@ namespace OurStuffAddon
 				int y = WorldGen.genRand.Next((int)WorldGen.worldSurfaceLow, Main.maxTilesY); // WorldGen.worldSurfaceLow is actually the highest surface tile. In practice you might want to use WorldGen.rockLayer or other WorldGen values.
 
 				// Then, we call WorldGen.TileRunner with random "strength" and random "steps", as well as the Tile we wish to place. Feel free to experiment with strength and step to see the shape they generate.
-				WorldGen.TileRunner(x, y, WorldGen.genRand.Next(6, 8), WorldGen.genRand.Next(4, 6), mod.TileType("NeoniumOre"), false, 0f, 0f, false, true);
+				WorldGen.TileRunner(x, y, WorldGen.genRand.Next(6, 8), WorldGen.genRand.Next(4, 6), ModContent.TileType<NeoniumOreTile>(), false, 0f, 0f, false, true);
 			}
 		}
 	}

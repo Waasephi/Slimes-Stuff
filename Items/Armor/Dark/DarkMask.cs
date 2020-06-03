@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
+using OurStuffAddon.Items.Materials;
 
 namespace OurStuffAddon.Items.Armor.Dark
 {
@@ -34,7 +35,7 @@ namespace OurStuffAddon.Items.Armor.Dark
 
 		public override bool IsArmorSet(Item head, Item body, Item legs)
 		{
-			return body.type == mod.ItemType("DarkPlate") && legs.type == mod.ItemType("DarkLegs");
+			return body.type == ModContent.ItemType<DarkPlate>() && legs.type == ModContent.ItemType<DarkLegs>();
 		}
 
 		public override void UpdateArmorSet(Player player)
@@ -46,7 +47,7 @@ namespace OurStuffAddon.Items.Armor.Dark
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.ItemType("DarkSteel"), 10);
+			recipe.AddIngredient(ModContent.ItemType<DarkSteel>(), 10);
 			recipe.AddTile(TileID.DemonAltar);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

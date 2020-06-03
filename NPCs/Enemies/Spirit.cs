@@ -41,14 +41,14 @@ namespace OurStuffAddon.NPCs.Enemies
 			switch (loots2)
 			{
 				case 2:
-					Item.NewItem(npc.getRect(), mod.ItemType("SpiritShard"), Main.rand.Next(3, 10));
+					Item.NewItem(npc.getRect(), ModContent.ItemType<SpiritShard>(), Main.rand.Next(3, 10));
 					break;
 			}
 			int loots3 = Main.rand.Next(6);
 			switch (loots3)
 			{
 				case 3:
-					Item.NewItem(npc.getRect(), mod.ItemType("SpiriciteCrystal"), Main.rand.Next(1, 2));
+					Item.NewItem(npc.getRect(), ModContent.ItemType<SpiriciteCrystal>(), Main.rand.Next(1, 2));
 
 					break;
 			}

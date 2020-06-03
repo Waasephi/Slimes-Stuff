@@ -40,7 +40,7 @@ namespace OurStuffAddon.Items.Consumables
 
 		public override bool UseItem(Player player)
 		{
-			NPC.SpawnOnPlayer(player.whoAmI, mod.NPCType("GiantSandSifterHead"));
+			NPC.SpawnOnPlayer(player.whoAmI, ModContent.NPCType<GiantSandSifterHead>());
 			return true;
 		}
 	}

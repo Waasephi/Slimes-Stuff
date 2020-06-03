@@ -1,9 +1,10 @@
+using OurStuffAddon.Walls.Seafoam;
 using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace OurStuffAddon.Items.Blocks
 {
-	public class SpiritInfuser : ModItem
+	public class SeafoamBrickWallItem : ModItem
 	{
 		public override void SetDefaults()
 		{
@@ -17,16 +18,15 @@ namespace OurStuffAddon.Items.Blocks
 			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.consumable = true;
 			item.value = 0;
-			item.createTile = ModContent.TileType<SpiritInfuser>();
+			item.createWall = ModContent.WallType<SeafoamBrickWall>();
 		}
 
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "SpiritShard", 10);
-			recipe.AddIngredient(ItemID.IronAnvil);
 			recipe.AddTile(TileID.Anvils);
-			recipe.SetResult(this);
+			recipe.AddIngredient(mod, "SeafoamBrick");
+			recipe.SetResult(this, 4);
 			recipe.AddRecipe();
 		}
 	}

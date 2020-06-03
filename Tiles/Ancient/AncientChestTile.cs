@@ -1,4 +1,5 @@
 using Microsoft.Xna.Framework;
+using OurStuffAddon.Items.Blocks;
 using System;
 using Terraria;
 using Terraria.DataStructures;
@@ -35,11 +36,11 @@ namespace OurStuffAddon.Tiles.Ancient
 			ModTranslation name = CreateMapEntryName();
 			name.SetDefault("Ancient Chest");
 			AddMapEntry(new Color(200, 200, 200), name, MapChestName);
-			dustType = mod.DustType("Sparkle");
+			 
 			disableSmartCursor = true;
 			adjTiles = new int[] { TileID.Containers };
 			chest = "Ancient Chest";
-			chestDrop = mod.ItemType("AncientChest");
+			chestDrop = ModContent.ItemType<AncientChest>();
 		}
 
 		public override bool HasSmartInteract()
@@ -181,7 +182,7 @@ namespace OurStuffAddon.Tiles.Ancient
 				player.showItemIconText = Main.chest[chest].name.Length > 0 ? Main.chest[chest].name : "Ancient Chest";
 				if (player.showItemIconText == "Ancient Chest")
 				{
-					player.showItemIcon2 = mod.ItemType("AncientChest");
+					player.showItemIcon2 = ModContent.ItemType<AncientChest>();
 					player.showItemIconText = "";
 				}
 			}

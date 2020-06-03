@@ -1,9 +1,10 @@
 using Terraria.ModLoader;
 using Terraria.ID;
+using OurStuffAddon.Walls;
 
 namespace OurStuffAddon.Items.Blocks
 {
-	public class AncientStoneWall : ModItem
+	public class FadedStoneWallItem : ModItem
 	{
 		public override void SetDefaults()
 		{
@@ -17,7 +18,7 @@ namespace OurStuffAddon.Items.Blocks
 			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.consumable = true;
 			item.value = 0;
-			item.createWall = mod.WallType("AncientStoneWall");
+			item.createWall = ModContent.WallType<FadedStoneWall>();
 		}
 	}
 }

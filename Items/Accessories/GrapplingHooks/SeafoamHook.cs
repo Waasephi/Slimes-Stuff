@@ -17,7 +17,7 @@ namespace OurStuffAddon.Items.Accessories.GrapplingHooks
 		{
 			item.CloneDefaults(ItemID.AmethystHook);
 			item.shootSpeed = 18f; // how quickly the hook is shot.
-			item.shoot = mod.ProjectileType("SeafoamHookProjectile");
+			item.shoot = ModContent.ProjectileType<SeafoamHookProjectile>();
 		}
 	}
 

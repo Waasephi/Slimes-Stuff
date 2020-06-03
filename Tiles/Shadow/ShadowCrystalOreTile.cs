@@ -2,6 +2,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
+using OurStuffAddon.Items.Materials;
 
 namespace OurStuffAddon.Tiles.Shadow
 {
@@ -17,7 +18,7 @@ namespace OurStuffAddon.Tiles.Shadow
 			AddMapEntry(new Color(0, 0, 0));
 			mineResist = 1f;
 			minPick = 20;
-			drop = mod.ItemType("ShadowCrystal");
+			drop = ModContent.ItemType<ShadowCrystal>();
 			soundType = SoundID.Tink;
 			dustType = 1;
 			//soundStyle = 1;

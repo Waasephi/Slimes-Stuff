@@ -34,7 +34,7 @@ namespace OurStuffAddon.Items.Armor.Dark
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.ItemType("DarkSteel"), 15);
+			recipe.AddIngredient(ModContent.ItemType<DarkSteel>(), 15);
 			recipe.AddTile(TileID.DemonAltar);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

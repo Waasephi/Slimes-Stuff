@@ -22,7 +22,7 @@ namespace OurStuffAddon.Items.Blocks
 			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.consumable = true;
 			item.value = 0;
-			item.createTile = mod.TileType("Pancakes");
+			item.createTile = ModContent.TileType<Pancakes>();
 		}
 
 		public override void AddRecipes()

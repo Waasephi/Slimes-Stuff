@@ -1,9 +1,10 @@
-using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.ID;
+using OurStuffAddon.Walls;
 
 namespace OurStuffAddon.Items.Blocks
 {
-	public class ShadowBrickWall : ModItem
+	public class GreenFadedStoneWallItem : ModItem
 	{
 		public override void SetDefaults()
 		{
@@ -17,16 +18,7 @@ namespace OurStuffAddon.Items.Blocks
 			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.consumable = true;
 			item.value = 0;
-			item.createWall = mod.WallType("ShadowBrickWall");
-		}
-
-		public override void AddRecipes()
-		{
-			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddTile(TileID.Anvils);
-			recipe.AddIngredient(mod, "ShadowBrick");
-			recipe.SetResult(this, 4);
-			recipe.AddRecipe();
+			item.createWall = ModContent.WallType<GreenFadedStoneWall>();
 		}
 	}
 }

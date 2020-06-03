@@ -2,6 +2,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
+using OurStuffAddon.Items.Blocks;
 
 namespace OurStuffAddon.Tiles
 {
@@ -16,7 +17,7 @@ namespace OurStuffAddon.Tiles
 			AddMapEntry(new Color(200, 0, 200));
 			mineResist = 1f;
 			minPick = 80;
-			drop = mod.ItemType("PhasiteOre");
+			drop = ModContent.ItemType<PhasiteOre>();
 			soundType = SoundID.Tink;
 			dustType = 1;
 			ModTranslation name = CreateMapEntryName();

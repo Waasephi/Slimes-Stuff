@@ -29,9 +29,9 @@ namespace OurStuffAddon.Items.Summoner
 			item.value = Item.buyPrice(0, 3, 0, 0);
 			item.rare = -12;
 			item.UseSound = SoundID.Item44;
-			item.shoot = mod.ProjectileType("BlueSlime");
+			item.shoot = ModContent.ProjectileType<BlueSlime>();
 			item.shootSpeed = 10f;
-			item.buffType = mod.BuffType("BlueSlime"); //The buff added to player after used the item
+			item.buffType = ModContent.BuffType<BlueSlime>(); //The buff added to player after used the item
 			item.buffTime = 3600;               //The duration of the buff, here is 60 seconds
 		}
 

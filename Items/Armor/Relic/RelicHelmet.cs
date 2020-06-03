@@ -34,7 +34,7 @@ namespace OurStuffAddon.Items.Armor.Relic
 
 		public override bool IsArmorSet(Item head, Item body, Item legs)
 		{
-			return body.type == mod.ItemType("RelicChestplate") && legs.type == mod.ItemType("RelicGreaves");
+			return body.type == ModContent.ItemType<RelicChestplate>() && legs.type == ModContent.ItemType<RelicGreaves>();
 		}
 
 		public override void UpdateArmorSet(Player player)

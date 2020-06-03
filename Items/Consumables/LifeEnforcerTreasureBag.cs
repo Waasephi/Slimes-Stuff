@@ -6,7 +6,7 @@ namespace OurStuffAddon.Items.Consumables
 {
 	public class LifeEnforcerTreasureBag : ModItem
 	{
-		public override int BossBagNPC => mod.NPCType("LifeEnforcer");
+		public override int BossBagNPC => ModContent.NPCType<LifeEnforcer>();
 
 		public override void SetStaticDefaults()
 		{
@@ -32,8 +32,8 @@ namespace OurStuffAddon.Items.Consumables
 		public override void OpenBossBag(Player player)
 		{
 			if (Main.rand.Next(0) == 0)
-				player.QuickSpawnItem(mod.ItemType("MineralChunk"), Main.rand.Next(5, 7));
-			player.QuickSpawnItem(mod.ItemType("HeartOfTheCaverns"), Main.rand.Next(1, 1));
+				player.QuickSpawnItem(ModContent.ItemType<MineralChunk>(), Main.rand.Next(5, 7));
+			player.QuickSpawnItem(ModContent.ItemType<HeartOfTheCaverns>(), Main.rand.Next(1, 1));
 		}
 	}
 }

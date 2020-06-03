@@ -1,9 +1,11 @@
-﻿using Terraria;
+﻿using OurStuffAddon.Tiles;
+using Terraria;
 using Terraria.ID;
+using Terraria.ModLoader;
 
 namespace OurStuffAddon.Structures
 {
-	public class HeartStone
+	public static class HeartStoneStructure
 	{
 		private static readonly int[,] _HeartStoneBig = new int[,]
 		{
@@ -51,7 +53,7 @@ namespace OurStuffAddon.Structures
 						if (_HeartStoneBig[j, i] == 1)
 						{
 							WorldGen.KillTile(xPosO + i, yPosO + j);
-							WorldGen.PlaceTile(xPosO + i, yPosO + j, SlimesStuffMod.Instance.TileType("HeartStone"), true, true);
+							WorldGen.PlaceTile(xPosO + i, yPosO + j, ModContent.TileType<HeartStoneTile>(), true, true);
 						}
 					}
 				}
@@ -69,7 +71,7 @@ namespace OurStuffAddon.Structures
 						if (_HeartStoneMed[j, i] == 1)
 						{
 							WorldGen.KillTile(xPosO + i, yPosO + j);
-							WorldGen.PlaceTile(xPosO + i, yPosO + j, SlimesStuffMod.Instance.TileType("HeartStone"), true, true);
+							WorldGen.PlaceTile(xPosO + i, yPosO + j, ModContent.TileType<HeartStoneTile>(), true, true);
 						}
 					}
 				}
@@ -87,7 +89,7 @@ namespace OurStuffAddon.Structures
 						if (_HeartStoneSmall[j, i] == 1)
 						{
 							WorldGen.KillTile(xPosO + i, yPosO + j);
-							WorldGen.PlaceTile(xPosO + i, yPosO + j, SlimesStuffMod.Instance.TileType("HeartStone"), true, true);
+							WorldGen.PlaceTile(xPosO + i, yPosO + j, ModContent.TileType<HeartStoneTile>(), true, true);
 						}
 					}
 				}

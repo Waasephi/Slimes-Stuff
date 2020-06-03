@@ -2,6 +2,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
+using OurStuffAddon.Items.Materials;
 
 namespace OurStuffAddon.Tiles.Seafoam
 {
@@ -16,7 +17,7 @@ namespace OurStuffAddon.Tiles.Seafoam
 			AddMapEntry(new Color(100, 200, 200));
 			mineResist = 1f;
 			minPick = 20;
-			drop = mod.ItemType("SeafoamCrystal");
+			drop = ModContent.ItemType<SeafoamCrystal>();
 			soundType = SoundID.Tink;
 			dustType = 1;
 			//soundStyle = 1;

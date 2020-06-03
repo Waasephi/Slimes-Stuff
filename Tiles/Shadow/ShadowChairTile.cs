@@ -1,4 +1,5 @@
 using Microsoft.Xna.Framework;
+using OurStuffAddon.Items.Blocks;
 using Terraria;
 using Terraria.Enums;
 using Terraria.ID;
@@ -28,7 +29,7 @@ namespace OurStuffAddon.Tiles.Shadow
 			ModTranslation name = CreateMapEntryName();
 			name.SetDefault("Shadow Chair");
 			AddMapEntry(new Color(1, 1, 1), name);
-			dustType = mod.DustType("Sparkle");
+			 
 			disableSmartCursor = true;
 			adjTiles = new int[] { TileID.Chairs };
 		}
@@ -40,7 +41,7 @@ namespace OurStuffAddon.Tiles.Shadow
 
 		public override void KillMultiTile(int i, int j, int frameX, int frameY)
 		{
-			Item.NewItem(i * 16, j * 16, 16, 32, mod.ItemType("ShadowChair"));
+			Item.NewItem(i * 16, j * 16, 16, 32, ModContent.ItemType<ShadowChair>());
 		}
 	}
 }

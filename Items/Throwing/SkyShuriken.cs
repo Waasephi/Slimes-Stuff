@@ -27,7 +27,7 @@ namespace OurStuffAddon.Items.Throwing
 			item.reuseDelay = 3;    //this is the item delay
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = false;       //this make the item auto reuse
-			item.shoot = mod.ProjectileType("SkyShurikenProjectile");
+			item.shoot = ModContent.ProjectileType<SkyShurikenProjectile>();
 			item.shootSpeed = 10f;     //projectile speed
 			item.useTurn = true;
 			item.maxStack = 1;       //this is the max stack of this item
@@ -38,7 +38,7 @@ namespace OurStuffAddon.Items.Throwing
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.ItemType("SkyEssence"), 20);
+			recipe.AddIngredient(ModContent.ItemType<SkyEssence>(), 20);
 			recipe.AddTile(TileID.SkyMill);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

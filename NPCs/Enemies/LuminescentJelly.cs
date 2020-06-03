@@ -41,7 +41,7 @@ namespace OurStuffAddon.NPCs.Enemies
 			switch (loots)
 			{
 				case 1:
-					Item.NewItem(npc.getRect(), mod.ItemType("SeafoamScale"), Main.rand.Next(2, 3));
+					Item.NewItem(npc.getRect(), ModContent.ItemType<SeafoamScale>(), Main.rand.Next(2, 3));
 					break;
 			}
 		}

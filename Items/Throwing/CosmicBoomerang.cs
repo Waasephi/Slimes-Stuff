@@ -24,7 +24,7 @@ namespace OurStuffAddon.Items.Throwing
 			item.value = 8;
 			item.rare = ItemRarityID.LightPurple;
 			item.shootSpeed = 12f;
-			item.shoot = mod.ProjectileType("CosmicBoomerangProjectile");
+			item.shoot = ModContent.ProjectileType<CosmicBoomerangProjectile>();
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
 		}

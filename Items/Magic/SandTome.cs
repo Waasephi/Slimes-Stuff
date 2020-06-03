@@ -24,7 +24,7 @@ namespace OurStuffAddon.Items.Magic
 			item.rare = ItemRarityID.LightPurple;
 			item.UseSound = SoundID.Item8;
 			item.autoReuse = true;
-			item.shoot = mod.ProjectileType("SifterToothProjectile");
+			item.shoot = ModContent.ProjectileType<SifterToothProjectile>();
 			item.shootSpeed = 7f;
 			item.mana = 10;
 			item.noMelee = true;

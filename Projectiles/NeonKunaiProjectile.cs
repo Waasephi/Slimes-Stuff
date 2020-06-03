@@ -39,7 +39,7 @@ namespace OurStuffAddon.Projectiles
 			Main.PlaySound(SoundID.Item, (int)projectile.position.X, (int)projectile.position.Y, 10);
 			if (Main.rand.Next(5) == 0)
 			{
-				Item.NewItem((int)projectile.position.X, (int)projectile.position.Y, projectile.width, projectile.height, mod.ItemType("NeonKunai"));
+				Item.NewItem((int)projectile.position.X, (int)projectile.position.Y, projectile.width, projectile.height, ModContent.ItemType<NeonKunai>());
 			}
 			return false;
 		}

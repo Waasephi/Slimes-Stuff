@@ -18,8 +18,8 @@ namespace OurStuffAddon.Items.Consumables
 		public override void SetDefaults()
 		{
 			item.CloneDefaults(ItemID.Carrot);
-			item.shoot = mod.ProjectileType("SpiritPet");
-			item.buffType = mod.BuffType("SpiritPet");
+			item.shoot = ModContent.ProjectileType<SpiritPet>();
+			item.buffType = ModContent.BuffType<SpiritPet>();
 		}
 
 		public override void UseStyle(Player player)

@@ -9,8 +9,8 @@ namespace OurStuffAddon.Walls.Plague
 		public override void SetDefaults()
 		{
 			Main.wallHouse[Type] = true;
-			dustType = mod.DustType("Sparkle");
-			drop = mod.ItemType("PlagueWoodWall");
+			 
+			//drop = ModContent.ItemType<PlagueWoodWall>(); TODO item?
 			AddMapEntry(new Color(125, 0, 180));
 		}
 

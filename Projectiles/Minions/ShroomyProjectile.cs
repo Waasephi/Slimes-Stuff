@@ -1,4 +1,5 @@
 using Microsoft.Xna.Framework;
+using OurStuffAddon.Buffs;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -51,7 +52,7 @@ namespace OurStuffAddon.Projectiles.Minions
 			projectile.rotation += projectile.velocity.X * 0.04f;
 
 			Player player = Main.player[projectile.owner];
-			player.AddBuff(mod.BuffType("ShroomBuff"), 3600);
+			player.AddBuff(ModContent.BuffType<ShroomBuff>(), 3600);
 		}
 
 		public override bool OnTileCollide(Vector2 oldVelocity)

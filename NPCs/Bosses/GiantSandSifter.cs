@@ -30,25 +30,25 @@ namespace OurStuffAddon.NPCs.Bosses
 		{
 			if (!Main.expertMode)
 			{
-				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("SandSifterMandible"), Main.rand.Next(7, 10));
-				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("SandSifterScale"), Main.rand.Next(7, 10));
+				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ModContent.ItemType<SandSifterMandible>(), Main.rand.Next(7, 10));
+				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ModContent.ItemType<SandSifterScale>(), Main.rand.Next(7, 10));
 				int loots = Main.rand.Next(5);
 				switch (loots)
 				{
 					case 1:
-						Item.NewItem(npc.getRect(), mod.ItemType("SandSifterScale"), Main.rand.Next(1, 1));
+						Item.NewItem(npc.getRect(), ModContent.ItemType<SandSifterScale>(), Main.rand.Next(1, 1));
 						break;
 
 					case 2:
-						Item.NewItem(npc.getRect(), mod.ItemType("SandTome"), Main.rand.Next(1, 1));
+						Item.NewItem(npc.getRect(), ModContent.ItemType<SandTome>(), Main.rand.Next(1, 1));
 						break;
 
 					case 3:
-						Item.NewItem(npc.getRect(), mod.ItemType("DesertDuster"), Main.rand.Next(1, 1));
+						Item.NewItem(npc.getRect(), ModContent.ItemType<DesertDuster>(), Main.rand.Next(1, 1));
 						break;
 
 					case 4:
-						Item.NewItem(npc.getRect(), mod.ItemType("DesertFang"), Main.rand.Next(100, 100));
+						Item.NewItem(npc.getRect(), ModContent.ItemType<DesertFang>(), Main.rand.Next(100, 100));
 						break;
 				}
 			}
@@ -57,7 +57,7 @@ namespace OurStuffAddon.NPCs.Bosses
 				int loots2 = Main.rand.Next(10);
 				switch (loots2)
 				{
-					case 1: Item.NewItem(npc.getRect(), mod.ItemType("GiantSandSifterTrophy"), 1); break;
+					case 1: Item.NewItem(npc.getRect(), ModContent.ItemType<GiantSandSifterTrophy>(), 1); break;
 					case 2: break;
 				}
 			}
@@ -582,7 +582,7 @@ namespace OurStuffAddon.NPCs.Bosses
 			npc.aiStyle = -1;
 			npc.lavaImmune = true;
 			npc.buffImmune[24] = true;
-			bossBag = mod.ItemType("GiantSandSifterTreasureBag");
+			bossBag = ModContent.ItemType<GiantSandSifterTreasureBag>();
 			npc.boss = true;
 			music = 40;
 		}
@@ -625,7 +625,7 @@ namespace OurStuffAddon.NPCs.Bosses
 			npc.aiStyle = -1;
 			npc.lavaImmune = true;
 			npc.buffImmune[24] = true;
-			bossBag = mod.ItemType("GiantSandSifterTreasureBag");
+			bossBag = ModContent.ItemType<GiantSandSifterTreasureBag>();
 			npc.boss = false;
 			music = 40;
 		}
@@ -648,7 +648,7 @@ namespace OurStuffAddon.NPCs.Bosses
 			npc.aiStyle = -1;
 			npc.lavaImmune = true;
 			npc.buffImmune[24] = true;
-			bossBag = mod.ItemType("GiantSandSifterTreasureBag");
+			bossBag = ModContent.ItemType<GiantSandSifterTreasureBag>();
 			npc.boss = false;
 			music = 40;
 		}

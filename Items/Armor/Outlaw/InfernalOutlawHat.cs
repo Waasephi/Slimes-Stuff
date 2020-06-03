@@ -33,7 +33,7 @@ namespace OurStuffAddon.Items.Armor.Outlaw
 
 		public override bool IsArmorSet(Item head, Item body, Item legs)
 		{
-			return body.type == mod.ItemType("InfernalOutlawLongcoat") && legs.type == mod.ItemType("InfernalOutlawPants");
+			return body.type == ModContent.ItemType<InfernalOutlawLongcoat>() && legs.type == ModContent.ItemType<InfernalOutlawPants>();
 		}
 
 		public override void UpdateArmorSet(Player player)

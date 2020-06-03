@@ -36,7 +36,7 @@ namespace OurStuffAddon.Items.Armor.Felmar
 
 		public override bool IsArmorSet(Item head, Item body, Item legs)
 		{
-			return body.type == mod.ItemType("FelmarBodypiece") && legs.type == mod.ItemType("FelmarCuisses");
+			return body.type == ModContent.ItemType<FelmarBodypiece>() && legs.type == ModContent.ItemType<FelmarCuisses>();
 		}
 
 		public override void UpdateArmorSet(Player player)

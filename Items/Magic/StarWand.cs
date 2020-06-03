@@ -27,7 +27,7 @@ namespace OurStuffAddon.Items.Magic
 			item.rare = ItemRarityID.LightPurple;
 			item.UseSound = SoundID.Item43;
 			item.autoReuse = true;
-			item.shoot = mod.ProjectileType("StarWandProjectile");
+			item.shoot = ModContent.ProjectileType<StarWandProjectile>();
 			item.shootSpeed = 7f;
 			item.mana = 5;
 			item.noMelee = true;

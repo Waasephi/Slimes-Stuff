@@ -32,7 +32,7 @@ namespace OurStuffAddon.Items.Armor.Trenagon
 
 		public override bool IsArmorSet(Item head, Item body, Item legs)
 		{
-			return body.type == mod.ItemType("TrenagonChestplate") && legs.type == mod.ItemType("TrenagonGreaves");
+			return body.type == ModContent.ItemType<TrenagonChestplate>() && legs.type == ModContent.ItemType<TrenagonGreaves>();
 		}
 
 		public override void UpdateArmorSet(Player player)

@@ -40,23 +40,23 @@ namespace OurStuffAddon.NPCs.Enemies
 			switch (loots)
 			{
 				case 1:
-					Item.NewItem(npc.getRect(), mod.ItemType("Relicarver"), Main.rand.Next(1, 1));
+					Item.NewItem(npc.getRect(), ModContent.ItemType<Relicarver>(), Main.rand.Next(1, 1));
 					break;
 
 				case 2:
-					Item.NewItem(npc.getRect(), mod.ItemType("RelicChakram"), Main.rand.Next(1, 1));
+					Item.NewItem(npc.getRect(), ModContent.ItemType<RelicChakram>(), Main.rand.Next(1, 1));
 					break;
 
 				case 3:
-					Item.NewItem(npc.getRect(), mod.ItemType("RuinedRelic"), Main.rand.Next(1, 1));
+					Item.NewItem(npc.getRect(), ModContent.ItemType<RuinedRelic>(), Main.rand.Next(1, 1));
 					break;
 
 				case 4:
-					Item.NewItem(npc.getRect(), mod.ItemType("RelicStaff"), Main.rand.Next(1, 1));
+					Item.NewItem(npc.getRect(), ModContent.ItemType<RelicStaff>(), Main.rand.Next(1, 1));
 					break;
 
 				case 5:
-					Item.NewItem(npc.getRect(), mod.ItemType("RelicSword"), Main.rand.Next(1, 1));
+					Item.NewItem(npc.getRect(), ModContent.ItemType<RelicSword>(), Main.rand.Next(1, 1));
 					break;
 			}
 			int loots2 = Main.rand.Next(3);
@@ -64,7 +64,7 @@ namespace OurStuffAddon.NPCs.Enemies
 			switch (loots2)
 			{
 				case 1:
-					Item.NewItem(npc.getRect(), mod.ItemType("SoulofAntiquity"), Main.rand.Next(1, 1));
+					Item.NewItem(npc.getRect(), ModContent.ItemType<SoulofAntiquity>(), Main.rand.Next(1, 1));
 					break;
 			}
 		}

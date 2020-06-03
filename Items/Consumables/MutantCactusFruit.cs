@@ -16,8 +16,8 @@ namespace OurStuffAddon.Items.Consumables
 		public override void SetDefaults()
 		{
 			item.CloneDefaults(ItemID.Carrot);
-			item.shoot = mod.ProjectileType("BabyCactus");
-			item.buffType = mod.BuffType("BabyCactus");
+			item.shoot = ModContent.ProjectileType<BabyCactus>();
+			item.buffType = ModContent.BuffType<BabyCactus>();
 		}
 
 		public override void UseStyle(Player player)

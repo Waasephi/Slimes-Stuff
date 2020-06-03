@@ -33,7 +33,7 @@ namespace OurStuffAddon.Items.Armor.SandScale
 
 		public override bool IsArmorSet(Item head, Item body, Item legs)
 		{
-			return body.type == mod.ItemType("SandScalemail") && legs.type == mod.ItemType("SandScaleBoots");
+			return body.type == ModContent.ItemType<SandScalemail>() && legs.type == ModContent.ItemType<SandScaleBoots>();
 		}
 
 		public override void UpdateArmorSet(Player player)

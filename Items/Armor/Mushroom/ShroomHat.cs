@@ -33,7 +33,7 @@ namespace OurStuffAddon.Items.Armor.Mushroom
 
 		public override bool IsArmorSet(Item head, Item body, Item legs)
 		{
-			return body.type == mod.ItemType("ShroomShirt") && legs.type == mod.ItemType("ShroomShoes");
+			return body.type == ModContent.ItemType<ShroomShirt>() && legs.type == ModContent.ItemType<ShroomShoes>();
 		}
 
 		public override void UpdateArmorSet(Player player)

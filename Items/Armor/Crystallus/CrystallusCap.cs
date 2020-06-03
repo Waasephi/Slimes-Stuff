@@ -36,7 +36,7 @@ namespace OurStuffAddon.Items.Armor.Crystallus
 
 		public override bool IsArmorSet(Item head, Item body, Item legs)
 		{
-			return body.type == mod.ItemType("CrystallusChestplate") && legs.type == mod.ItemType("CrystallusLeggings");
+			return body.type == ModContent.ItemType<CrystallusChestplate>() && legs.type == ModContent.ItemType<CrystallusLeggings>();
 		}
 
 		public override void UpdateArmorSet(Player player)

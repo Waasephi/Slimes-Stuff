@@ -2,6 +2,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
+using OurStuffAddon.Items.Blocks;
 
 namespace OurStuffAddon.Tiles
 {
@@ -15,7 +16,7 @@ namespace OurStuffAddon.Tiles
 			AddMapEntry(new Color(30, 30, 50));
 			mineResist = 1f;
 			minPick = 20;
-			drop = mod.ItemType("SpiriciteBrick");
+			drop = ModContent.ItemType<SpiriciteBrick>();
 			soundType = SoundID.Tink;
 			dustType = 1;
 			//soundStyle = 1;

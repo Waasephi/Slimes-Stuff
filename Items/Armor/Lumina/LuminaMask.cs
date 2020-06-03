@@ -36,7 +36,7 @@ namespace OurStuffAddon.Items.Armor.Lumina
 
 		public override bool IsArmorSet(Item head, Item body, Item legs)
 		{
-			return body.type == mod.ItemType("LuminaBreastplate") && legs.type == mod.ItemType("LuminaLeggings");
+			return body.type == ModContent.ItemType<LuminaBreastplate>() && legs.type == ModContent.ItemType<LuminaLeggings>();
 		}
 
 		public override void UpdateArmorSet(Player player)

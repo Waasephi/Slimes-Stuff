@@ -41,7 +41,7 @@ namespace OurStuffAddon.Items.Consumables
 		public override bool UseItem(Player player)
 		{
 			Main.NewText("You are hurting this world! Please stop.", 250, 200, 200);
-			NPC.SpawnOnPlayer(player.whoAmI, mod.NPCType("LifeEnforcer"));
+			NPC.SpawnOnPlayer(player.whoAmI, ModContent.NPCType<LifeEnforcer>());
 			return true;
 		}
 	}

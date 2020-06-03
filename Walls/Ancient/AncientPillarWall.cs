@@ -1,4 +1,5 @@
 using Microsoft.Xna.Framework;
+using OurStuffAddon.Items.Blocks;
 using Terraria;
 using Terraria.ModLoader;
 
@@ -9,8 +10,7 @@ namespace OurStuffAddon.Walls.Ancient
 		public override void SetDefaults()
 		{
 			Main.wallHouse[Type] = true;
-			dustType = mod.DustType("Sparkle");
-			drop = mod.ItemType("AncientPillarWall");
+			drop = ModContent.ItemType<AncientPillarWallItem>();
 			AddMapEntry(new Color(255, 239, 213));
 		}
 

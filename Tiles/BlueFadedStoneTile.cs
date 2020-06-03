@@ -2,6 +2,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
+using OurStuffAddon.Items.Blocks;
 
 namespace OurStuffAddon.Tiles
 {
@@ -15,7 +16,7 @@ namespace OurStuffAddon.Tiles
 			AddMapEntry(new Color(240, 230, 140));
 			mineResist = 1f;
 			minPick = 20;
-			drop = mod.ItemType("BlueFadedStone");
+			drop = ModContent.ItemType<BlueFadedStone>();
 			soundType = SoundID.Tink;
 			dustType = 1;
 			//soundStyle = 1;

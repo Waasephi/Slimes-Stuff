@@ -27,7 +27,7 @@ namespace OurStuffAddon.Items.Magic
 			item.rare = ItemRarityID.LightPurple;
 			item.UseSound = SoundID.Item43;
 			item.autoReuse = false;
-			item.shoot = mod.ProjectileType("StickProjectile");
+			item.shoot = ModContent.ProjectileType<StickProjectile>();
 			item.shootSpeed = 6f;
 			item.mana = 2;
 			item.noMelee = true;

@@ -17,7 +17,7 @@ namespace OurStuffAddon.Items.Blocks
 			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.consumable = true;
 			item.value = 0;
-			item.createTile = mod.TileType("AncientPillar");
+			item.createTile = ModContent.TileType<AncientPillar>();
 		}
 
 		public override void AddRecipes()

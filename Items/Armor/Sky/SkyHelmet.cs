@@ -34,7 +34,7 @@ namespace OurStuffAddon.Items.Armor.Sky
 
 		public override bool IsArmorSet(Item head, Item body, Item legs)
 		{
-			return body.type == mod.ItemType("SkyChestplate") && legs.type == mod.ItemType("SkyLeggings");
+			return body.type == ModContent.ItemType<SkyChestplate>() && legs.type == ModContent.ItemType<SkyLeggings>();
 		}
 
 		public override void UpdateArmorSet(Player player)
@@ -46,7 +46,7 @@ namespace OurStuffAddon.Items.Armor.Sky
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod.ItemType("SkyEssence"), 10);
+			recipe.AddIngredient(ModContent.ItemType<SkyEssence>(), 10);
 			recipe.AddTile(TileID.SkyMill);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

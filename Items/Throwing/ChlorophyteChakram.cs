@@ -24,7 +24,7 @@ namespace OurStuffAddon.Items.Throwing
 			item.value = 8;
 			item.rare = ItemRarityID.LightPurple;
 			item.shootSpeed = 12f;
-			item.shoot = mod.ProjectileType("ChlorophyteChakramProjectile");
+			item.shoot = ModContent.ProjectileType<ChlorophyteChakramProjectile>();
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
 		}

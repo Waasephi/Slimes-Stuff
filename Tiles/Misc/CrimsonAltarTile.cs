@@ -1,4 +1,5 @@
 using Microsoft.Xna.Framework;
+using OurStuffAddon.Items.Blocks;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
@@ -35,7 +36,7 @@ namespace OurStuffAddon.Tiles.Misc
 
 		public override void KillMultiTile(int i, int j, int frameX, int frameY)
 		{
-			Item.NewItem(i * 16, j * 16, 48, 32, mod.ItemType("CrimsonAltar"));
+			Item.NewItem(i * 16, j * 16, 48, 32, ModContent.ItemType<CrimsonAltar>());
 		}
 	}
 }

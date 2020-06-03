@@ -32,7 +32,7 @@ namespace OurStuffAddon.Items.Armor.Parephene
 
 		public override bool IsArmorSet(Item head, Item body, Item legs)
 		{
-			return body.type == mod.ItemType("ParepheneChestplate") && legs.type == mod.ItemType("ParepheneLeggings");
+			return body.type == ModContent.ItemType<ParepheneChestplate>() && legs.type == ModContent.ItemType<ParepheneLeggings>();
 		}
 
 		public override void UpdateArmorSet(Player player)

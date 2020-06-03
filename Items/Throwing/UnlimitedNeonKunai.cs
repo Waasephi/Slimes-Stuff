@@ -29,7 +29,7 @@ namespace OurStuffAddon.Items.Throwing
 			item.reuseDelay = 6;    //this is the item delay
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;       //this make the item auto reuse
-			item.shoot = mod.ProjectileType("UnlimitedNeonKunaiProjectile");
+			item.shoot = ModContent.ProjectileType<UnlimitedNeonKunaiProjectile>();
 			item.shootSpeed = 15f;     //projectile speed
 			item.useTurn = true;
 			item.maxStack = 1;       //this is the max stack of this item

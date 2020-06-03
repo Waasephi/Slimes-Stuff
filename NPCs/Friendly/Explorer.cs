@@ -111,11 +111,11 @@ namespace OurStuffAddon.NPCs.Friendly
 				nextSlot++;
 				shop.item[nextSlot].SetDefaults(ItemID.Gel);
 				nextSlot++;
-				shop.item[nextSlot].SetDefaults(mod.ItemType("SeafoamCrystal"));  //this is an example of how to add a modded item
+				shop.item[nextSlot].SetDefaults(ModContent.ItemType<SeafoamCrystal>());  //this is an example of how to add a modded item
 				nextSlot++;
-				shop.item[nextSlot].SetDefaults(mod.ItemType("SeafoamScale"));  //this is an example of how to add a modded item
+				shop.item[nextSlot].SetDefaults(ModContent.ItemType<SeafoamScale>());  //this is an example of how to add a modded item
 				nextSlot++;
-				shop.item[nextSlot].SetDefaults(mod.ItemType("ShadowCrystal"));  //this is an example of how to add a modded item
+				shop.item[nextSlot].SetDefaults(ModContent.ItemType<ShadowCrystal>());  //this is an example of how to add a modded item
 				nextSlot++;
 			}
 			if (NPC.downedQueenBee)   //this make so when Skeletron is killed the town npc will sell this
@@ -128,11 +128,11 @@ namespace OurStuffAddon.NPCs.Friendly
 				shop.item[nextSlot].SetDefaults(ItemID.Bone);
 				nextSlot++;
 			}
-			shop.item[nextSlot].SetDefaults(mod.ItemType("RelicShard"));  //this is an example of how to add a modded item
+			shop.item[nextSlot].SetDefaults(ModContent.ItemType<RelicShard>());  //this is an example of how to add a modded item
 			nextSlot++;
-			shop.item[nextSlot].SetDefaults(mod.ItemType("SkyEssence"));  //this is an example of how to add a modded item
+			shop.item[nextSlot].SetDefaults(ModContent.ItemType<SkyEssence>());  //this is an example of how to add a modded item
 			nextSlot++;
-			shop.item[nextSlot].SetDefaults(mod.ItemType("SpiritShard"));  //this is an example of how to add a modded item
+			shop.item[nextSlot].SetDefaults(ModContent.ItemType<SpiritShard>());  //this is an example of how to add a modded item
 			nextSlot++;
 			shop.item[nextSlot].SetDefaults(ItemID.Lens);
 			nextSlot++;
@@ -211,7 +211,7 @@ namespace OurStuffAddon.NPCs.Friendly
 		/*public override void DrawTownAttackGun(ref float scale, ref int item, ref int closeness) //Allows you to customize how this town NPC's weapon is drawn when this NPC is shooting (this NPC must have an attack type of 1). Scale is a multiplier for the item's drawing size, item is the ID of the item to be drawn, and closeness is how close the item should be drawn to the NPC.
           {
               scale = 1f;
-              item = mod.ItemType("GunName");
+              item = ModContent.ItemType<GunName>();
               closeness = 20;
           }
           public override void TownNPCAttackProj(ref int projType, ref int attackDelay)//Allows you to determine the projectile type of this town NPC's attack, and how long it takes for the projectile to actually appear

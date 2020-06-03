@@ -9,8 +9,8 @@ namespace OurStuffAddon.Walls
 		public override void SetDefaults()
 		{
 			Main.wallHouse[Type] = true;
-			dustType = mod.DustType("Sparkle");
-			drop = mod.ItemType("FadedStoneWall");
+			 
+			drop = ModContent.ItemType<FadedStoneWall>();
 			AddMapEntry(new Color(238, 232, 170));
 		}
 

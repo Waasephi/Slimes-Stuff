@@ -23,7 +23,7 @@ namespace OurStuffAddon.Items.Blocks
 			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.consumable = true;
 			item.value = 0;
-			item.createTile = mod.TileType("CrimsonAltar");
+			item.createTile = ModContent.TileType<CrimsonAltar>();
 		}
 
 		public override void AddRecipes()

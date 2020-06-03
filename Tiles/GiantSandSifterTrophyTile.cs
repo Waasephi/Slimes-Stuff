@@ -1,4 +1,5 @@
 using Microsoft.Xna.Framework;
+using OurStuffAddon.Items.Blocks;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
@@ -17,7 +18,7 @@ namespace OurStuffAddon.Tiles
 			TileObjectData.addTile(Type);
 			dustType = 7;
 			disableSmartCursor = true;
-			drop = mod.ItemType("GiantSandSifterTrophy");
+			drop = ModContent.ItemType<GiantSandSifterTrophy>();
 			ModTranslation name = CreateMapEntryName();
 			name.SetDefault("Trophy");
 			AddMapEntry(new Color(120, 85, 60), name);

@@ -1,5 +1,6 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using OurStuffAddon.Items.Blocks;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
@@ -37,7 +38,7 @@ namespace OurStuffAddon.Tiles.Shadow
 			ModTranslation name = CreateMapEntryName();
 			name.SetDefault("Torch");
 			AddMapEntry(new Color(0, 0, 0), name);
-			drop = mod.ItemType("ShadowTorch");
+			drop = ModContent.ItemType<ShadowTorch>();
 			disableSmartCursor = true;
 			adjTiles = new int[] { TileID.Torches };
 			torch = true;

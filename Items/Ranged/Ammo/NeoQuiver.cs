@@ -22,7 +22,7 @@ namespace OurStuffAddon.Items.Ranged.Ammo
 			item.value = 1;
 			item.expert = true;
 			item.rare = ItemRarityID.Blue;
-			item.shoot = mod.ProjectileType("NeonArrow");   //The projectile shoot when your weapon using this ammo
+			item.shoot = ModContent.ProjectileType<NeonArrow>();   //The projectile shoot when your weapon using this ammo
 			item.shootSpeed = 5f;                  //The speed of the projectile
 			item.ammo = AmmoID.Arrow;              //The ammo class this ammo belongs to.
 		}

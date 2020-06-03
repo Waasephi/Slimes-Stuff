@@ -33,7 +33,7 @@ namespace OurStuffAddon.Items.Armor.Neonium
 
 		public override bool IsArmorSet(Item head, Item body, Item legs)
 		{
-			return body.type == mod.ItemType("NeoniumChestplate") && legs.type == mod.ItemType("NeoniumLeggings");
+			return body.type == ModContent.ItemType<NeoniumChestplate>() && legs.type == ModContent.ItemType<NeoniumLeggings>();
 		}
 
 		public override void UpdateArmorSet(Player player)

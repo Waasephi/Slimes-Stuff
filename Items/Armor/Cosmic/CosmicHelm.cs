@@ -33,7 +33,7 @@ namespace OurStuffAddon.Items.Armor.Cosmic
 
 		public override bool IsArmorSet(Item head, Item body, Item legs)
 		{
-			return body.type == mod.ItemType("CosmicArmor") && legs.type == mod.ItemType("CosmicCuisses");
+			return body.type == ModContent.ItemType<CosmicArmor>() && legs.type == ModContent.ItemType<CosmicCuisses>();
 		}
 
 		public override void UpdateArmorSet(Player player)

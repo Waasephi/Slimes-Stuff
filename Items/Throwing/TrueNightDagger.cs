@@ -27,7 +27,7 @@ namespace OurStuffAddon.Items.Throwing
 			item.reuseDelay = 6;    //this is the item delay
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;       //this make the item auto reuse
-			item.shoot = mod.ProjectileType("TrueNightDaggerProjectile");
+			item.shoot = ModContent.ProjectileType<TrueNightDaggerProjectile>();
 			item.shootSpeed = 12f;     //projectile speed
 			item.useTurn = true;
 			item.maxStack = 1;       //this is the max stack of this item

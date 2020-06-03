@@ -1,5 +1,6 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using OurStuffAddon.Items.Blocks;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
@@ -8,7 +9,7 @@ using Terraria.ObjectData;
 
 namespace OurStuffAddon.Tiles
 {
-	public class SpiritInfuser : ModTile
+	public class SpiritInfuserTile : ModTile
 	{
 		public override void SetDefaults()
 		{
@@ -27,7 +28,7 @@ namespace OurStuffAddon.Tiles
 
 		public override void KillMultiTile(int i, int j, int frameX, int frameY)
 		{
-			Item.NewItem(i * 16, j * 16, 32, 48, mod.ItemType("SpiritInfuser"));
+			Item.NewItem(i * 16, j * 16, 32, 48, ModContent.ItemType<SpiritInfuser>());
 		}
 
 		public override void AnimateTile(ref int frame, ref int frameCounter)

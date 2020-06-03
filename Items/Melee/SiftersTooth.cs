@@ -24,7 +24,7 @@ namespace OurStuffAddon.Items.Melee
 			item.rare = ItemRarityID.Green;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
-			item.shoot = mod.ProjectileType("SifterToothProjectile");
+			item.shoot = ModContent.ProjectileType<SifterToothProjectile>();
 			item.shootSpeed = 6f;
 		}
 	}

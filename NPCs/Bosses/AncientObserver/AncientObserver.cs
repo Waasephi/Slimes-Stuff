@@ -31,7 +31,7 @@ namespace OurStuffAddon.NPCs.Bosses.AncientObserver
 			npc.knockBackResist = 0f;
 			npc.boss = true;
 			Lighting.AddLight(npc.Center, 0.7f, 0.7f, 0f);
-			bossBag = mod.ItemType("AncientObserverTreasureBag");
+			bossBag = ModContent.ItemType<AncientObserverTreasureBag>();
 			music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/boss2");
 			npc.lavaImmune = true;
 			npc.noGravity = true;
@@ -42,15 +42,15 @@ namespace OurStuffAddon.NPCs.Bosses.AncientObserver
 		{
 			if (!Main.expertMode)
 			{
-				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("AncientShard"), Main.rand.Next(3, 5));
-				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("ChippedStone"), Main.rand.Next(10, 20));
+				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ModContent.ItemType<AncientShard>(), Main.rand.Next(3, 5));
+				Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ModContent.ItemType<ChippedStone>(), Main.rand.Next(10, 20));
 			}
 
 			/* {
                  int loots2 = Main.rand.Next(10);
                  switch (loots2)
                  {
-                     case 1: Item.NewItem(npc.getRect(), mod.ItemType("GiantSandSifterTrophy"), 1); break;
+                     case 1: Item.NewItem(npc.getRect(), ModContent.ItemType<GiantSandSifterTrophy>(), 1); break;
                      case 2: break;
                  }
              }*/
@@ -91,7 +91,7 @@ namespace OurStuffAddon.NPCs.Bosses.AncientObserver
 				npc.position += goalPosition * 0.4f;
 				if (attackTimer % 30 == 0)
 				{
-					Projectile.NewProjectile(npc.Center, shootDirection, mod.ProjectileType("AncientPebbleShot"), 5, 5, Main.LocalPlayer.whoAmI);
+					Projectile.NewProjectile(npc.Center, shootDirection, ModContent.ProjectileType<AncientPebbleShot>(), 5, 5, Main.LocalPlayer.whoAmI);
 				}
 			}
 			else if (attackState == 5 && attackTimer == 0)
