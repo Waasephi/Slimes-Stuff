@@ -6,7 +6,7 @@ using Terraria.ObjectData;
 
 namespace OurStuffAddon.Tiles
 {
-	public class CrimsonAltar : ModTile
+	public class DemonAltarTile : ModTile
 	{
 		public override void SetDefaults()
 		{
@@ -23,8 +23,8 @@ namespace OurStuffAddon.Tiles
 			TileObjectData.newTile.StyleHorizontal = true;
 			TileObjectData.addTile(Type);
 			ModTranslation name = CreateMapEntryName();
-			name.SetDefault("Crimson Altar");
-			AddMapEntry(new Color(30, 0, 0), name);
+			name.SetDefault("Demon Altar");
+			AddMapEntry(new Color(30, 0, 30), name);
 			disableSmartCursor = true;
 		}
 
@@ -35,7 +35,7 @@ namespace OurStuffAddon.Tiles
 
 		public override void KillMultiTile(int i, int j, int frameX, int frameY)
 		{
-			Item.NewItem(i * 16, j * 16, 48, 32, mod.ItemType("CrimsonAltar"));
+			Item.NewItem(i * 16, j * 16, 48, 32, mod.ItemType("DemonAltar"));
 		}
 	}
 }

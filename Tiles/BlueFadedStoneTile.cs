@@ -5,17 +5,17 @@ using Terraria.ID;
 
 namespace OurStuffAddon.Tiles
 {
-	public class AncientPillar : ModTile
+	public class BlueFadedStoneTile : ModTile
 	{
 		public override void SetDefaults()
 		{
 			Main.tileSolid[Type] = true;
 			Main.tileLighted[Type] = false;
 			Main.tileBlockLight[Type] = true;
-			AddMapEntry(new Color(250, 230, 140));
+			AddMapEntry(new Color(240, 230, 140));
 			mineResist = 1f;
 			minPick = 20;
-			drop = mod.ItemType("AncientPillar");
+			drop = mod.ItemType("BlueFadedStone");
 			soundType = SoundID.Tink;
 			dustType = 1;
 			//soundStyle = 1;

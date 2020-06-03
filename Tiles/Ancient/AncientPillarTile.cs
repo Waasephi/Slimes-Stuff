@@ -5,22 +5,19 @@ using Terraria.ID;
 
 namespace OurStuffAddon.Tiles
 {
-	public class PhasiteOre : ModTile
+	public class AncientPillarTile : ModTile
 	{
 		public override void SetDefaults()
 		{
 			Main.tileSolid[Type] = true;
 			Main.tileLighted[Type] = false;
 			Main.tileBlockLight[Type] = true;
-			Main.tileSpelunker[Type] = true;
-			AddMapEntry(new Color(200, 0, 200));
+			AddMapEntry(new Color(250, 230, 140));
 			mineResist = 1f;
-			minPick = 80;
-			drop = mod.ItemType("PhasiteOre");
+			minPick = 20;
+			drop = mod.ItemType("AncientPillar");
 			soundType = SoundID.Tink;
 			dustType = 1;
-			ModTranslation name = CreateMapEntryName();
-			name.SetDefault("Phasite Ore");
 			//soundStyle = 1;
 		}
 
@@ -29,9 +26,16 @@ namespace OurStuffAddon.Tiles
 			num = fail ? 1 : 3;
 		}
 
-		public override bool CanExplode(int i, int j)
-		{
-			return false;
-		}
+		/*public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
+        {
+            r = 0.2f;
+            g = 0.1f;
+            b = 0.2f;
+        }
+
+        public override bool CanExplode(int i, int j)
+        {
+            return false;
+        }*/
 	}
 }

@@ -1,12 +1,11 @@
 using Microsoft.Xna.Framework;
 using Terraria;
-using Terraria.DataStructures;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
 namespace OurStuffAddon.Tiles
 {
-	public class DemonAltar : ModTile
+	public class PancakesTile : ModTile
 	{
 		public override void SetDefaults()
 		{
@@ -14,18 +13,14 @@ namespace OurStuffAddon.Tiles
 			Main.tileFrameImportant[Type] = true;
 			Main.tileNoAttach[Type] = true;
 			Main.tileTable[Type] = false;
-			Main.tileContainer[Type] = true;
-			Main.tileLavaDeath[Type] = false;
-			TileObjectData.newTile.CopyFrom(TileObjectData.Style3x2);
-			TileObjectData.newTile.Origin = new Point16(1, 1);
-			TileObjectData.newTile.CoordinateHeights = new[] { 16, 16 };
-			TileObjectData.newTile.AnchorInvalidTiles = new[] { 127 };
-			TileObjectData.newTile.StyleHorizontal = true;
+			Main.tileLavaDeath[Type] = true;
+			TileObjectData.newTile.CopyFrom(TileObjectData.Style2x2);
 			TileObjectData.addTile(Type);
 			ModTranslation name = CreateMapEntryName();
-			name.SetDefault("Demon Altar");
-			AddMapEntry(new Color(30, 0, 30), name);
+			name.SetDefault("Pancakes");
+			AddMapEntry(new Color(150, 150, 0), name);
 			disableSmartCursor = true;
+			//adjTiles = new int[] { TileID.WorkBenches };
 		}
 
 		public override void NumDust(int i, int j, bool fail, ref int num)
@@ -35,7 +30,7 @@ namespace OurStuffAddon.Tiles
 
 		public override void KillMultiTile(int i, int j, int frameX, int frameY)
 		{
-			Item.NewItem(i * 16, j * 16, 48, 32, mod.ItemType("DemonAltar"));
+			Item.NewItem(i * 16, j * 16, 36, 36, ModContent.ItemType<Items.Consumables.Potions.Pancakes>());
 		}
 	}
 }

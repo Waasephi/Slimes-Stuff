@@ -5,19 +5,22 @@ using Terraria.ID;
 
 namespace OurStuffAddon.Tiles
 {
-	public class LuminescentRock : ModTile
+	public class NeoniumOreTile : ModTile
 	{
 		public override void SetDefaults()
 		{
 			Main.tileSolid[Type] = true;
 			Main.tileLighted[Type] = true;
 			Main.tileBlockLight[Type] = true;
-			AddMapEntry(new Color(0, 200, 150));
+			Main.tileSpelunker[Type] = true;
+			AddMapEntry(new Color(0, 255, 0));
 			mineResist = 1f;
-			minPick = 20;
-			drop = mod.ItemType("LuminescentRock");
+			minPick = 101;
+			drop = mod.ItemType("NeoniumOre");
 			soundType = SoundID.Tink;
 			dustType = 1;
+			ModTranslation name = CreateMapEntryName();
+			name.SetDefault("Neonium Ore");
 			//soundStyle = 1;
 		}
 
@@ -29,13 +32,13 @@ namespace OurStuffAddon.Tiles
 		public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
 		{
 			r = 0;
-			g = 0.3f;
-			b = 0.2f;
+			g = 1f;
+			b = 0f;
 		}
 
 		public override bool CanExplode(int i, int j)
 		{
-			return true;
+			return false;
 		}
 	}
 }

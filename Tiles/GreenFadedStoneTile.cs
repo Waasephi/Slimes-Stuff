@@ -5,7 +5,7 @@ using Terraria.ID;
 
 namespace OurStuffAddon.Tiles
 {
-	public class FadedStone : ModTile
+	public class GreenFadedStoneTile : ModTile
 	{
 		public override void SetDefaults()
 		{
@@ -15,7 +15,7 @@ namespace OurStuffAddon.Tiles
 			AddMapEntry(new Color(240, 230, 140));
 			mineResist = 1f;
 			minPick = 20;
-			drop = mod.ItemType("FadedStone");
+			drop = mod.ItemType("GreenFadedStone");
 			soundType = SoundID.Tink;
 			dustType = 1;
 			//soundStyle = 1;

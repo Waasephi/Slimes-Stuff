@@ -13,6 +13,8 @@
   <ItemGroup>
     <None Remove=".gitattributes" />
     <None Remove=".gitignore" />
+    <None Remove="CryodineOre.png" />
+    <None Remove="InferniteOre.png" />
     <None Remove="README.md" />
   </ItemGroup>
   <ItemGroup>

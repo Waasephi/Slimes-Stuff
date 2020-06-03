@@ -5,7 +5,7 @@ using Terraria.ObjectData;
 
 namespace OurStuffAddon.Tiles
 {
-	public class GiantSandSifterTrophy : ModTile
+	public class GiantSandSifterTrophyTile : ModTile
 	{
 		public override void SetDefaults()
 		{

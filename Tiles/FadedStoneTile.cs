@@ -5,22 +5,19 @@ using Terraria.ID;
 
 namespace OurStuffAddon.Tiles
 {
-	public class ParepheneOre : ModTile
+	public class FadedStoneTile : ModTile
 	{
 		public override void SetDefaults()
 		{
 			Main.tileSolid[Type] = true;
 			Main.tileLighted[Type] = false;
 			Main.tileBlockLight[Type] = true;
-			Main.tileSpelunker[Type] = true;
-			AddMapEntry(new Color(0, 200, 0));
+			AddMapEntry(new Color(240, 230, 140));
 			mineResist = 1f;
-			minPick = 120;
-			drop = mod.ItemType("ParepheneOre");
+			minPick = 20;
+			drop = mod.ItemType("FadedStone");
 			soundType = SoundID.Tink;
 			dustType = 1;
-			ModTranslation name = CreateMapEntryName();
-			name.SetDefault("Parephene Ore");
 			//soundStyle = 1;
 		}
 
@@ -29,9 +26,16 @@ namespace OurStuffAddon.Tiles
 			num = fail ? 1 : 3;
 		}
 
-		public override bool CanExplode(int i, int j)
-		{
-			return false;
-		}
+		/*public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
+        {
+            r = 0.2f;
+            g = 0.1f;
+            b = 0.2f;
+        }
+
+        public override bool CanExplode(int i, int j)
+        {
+            return false;
+        }*/
 	}
 }
