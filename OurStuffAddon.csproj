@@ -11,6 +11,11 @@
     <Exec Command="&quot;$(tMLBuildServerPath)&quot; -build $(ProjectDir) -eac $(TargetPath) -define &quot;$(DefineConstants)&quot; -unsafe $(AllowUnsafeBlocks)" />
   </Target>
   <ItemGroup>
+    <Compile Remove="Unused\**" />
+    <EmbeddedResource Remove="Unused\**" />
+    <None Remove="Unused\**" />
+  </ItemGroup>
+  <ItemGroup>
     <None Remove=".gitattributes" />
     <None Remove=".gitignore" />
     <None Remove="CryodineOre.png" />
