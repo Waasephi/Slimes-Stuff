@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 
 namespace OurStuffAddon.Items.Accessories
 {
-	public class AncientPebbleItem : ModItem
+	public class AncientPebble : ModItem //replace ItemName with the name of your accessory
 	{
 		public override void SetStaticDefaults()
 		{
@@ -11,7 +11,7 @@ namespace OurStuffAddon.Items.Accessories
 			Tooltip.SetDefault("It Shouldn't Be As Useful As It Is... (+7% To All Damage)");
 		}
 
-		public override void UpdateAccessory(Player player, bool hideVisual)
+		public override void UpdateAccessory(Player player, bool hideVisual) //Where it says "p" is the variable used to represent "player". In this case, every p stands for player. This is called when the accessory is on.
 		{
 			player.allDamage *= 1.07f;
 			player.detectCreature = true;
