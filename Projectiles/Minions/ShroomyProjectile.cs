@@ -49,13 +49,9 @@ namespace OurStuffAddon.Projectiles.Minions
 		public override void AI()
 		{
 			projectile.rotation += projectile.velocity.X * 0.04f;
-			bool flag64 = projectile.type == mod.ProjectileType("Shroomy");
+
 			Player player = Main.player[projectile.owner];
-			ModPlayer modPlayer = player.GetModPlayer<ModPlayer>();
 			player.AddBuff(mod.BuffType("ShroomBuff"), 3600);
-			if (flag64)
-			{
-			}
 		}
 
 		public override bool OnTileCollide(Vector2 oldVelocity)
