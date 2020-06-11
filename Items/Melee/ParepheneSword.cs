@@ -9,6 +9,7 @@ namespace OurStuffAddon.Items.Melee
 		{
 			DisplayName.SetDefault("Parephene Sword");
 		}
+
 		public override void SetDefaults()
 		{
 			item.damage = 48;
@@ -17,21 +18,21 @@ namespace OurStuffAddon.Items.Melee
 			item.height = 40;
 			item.useTime = 18;
 			item.useAnimation = 18;
-			item.useStyle = 1;
+			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.knockBack = 4;
 			item.value = 10000;
-			item.rare = 2;
-            item.shoot = 228;
+			item.rare = ItemRarityID.Green;
+			item.shoot = ProjectileID.SporeCloud;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
-            item.shootSpeed = 6f;
-        }
+			item.shootSpeed = 6f;
+		}
 
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod, "ParepheneBar", 10);
-			recipe.AddTile(134);
+			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

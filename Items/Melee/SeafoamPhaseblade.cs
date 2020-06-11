@@ -9,6 +9,7 @@ namespace OurStuffAddon.Items.Melee
 		{
 			DisplayName.SetDefault("Seafoam Phaseblade");
 		}
+
 		public override void SetDefaults()
 		{
 			item.damage = 21;
@@ -17,10 +18,10 @@ namespace OurStuffAddon.Items.Melee
 			item.height = 48;
 			item.useTime = 24;
 			item.useAnimation = 24;
-			item.useStyle = 1;
+			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.knockBack = 3;
 			item.value = 10000;
-			item.rare = 2;
+			item.rare = ItemRarityID.Green;
 			item.UseSound = SoundID.Item15;
 			item.autoReuse = false;
 		}
@@ -29,8 +30,8 @@ namespace OurStuffAddon.Items.Melee
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod, "SeafoamCrystal", 10);
-            recipe.AddIngredient(ItemID.MeteoriteBar, 15);
-            recipe.AddTile(TileID.Anvils);
+			recipe.AddIngredient(ItemID.MeteoriteBar, 15);
+			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

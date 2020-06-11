@@ -10,6 +10,7 @@ namespace OurStuffAddon.Items.Melee
 			DisplayName.SetDefault("Line");
 			Tooltip.SetDefault("What?");
 		}
+
 		public override void SetDefaults()
 		{
 			item.damage = 999999999;
@@ -18,23 +19,23 @@ namespace OurStuffAddon.Items.Melee
 			item.height = 32;
 			item.useTime = 1;
 			item.useAnimation = 1;
-			item.useStyle = 1;
+			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.knockBack = 6;
 			item.value = 10000;
-			item.rare = 2;
+			item.rare = ItemRarityID.Green;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
-            item.noMelee = true;
+			item.noMelee = true;
 		}
 
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(2, 9999);
-            recipe.AddIngredient(2, 9999);
-            recipe.AddIngredient(2, 9999);
-            recipe.AddIngredient(2, 9999);
-            recipe.SetResult(this);
+			recipe.AddIngredient(ItemID.DirtBlock, 9999);
+			recipe.AddIngredient(ItemID.DirtBlock, 9999);
+			recipe.AddIngredient(ItemID.DirtBlock, 9999);
+			recipe.AddIngredient(ItemID.DirtBlock, 9999);
+			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}
 	}

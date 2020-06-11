@@ -9,6 +9,7 @@ namespace OurStuffAddon.Items.Melee
 		{
 			DisplayName.SetDefault("Moonlight");
 		}
+
 		public override void SetDefaults()
 		{
 			item.damage = 40;
@@ -17,10 +18,10 @@ namespace OurStuffAddon.Items.Melee
 			item.height = 40;
 			item.useTime = 20;
 			item.useAnimation = 20;
-			item.useStyle = 1;
+			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.knockBack = 6;
 			item.value = 10000;
-			item.rare = 1;
+			item.rare = ItemRarityID.Blue;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
 		}
@@ -29,9 +30,9 @@ namespace OurStuffAddon.Items.Melee
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.DarkShard, 3);
-            recipe.AddIngredient(521, 20);
-            recipe.AddTile(134);
-            recipe.SetResult(this);
+			recipe.AddIngredient(ItemID.SoulofNight, 20);
+			recipe.AddTile(TileID.MythrilAnvil);
+			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}
 	}

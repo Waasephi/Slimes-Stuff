@@ -9,6 +9,7 @@ namespace OurStuffAddon.Items.Melee
 		{
 			DisplayName.SetDefault("Shadow Phasesaber");
 		}
+
 		public override void SetDefaults()
 		{
 			item.damage = 41;
@@ -17,10 +18,10 @@ namespace OurStuffAddon.Items.Melee
 			item.height = 48;
 			item.useTime = 24;
 			item.useAnimation = 24;
-			item.useStyle = 1;
+			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.knockBack = 3;
 			item.value = 10000;
-			item.rare = 2;
+			item.rare = ItemRarityID.Green;
 			item.UseSound = SoundID.Item15;
 			item.autoReuse = true;
 		}
@@ -29,8 +30,8 @@ namespace OurStuffAddon.Items.Melee
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod, "ShadowPhaseblade");
-            recipe.AddIngredient(ItemID.CrystalShard, 50);
-            recipe.AddTile(134);
+			recipe.AddIngredient(ItemID.CrystalShard, 50);
+			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

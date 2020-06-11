@@ -1,7 +1,5 @@
-using Microsoft.Xna.Framework;
-using Terraria;
-using Terraria.ModLoader;
 using Terraria.ID;
+using Terraria.ModLoader;
 
 namespace OurStuffAddon.Items.Melee
 {
@@ -10,8 +8,9 @@ namespace OurStuffAddon.Items.Melee
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Infernal Blade");
-			Tooltip.SetDefault("Use the power of the underworld to cut your enemies down.");
+			Tooltip.SetDefault("Use the power of the Underworld to cut your enemies down.");
 		}
+
 		public override void SetDefaults()
 		{
 			item.damage = 40;
@@ -20,13 +19,12 @@ namespace OurStuffAddon.Items.Melee
 			item.height = 40;
 			item.useTime = 18;
 			item.useAnimation = 18;
-			item.useStyle = 1;
+			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.knockBack = 6;
-			item.value = Item.sellPrice(0, 0, 40, 0);
-			item.value = Item.buyPrice(0, 1, 50, 0);
-			item.shoot = 15;
-            item.shootSpeed = 4f;
-			item.rare = 2;
+			item.value = 10000;
+			item.shoot = ProjectileID.BallofFire;
+			item.shootSpeed = 4f;
+			item.rare = ItemRarityID.Green;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = false;
 		}
@@ -34,10 +32,10 @@ namespace OurStuffAddon.Items.Melee
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddRecipeGroup("OurStuffAddon:EvilBlade");
-            recipe.AddIngredient(ItemID.HellstoneBar, 20);
-            recipe.AddTile(mod, "SpiritInfuser");
-            recipe.SetResult(this);
+			recipe.AddRecipeGroup("OurStuffAddon:EvilBlade");
+			recipe.AddIngredient(ItemID.HellstoneBar, 20);
+			recipe.AddTile(mod, "SpiritInfuser");
+			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}
 	}

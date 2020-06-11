@@ -1,3 +1,4 @@
+using OurStuffAddon.Projectiles;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -9,6 +10,7 @@ namespace OurStuffAddon.Items.Melee
 		{
 			DisplayName.SetDefault("Sifter's Tooth");
 		}
+
 		public override void SetDefaults()
 		{
 			item.damage = 14;
@@ -17,14 +19,14 @@ namespace OurStuffAddon.Items.Melee
 			item.height = 40;
 			item.useTime = 18;
 			item.useAnimation = 18;
-			item.useStyle = 1;
+			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.knockBack = 5;
 			item.value = 10000;
-			item.rare = 2;
+			item.rare = ItemRarityID.Green;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
-            item.shoot = mod.ProjectileType("SifterToothProjectile");
-            item.shootSpeed = 6f;
-        }
+			item.shoot = ModContent.ProjectileType<SifterToothProjectile>();
+			item.shootSpeed = 6f;
+		}
 	}
 }

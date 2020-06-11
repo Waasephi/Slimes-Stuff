@@ -9,6 +9,7 @@ namespace OurStuffAddon.Items.Melee
 		{
 			DisplayName.SetDefault("Reaper Scythe");
 		}
+
 		public override void SetDefaults()
 		{
 			item.damage = 30;
@@ -17,14 +18,14 @@ namespace OurStuffAddon.Items.Melee
 			item.height = 48;
 			item.useTime = 25;
 			item.useAnimation = 25;
-            item.shoot = 274;
-			item.useStyle = 1;
+			item.shoot = ProjectileID.DeathSickle;
+			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.knockBack = 6;
 			item.value = 10000;
-			item.rare = 2;
+			item.rare = ItemRarityID.Green;
 			item.UseSound = SoundID.Item71;
 			item.autoReuse = true;
-            item.shootSpeed = 6f;
-        }
+			item.shootSpeed = 6f;
+		}
 	}
 }

@@ -1,10 +1,8 @@
-﻿using Terraria;
-using Terraria.ModLoader;
+﻿using Terraria.ModLoader;
 
 namespace OurStuffAddon.Waters
 {
-    public class LuminescentWaterfallStyle : ModWaterfallStyle
-    {
-
-    }
+	public class LuminescentWaterfallStyle : ModWaterfallStyle
+	{
+	}
 }

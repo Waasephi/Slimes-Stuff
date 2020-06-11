@@ -6,33 +6,32 @@ using Terraria.ModLoader;
 
 namespace OurStuffAddon.Items.Materials
 {
-    public class SoulofAntiquity : ModItem
-    {
-        public override void SetStaticDefaults()
-        {
-            DisplayName.SetDefault("Soul of Antiquity");
-            Tooltip.SetDefault("'The essence of ancient creatures'");
-            // ticksperframe, frameCount
-            Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(5, 4));
-            ItemID.Sets.AnimatesAsSoul[item.type] = true;
-            ItemID.Sets.ItemIconPulse[item.type] = true;
-            ItemID.Sets.ItemNoGravity[item.type] = true;
-        }
+	public class SoulofAntiquity : ModItem
+	{
+		public override void SetStaticDefaults()
+		{
+			DisplayName.SetDefault("Soul of Antiquity");
+			Tooltip.SetDefault("'The essence of ancient creatures'");
+			// ticksperframe, frameCount
+			Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(5, 4));
+			ItemID.Sets.AnimatesAsSoul[item.type] = true;
+			ItemID.Sets.ItemIconPulse[item.type] = true;
+			ItemID.Sets.ItemNoGravity[item.type] = true;
+		}
 
-        // TODO -- Velocity Y smaller, post NewItem?
-        public override void SetDefaults()
-        {
-            Item refItem = new Item();
-            refItem.SetDefaults(ItemID.SoulofSight);
-            item.width = refItem.width;
-            item.height = refItem.height;
-            item.maxStack = 999;
-            item.value = 1000;
-            item.rare = 3;
-        }
+		public override void SetDefaults()
+		{
+			Item refItem = new Item();
+			refItem.SetDefaults(ItemID.SoulofSight);
+			item.width = refItem.width;
+			item.height = refItem.height;
+			item.maxStack = 999;
+			item.value = 1000;
+			item.rare = ItemRarityID.Orange;
+		}
 
-        // The following 2 methods are purely to show off these 2 hooks. Don't use them in your own code.
-        /*public override void GrabRange(Player player, ref int grabRange)
+		// The following 2 methods are purely to show off these 2 hooks. Don't use them in your own code.
+		/*public override void GrabRange(Player player, ref int grabRange)
         {
             grabRange *= 3;
         }
@@ -46,9 +45,9 @@ namespace OurStuffAddon.Items.Materials
             return true;
         } */
 
-        public override void PostUpdate()
-        {
-            Lighting.AddLight(item.Center, Color.WhiteSmoke.ToVector3() * 0.55f * Main.essScale);
-        }
-    }
+		public override void PostUpdate()
+		{
+			Lighting.AddLight(item.Center, Color.WhiteSmoke.ToVector3() * 0.55f * Main.essScale);
+		}
+	}
 }

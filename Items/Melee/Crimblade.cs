@@ -1,7 +1,5 @@
-using Microsoft.Xna.Framework;
-using Terraria;
-using Terraria.ModLoader;
 using Terraria.ID;
+using Terraria.ModLoader;
 
 namespace OurStuffAddon.Items.Melee
 {
@@ -12,6 +10,7 @@ namespace OurStuffAddon.Items.Melee
 			DisplayName.SetDefault("CrimBlade");
 			Tooltip.SetDefault("Use the power of the crimson to cut your enemies down.");
 		}
+
 		public override void SetDefaults()
 		{
 			item.damage = 20;
@@ -20,13 +19,12 @@ namespace OurStuffAddon.Items.Melee
 			item.height = 40;
 			item.useTime = 18;
 			item.useAnimation = 18;
-			item.useStyle = 1;
+			item.useStyle = ItemUseStyleID.SwingThrow;
 			item.knockBack = 6;
-			item.value = Item.sellPrice(0, 0, 20, 0);
-			item.value = Item.buyPrice(0, 1, 0, 0);
-            item.shoot = 304;
-            item.shootSpeed = 8f;
-			item.rare = 2;
+			item.value = 10000;
+			item.shoot = ProjectileID.VampireKnife;
+			item.shootSpeed = 8f;
+			item.rare = ItemRarityID.Green;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = false;
 		}
@@ -35,9 +33,9 @@ namespace OurStuffAddon.Items.Melee
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(mod, "SpiritSword");
-            recipe.AddIngredient(ItemID.CrimtaneBar, 20);
-            recipe.AddTile(mod, "SpiritInfuser");
-            recipe.SetResult(this);
+			recipe.AddIngredient(ItemID.CrimtaneBar, 20);
+			recipe.AddTile(mod, "SpiritInfuser");
+			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}
 	}
