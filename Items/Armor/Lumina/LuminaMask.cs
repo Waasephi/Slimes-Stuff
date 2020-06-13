@@ -50,9 +50,9 @@ namespace OurStuffAddon.Items.Armor.Lumina
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "SpiritInfusedBar", 10);
+			recipe.AddIngredient(ModContent.ItemType<SpiritInfusedBar>(), 10);
 			recipe.AddIngredient(ItemID.LunarBar, 8);
-			recipe.AddIngredient(mod, "LuminaFragment", 10);
+			recipe.AddIngredient(ModContent.ItemType<LuminaFragment>(), 10);
 			recipe.AddTile(TileID.LunarCraftingStation);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

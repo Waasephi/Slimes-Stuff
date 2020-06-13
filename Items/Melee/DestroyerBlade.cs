@@ -10,6 +10,7 @@ namespace OurStuffAddon.Items.Melee
 			DisplayName.SetDefault("Destroyer Blade");
 			Tooltip.SetDefault("-Cheat Weapon-");
 		}
+
 		public override void SetDefaults()
 		{
 			item.damage = 9999;

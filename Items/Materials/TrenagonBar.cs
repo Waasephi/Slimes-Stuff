@@ -25,7 +25,7 @@ namespace OurStuffAddon.Items.Materials
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "TrenagonOre", 4);
+			recipe.AddIngredient(ModContent.ItemType<TrenagonOre>(), 4);
 			recipe.AddTile(TileID.Furnaces);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

@@ -39,10 +39,10 @@ namespace OurStuffAddon.Items.Throwing
 		public override void AddRecipes()  //How to craft this item
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "SeafoamJavelin", 999);
-			recipe.AddIngredient(mod, "DemonBoomerang", 2);
-			recipe.AddIngredient(mod, "SporeBag", 999);
-			recipe.AddIngredient(mod, "InfernalKunai", 999);
+			recipe.AddIngredient(ModContent.ItemType<SeafoamJavelin>(), 999);
+			recipe.AddIngredient(ModContent.ItemType<DemonBoomerang>(), 2);
+			recipe.AddIngredient(ModContent.ItemType<SporeBag>(), 999);
+			recipe.AddIngredient(ModContent.ItemType<InfernalKunai>(), 999);
 			recipe.AddTile(TileID.DemonAltar);
 			recipe.SetResult(this, 1);
 			recipe.AddRecipe();

@@ -29,7 +29,7 @@ namespace OurStuffAddon.Items.Blocks
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "SpiritShard", 10);
+			recipe.AddIngredient(ModContent.ItemType<SpiritShard>(), 10);
 			recipe.AddIngredient(ItemID.LeadAnvil);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(mod, "SpiritInfuser");

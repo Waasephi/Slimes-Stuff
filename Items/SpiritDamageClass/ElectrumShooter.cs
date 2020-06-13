@@ -57,7 +57,7 @@ namespace OurStuffAddon.Items.SpiritDamageClass
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "RainEssence");
+			recipe.AddIngredient(ModContent.ItemType<RainEssence>());
 			recipe.AddIngredient(ItemID.MartianConduitPlating, 50);
 			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(this);

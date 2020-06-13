@@ -33,7 +33,7 @@ namespace OurStuffAddon.Projectiles.Pets
 
 			if (player.dead)
 				modPlayer.BabyCactus = false;
-			
+
 			if (modPlayer.BabyCactus)
 				projectile.timeLeft = 2;
 		}

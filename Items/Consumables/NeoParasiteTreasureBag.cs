@@ -1,10 +1,10 @@
-using Terraria;
-using Terraria.ModLoader;
-using Terraria.ID;
-using OurStuffAddon.Items.Tools;
 using OurStuffAddon.Items.Materials;
 using OurStuffAddon.Items.Ranged.Ammo;
-using OurStuffAddon.NPCs.Bosses;
+using OurStuffAddon.Items.Tools;
+using OurStuffAddon.NPCs.Bosses.NeoMothership;
+using Terraria;
+using Terraria.ID;
+using Terraria.ModLoader;
 
 namespace OurStuffAddon.Items.Consumables
 {

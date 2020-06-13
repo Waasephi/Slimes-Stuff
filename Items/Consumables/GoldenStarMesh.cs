@@ -28,7 +28,7 @@ namespace OurStuffAddon.Items.Consumables
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "CosmicStarMesh", 10);
+			recipe.AddIngredient(ModContent.ItemType<CosmicStarMesh>(), 10);
 			recipe.AddTile(TileID.LunarCraftingStation);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

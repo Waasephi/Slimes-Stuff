@@ -35,7 +35,7 @@ namespace OurStuffAddon.Items.Magic
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "NeoniumBar", 20);
+			recipe.AddIngredient(ModContent.ItemType<NeoniumBar>(), 20);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

@@ -32,7 +32,7 @@ namespace OurStuffAddon.Items.Accessories
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "BundleOfBundles");
+			recipe.AddIngredient(ModContent.ItemType<BundleOfBundles>());
 			recipe.AddIngredient(ItemID.LunarBar, 10);
 			recipe.AddTile(TileID.TinkerersWorkbench);
 			recipe.SetResult(this);

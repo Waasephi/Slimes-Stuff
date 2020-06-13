@@ -63,7 +63,8 @@ namespace OurStuffAddon.NPCs.Bosses
 				int loots2 = Main.rand.Next(10);
 				switch (loots2)
 				{
-					case 1: Item.NewItem(npc.getRect(), ModContent.ItemType<GiantSandSifterTrophy>(), 1);
+					case 1:
+						Item.NewItem(npc.getRect(), ModContent.ItemType<GiantSandSifterTrophy>(), 1);
 						break;
 				}
 			}

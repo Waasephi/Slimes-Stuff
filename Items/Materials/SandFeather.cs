@@ -25,7 +25,7 @@ namespace OurStuffAddon.Items.Materials
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "SandFeather");
+			recipe.AddIngredient(ModContent.ItemType<SandFeather>());
 			recipe.AddTile(TileID.SkyMill);
 			recipe.SetResult(ItemID.Feather);
 			recipe.AddRecipe();

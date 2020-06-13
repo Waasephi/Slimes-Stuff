@@ -1,18 +1,15 @@
-using System;
 using Microsoft.Xna.Framework;
 using Terraria;
-using Terraria.ModLoader;
 using Terraria.ID;
-using OurStuffAddon.Projectiles;
-using System.Collections.Generic;
+using Terraria.ModLoader;
 
 namespace OurStuffAddon.Projectiles
 {
-
 	public class GelShuriken : ModProjectile
 	{
-		int Bounces;
-		bool Washed;
+		private int Bounces;
+		private bool Washed;
+
 		public override void SetStaticDefaults()
 		{
 			DisplayName.SetDefault("Gel Shuriken");
@@ -56,7 +53,6 @@ namespace OurStuffAddon.Projectiles
 			}
 			if (projectile.owner == Main.myPlayer)
 			{
-
 				int item =
 				Main.rand.NextBool(6)
 					? Item.NewItem(projectile.getRect(), mod.ItemType("GelShuriken"))
@@ -70,6 +66,7 @@ namespace OurStuffAddon.Projectiles
 				}
 			}
 		}
+
 		public override bool OnTileCollide(Vector2 oldVelocity)
 		{
 			if (Bounces > 0)
@@ -90,8 +87,5 @@ namespace OurStuffAddon.Projectiles
 			}
 			return base.OnTileCollide(oldVelocity);
 		}
-
-
-
 	}
 }

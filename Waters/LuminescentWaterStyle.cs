@@ -28,7 +28,7 @@ namespace OurStuffAddon.Waters
 		public override int GetDropletGore()
 		{
 			//this is the water droplet
-			return mod.GetGoreSlot("Gores/LuminescentWaterDroplet"); 
+			return mod.GetGoreSlot("Gores/LuminescentWaterDroplet");
 		}
 
 		public override void LightColorMultiplier(ref float r, ref float g, ref float b)

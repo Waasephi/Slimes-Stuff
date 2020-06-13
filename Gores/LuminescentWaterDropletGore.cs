@@ -1,7 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Terraria;
-using Terraria.ModLoader;
 using Terraria.ID;
+using Terraria.ModLoader;
 
 namespace OurStuffAddon.Gores
 {
@@ -20,7 +20,7 @@ namespace OurStuffAddon.Gores
 				gore.alpha = 0;
 			else
 				gore.alpha = 100;
-			
+
 			int frameDuration = 4;
 			gore.frameCounter += 1;
 
@@ -31,13 +31,13 @@ namespace OurStuffAddon.Gores
 
 				if (WorldGen.InWorld(tileX, tileY, 0) && !Main.tile[tileX, tileY].active())
 					gore.active = false;
-				
+
 				if (gore.frame == 0 || gore.frame == 1 || gore.frame == 2)
 					frameDuration = 24 + Main.rand.Next(256);
-				
+
 				if (gore.frame == 3)
 					frameDuration = 24 + Main.rand.Next(96);
-				
+
 				if (gore.frameCounter >= frameDuration)
 				{
 					gore.frameCounter = 0;
@@ -70,10 +70,10 @@ namespace OurStuffAddon.Gores
 
 				if (gore.velocity.Y < 0.5f)
 					gore.velocity.Y = 0.5f;
-				
+
 				if (gore.velocity.Y > 12f)
 					gore.velocity.Y = 12f;
-				
+
 				if (gore.frameCounter >= frameDuration)
 				{
 					gore.frameCounter = 0;

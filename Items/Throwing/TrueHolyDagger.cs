@@ -1,3 +1,4 @@
+using OurStuffAddon.Items.Materials;
 using OurStuffAddon.Projectiles;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -39,8 +40,8 @@ namespace OurStuffAddon.Items.Throwing
 		public override void AddRecipes()  //How to craft this item
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "HolyDagger");
-			recipe.AddIngredient(mod, "BrokenHeroDagger");
+			recipe.AddIngredient(ModContent.ItemType<HolyDagger>());
+			recipe.AddIngredient(ModContent.ItemType<BrokenHeroDagger>());
 			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(this, 1);
 			recipe.AddRecipe();

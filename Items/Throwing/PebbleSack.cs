@@ -38,7 +38,7 @@ namespace OurStuffAddon.Items.Throwing
 		public override void AddRecipes()  //How to craft this item
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "ChippedStone", 10);
+			recipe.AddIngredient(ModContent.ItemType<ChippedStone>(), 10);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this, 333);
 			recipe.AddRecipe();

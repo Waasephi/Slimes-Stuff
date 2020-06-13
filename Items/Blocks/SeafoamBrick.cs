@@ -1,3 +1,4 @@
+using OurStuffAddon.Items.Materials;
 using OurStuffAddon.Tiles.Seafoam;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -25,7 +26,7 @@ namespace OurStuffAddon.Items.Blocks
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddTile(TileID.Anvils);
-			recipe.AddIngredient(mod, "SeafoamCrystal", 1);
+			recipe.AddIngredient(ModContent.ItemType<SeafoamCrystal>(), 1);
 			recipe.AddIngredient(ItemID.StoneBlock, 50);
 			recipe.SetResult(this, 50);
 			recipe.AddRecipe();

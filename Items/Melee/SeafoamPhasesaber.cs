@@ -29,7 +29,7 @@ namespace OurStuffAddon.Items.Melee
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "SeafoamPhaseblade");
+			recipe.AddIngredient(ModContent.ItemType<SeafoamPhaseblade>());
 			recipe.AddIngredient(ItemID.CrystalShard, 50);
 			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(this);

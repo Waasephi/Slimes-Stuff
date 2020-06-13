@@ -42,7 +42,7 @@ namespace OurStuffAddon.Items.Throwing
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddRecipeGroup("OurStuffAddon:TrueEvilDagger");
-			recipe.AddIngredient(mod, "TrueHolyDagger");
+			recipe.AddIngredient(ModContent.ItemType<TrueHolyDagger>());
 			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(this, 1);
 			recipe.AddRecipe();
@@ -51,7 +51,7 @@ namespace OurStuffAddon.Items.Throwing
 		public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
 		{
 			//Vector2 perturbedSpeed = new Vector2(speedX, speedY).RotatedByRandom(MathHelper.ToRadians(80)); // 20 degree spread.
-																											// Here we manually spawn the 2nd projectile, manually specifying the projectile type that we wish to shoot.
+			// Here we manually spawn the 2nd projectile, manually specifying the projectile type that we wish to shoot.
 			Projectile.NewProjectile(position.X - 20, position.Y, speedX *= 0.6f, speedY *= 0.6f, ModContent.ProjectileType<UTrueNightDaggerProjectile>(), damage, knockBack, player.whoAmI);
 			Projectile.NewProjectile(position.X - 20, position.Y, speedX *= 0.8f, speedY *= 0.8f, ModContent.ProjectileType<UTrueClotDaggerProjectile>(), damage, knockBack, player.whoAmI);
 			Projectile.NewProjectile(position.X - 20, position.Y, speedX *= 1, speedY *= 1, ModContent.ProjectileType<UTrueHolyDaggerProjectile>(), damage, knockBack, player.whoAmI);

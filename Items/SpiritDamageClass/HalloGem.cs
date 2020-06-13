@@ -57,7 +57,7 @@ namespace OurStuffAddon.Items.SpiritDamageClass
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "VenoGem");
+			recipe.AddIngredient(ModContent.ItemType<VenoGem>());
 			recipe.AddIngredient(ItemID.HallowedBar, 20);
 			recipe.AddTile(mod, "SpiritInfuser");
 			recipe.SetResult(this);

@@ -25,7 +25,7 @@ namespace OurStuffAddon.Items.Blocks
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddTile(TileID.DyeVat);
-			recipe.AddIngredient(mod, "FadedStone", 1);
+			recipe.AddIngredient(ModContent.ItemType<FadedStone>(), 1);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

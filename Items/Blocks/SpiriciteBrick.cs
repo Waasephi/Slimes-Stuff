@@ -1,6 +1,7 @@
-using Terraria.ModLoader;
-using Terraria.ID;
+using OurStuffAddon.Items.Materials;
 using OurStuffAddon.Tiles;
+using Terraria.ID;
+using Terraria.ModLoader;
 
 namespace OurStuffAddon.Items.Blocks
 {
@@ -25,7 +26,7 @@ namespace OurStuffAddon.Items.Blocks
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddTile(mod, "SpiritInfuser");
-			recipe.AddIngredient(null, "SpiritShard", 1);
+			recipe.AddIngredient(ModContent.ItemType<SpiritShard>(), 1);
 			recipe.AddIngredient(ItemID.StoneBlock, 50);
 			recipe.SetResult(this, 50);
 			recipe.AddRecipe();

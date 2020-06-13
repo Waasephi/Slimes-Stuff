@@ -1,6 +1,6 @@
-using Terraria.ModLoader;
-using Terraria.ID;
 using OurStuffAddon.Tiles.Shadow;
+using Terraria.ID;
+using Terraria.ModLoader;
 
 namespace OurStuffAddon.Items.Blocks
 {

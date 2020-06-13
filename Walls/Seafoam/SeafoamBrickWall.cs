@@ -10,7 +10,7 @@ namespace OurStuffAddon.Walls.Seafoam
 		public override void SetDefaults()
 		{
 			Main.wallHouse[Type] = true;
-			 
+
 			drop = ModContent.ItemType<SeafoamBrickWallItem>();
 			AddMapEntry(new Color(0, 200, 150));
 		}

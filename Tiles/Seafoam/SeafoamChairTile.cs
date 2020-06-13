@@ -29,7 +29,7 @@ namespace OurStuffAddon.Tiles.Seafoam
 			ModTranslation name = CreateMapEntryName();
 			name.SetDefault("Seafoam Chair");
 			AddMapEntry(new Color(0, 200, 150), name);
-			 
+
 			disableSmartCursor = true;
 			adjTiles = new int[] { TileID.Chairs };
 		}

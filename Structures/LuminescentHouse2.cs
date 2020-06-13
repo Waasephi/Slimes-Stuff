@@ -20,7 +20,6 @@ namespace OurStuffAddon.Structures
             {1,4,4,9,9,9,9,9,9,9,9,9,9,9,9,7,9,9,0,0,0,0,0,0,0,0},
             {1,3,3,4,4,9,6,9,9,9,8,9,9,9,9,7,9,9,0,0,0,0,0,0,0,0},
             {1,1,1,1,1,1,1,1,1,1,1,1,1,5,5,5,1,1,0,0,0,0,0,0,0,0},
-
         };
 
         public static void StructureGen(int xPosO, int yPosO, bool mirrored)
@@ -37,8 +36,7 @@ namespace OurStuffAddon.Structures
              * 7 = lavafall
              * 8 = ?
              * 9 = Kill tile
-             * 
-
+             *
 
             for (int i = 0; i < _structureArray.GetLength(1); i++)
             {

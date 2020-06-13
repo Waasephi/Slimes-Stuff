@@ -36,7 +36,6 @@ namespace OurStuffAddon
 
 					break;
 
-
 				case NPCID.IceTortoise:
 					if (Main.rand.Next(100) == 0) //1% chance
 					{

@@ -1,3 +1,4 @@
+using OurStuffAddon.Items.Materials;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -35,8 +36,8 @@ namespace OurStuffAddon.Items.Armor.Relic
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.GoldChainmail);
-			recipe.AddIngredient(mod, "RelicShard", 20);
-			recipe.AddIngredient(mod, "ChippedStone", 10);
+			recipe.AddIngredient(ModContent.ItemType<RelicShard>(), 20);
+			recipe.AddIngredient(ModContent.ItemType<ChippedStone>(), 10);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

@@ -1,5 +1,5 @@
-using Terraria.ModLoader;
 using Terraria.ID;
+using Terraria.ModLoader;
 
 namespace OurStuffAddon.Items.Materials
 {
@@ -26,7 +26,7 @@ namespace OurStuffAddon.Items.Materials
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "SpiritShard", 5);
+			recipe.AddIngredient(ModContent.ItemType<SpiritShard>(), 5);
 			recipe.AddTile(mod, "SpiritInfuser");
 			recipe.SetResult(this);
 			recipe.AddRecipe();

@@ -2,11 +2,11 @@
 
 namespace OurStuffAddon.Dusts
 {
-    public class FlareSolution : ModDust
-    {
-        public override void SetDefaults()
-        {
-            updateType = 110;
-        }
-    }
+	public class FlareSolution : ModDust
+	{
+		public override void SetDefaults()
+		{
+			updateType = 110;
+		}
+	}
 }

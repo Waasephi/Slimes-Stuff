@@ -35,8 +35,8 @@ namespace OurStuffAddon.Items.Accessories
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "BundledHorseShoeBalloon");
-			recipe.AddIngredient(mod, "BundleOfOtherBalloons");
+			recipe.AddIngredient(ModContent.ItemType<BundledHorseShoeBalloon>());
+			recipe.AddIngredient(ModContent.ItemType<BundleOfOtherBalloons>());
 			recipe.AddIngredient(ItemID.PartyBundleOfBalloonsAccessory);
 			recipe.AddIngredient(ItemID.HallowedBar, 10);
 			recipe.AddTile(TileID.TinkerersWorkbench);

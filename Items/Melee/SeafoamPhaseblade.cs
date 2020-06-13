@@ -1,3 +1,4 @@
+using OurStuffAddon.Items.Materials;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -29,7 +30,7 @@ namespace OurStuffAddon.Items.Melee
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "SeafoamCrystal", 10);
+			recipe.AddIngredient(ModContent.ItemType<SeafoamCrystal>(), 10);
 			recipe.AddIngredient(ItemID.MeteoriteBar, 15);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);

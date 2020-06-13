@@ -25,7 +25,7 @@ namespace OurStuffAddon.Items.Blocks
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddTile(TileID.Anvils);
-			recipe.AddIngredient(mod, "SeafoamBrick");
+			recipe.AddIngredient(ModContent.ItemType<SeafoamBrick>());
 			recipe.SetResult(this, 4);
 			recipe.AddRecipe();
 		}

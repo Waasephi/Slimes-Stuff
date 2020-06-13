@@ -58,7 +58,7 @@ namespace OurStuffAddon.Items.SpiritDamageClass
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "SpiritGem", 1);
+			recipe.AddIngredient(ModContent.ItemType<SpiritGem>(), 1);
 			recipe.AddIngredient(ItemID.CrimtaneBar, 20);
 			recipe.AddTile(mod, "SpiritInfuser");
 			recipe.SetResult(this);

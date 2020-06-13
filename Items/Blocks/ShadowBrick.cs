@@ -1,3 +1,4 @@
+using OurStuffAddon.Items.Materials;
 using OurStuffAddon.Tiles.Shadow;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -25,7 +26,7 @@ namespace OurStuffAddon.Items.Blocks
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddTile(TileID.Anvils);
-			recipe.AddIngredient(mod, "ShadowCrystal", 1);
+			recipe.AddIngredient(ModContent.ItemType<ShadowCrystal>(), 1);
 			recipe.AddIngredient(ItemID.StoneBlock, 50);
 			recipe.SetResult(this, 50);
 			recipe.AddRecipe();

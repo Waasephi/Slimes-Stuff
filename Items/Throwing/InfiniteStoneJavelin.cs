@@ -39,7 +39,7 @@ namespace OurStuffAddon.Items.Throwing
 		public override void AddRecipes()  //How to craft this item
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "StoneJavelin", 1000);
+			recipe.AddIngredient(ModContent.ItemType<StoneJavelin>(), 1000);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this, 1);
 			recipe.AddRecipe();

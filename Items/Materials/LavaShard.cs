@@ -1,7 +1,7 @@
 using Terraria;
 using Terraria.DataStructures;
-using Terraria.ModLoader;
 using Terraria.ID;
+using Terraria.ModLoader;
 
 namespace OurStuffAddon.Items.Materials
 {

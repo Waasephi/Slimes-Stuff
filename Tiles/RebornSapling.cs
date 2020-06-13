@@ -1,6 +1,6 @@
-using OurStuffAddon.Dusts;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using OurStuffAddon.Dusts;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
@@ -13,7 +13,7 @@ namespace OurStuffAddon.Tiles
 {
 	public class RebornSapling : ModTile
 	{
-		public override void SetDefaults() 
+		public override void SetDefaults()
 		{
 			Main.tileFrameImportant[Type] = true;
 			Main.tileNoAttach[Type] = true;
@@ -45,33 +45,33 @@ namespace OurStuffAddon.Tiles
 			adjTiles = new int[] { TileID.Saplings };
 		}
 
-		public override void NumDust(int i, int j, bool fail, ref int num) 
+		public override void NumDust(int i, int j, bool fail, ref int num)
 		{
 			num = fail ? 1 : 3;
 		}
 
 		public override void RandomUpdate(int i, int j)
 		{
-			if (WorldGen.genRand.Next(20) == 0) 
+			if (WorldGen.genRand.Next(20) == 0)
 			{
 				bool isPlayerNear = WorldGen.PlayerLOS(i, j);
 				Tile tile = Framing.GetTileSafely(i, j);
 				bool success;
 				// Style 0 is for the ExampleTree sapling, and style 1 is for ExamplePalmTree, so here we check frameX to call the correct method.
-			if (tile.frameX < 54)
+				if (tile.frameX < 54)
 					success = WorldGen.GrowTree(i, j);
-			else
+				else
 					success = WorldGen.GrowPalmTree(i, j);
-			if (success && isPlayerNear) 
+				if (success && isPlayerNear)
 				{
 					WorldGen.TreeGrowFXCheck(i, j);
 				}
 			}
 		}
 
-		public override void SetSpriteEffects(int i, int j, ref SpriteEffects effects) 
+		public override void SetSpriteEffects(int i, int j, ref SpriteEffects effects)
 		{
-			if (i % 2 == 1) 
+			if (i % 2 == 1)
 			{
 				effects = SpriteEffects.FlipHorizontally;
 			}

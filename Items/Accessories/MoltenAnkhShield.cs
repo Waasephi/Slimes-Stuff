@@ -46,7 +46,7 @@ namespace OurStuffAddon.Items.Accessories
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.AnkhCharm);
-			recipe.AddIngredient(mod, "MoltenShield");
+			recipe.AddIngredient(ModContent.ItemType<MoltenShield>());
 			recipe.AddIngredient(ItemID.ObsidianRose);
 			recipe.AddTile(TileID.TinkerersWorkbench);
 			recipe.SetResult(this);

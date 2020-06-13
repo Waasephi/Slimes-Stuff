@@ -10,7 +10,7 @@ namespace OurStuffAddon.Walls.Shadow
 		public override void SetDefaults()
 		{
 			Main.wallHouse[Type] = true;
-			 
+
 			drop = ModContent.ItemType<ShadowBrickWallItem>();
 			AddMapEntry(new Color(1, 1, 1));
 		}

@@ -32,7 +32,7 @@ namespace OurStuffAddon.Items.Armor.Trenagon
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "TrenagonBar", 20);
+			recipe.AddIngredient(ModContent.ItemType<TrenagonBar>(), 20);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

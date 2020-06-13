@@ -33,8 +33,8 @@ namespace OurStuffAddon.Items.Magic
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "SoulofAntiquity", 15);
-			recipe.AddIngredient(mod, "RelicShard", 20);
+			recipe.AddIngredient(ModContent.ItemType<SoulofAntiquity>(), 15);
+			recipe.AddIngredient(ModContent.ItemType<RelicShard>(), 20);
 			recipe.AddIngredient(ItemID.SpellTome);
 			recipe.AddTile(TileID.Bookcases);
 			recipe.SetResult(this);

@@ -1,7 +1,3 @@
-using System;
-using System.IO;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -14,6 +10,7 @@ namespace OurStuffAddon.Items.Melee
 		{
 			DisplayName.SetDefault("Gel Blade");
 		}
+
 		public override void SetDefaults()
 		{
 			item.damage = 14;
@@ -28,8 +25,9 @@ namespace OurStuffAddon.Items.Melee
 			item.rare = 2;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
-            item.shootSpeed = 6f;
-        }
+			item.shootSpeed = 6f;
+		}
+
 		public override void AddRecipes()  //How to craft this item
 		{
 			ModRecipe recipe = new ModRecipe(mod);

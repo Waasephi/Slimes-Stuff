@@ -29,7 +29,7 @@ namespace OurStuffAddon.Items.Accessories
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "ThrowerEmblem");
+			recipe.AddIngredient(ModContent.ItemType<ThrowerEmblem>());
 			recipe.AddIngredient(ItemID.SoulofMight, 5);
 			recipe.AddIngredient(ItemID.SoulofFright, 5);
 			recipe.AddIngredient(ItemID.SoulofSight, 5);

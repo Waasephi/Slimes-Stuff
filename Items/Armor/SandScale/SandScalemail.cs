@@ -34,8 +34,8 @@ namespace OurStuffAddon.Items.Armor.SandScale
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "SandSifterMandible", 10);
-			recipe.AddIngredient(mod, "SandSifterScale", 20);
+			recipe.AddIngredient(ModContent.ItemType<SandSifterMandible>(), 10);
+			recipe.AddIngredient(ModContent.ItemType<SandSifterScale>(), 20);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

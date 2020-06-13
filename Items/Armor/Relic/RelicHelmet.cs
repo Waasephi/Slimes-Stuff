@@ -47,8 +47,8 @@ namespace OurStuffAddon.Items.Armor.Relic
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.GoldHelmet);
-			recipe.AddIngredient(mod, "RelicShard", 10);
-			recipe.AddIngredient(mod, "ChippedStone", 5);
+			recipe.AddIngredient(ModContent.ItemType<RelicShard>(), 10);
+			recipe.AddIngredient(ModContent.ItemType<ChippedStone>(), 5);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

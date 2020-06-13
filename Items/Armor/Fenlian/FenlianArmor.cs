@@ -39,7 +39,7 @@ namespace OurStuffAddon.Items.Armor.Fenlian
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.ChlorophyteBar, 20);
-			recipe.AddIngredient(mod, "LivingMush");
+			recipe.AddIngredient(ModContent.ItemType<LivingMush>());
 			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

@@ -1,7 +1,6 @@
-using Microsoft.Xna.Framework;
 using Terraria;
-using Terraria.ModLoader;
 using Terraria.ID;
+using Terraria.ModLoader;
 
 namespace OurStuffAddon.Items.Melee
 {
@@ -12,6 +11,7 @@ namespace OurStuffAddon.Items.Melee
 			DisplayName.SetDefault("Solar Blade");
 			Tooltip.SetDefault("Use the power of the Sun to cut your enemies down.");
 		}
+
 		public override void SetDefaults()
 		{
 			item.damage = 120;
@@ -25,7 +25,7 @@ namespace OurStuffAddon.Items.Melee
 			item.value = Item.sellPrice(0, 11, 0, 0);
 			item.value = Item.buyPrice(0, 25, 0, 0);
 			item.shoot = 295;
-            item.shootSpeed = 8f;
+			item.shootSpeed = 8f;
 			item.rare = 2;
 			item.UseSound = SoundID.Item103;
 			item.autoReuse = true;
@@ -34,11 +34,11 @@ namespace OurStuffAddon.Items.Melee
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "TrueSpiritBlade");
-            recipe.AddIngredient(3458, 20);
-            recipe.AddTile(mod, "SpiritInfuser");
-            recipe.SetResult(this);
+			recipe.AddIngredient(ModContent.ItemType<TrueSpiritBlade>());
+			recipe.AddIngredient(3458, 20);
+			recipe.AddTile(mod, "SpiritInfuser");
+			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}
-    }
+	}
 }

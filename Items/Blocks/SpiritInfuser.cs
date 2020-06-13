@@ -1,3 +1,4 @@
+using OurStuffAddon.Items.Materials;
 using OurStuffAddon.Tiles;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -24,7 +25,7 @@ namespace OurStuffAddon.Items.Blocks
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "SpiritShard", 10);
+			recipe.AddIngredient(ModContent.ItemType<SpiritShard>(), 10);
 			recipe.AddIngredient(ItemID.IronAnvil);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);

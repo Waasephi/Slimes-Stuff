@@ -1,4 +1,5 @@
 using Microsoft.Xna.Framework;
+using OurStuffAddon.Items.Materials;
 using OurStuffAddon.Projectiles;
 using Terraria;
 using Terraria.ID;
@@ -41,7 +42,7 @@ namespace OurStuffAddon.Items.Throwing
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "NeoniumBar", 5);
+			recipe.AddIngredient(ModContent.ItemType<NeoniumBar>(), 5);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this, 50);
 			recipe.AddRecipe();

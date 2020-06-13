@@ -30,7 +30,7 @@ namespace OurStuffAddon.Items.Consumables.Potions
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "SeafoamCrystal", 2);
+			recipe.AddIngredient(ModContent.ItemType<SeafoamCrystal>(), 2);
 			recipe.AddIngredient(ItemID.HealingPotion, 1);
 			recipe.AddTile(TileID.Bottles);
 			recipe.SetResult(this);

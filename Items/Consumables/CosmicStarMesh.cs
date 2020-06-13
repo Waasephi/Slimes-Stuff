@@ -1,3 +1,4 @@
+using OurStuffAddon.Items.Materials;
 using OurStuffAddon.NPCs.Bosses;
 using Terraria;
 using Terraria.ID;
@@ -30,7 +31,7 @@ namespace OurStuffAddon.Items.Consumables
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.LunarBar, 5);
-			recipe.AddIngredient(mod, "CosmicFragment", 10);
+			recipe.AddIngredient(ModContent.ItemType<CosmicFragment>(), 10);
 			recipe.AddTile(TileID.LunarCraftingStation);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

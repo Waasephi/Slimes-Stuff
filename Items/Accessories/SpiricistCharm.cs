@@ -1,7 +1,7 @@
 ﻿using OurStuffAddon.Items.SpiritDamageClass;
 using Terraria;
-using Terraria.ModLoader;
 using Terraria.ID;
+using Terraria.ModLoader;
 
 namespace OurStuffAddon.Items.Accessories
 {
@@ -33,10 +33,10 @@ namespace OurStuffAddon.Items.Accessories
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "SeafoamCrystal", 50);
-			recipe.AddIngredient(mod, "FelmarHelmet", 1);
-			recipe.AddIngredient(mod, "FelmarBodypiece", 1);
-			recipe.AddIngredient(mod, "FelmarCuisses", 1);
+			recipe.AddIngredient(ModContent.ItemType<SeafoamCrystal>(), 50);
+			recipe.AddIngredient(ModContent.ItemType<FelmarHelmet>(), 1);
+			recipe.AddIngredient(ModContent.ItemType<FelmarBodypiece>(), 1);
+			recipe.AddIngredient(ModContent.ItemType<FelmarCuisses>(), 1);
 			recipe.AddTile(TileID.TinkerersWorkbench);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

@@ -34,9 +34,9 @@ namespace OurStuffAddon.Items.Ranged
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "TrueNightsShot");
-			recipe.AddIngredient(mod, "TrueHallowedRepeater");
-			recipe.AddIngredient(mod, "BrokenHeroBow");
+			recipe.AddIngredient(ModContent.ItemType<TrueNightsShot>());
+			recipe.AddIngredient(ModContent.ItemType<TrueHallowedRepeater>());
+			recipe.AddIngredient(ModContent.ItemType<BrokenHeroBow>());
 			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

@@ -1,4 +1,5 @@
 using Microsoft.Xna.Framework;
+using OurStuffAddon.Items.Materials;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -57,8 +58,8 @@ namespace OurStuffAddon.Items.SpiritDamageClass
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "CrystalCore");
-			recipe.AddIngredient(mod, "AncientCore");
+			recipe.AddIngredient(ModContent.ItemType<CrystalCore>());
+			recipe.AddIngredient(ModContent.ItemType<AncientCore>());
 			recipe.AddIngredient(ItemID.CrystalShard, 10);
 			recipe.AddIngredient(ItemID.SoulofLight, 7);
 			recipe.AddTile(TileID.MythrilAnvil);

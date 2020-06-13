@@ -73,7 +73,6 @@ namespace OurStuffAddon
 				ItemID.TissueSample
 			});
 			RecipeGroup.RegisterGroup("OurStuffAddon:EvilMaterial", EvilMaterial);
-
 		}
 
 		public override void PostSetupContent()

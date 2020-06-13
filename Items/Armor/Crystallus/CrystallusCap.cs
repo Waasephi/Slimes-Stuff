@@ -1,3 +1,4 @@
+using OurStuffAddon.Items.Materials;
 using OurStuffAddon.Items.SpiritDamageClass;
 using Terraria;
 using Terraria.ID;
@@ -53,7 +54,7 @@ namespace OurStuffAddon.Items.Armor.Crystallus
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.CrystalShard, 10);
-			recipe.AddIngredient(mod, "AncientCore");
+			recipe.AddIngredient(ModContent.ItemType<AncientCore>());
 			recipe.AddIngredient(ItemID.SoulofLight, 5);
 			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(this);

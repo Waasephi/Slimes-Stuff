@@ -29,7 +29,7 @@ namespace OurStuffAddon.Tiles.Shadow
 			ModTranslation name = CreateMapEntryName();
 			name.SetDefault("Shadow Chair");
 			AddMapEntry(new Color(1, 1, 1), name);
-			 
+
 			disableSmartCursor = true;
 			adjTiles = new int[] { TileID.Chairs };
 		}

@@ -32,7 +32,7 @@ namespace OurStuffAddon.Items.Armor.Phasite
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "PhasiteBar", 20);
+			recipe.AddIngredient(ModContent.ItemType<PhasiteBar>(), 20);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

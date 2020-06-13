@@ -1,6 +1,6 @@
-using Terraria.ModLoader;
-using Terraria.ID;
 using OurStuffAddon.Walls.Ancient;
+using Terraria.ID;
+using Terraria.ModLoader;
 
 namespace OurStuffAddon.Items.Blocks
 {

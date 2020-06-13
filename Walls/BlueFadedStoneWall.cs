@@ -10,7 +10,7 @@ namespace OurStuffAddon.Walls
 		public override void SetDefaults()
 		{
 			Main.wallHouse[Type] = true;
-			 
+
 			drop = ModContent.ItemType<BlueFadedStoneWallItem>();
 			AddMapEntry(new Color(123, 104, 238));
 		}

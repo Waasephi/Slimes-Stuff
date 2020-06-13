@@ -35,7 +35,7 @@ namespace OurStuffAddon.Items.Armor.Cosmic
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.LunarBar, 16);
-			recipe.AddIngredient(mod, "CosmicFragment", 20);
+			recipe.AddIngredient(ModContent.ItemType<CosmicFragment>(), 20);
 			recipe.AddTile(TileID.LunarCraftingStation);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

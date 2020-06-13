@@ -15,6 +15,9 @@ namespace OurStuffAddon
 		public bool ZoneLuminescentLagoon;
 
 		public bool ZoneRuin;
+		internal bool StardustWisp;
+
+		public bool SpiritWisp { get; internal set; }
 
 		public override void ResetEffects()
 		{

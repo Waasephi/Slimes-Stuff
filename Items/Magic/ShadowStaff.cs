@@ -35,8 +35,8 @@ namespace OurStuffAddon.Items.Magic
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "ShadowCrystal", 10);
-			recipe.AddIngredient(mod, "TrenagonBar", 20);
+			recipe.AddIngredient(ModContent.ItemType<ShadowCrystal>(), 10);
+			recipe.AddIngredient(ModContent.ItemType<TrenagonBar>(), 20);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

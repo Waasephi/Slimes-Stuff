@@ -33,7 +33,7 @@ namespace OurStuffAddon.Items.Ranged
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "BlasterGunparts", 1);
+			recipe.AddIngredient(ModContent.ItemType<BlasterGunparts>(), 1);
 			recipe.AddIngredient(ItemID.DemoniteBar, 20);
 			recipe.AddIngredient(ItemID.ShadowScale, 25);
 			recipe.AddTile(TileID.Anvils);

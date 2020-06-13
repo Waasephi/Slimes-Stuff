@@ -70,7 +70,6 @@ namespace OurStuffAddon
                     }
                 }
             }
-        
 
         private void GenerateCavernTop(int xO, int yO, int i, int j)
         {
@@ -153,9 +152,6 @@ namespace OurStuffAddon
             }
         }
 
-
-
-
         private void GenerateLuminescentFeatures(int xO, int yO)
         {
             GenerateFeature(xO, yO, 25, (ushort)mod.TileType("SeafoamStone")(), 2, 6, 180 * sizeMult);
@@ -236,7 +232,6 @@ namespace OurStuffAddon
             Point16 structurePosition = new Point16(structX, structY);
             return structurePosition;
         }
-
 
         private void LootStructures(int xO, int yO)
         {

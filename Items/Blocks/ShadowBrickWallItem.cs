@@ -25,7 +25,7 @@ namespace OurStuffAddon.Items.Blocks
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddTile(TileID.Anvils);
-			recipe.AddIngredient(mod, "ShadowBrick");
+			recipe.AddIngredient(ModContent.ItemType<ShadowBrick>());
 			recipe.SetResult(this, 4);
 			recipe.AddRecipe();
 		}

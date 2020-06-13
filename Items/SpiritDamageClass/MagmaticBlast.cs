@@ -58,7 +58,7 @@ namespace OurStuffAddon.Items.SpiritDamageClass
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "LavaShard");
+			recipe.AddIngredient(ModContent.ItemType<LavaShard>());
 			recipe.AddIngredient(ItemID.AshBlock, 50);
 			recipe.AddIngredient(ItemID.HellstoneBar, 15);
 			recipe.AddIngredient(ItemID.HallowedBar, 15);

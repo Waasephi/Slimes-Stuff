@@ -58,7 +58,7 @@ namespace OurStuffAddon.Items.SpiritDamageClass
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "PsychicSand");
+			recipe.AddIngredient(ModContent.ItemType<PsychicSand>());
 			recipe.AddIngredient(ItemID.Coral, 20);
 			recipe.AddIngredient(ItemID.HallowedBar, 15);
 			recipe.AddTile(TileID.MythrilAnvil);

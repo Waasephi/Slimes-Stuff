@@ -33,7 +33,7 @@ namespace OurStuffAddon.Items.Ranged
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "ParepheneBar", 14);
+			recipe.AddIngredient(ModContent.ItemType<ParepheneBar>(), 14);
 			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

@@ -16,8 +16,6 @@ namespace OurStuffAddon.Structures
         private static int x = 0;
         private static int y = 0;
 
-
-
         public static void GenerateHouse(int i, int j)
         {
             PickVariables(i, j);
@@ -182,7 +180,6 @@ namespace OurStuffAddon.Structures
                 }
             }
         }
-
 
         private static bool TileCheckSafe(int i, int j)
         {

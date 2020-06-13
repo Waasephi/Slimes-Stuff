@@ -33,7 +33,7 @@ namespace OurStuffAddon.Items.Magic
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "PhasiteBar", 15);
+			recipe.AddIngredient(ModContent.ItemType<PhasiteBar>(), 15);
 			recipe.AddIngredient(ItemID.Book);
 			recipe.AddTile(TileID.Bookcases);
 			recipe.SetResult(this);

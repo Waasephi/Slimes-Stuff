@@ -1,4 +1,4 @@
-using OurStuffAddon.NPCs.Bosses;
+using OurStuffAddon.NPCs.Bosses.NeoMothership;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;

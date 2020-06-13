@@ -27,7 +27,7 @@ namespace OurStuffAddon.Items.Consumables
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "Portabulb", 10);
+			recipe.AddIngredient(ModContent.ItemType<Portabulb>(), 10);
 			recipe.AddTile(TileID.DemonAltar);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

@@ -24,7 +24,7 @@ namespace OurStuffAddon.Items.Blocks
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "HeartStone", 20);
+			recipe.AddIngredient(ModContent.ItemType<HeartStone>(), 20);
 			recipe.AddTile(TileID.Furnaces);
 			recipe.SetResult(ItemID.LifeCrystal);
 			recipe.AddRecipe();

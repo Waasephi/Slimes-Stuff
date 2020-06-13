@@ -1,6 +1,6 @@
 ﻿using Terraria;
-using Terraria.ModLoader;
 using Terraria.ID;
+using Terraria.ModLoader;
 
 namespace OurStuffAddon.Items.Accessories
 {
@@ -46,7 +46,7 @@ namespace OurStuffAddon.Items.Accessories
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.LunarBar, 20);
-			recipe.AddIngredient(mod, "CosmicFragment", 14);
+			recipe.AddIngredient(ModContent.ItemType<CosmicFragment>(), 14);
 			recipe.AddTile(412);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

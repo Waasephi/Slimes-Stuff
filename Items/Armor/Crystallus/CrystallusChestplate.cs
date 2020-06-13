@@ -39,7 +39,7 @@ namespace OurStuffAddon.Items.Armor.Crystallus
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.CrystalShard, 20);
-			recipe.AddIngredient(mod, "CrystalCore");
+			recipe.AddIngredient(ModContent.ItemType<CrystalCore>());
 			recipe.AddIngredient(ItemID.SoulofLight, 15);
 			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(this);

@@ -26,7 +26,7 @@ namespace OurStuffAddon.Items.Materials
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "SpiriciteCrystal", 5);
+			recipe.AddIngredient(ModContent.ItemType<SpiriciteCrystal>(), 5);
 			recipe.AddIngredient(ItemID.ChlorophyteBar, 2);
 			recipe.AddIngredient(ItemID.Ectoplasm, 2);
 			recipe.AddTile(mod, "SpiritInfuser");

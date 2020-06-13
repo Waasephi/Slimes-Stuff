@@ -25,7 +25,7 @@ namespace OurStuffAddon.Items.Blocks
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddTile(TileID.HeavyWorkBench);
-			recipe.AddIngredient(mod, "AncientStone", 2);
+			recipe.AddIngredient(ModContent.ItemType<AncientStone>(), 2);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

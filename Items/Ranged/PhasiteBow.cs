@@ -9,6 +9,7 @@ namespace OurStuffAddon.Items.Ranged
 		{
 			DisplayName.SetDefault("Phasite Bow");
 		}
+
 		public override void SetDefaults()
 		{
 			item.damage = 23;
@@ -32,7 +33,7 @@ namespace OurStuffAddon.Items.Ranged
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "PhasiteBar", 9);
+			recipe.AddIngredient(ModContent.ItemType<PhasiteBar>(), 9);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

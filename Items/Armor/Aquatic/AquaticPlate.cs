@@ -38,7 +38,7 @@ namespace OurStuffAddon.Items.Armor.Aquatic
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "PsychicSand");
+			recipe.AddIngredient(ModContent.ItemType<PsychicSand>());
 			recipe.AddIngredient(ItemID.Coral, 30);
 			recipe.AddIngredient(ItemID.HallowedBar, 20);
 			recipe.AddTile(TileID.MythrilAnvil);

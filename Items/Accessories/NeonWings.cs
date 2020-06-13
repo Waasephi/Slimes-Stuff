@@ -46,7 +46,7 @@ namespace OurStuffAddon.Items.Accessories
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.Feather, 15);
-			recipe.AddIngredient(mod, "NeoniumBar", 30);
+			recipe.AddIngredient(ModContent.ItemType<NeoniumBar>(), 30);
 			recipe.AddTile(TileID.TinkerersWorkbench);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

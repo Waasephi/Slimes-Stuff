@@ -30,7 +30,7 @@ namespace OurStuffAddon.Items.Consumables.Potions
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "CosmicJelly", 2);
+			recipe.AddIngredient(ModContent.ItemType<CosmicJelly>(), 2);
 			recipe.AddIngredient(ItemID.SuperHealingPotion, 1);
 			recipe.AddTile(TileID.LunarCraftingStation);
 			recipe.SetResult(this);

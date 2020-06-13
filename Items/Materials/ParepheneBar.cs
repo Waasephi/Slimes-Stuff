@@ -1,5 +1,5 @@
-using Terraria.ModLoader;
 using Terraria.ID;
+using Terraria.ModLoader;
 
 namespace OurStuffAddon.Items.Materials
 {
@@ -25,7 +25,7 @@ namespace OurStuffAddon.Items.Materials
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "ParepheneOre", 6);
+			recipe.AddIngredient(ModContent.ItemType<ParepheneOre>(), 6);
 			recipe.AddTile(TileID.AdamantiteForge);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

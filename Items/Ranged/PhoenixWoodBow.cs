@@ -9,6 +9,7 @@ namespace OurStuffAddon.Items.Ranged
 		{
 			DisplayName.SetDefault("Phoenix Wood Bow");
 		}
+
 		public override void SetDefaults()
 		{
 			item.damage = 45;
@@ -32,7 +33,7 @@ namespace OurStuffAddon.Items.Ranged
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "PhoenixWood", 10);
+			recipe.AddIngredient(ModContent.ItemType<PhoenixWood>(), 10);
 			recipe.AddTile(18);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

@@ -1,7 +1,8 @@
+using OurStuffAddon.Items.Materials;
 using OurStuffAddon.Items.SpiritDamageClass;
 using Terraria;
-using Terraria.ModLoader;
 using Terraria.ID;
+using Terraria.ModLoader;
 
 namespace OurStuffAddon.Items.Armor.Spiricite
 {
@@ -37,7 +38,7 @@ namespace OurStuffAddon.Items.Armor.Spiricite
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "SpiriciteCrystal", 20);
+			recipe.AddIngredient(ModContent.ItemType<SpiriciteCrystal>(), 20);
 			recipe.AddTile(mod, "SpiritInfuser");
 			recipe.SetResult(this);
 			recipe.AddRecipe();

@@ -35,7 +35,7 @@ namespace OurStuffAddon.Items.Ranged
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.HallowedRepeater, 1);
-			recipe.AddIngredient(mod, "BrokenHeroBow");
+			recipe.AddIngredient(ModContent.ItemType<BrokenHeroBow>());
 			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

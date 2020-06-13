@@ -40,7 +40,7 @@ namespace OurStuffAddon.Items.Throwing
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddTile(TileID.Anvils);
-			recipe.AddIngredient(mod, "DesertFang", 999);
+			recipe.AddIngredient(ModContent.ItemType<DesertFang>(), 999);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

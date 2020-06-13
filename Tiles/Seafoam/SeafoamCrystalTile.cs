@@ -1,28 +1,31 @@
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.ObjectData;
 
-namespace OurStuffAddon.Tiles
+namespace OurStuffAddon.Tiles.Seafoam
 {
-	public class LLStalagtites : ModTile
+	public class SeafoamCrystalTile : ModTile
 	{
 		public override void SetDefaults()
 		{
-			Main.tileSolidTop[Type] = false;
-			Main.tileFrameImportant[Type] = true;
-			Main.tileNoAttach[Type] = true;
-			Main.tileTable[Type] = true;
-			Main.tileLavaDeath[Type] = false;
-			TileObjectData.newTile.CopyFrom(TileObjectData.Style1x2Top);
-			TileObjectData.addTile(Type);
-			disableSmartCursor = true;
-			//adjTiles = new int[] { TileID.WorkBenches };
+			Main.tileSolid[Type] = true;
+			Main.tileLighted[Type] = true;
+			Main.tileBlockLight[Type] = true;
+			Main.tileSpelunker[Type] = true;
+			AddMapEntry(new Color(100, 200, 200));
+			mineResist = 1f;
+			minPick = 20;
+			drop = mod.ItemType("SeafoamCrystal");
+			soundType = SoundID.Tink;
+			dustType = 1;
+			//soundStyle = 1;
 		}
 
 		public override void SetSpriteEffects(int i, int j, ref SpriteEffects spriteEffects)
 		{
-			if ((i % 12) < 6)
+			if ((i % 10) < 5)
 			{
 				spriteEffects = SpriteEffects.FlipHorizontally;
 			}
@@ -33,21 +36,19 @@ namespace OurStuffAddon.Tiles
 			num = fail ? 1 : 3;
 		}
 
-		public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
-		{
-			r = 0;
-			g = 0.1f;
-			b = 0.1f;
-		}
-
 		public override void AnimateIndividualTile(int type, int i, int j, ref int frameXOffset, ref int frameYOffset)
 		{
-			frameXOffset = i % 6 * 18;
+			frameXOffset = i % 5 * 18;
 		}
 
 		public override void SetDrawPositions(int i, int j, ref int width, ref int offsetY, ref int height)
 		{
 			offsetY = 4;
+		}
+
+		public override bool CanExplode(int i, int j)
+		{
+			return true;
 		}
 	}
 }

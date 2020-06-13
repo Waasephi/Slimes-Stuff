@@ -1,3 +1,4 @@
+using OurStuffAddon.Items.Materials;
 using OurStuffAddon.Projectiles;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -31,7 +32,7 @@ namespace OurStuffAddon.Items.Ranged.Ammo
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "SpiriciteCrystal");
+			recipe.AddIngredient(ModContent.ItemType<SpiriciteCrystal>());
 			recipe.AddTile(mod, "SpiritInfuser");
 			recipe.SetResult(this, 150);
 			recipe.AddRecipe();

@@ -1,3 +1,4 @@
+using OurStuffAddon.Items.Materials;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -47,7 +48,7 @@ namespace OurStuffAddon.Items.Armor.Ancient
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.LihzahrdBrick, 35);
-			recipe.AddIngredient(mod, "SolarPebble", 10);
+			recipe.AddIngredient(ModContent.ItemType<SolarPebble>(), 10);
 			recipe.AddTile(TileID.LihzahrdFurnace);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

@@ -31,7 +31,7 @@ namespace OurStuffAddon.Items.Ranged.Ammo
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "SplinteredShot", 3996);
+			recipe.AddIngredient(ModContent.ItemType<SplinteredShot>(), 3996);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this, 1);
 			recipe.AddRecipe();

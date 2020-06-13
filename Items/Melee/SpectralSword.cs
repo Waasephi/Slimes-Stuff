@@ -1,7 +1,6 @@
-using Microsoft.Xna.Framework;
 using Terraria;
-using Terraria.ModLoader;
 using Terraria.ID;
+using Terraria.ModLoader;
 
 namespace OurStuffAddon.Items.Melee
 {
@@ -12,6 +11,7 @@ namespace OurStuffAddon.Items.Melee
 			DisplayName.SetDefault("Spectral Sword");
 			Tooltip.SetDefault("Perfect for musical avians!");
 		}
+
 		public override void SetDefaults()
 		{
 			item.damage = 50;

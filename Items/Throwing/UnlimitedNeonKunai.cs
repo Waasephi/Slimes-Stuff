@@ -41,7 +41,7 @@ namespace OurStuffAddon.Items.Throwing
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "NeonKunai", 999);
+			recipe.AddIngredient(ModContent.ItemType<NeonKunai>(), 999);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

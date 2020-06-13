@@ -1,6 +1,6 @@
 ﻿using Terraria;
-using Terraria.ModLoader;
 using Terraria.ID;
+using Terraria.ModLoader;
 
 namespace OurStuffAddon.Items.Accessories
 {
@@ -35,7 +35,7 @@ namespace OurStuffAddon.Items.Accessories
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.FireGauntlet, 1);
-			recipe.AddIngredient(mod, "FrostGauntlet");
+			recipe.AddIngredient(ModContent.ItemType<FrostGauntlet>());
 			recipe.AddTile(114);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

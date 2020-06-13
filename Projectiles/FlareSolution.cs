@@ -1,6 +1,6 @@
+using Microsoft.Xna.Framework;
 using OurStuffAddon.Tiles;
 using OurStuffAddon.Walls;
-using Microsoft.Xna.Framework;
 using System;
 using Terraria;
 using Terraria.ID;
@@ -97,15 +97,15 @@ namespace OurStuffAddon.Projectiles
 							WorldGen.SquareTileFrame(k, l, true);
 							NetMessage.SendTileSquare(-1, k, l, 1);
 						}
-                        {
-                            if (TileID.Sets.Conversion.Sand[type])
-                            {
-                                Main.tile[k, l].type = (ushort)TileType<PhoenixSand>();
-                                WorldGen.SquareTileFrame(k, l, true);
-                                NetMessage.SendTileSquare(-1, k, l, 1);
-                            }
-                        }
-                    }
+						{
+							if (TileID.Sets.Conversion.Sand[type])
+							{
+								Main.tile[k, l].type = (ushort)TileType<PhoenixSand>();
+								WorldGen.SquareTileFrame(k, l, true);
+								NetMessage.SendTileSquare(-1, k, l, 1);
+							}
+						}
+					}
 				}
 			}
 		}

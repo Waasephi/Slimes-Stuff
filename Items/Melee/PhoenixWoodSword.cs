@@ -9,6 +9,7 @@ namespace OurStuffAddon.Items.Melee
 		{
 			DisplayName.SetDefault("Phoenix Wood Sword");
 		}
+
 		public override void SetDefaults()
 		{
 			item.damage = 45;
@@ -28,7 +29,7 @@ namespace OurStuffAddon.Items.Melee
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod,"PhoenixWood", 7);
+			recipe.AddIngredient(mod, "PhoenixWood", 7);
 			recipe.AddTile(18);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

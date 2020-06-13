@@ -1,3 +1,4 @@
+using OurStuffAddon.Items.Materials;
 using OurStuffAddon.NPCs.Bosses;
 using Terraria;
 using Terraria.ID;
@@ -34,7 +35,7 @@ namespace OurStuffAddon.Items.Consumables
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.AntlionMandible, 5);
-			recipe.AddIngredient(mod, "SandSifterScale", 5);
+			recipe.AddIngredient(ModContent.ItemType<SandSifterScale>(), 5);
 			recipe.AddTile(TileID.DemonAltar);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

@@ -34,8 +34,8 @@ namespace OurStuffAddon.Items.Armor.Luminescent
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "SeafoamScale", 25);
-			recipe.AddIngredient(mod, "SeafoamCrystal", 30);
+			recipe.AddIngredient(ModContent.ItemType<SeafoamScale>(), 25);
+			recipe.AddIngredient(ModContent.ItemType<SeafoamCrystal>(), 30);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

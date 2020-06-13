@@ -1,4 +1,4 @@
-using OurStuffAddon.NPCs.Bosses;
+using OurStuffAddon.NPCs.Bosses.NeoMothership;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -28,7 +28,7 @@ namespace OurStuffAddon.Items.Consumables
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "NeoLocator", 10);
+			recipe.AddIngredient(ModContent.ItemType<NeoLocator>(), 10);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

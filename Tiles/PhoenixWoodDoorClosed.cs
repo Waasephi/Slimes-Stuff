@@ -1,5 +1,5 @@
-using OurStuffAddon.Items.Blocks;
 using Microsoft.Xna.Framework;
+using OurStuffAddon.Items.Blocks;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;

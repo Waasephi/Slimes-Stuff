@@ -1,9 +1,9 @@
-using Terraria;
-using Terraria.ModLoader;
-using Terraria.ID;
 using OurStuffAddon.Items.Accessories;
 using OurStuffAddon.Items.Materials;
 using OurStuffAddon.NPCs.Bosses;
+using Terraria;
+using Terraria.ID;
+using Terraria.ModLoader;
 
 namespace OurStuffAddon.Items.Consumables
 {

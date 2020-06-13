@@ -9,6 +9,7 @@ namespace OurStuffAddon.Items.Ranged
 		{
 			DisplayName.SetDefault("Trenagon Bow");
 		}
+
 		public override void SetDefaults()
 		{
 			item.damage = 15;
@@ -32,7 +33,7 @@ namespace OurStuffAddon.Items.Ranged
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "TrenagonBar", 8);
+			recipe.AddIngredient(ModContent.ItemType<TrenagonBar>(), 8);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

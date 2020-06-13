@@ -33,10 +33,10 @@ namespace OurStuffAddon.Items.Ranged
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "SporeBlaster", 1);
-			recipe.AddIngredient(mod, "AncientBlaster", 1);
-			recipe.AddIngredient(mod, "BurningBlaster", 1);
-			recipe.AddIngredient(mod, "DemonBlaster", 1);
+			recipe.AddIngredient(ModContent.ItemType<SporeBlaster>(), 1);
+			recipe.AddIngredient(ModContent.ItemType<AncientBlaster>(), 1);
+			recipe.AddIngredient(ModContent.ItemType<BurningBlaster>(), 1);
+			recipe.AddIngredient(ModContent.ItemType<DemonBlaster>(), 1);
 			recipe.AddTile(TileID.DemonAltar);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

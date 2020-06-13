@@ -58,7 +58,7 @@ namespace OurStuffAddon.Items.SpiritDamageClass
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "GlacialCrystal", 10);
+			recipe.AddIngredient(ModContent.ItemType<GlacialCrystal>(), 10);
 			recipe.AddTile(TileID.IceMachine);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

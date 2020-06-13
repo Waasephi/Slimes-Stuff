@@ -1,8 +1,8 @@
 ﻿using OurStuffAddon.Items.SpiritDamageClass;
 using Terraria;
 using Terraria.DataStructures;
-using Terraria.ModLoader;
 using Terraria.ID;
+using Terraria.ModLoader;
 
 namespace OurStuffAddon.Items.Accessories
 {
@@ -44,14 +44,14 @@ namespace OurStuffAddon.Items.Accessories
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "DashCharm");
-			recipe.AddIngredient(mod, "NinjaCharm");
-			recipe.AddIngredient(mod, "MinerCharm");
-			recipe.AddIngredient(mod, "WizardCharm");
-			recipe.AddIngredient(mod, "SummonerCharm");
-			recipe.AddIngredient(mod, "WarriorCharm");
-			recipe.AddIngredient(mod, "RangerCharm");
-			recipe.AddIngredient(mod, "SpiricistCharm");
+			recipe.AddIngredient(ModContent.ItemType<DashCharm>());
+			recipe.AddIngredient(ModContent.ItemType<NinjaCharm>());
+			recipe.AddIngredient(ModContent.ItemType<MinerCharm>());
+			recipe.AddIngredient(ModContent.ItemType<WizardCharm>());
+			recipe.AddIngredient(ModContent.ItemType<SummonerCharm>());
+			recipe.AddIngredient(ModContent.ItemType<WarriorCharm>());
+			recipe.AddIngredient(ModContent.ItemType<RangerCharm>());
+			recipe.AddIngredient(ModContent.ItemType<SpiricistCharm>());
 			recipe.AddTile(TileID.TinkerersWorkbench);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

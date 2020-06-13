@@ -33,8 +33,8 @@ namespace OurStuffAddon.Items.Melee
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "Daylight");
-			recipe.AddIngredient(mod, "Moonlight");
+			recipe.AddIngredient(ModContent.ItemType<Daylight>());
+			recipe.AddIngredient(ModContent.ItemType<Moonlight>());
 			recipe.AddIngredient(ItemID.HallowedBar, 10);
 			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(this);

@@ -32,7 +32,7 @@ namespace OurStuffAddon.Items.Melee
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "InfernalBlade");
+			recipe.AddIngredient(ModContent.ItemType<InfernalBlade>());
 			recipe.AddIngredient(ItemID.HallowedBar, 20);
 			recipe.AddTile(mod, "SpiritInfuser");
 			recipe.SetResult(this);

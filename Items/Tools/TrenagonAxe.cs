@@ -30,7 +30,7 @@ namespace OurStuffAddon.Items.Tools
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "TrenagonBar", 14);
+			recipe.AddIngredient(ModContent.ItemType<TrenagonBar>(), 14);
 			recipe.AddIngredient(ItemID.Wood, 12);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);

@@ -32,7 +32,7 @@ namespace OurStuffAddon.Items.Melee
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "MasterSword");
+			recipe.AddIngredient(ModContent.ItemType<MasterSword>());
 			recipe.AddIngredient(ItemID.BrokenHeroSword, 3);
 			recipe.AddIngredient(ItemID.TerraBlade, 1);
 			recipe.AddTile(TileID.MythrilAnvil);

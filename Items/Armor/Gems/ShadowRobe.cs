@@ -46,7 +46,7 @@ namespace OurStuffAddon.Items.Armor.Gems
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "ShadowCrystal", 10);
+			recipe.AddIngredient(ModContent.ItemType<ShadowCrystal>(), 10);
 			recipe.AddIngredient(ItemID.Robe, 1);
 			recipe.AddTile(TileID.Loom);
 			recipe.SetResult(this);

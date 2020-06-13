@@ -1,4 +1,5 @@
 using OurStuffAddon.Buffs;
+using OurStuffAddon.Items.Materials;
 using OurStuffAddon.Projectiles.Pets;
 using Terraria;
 using Terraria.DataStructures;
@@ -35,7 +36,7 @@ namespace OurStuffAddon.Items.Consumables
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "SpiritShard", 50);
+			recipe.AddIngredient(ModContent.ItemType<SpiritShard>(), 50);
 			recipe.AddTile(mod, "SpiritInfuser");
 			recipe.SetResult(this);
 			recipe.AddRecipe();

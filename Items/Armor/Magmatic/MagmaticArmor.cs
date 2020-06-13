@@ -38,7 +38,7 @@ namespace OurStuffAddon.Items.Armor.Magmatic
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "LavaShard");
+			recipe.AddIngredient(ModContent.ItemType<LavaShard>());
 			recipe.AddIngredient(ItemID.AshBlock, 150);
 			recipe.AddIngredient(ItemID.HellstoneBar, 20);
 			recipe.AddIngredient(ItemID.HallowedBar, 20);

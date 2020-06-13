@@ -1,3 +1,4 @@
+using OurStuffAddon.Items.Materials;
 using OurStuffAddon.Projectiles;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -39,8 +40,8 @@ namespace OurStuffAddon.Items.Throwing
 		public override void AddRecipes()  //How to craft this item
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "SeafoamCrystal", 2);
-			recipe.AddIngredient(mod, "SeafoamScale", 2);
+			recipe.AddIngredient(ModContent.ItemType<SeafoamCrystal>(), 2);
+			recipe.AddIngredient(ModContent.ItemType<SeafoamScale>(), 2);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this, 150);
 			recipe.AddRecipe();

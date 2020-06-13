@@ -57,8 +57,8 @@ namespace OurStuffAddon.Items.SpiritDamageClass
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "TrueSpiritGem");
-			recipe.AddIngredient(mod, "LuminaFragment", 20);
+			recipe.AddIngredient(ModContent.ItemType<TrueSpiritGem>());
+			recipe.AddIngredient(ModContent.ItemType<LuminaFragment>(), 20);
 			recipe.AddTile(mod, "SpiritInfuser");
 			recipe.SetResult(this);
 			recipe.AddRecipe();

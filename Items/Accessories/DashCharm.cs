@@ -1,6 +1,6 @@
 ﻿using Terraria;
-using Terraria.ModLoader;
 using Terraria.ID;
+using Terraria.ModLoader;
 
 namespace OurStuffAddon.Items.Accessories
 {
@@ -29,7 +29,7 @@ namespace OurStuffAddon.Items.Accessories
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "ShadowCrystal", 50);
+			recipe.AddIngredient(ModContent.ItemType<ShadowCrystal>(), 50);
 			recipe.AddIngredient(ItemID.NinjaHood, 1);
 			recipe.AddIngredient(257, 1);
 			recipe.AddIngredient(258, 1);

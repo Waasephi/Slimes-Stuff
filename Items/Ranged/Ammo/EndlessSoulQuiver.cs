@@ -31,7 +31,7 @@ namespace OurStuffAddon.Items.Ranged.Ammo
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "SpiritArrow", 3996);
+			recipe.AddIngredient(ModContent.ItemType<SpiritArrow>(), 3996);
 			recipe.AddTile(mod, "SpiritInfuser");
 			recipe.SetResult(this, 1);
 			recipe.AddRecipe();

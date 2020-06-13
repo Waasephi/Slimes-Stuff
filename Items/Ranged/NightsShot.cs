@@ -37,7 +37,7 @@ namespace OurStuffAddon.Items.Ranged
 			recipe.AddIngredient(ItemID.DemonBow, 1);
 			recipe.AddIngredient(ItemID.BeesKnees, 1);
 			recipe.AddIngredient(ItemID.MoltenFury, 1);
-			recipe.AddIngredient(mod, "SkeletalBow");
+			recipe.AddIngredient(ModContent.ItemType<SkeletalBow>());
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

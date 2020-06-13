@@ -57,7 +57,7 @@ namespace OurStuffAddon.Items.SpiritDamageClass
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "TaintedCore");
+			recipe.AddIngredient(ModContent.ItemType<TaintedCore>());
 			recipe.AddIngredient(ItemID.Ichor, 20);
 			recipe.AddIngredient(ItemID.SoulofNight, 15);
 			recipe.AddTile(TileID.MythrilAnvil);

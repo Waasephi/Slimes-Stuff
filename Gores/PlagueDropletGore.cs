@@ -28,13 +28,13 @@ namespace OurStuffAddon.Gores
 
 				if (WorldGen.InWorld(tileX, tileY, 0) && !Main.tile[tileX, tileY].active())
 					gore.active = false;
-				
+
 				if (gore.frame == 0 || gore.frame == 1 || gore.frame == 2)
 					frameDuration = 24 + Main.rand.Next(256);
-				
+
 				if (gore.frame == 3)
 					frameDuration = 24 + Main.rand.Next(96);
-				
+
 				if (gore.frameCounter >= frameDuration)
 				{
 					gore.frameCounter = 0;
@@ -68,14 +68,14 @@ namespace OurStuffAddon.Gores
 
 				if (gore.velocity.Y < 0.5f)
 					gore.velocity.Y = 0.5f;
-				
+
 				if (gore.velocity.Y > 12f)
 					gore.velocity.Y = 12f;
-				
+
 				if (gore.frameCounter >= frameDuration)
 					gore.frameCounter = 0;
-					gore.frame += 1;
-				
+				gore.frame += 1;
+
 				if (gore.frame > 9)
 					gore.frame = 7;
 			}

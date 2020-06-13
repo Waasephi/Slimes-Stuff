@@ -34,7 +34,7 @@ namespace OurStuffAddon.Items.Armor.Glacial
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "GlacialCrystal", 15);
+			recipe.AddIngredient(ModContent.ItemType<GlacialCrystal>(), 15);
 			recipe.AddTile(TileID.IceMachine);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

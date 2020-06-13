@@ -36,7 +36,7 @@ namespace OurStuffAddon.Tiles.Ancient
 			ModTranslation name = CreateMapEntryName();
 			name.SetDefault("Ancient Chest");
 			AddMapEntry(new Color(200, 200, 200), name, MapChestName);
-			 
+
 			disableSmartCursor = true;
 			adjTiles = new int[] { TileID.Containers };
 			chest = "Ancient Chest";

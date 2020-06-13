@@ -20,7 +20,7 @@ namespace OurStuffAddon.Buffs
 
 			if (player.ownedProjectileCounts[ProjectileType<Projectiles.Minions.ShroomyProjectile>()] > 0)
 				modPlayer.ShroomBuff = true;
-			
+
 			if (!modPlayer.ShroomBuff)
 			{
 				player.DelBuff(buffIndex);

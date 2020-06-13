@@ -35,7 +35,7 @@ namespace OurStuffAddon.Items.Armor.Ancient
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.LihzahrdBrick, 65);
-			recipe.AddIngredient(mod, "SolarPebble", 15);
+			recipe.AddIngredient(ModContent.ItemType<SolarPebble>(), 15);
 			recipe.AddTile(TileID.LihzahrdFurnace);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

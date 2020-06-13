@@ -9,6 +9,7 @@ namespace OurStuffAddon.Items.Ranged
 		{
 			DisplayName.SetDefault("Seafoam Longbow");
 		}
+
 		public override void SetDefaults()
 		{
 			item.damage = 20;
@@ -19,22 +20,23 @@ namespace OurStuffAddon.Items.Ranged
 			item.useTime = 18;
 			item.useAnimation = 18;
 			item.useStyle = 5;
-            item.shoot = mod.ProjectileType("LuminescentArrow");
-            item.shootSpeed = 10f;
+			item.shoot = mod.ProjectileType("LuminescentArrow");
+			item.shootSpeed = 10f;
 			item.knockBack = 6;
 			item.value = 10000;
 			item.rare = 11;
 			item.UseSound = SoundID.Item5;
 			item.autoReuse = true;
 		}
-        public override void AddRecipes()
-        {
-            ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(mod, "SeafoamCrystal", 20);
-            recipe.AddIngredient(mod, "SeafoamScale", 10);
-            recipe.AddTile(TileID.Anvils);
-            recipe.SetResult(this);
-            recipe.AddRecipe();
-        }
-    }
+
+		public override void AddRecipes()
+		{
+			ModRecipe recipe = new ModRecipe(mod);
+			recipe.AddIngredient(ModContent.ItemType<SeafoamCrystal>(), 20);
+			recipe.AddIngredient(ModContent.ItemType<SeafoamScale>(), 10);
+			recipe.AddTile(TileID.Anvils);
+			recipe.SetResult(this);
+			recipe.AddRecipe();
+		}
+	}
 }

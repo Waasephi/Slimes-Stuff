@@ -1,7 +1,7 @@
 using OurStuffAddon.Items.SpiritDamageClass;
 using Terraria;
-using Terraria.ModLoader;
 using Terraria.ID;
+using Terraria.ModLoader;
 
 namespace OurStuffAddon.Items.Armor.SpiritRobe
 {
@@ -38,8 +38,8 @@ namespace OurStuffAddon.Items.Armor.SpiritRobe
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "SpiritInfusedBar", 20);
-			recipe.AddIngredient(mod, "Ectoheart");
+			recipe.AddIngredient(ModContent.ItemType<SpiritInfusedBar>(), 20);
+			recipe.AddIngredient(ModContent.ItemType<Ectoheart>());
 			recipe.AddTile(mod, "SpiritInfuser");
 			recipe.SetResult(this);
 			recipe.AddRecipe();

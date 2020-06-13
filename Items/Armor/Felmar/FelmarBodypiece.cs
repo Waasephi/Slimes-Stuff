@@ -39,7 +39,7 @@ namespace OurStuffAddon.Items.Armor.Felmar
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.HellstoneBar, 20);
-			recipe.AddIngredient(mod, "BottledDune");
+			recipe.AddIngredient(ModContent.ItemType<BottledDune>());
 			recipe.AddIngredient(ItemID.SandBlock, 150);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);

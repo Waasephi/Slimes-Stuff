@@ -1,6 +1,7 @@
-using Terraria.ModLoader;
-using Terraria.ID;
+using OurStuffAddon.Items.Consumables.Potions;
 using OurStuffAddon.Tiles.Misc;
+using Terraria.ID;
+using Terraria.ModLoader;
 
 namespace OurStuffAddon.Items.Blocks
 {
@@ -29,7 +30,7 @@ namespace OurStuffAddon.Items.Blocks
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "Pancakes");
+			recipe.AddIngredient(ModContent.ItemType<Pancakes>());
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

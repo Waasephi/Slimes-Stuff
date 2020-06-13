@@ -32,7 +32,7 @@ namespace OurStuffAddon.Items.Ranged
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "Duality", 1);
+			recipe.AddIngredient(ModContent.ItemType<Duality>(), 1);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

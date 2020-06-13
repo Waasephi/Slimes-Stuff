@@ -36,8 +36,8 @@ namespace OurStuffAddon.Items.Magic
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "ShadowStaff");
-			recipe.AddIngredient(mod, "SeafoamStaff");
+			recipe.AddIngredient(ModContent.ItemType<ShadowStaff>());
+			recipe.AddIngredient(ModContent.ItemType<SeafoamStaff>());
 			recipe.AddIngredient(ItemID.TopazStaff);
 			recipe.AddIngredient(ItemID.AmethystStaff);
 			recipe.AddIngredient(ItemID.SapphireStaff);

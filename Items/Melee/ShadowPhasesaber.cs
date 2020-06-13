@@ -29,7 +29,7 @@ namespace OurStuffAddon.Items.Melee
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "ShadowPhaseblade");
+			recipe.AddIngredient(ModContent.ItemType<ShadowPhaseblade>());
 			recipe.AddIngredient(ItemID.CrystalShard, 50);
 			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(this);

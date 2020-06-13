@@ -34,8 +34,8 @@ namespace OurStuffAddon.Items.Melee
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "ChloroBlade");
-			recipe.AddIngredient(mod, "SpiritInfusedBar", 20);
+			recipe.AddIngredient(ModContent.ItemType<ChloroBlade>());
+			recipe.AddIngredient(ModContent.ItemType<SpiritInfusedBar>(), 20);
 			recipe.AddTile(mod, "SpiritInfuser");
 			recipe.SetResult(this);
 			recipe.AddRecipe();

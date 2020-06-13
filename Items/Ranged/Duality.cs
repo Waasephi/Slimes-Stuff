@@ -33,10 +33,10 @@ namespace OurStuffAddon.Items.Ranged
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "BlasterGunparts", 1);
-			recipe.AddIngredient(mod, "TrueNox", 1);
+			recipe.AddIngredient(ModContent.ItemType<BlasterGunparts>(), 1);
+			recipe.AddIngredient(ModContent.ItemType<TrueNox>(), 1);
 			recipe.AddRecipeGroup("OurStuffAddon:TrueEvilBlaster");
-			recipe.AddIngredient(mod, "BrokenHeroBlaster", 1);
+			recipe.AddIngredient(ModContent.ItemType<BrokenHeroBlaster>(), 1);
 			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

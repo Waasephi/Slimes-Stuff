@@ -26,11 +26,12 @@ namespace OurStuffAddon.Items.MusicBoxes
 			item.value = 100000;
 			item.accessory = true;
 		}
+
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.MusicBox);
-			recipe.AddIngredient(mod, "NeoniumBar", 20);
+			recipe.AddIngredient(ModContent.ItemType<NeoniumBar>(), 20);
 			recipe.AddTile(114);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

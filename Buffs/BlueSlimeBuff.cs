@@ -19,14 +19,14 @@ namespace OurStuffAddon.Buffs
 			MyPlayer modPlayer = player.GetModPlayer<MyPlayer>();
 
 			if (player.ownedProjectileCounts[ModContent.ProjectileType<BlueSlimeProjectile>()] > 0)
-			
-			if (!modPlayer.blueSlime)
-			{
-				player.DelBuff(buffIndex);
-				buffIndex--;
-			}
-			else
-				player.buffTime[buffIndex] = 18000;
+
+				if (!modPlayer.blueSlime)
+				{
+					player.DelBuff(buffIndex);
+					buffIndex--;
+				}
+				else
+					player.buffTime[buffIndex] = 18000;
 		}
 	}
 }

@@ -33,7 +33,7 @@ namespace OurStuffAddon.Items.Armor.Neonium
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "NeoniumBar", 15);
+			recipe.AddIngredient(ModContent.ItemType<NeoniumBar>(), 15);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

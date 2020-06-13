@@ -1,3 +1,5 @@
+using OurStuffAddon.Items.Blocks;
+using OurStuffAddon.Items.Materials;
 using OurStuffAddon.NPCs.Bosses.AncientObserver;
 using Terraria;
 using Terraria.ID;
@@ -28,8 +30,8 @@ namespace OurStuffAddon.Items.Consumables
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(mod, "RelicShard", 5);
-			recipe.AddIngredient(mod, "AncientStone", 100);
+			recipe.AddIngredient(ModContent.ItemType<RelicShard>(), 5);
+			recipe.AddIngredient(ModContent.ItemType<AncientStone>(), 100);
 			recipe.AddTile(TileID.DemonAltar);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
